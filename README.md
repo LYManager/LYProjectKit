@@ -24,6 +24,8 @@
 
 ![baidu](https://www.baidu.com/img/bd_logo1.png?qua=high&where=super "百度logo")
 
+
+<!----> baidu是个标识，以下方法是连在一起的
 [![baidu]](http://baidu.com)
 
 [baidu]:https://www.baidu.com/img/bd_logo1.png?qua=high&where=super "百度logo"
