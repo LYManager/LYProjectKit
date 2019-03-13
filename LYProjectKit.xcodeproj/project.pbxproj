@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633442E82238E92300035BBA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 633442E72238E92300035BBA /* README.md */; };
 		633674FA2234E01700B87968 /* LYProjectKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633674F92234E01700B87968 /* LYProjectKitTests.m */; };
 		633675082234E24100B87968 /* LYProjectKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675072234E24100B87968 /* LYProjectKitUITests.m */; };
 		6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675122234E7A600B87968 /* LYProgressHUD.m */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYProjectKit.release.xcconfig"; path = "Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit.release.xcconfig"; sourceTree = "<group>"; };
+		633442E72238E92300035BBA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		633674F72234E01700B87968 /* LYProjectKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYProjectKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		633674F92234E01700B87968 /* LYProjectKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYProjectKitTests.m; sourceTree = "<group>"; };
 		633674FB2234E01700B87968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		634220E02233925C00A2CD27 = {
 			isa = PBXGroup;
 			children = (
+				633442E72238E92300035BBA /* README.md */,
 				634220EB2233925C00A2CD27 /* LYProjectKit */,
 				633674F82234E01700B87968 /* LYProjectKitTests */,
 				633675062234E24100B87968 /* LYProjectKitUITests */,
@@ -615,6 +618,7 @@
 			files = (
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
+				633442E82238E92300035BBA /* README.md in Resources */,
 				634221392233B8A300A2CD27 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
