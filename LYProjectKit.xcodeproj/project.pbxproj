@@ -7,43 +7,216 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		634220EE2233925C00A2CD27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 634220ED2233925C00A2CD27 /* AppDelegate.m */; };
-		634220F12233925C00A2CD27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634220F02233925C00A2CD27 /* ViewController.m */; };
-		634220F42233925C00A2CD27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634220F22233925C00A2CD27 /* Main.storyboard */; };
+		633674FA2234E01700B87968 /* LYProjectKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633674F92234E01700B87968 /* LYProjectKitTests.m */; };
+		633675082234E24100B87968 /* LYProjectKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675072234E24100B87968 /* LYProjectKitUITests.m */; };
+		6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675122234E7A600B87968 /* LYProgressHUD.m */; };
+		6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675152234E7A600B87968 /* LYUserDefault.m */; };
+		6336751C2234E7A600B87968 /* LYAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675192234E7A600B87968 /* LYAlert.m */; };
+		6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336751E22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m */; };
 		634220F62233925E00A2CD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634220F52233925E00A2CD27 /* Assets.xcassets */; };
-		634220F92233925E00A2CD27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634220F72233925E00A2CD27 /* LaunchScreen.storyboard */; };
 		634220FC2233925E00A2CD27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 634220FB2233925E00A2CD27 /* main.m */; };
+		6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63422104223393EB00A2CD27 /* AppDelegate.m */; };
+		6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342210E2233942000A2CD27 /* LYBaseViewController.m */; };
+		634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221112233945300A2CD27 /* LYTabBarViewController.m */; };
+		634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221142233946F00A2CD27 /* LYNavigationViewController.m */; };
+		6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342212422339C0000A2CD27 /* LYHomePageViewController.m */; };
+		6342212822339C2600A2CD27 /* LYPageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342212722339C2600A2CD27 /* LYPageContext.m */; };
+		634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221302233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m */; };
+		634221392233B8A300A2CD27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6342213B2233B8A300A2CD27 /* Localizable.strings */; };
+		634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634221472233BA9400A2CD27 /* InfoPlist.strings */; };
+		634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */; };
+		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
+		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
+		63E99894223777B400A1168B /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E99892223777B400A1168B /* LYTableViewController.m */; };
+		63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989B22377D2500A1168B /* LYFindViewController.m */; };
+		63E9989F22377D5200A1168B /* LYFindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989E22377D5200A1168B /* LYFindModel.m */; };
+		63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E998A122377DED00A1168B /* LYFindTableViewCell.m */; };
+		9352361FEA18E5C5AAFD783E /* libPods-LYProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		633674FC2234E01700B87968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 634220E12233925C00A2CD27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 634220E82233925C00A2CD27;
+			remoteInfo = LYProjectKit;
+		};
+		6336750A2234E24100B87968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 634220E12233925C00A2CD27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 634220E82233925C00A2CD27;
+			remoteInfo = LYProjectKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYProjectKit.release.xcconfig"; path = "Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit.release.xcconfig"; sourceTree = "<group>"; };
+		633674F72234E01700B87968 /* LYProjectKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYProjectKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		633674F92234E01700B87968 /* LYProjectKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYProjectKitTests.m; sourceTree = "<group>"; };
+		633674FB2234E01700B87968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633675052234E24100B87968 /* LYProjectKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYProjectKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		633675072234E24100B87968 /* LYProjectKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYProjectKitUITests.m; sourceTree = "<group>"; };
+		633675092234E24100B87968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633675122234E7A600B87968 /* LYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYProgressHUD.m; sourceTree = "<group>"; };
+		633675132234E7A600B87968 /* LYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYProgressHUD.h; sourceTree = "<group>"; };
+		633675152234E7A600B87968 /* LYUserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUserDefault.m; sourceTree = "<group>"; };
+		633675162234E7A600B87968 /* LYUserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUserDefault.h; sourceTree = "<group>"; };
+		633675182234E7A600B87968 /* LYAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAlert.h; sourceTree = "<group>"; };
+		633675192234E7A600B87968 /* LYAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAlert.m; sourceTree = "<group>"; };
+		6336751D22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AdjustScrollViewLayout.h"; sourceTree = "<group>"; };
+		6336751E22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AdjustScrollViewLayout.m"; sourceTree = "<group>"; };
 		634220E92233925C00A2CD27 /* LYProjectKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYProjectKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		634220EC2233925C00A2CD27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		634220ED2233925C00A2CD27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		634220EF2233925C00A2CD27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		634220F02233925C00A2CD27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		634220F32233925C00A2CD27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		634220F52233925E00A2CD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		634220F82233925E00A2CD27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		634220FA2233925E00A2CD27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634220FB2233925E00A2CD27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63422103223393EB00A2CD27 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63422104223393EB00A2CD27 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6342210D2233942000A2CD27 /* LYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYBaseViewController.h; sourceTree = "<group>"; };
+		6342210E2233942000A2CD27 /* LYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYBaseViewController.m; sourceTree = "<group>"; };
+		634221102233945300A2CD27 /* LYTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTabBarViewController.h; sourceTree = "<group>"; };
+		634221112233945300A2CD27 /* LYTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTabBarViewController.m; sourceTree = "<group>"; };
+		634221132233946F00A2CD27 /* LYNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYNavigationViewController.h; sourceTree = "<group>"; };
+		634221142233946F00A2CD27 /* LYNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYNavigationViewController.m; sourceTree = "<group>"; };
+		63422116223394B800A2CD27 /* LYTabBarData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTabBarData.h; sourceTree = "<group>"; };
+		6342212322339C0000A2CD27 /* LYHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomePageViewController.h; sourceTree = "<group>"; };
+		6342212422339C0000A2CD27 /* LYHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomePageViewController.m; sourceTree = "<group>"; };
+		6342212622339C2600A2CD27 /* LYPageContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPageContext.h; sourceTree = "<group>"; };
+		6342212722339C2600A2CD27 /* LYPageContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPageContext.m; sourceTree = "<group>"; };
+		6342212F2233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Repair_iOS_12_1_bug.h"; sourceTree = "<group>"; };
+		634221302233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Repair_iOS_12_1_bug.m"; sourceTree = "<group>"; };
+		6342213A2233B8A300A2CD27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6342213C2233B8F300A2CD27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		634221462233BA9400A2CD27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		634221482233BA9500A2CD27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		634221562233FC2B00A2CD27 /* UIViewController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Aspects.h"; sourceTree = "<group>"; };
+		634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Aspects.m"; sourceTree = "<group>"; };
+		6342215C22340CD600A2CD27 /* LYProjectKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYProjectKit.pch; sourceTree = "<group>"; };
+		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
+		63E9988B2237504A00A1168B /* LYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWebViewController.m; sourceTree = "<group>"; };
+		63E9988D2237545B00A1168B /* LYWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebView.h; sourceTree = "<group>"; };
+		63E9988E2237545B00A1168B /* LYWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWebView.m; sourceTree = "<group>"; };
+		63E99892223777B400A1168B /* LYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableViewController.m; sourceTree = "<group>"; };
+		63E99893223777B400A1168B /* LYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTableViewController.h; sourceTree = "<group>"; };
+		63E99895223777D000A1168B /* LYCellModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCellModelProtocol.h; sourceTree = "<group>"; };
+		63E9989A22377D2500A1168B /* LYFindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindViewController.h; sourceTree = "<group>"; };
+		63E9989B22377D2500A1168B /* LYFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindViewController.m; sourceTree = "<group>"; };
+		63E9989D22377D5200A1168B /* LYFindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindModel.h; sourceTree = "<group>"; };
+		63E9989E22377D5200A1168B /* LYFindModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindModel.m; sourceTree = "<group>"; };
+		63E998A022377DED00A1168B /* LYFindTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindTableViewCell.h; sourceTree = "<group>"; };
+		63E998A122377DED00A1168B /* LYFindTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindTableViewCell.m; sourceTree = "<group>"; };
+		8FF97726890D2E6AFF9C6849 /* Pods-LYProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYProjectKit.debug.xcconfig"; path = "Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		634220E62233925C00A2CD27 /* Frameworks */ = {
+		633674F42234E01700B87968 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		633675022234E24100B87968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		634220E62233925C00A2CD27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9352361FEA18E5C5AAFD783E /* libPods-LYProjectKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F0FFF32AF0659B233745261 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FF97726890D2E6AFF9C6849 /* Pods-LYProjectKit.debug.xcconfig */,
+				3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		633674F82234E01700B87968 /* LYProjectKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				633674F92234E01700B87968 /* LYProjectKitTests.m */,
+				633674FB2234E01700B87968 /* Info.plist */,
+			);
+			path = LYProjectKitTests;
+			sourceTree = "<group>";
+		};
+		633675062234E24100B87968 /* LYProjectKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				633675072234E24100B87968 /* LYProjectKitUITests.m */,
+				633675092234E24100B87968 /* Info.plist */,
+			);
+			path = LYProjectKitUITests;
+			sourceTree = "<group>";
+		};
+		6336750F2234E7A600B87968 /* LYCommonModule */ = {
+			isa = PBXGroup;
+			children = (
+				633675102234E7A600B87968 /* LYTool */,
+			);
+			path = LYCommonModule;
+			sourceTree = "<group>";
+		};
+		633675102234E7A600B87968 /* LYTool */ = {
+			isa = PBXGroup;
+			children = (
+				633675112234E7A600B87968 /* LYProgressHUD */,
+				633675142234E7A600B87968 /* LYUserDefault */,
+				633675172234E7A600B87968 /* LYAlert */,
+			);
+			path = LYTool;
+			sourceTree = "<group>";
+		};
+		633675112234E7A600B87968 /* LYProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				633675122234E7A600B87968 /* LYProgressHUD.m */,
+				633675132234E7A600B87968 /* LYProgressHUD.h */,
+			);
+			path = LYProgressHUD;
+			sourceTree = "<group>";
+		};
+		633675142234E7A600B87968 /* LYUserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				633675152234E7A600B87968 /* LYUserDefault.m */,
+				633675162234E7A600B87968 /* LYUserDefault.h */,
+			);
+			path = LYUserDefault;
+			sourceTree = "<group>";
+		};
+		633675172234E7A600B87968 /* LYAlert */ = {
+			isa = PBXGroup;
+			children = (
+				633675182234E7A600B87968 /* LYAlert.h */,
+				633675192234E7A600B87968 /* LYAlert.m */,
+			);
+			path = LYAlert;
+			sourceTree = "<group>";
+		};
 		634220E02233925C00A2CD27 = {
 			isa = PBXGroup;
 			children = (
 				634220EB2233925C00A2CD27 /* LYProjectKit */,
+				633674F82234E01700B87968 /* LYProjectKitTests */,
+				633675062234E24100B87968 /* LYProjectKitUITests */,
 				634220EA2233925C00A2CD27 /* Products */,
+				4F0FFF32AF0659B233745261 /* Pods */,
+				720647E5BF4F4D9FBBE68D5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				634220E92233925C00A2CD27 /* LYProjectKit.app */,
+				633674F72234E01700B87968 /* LYProjectKitTests.xctest */,
+				633675052234E24100B87968 /* LYProjectKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,29 +233,313 @@
 		634220EB2233925C00A2CD27 /* LYProjectKit */ = {
 			isa = PBXGroup;
 			children = (
-				634220EC2233925C00A2CD27 /* AppDelegate.h */,
-				634220ED2233925C00A2CD27 /* AppDelegate.m */,
-				634220EF2233925C00A2CD27 /* ViewController.h */,
-				634220F02233925C00A2CD27 /* ViewController.m */,
-				634220F22233925C00A2CD27 /* Main.storyboard */,
+				63422102223393EB00A2CD27 /* AppDelegateModule */,
+				63422105223393EB00A2CD27 /* BaseModuel */,
+				6342211D22339BE400A2CD27 /* HomePageModule */,
+				63E9989622377D0700A1168B /* LYTestFindModule */,
+				6336750F2234E7A600B87968 /* LYCommonModule */,
 				634220F52233925E00A2CD27 /* Assets.xcassets */,
-				634220F72233925E00A2CD27 /* LaunchScreen.storyboard */,
 				634220FA2233925E00A2CD27 /* Info.plist */,
+				6342215C22340CD600A2CD27 /* LYProjectKit.pch */,
+				634221472233BA9400A2CD27 /* InfoPlist.strings */,
+				6342213B2233B8A300A2CD27 /* Localizable.strings */,
 				634220FB2233925E00A2CD27 /* main.m */,
 			);
 			path = LYProjectKit;
 			sourceTree = "<group>";
 		};
+		63422102223393EB00A2CD27 /* AppDelegateModule */ = {
+			isa = PBXGroup;
+			children = (
+				63422103223393EB00A2CD27 /* AppDelegate.h */,
+				63422104223393EB00A2CD27 /* AppDelegate.m */,
+				6342212622339C2600A2CD27 /* LYPageContext.h */,
+				6342212722339C2600A2CD27 /* LYPageContext.m */,
+			);
+			path = AppDelegateModule;
+			sourceTree = "<group>";
+		};
+		63422105223393EB00A2CD27 /* BaseModuel */ = {
+			isa = PBXGroup;
+			children = (
+				63422106223393EB00A2CD27 /* ViewModel */,
+				63422107223393EB00A2CD27 /* LocationDataModel */,
+				63422108223393EB00A2CD27 /* Category */,
+				63422109223393EB00A2CD27 /* Controller */,
+				6342210A223393EB00A2CD27 /* Model */,
+				6342210B223393EB00A2CD27 /* View */,
+			);
+			path = BaseModuel;
+			sourceTree = "<group>";
+		};
+		63422106223393EB00A2CD27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63422107223393EB00A2CD27 /* LocationDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				63422116223394B800A2CD27 /* LYTabBarData.h */,
+			);
+			path = LocationDataModel;
+			sourceTree = "<group>";
+		};
+		63422108223393EB00A2CD27 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6342212F2233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.h */,
+				634221302233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m */,
+				634221562233FC2B00A2CD27 /* UIViewController+Aspects.h */,
+				634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */,
+				6336751D22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.h */,
+				6336751E22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		63422109223393EB00A2CD27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63E998862237503400A1168B /* LYWebView */,
+				6342216022340DDC00A2CD27 /* LYCollectionViewController */,
+				6342215D22340DDC00A2CD27 /* LYTableViewController */,
+				6342210D2233942000A2CD27 /* LYBaseViewController.h */,
+				6342210E2233942000A2CD27 /* LYBaseViewController.m */,
+				634221102233945300A2CD27 /* LYTabBarViewController.h */,
+				634221112233945300A2CD27 /* LYTabBarViewController.m */,
+				634221132233946F00A2CD27 /* LYNavigationViewController.h */,
+				634221142233946F00A2CD27 /* LYNavigationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6342210A223393EB00A2CD27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6342210B223393EB00A2CD27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6342211D22339BE400A2CD27 /* HomePageModule */ = {
+			isa = PBXGroup;
+			children = (
+				6342211E22339BE400A2CD27 /* ViewModel */,
+				6342211F22339BE400A2CD27 /* Protocol */,
+				6342212022339BE400A2CD27 /* Controller */,
+				6342212122339BE400A2CD27 /* Model */,
+				6342212222339BE400A2CD27 /* View */,
+			);
+			path = HomePageModule;
+			sourceTree = "<group>";
+		};
+		6342211E22339BE400A2CD27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6342211F22339BE400A2CD27 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6342212022339BE400A2CD27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6342212322339C0000A2CD27 /* LYHomePageViewController.h */,
+				6342212422339C0000A2CD27 /* LYHomePageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6342212122339BE400A2CD27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6342212222339BE400A2CD27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6342215D22340DDC00A2CD27 /* LYTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63E99890223777B400A1168B /* CellModelProtocol */,
+				63E99891223777B400A1168B /* Controller */,
+			);
+			path = LYTableViewController;
+			sourceTree = "<group>";
+		};
+		6342216022340DDC00A2CD27 /* LYCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LYCollectionViewController;
+			sourceTree = "<group>";
+		};
+		63E998862237503400A1168B /* LYWebView */ = {
+			isa = PBXGroup;
+			children = (
+				63E998872237503400A1168B /* Category */,
+				63E998882237503400A1168B /* Controller */,
+				63E998892237503400A1168B /* View */,
+			);
+			path = LYWebView;
+			sourceTree = "<group>";
+		};
+		63E998872237503400A1168B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		63E998882237503400A1168B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63E9988A2237504A00A1168B /* LYWebViewController.h */,
+				63E9988B2237504A00A1168B /* LYWebViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63E998892237503400A1168B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63E9988D2237545B00A1168B /* LYWebView.h */,
+				63E9988E2237545B00A1168B /* LYWebView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63E99890223777B400A1168B /* CellModelProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				63E99895223777D000A1168B /* LYCellModelProtocol.h */,
+			);
+			path = CellModelProtocol;
+			sourceTree = "<group>";
+		};
+		63E99891223777B400A1168B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63E99893223777B400A1168B /* LYTableViewController.h */,
+				63E99892223777B400A1168B /* LYTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63E9989622377D0700A1168B /* LYTestFindModule */ = {
+			isa = PBXGroup;
+			children = (
+				63E9989722377D0700A1168B /* Controller */,
+				63E9989822377D0700A1168B /* Model */,
+				63E9989922377D0700A1168B /* View */,
+			);
+			path = LYTestFindModule;
+			sourceTree = "<group>";
+		};
+		63E9989722377D0700A1168B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63E9989A22377D2500A1168B /* LYFindViewController.h */,
+				63E9989B22377D2500A1168B /* LYFindViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63E9989822377D0700A1168B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63E9989D22377D5200A1168B /* LYFindModel.h */,
+				63E9989E22377D5200A1168B /* LYFindModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63E9989922377D0700A1168B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63E998A022377DED00A1168B /* LYFindTableViewCell.h */,
+				63E998A122377DED00A1168B /* LYFindTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		720647E5BF4F4D9FBBE68D5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		633674F62234E01700B87968 /* LYProjectKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 633675002234E01700B87968 /* Build configuration list for PBXNativeTarget "LYProjectKitTests" */;
+			buildPhases = (
+				633674F32234E01700B87968 /* Sources */,
+				633674F42234E01700B87968 /* Frameworks */,
+				633674F52234E01700B87968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				633674FD2234E01700B87968 /* PBXTargetDependency */,
+			);
+			name = LYProjectKitTests;
+			productName = LYProjectKitTests;
+			productReference = 633674F72234E01700B87968 /* LYProjectKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		633675042234E24100B87968 /* LYProjectKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6336750C2234E24100B87968 /* Build configuration list for PBXNativeTarget "LYProjectKitUITests" */;
+			buildPhases = (
+				633675012234E24100B87968 /* Sources */,
+				633675022234E24100B87968 /* Frameworks */,
+				633675032234E24100B87968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6336750B2234E24100B87968 /* PBXTargetDependency */,
+			);
+			name = LYProjectKitUITests;
+			productName = LYProjectKitUITests;
+			productReference = 633675052234E24100B87968 /* LYProjectKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		634220E82233925C00A2CD27 /* LYProjectKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 634220FF2233925E00A2CD27 /* Build configuration list for PBXNativeTarget "LYProjectKit" */;
 			buildPhases = (
+				634158B01D64B30987BE08B9 /* [CP] Check Pods Manifest.lock */,
 				634220E52233925C00A2CD27 /* Sources */,
 				634220E62233925C00A2CD27 /* Frameworks */,
 				634220E72233925C00A2CD27 /* Resources */,
+				30F3A926ED193ACEC78AE391 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,9 +556,18 @@
 		634220E12233925C00A2CD27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LY;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "赵良育";
 				TargetAttributes = {
+					633674F62234E01700B87968 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 634220E82233925C00A2CD27;
+					};
+					633675042234E24100B87968 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 634220E82233925C00A2CD27;
+					};
 					634220E82233925C00A2CD27 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -112,6 +580,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 634220E02233925C00A2CD27;
 			productRefGroup = 634220EA2233925C00A2CD27 /* Products */;
@@ -119,60 +588,247 @@
 			projectRoot = "";
 			targets = (
 				634220E82233925C00A2CD27 /* LYProjectKit */,
+				633674F62234E01700B87968 /* LYProjectKitTests */,
+				633675042234E24100B87968 /* LYProjectKitUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		633674F52234E01700B87968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		633675032234E24100B87968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		634220E72233925C00A2CD27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634220F92233925E00A2CD27 /* LaunchScreen.storyboard in Resources */,
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
-				634220F42233925C00A2CD27 /* Main.storyboard in Resources */,
+				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
+				634221392233B8A300A2CD27 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30F3A926ED193ACEC78AE391 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		634158B01D64B30987BE08B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYProjectKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		633674F32234E01700B87968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633674FA2234E01700B87968 /* LYProjectKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		633675012234E24100B87968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633675082234E24100B87968 /* LYProjectKitUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		634220E52233925C00A2CD27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634220F12233925C00A2CD27 /* ViewController.m in Sources */,
+				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
-				634220EE2233925C00A2CD27 /* AppDelegate.m in Sources */,
+				6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */,
+				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
+				63E9988F2237545B00A1168B /* LYWebView.m in Sources */,
+				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
+				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
+				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
+				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
+				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
+				6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */,
+				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
+				6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */,
+				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
+				634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */,
+				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
+				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
+				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
+				63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		633674FD2234E01700B87968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 634220E82233925C00A2CD27 /* LYProjectKit */;
+			targetProxy = 633674FC2234E01700B87968 /* PBXContainerItemProxy */;
+		};
+		6336750B2234E24100B87968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 634220E82233925C00A2CD27 /* LYProjectKit */;
+			targetProxy = 6336750A2234E24100B87968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		634220F22233925C00A2CD27 /* Main.storyboard */ = {
+		6342213B2233B8A300A2CD27 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				634220F32233925C00A2CD27 /* Base */,
+				6342213A2233B8A300A2CD27 /* en */,
+				6342213C2233B8F300A2CD27 /* zh-Hans */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		634220F72233925E00A2CD27 /* LaunchScreen.storyboard */ = {
+		634221472233BA9400A2CD27 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				634220F82233925E00A2CD27 /* Base */,
+				634221462233BA9400A2CD27 /* en */,
+				634221482233BA9500A2CD27 /* zh-Hans */,
 			);
-			name = LaunchScreen.storyboard;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		633674FE2234E01700B87968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				INFOPLIST_FILE = LYProjectKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sunshine.LYProjectKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYProjectKit.app/LYProjectKit";
+			};
+			name = Debug;
+		};
+		633674FF2234E01700B87968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				INFOPLIST_FILE = LYProjectKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sunshine.LYProjectKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYProjectKit.app/LYProjectKit";
+			};
+			name = Release;
+		};
+		6336750D2234E24100B87968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				INFOPLIST_FILE = LYProjectKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sunshine.LYProjectKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYProjectKit;
+			};
+			name = Debug;
+		};
+		6336750E2234E24100B87968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				INFOPLIST_FILE = LYProjectKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sunshine.LYProjectKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYProjectKit;
+			};
+			name = Release;
+		};
 		634220FD2233925E00A2CD27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -232,6 +888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -283,10 +940,25 @@
 		};
 		634221002233925E00A2CD27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF97726890D2E6AFF9C6849 /* Pods-LYProjectKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Aspects\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/YYKit\"",
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = LYProjectKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,10 +972,25 @@
 		};
 		634221012233925E00A2CD27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Aspects\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/YYKit\"",
+					"$(SRCROOT)/**",
+				);
 				INFOPLIST_FILE = LYProjectKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -318,6 +1005,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		633675002234E01700B87968 /* Build configuration list for PBXNativeTarget "LYProjectKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				633674FE2234E01700B87968 /* Debug */,
+				633674FF2234E01700B87968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6336750C2234E24100B87968 /* Build configuration list for PBXNativeTarget "LYProjectKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6336750D2234E24100B87968 /* Debug */,
+				6336750E2234E24100B87968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		634220E42233925C00A2CD27 /* Build configuration list for PBXProject "LYProjectKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

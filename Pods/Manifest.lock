@@ -1,0 +1,74 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
+  - CTMediator (25)
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - ReactiveObjC (3.1.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SVProgressHUD (2.2.5)
+  - Toast (4.0.0)
+  - WebViewJavascriptBridge (6.0.3)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2.1)
+  - Aspects (~> 1.4.1)
+  - CTMediator (~> 25)
+  - Masonry (~> 1.1.0)
+  - MJRefresh (~> 3.1.15.7)
+  - ReactiveObjC (~> 3.1.0)
+  - SDWebImage (~> 4.0.0)
+  - SVProgressHUD (~> 2.2.5)
+  - Toast (~> 4.0.0)
+  - WebViewJavascriptBridge (~> 6.0.3)
+  - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Aspects
+    - CTMediator
+    - Masonry
+    - MJRefresh
+    - ReactiveObjC
+    - SDWebImage
+    - SVProgressHUD
+    - Toast
+    - WebViewJavascriptBridge
+    - YYKit
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: ed3d413c026cfcaeb1b802beadbf84e182c13bc3
+
+COCOAPODS: 1.6.0.beta.2
