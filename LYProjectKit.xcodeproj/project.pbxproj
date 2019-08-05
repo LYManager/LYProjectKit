@@ -26,6 +26,7 @@
 		634221392233B8A300A2CD27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6342213B2233B8A300A2CD27 /* Localizable.strings */; };
 		634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634221472233BA9400A2CD27 /* InfoPlist.strings */; };
 		634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */; };
+		638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638A3FCE22F8099600F0C59B /* LYRouterManager.m */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
 		63E99894223777B400A1168B /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E99892223777B400A1168B /* LYTableViewController.m */; };
@@ -96,6 +97,8 @@
 		634221562233FC2B00A2CD27 /* UIViewController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Aspects.h"; sourceTree = "<group>"; };
 		634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Aspects.m"; sourceTree = "<group>"; };
 		6342215C22340CD600A2CD27 /* LYProjectKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYProjectKit.pch; sourceTree = "<group>"; };
+		638A3FCD22F8099600F0C59B /* LYRouterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRouterManager.h; sourceTree = "<group>"; };
+		638A3FCE22F8099600F0C59B /* LYRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRouterManager.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
 		63E9988B2237504A00A1168B /* LYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWebViewController.m; sourceTree = "<group>"; };
 		63E9988D2237545B00A1168B /* LYWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebView.h; sourceTree = "<group>"; };
@@ -186,8 +189,8 @@
 		633675112234E7A600B87968 /* LYProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				633675122234E7A600B87968 /* LYProgressHUD.m */,
 				633675132234E7A600B87968 /* LYProgressHUD.h */,
+				633675122234E7A600B87968 /* LYProgressHUD.m */,
 			);
 			path = LYProgressHUD;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 		63422105223393EB00A2CD27 /* BaseModuel */ = {
 			isa = PBXGroup;
 			children = (
+				638A3FCC22F8097E00F0C59B /* Router */,
 				63422106223393EB00A2CD27 /* ViewModel */,
 				63422107223393EB00A2CD27 /* LocationDataModel */,
 				63422108223393EB00A2CD27 /* Category */,
@@ -396,6 +400,15 @@
 			children = (
 			);
 			path = LYCollectionViewController;
+			sourceTree = "<group>";
+		};
+		638A3FCC22F8097E00F0C59B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				638A3FCD22F8099600F0C59B /* LYRouterManager.h */,
+				638A3FCE22F8099600F0C59B /* LYRouterManager.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		63E998862237503400A1168B /* LYWebView */ = {
@@ -704,6 +717,7 @@
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
+				638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
 				6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,

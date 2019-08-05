@@ -47,7 +47,7 @@
  */
 - (void)initConfig
 {
-    [self.navigationBar setBarTintColor:[UIColor darkGrayColor]];
+//    [self.navigationBar setBarTintColor:[UIColor whiteColor]];
 }
 #pragma mark - Lazy
 

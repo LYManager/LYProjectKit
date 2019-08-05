@@ -17,6 +17,7 @@ PODS:
   - Aspects (1.4.1)
   - CTMediator (25)
   - Masonry (1.1.0)
+  - MGJRouter (0.10.0)
   - MJRefresh (3.1.15.7)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.0.0):
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - Aspects (~> 1.4.1)
   - CTMediator (~> 25)
   - Masonry (~> 1.1.0)
+  - MGJRouter (~> 0.10.0)
   - MJRefresh (~> 3.1.15.7)
   - ReactiveObjC (~> 3.1.0)
   - SDWebImage (~> 4.0.0)
@@ -48,6 +50,7 @@ SPEC REPOS:
     - Aspects
     - CTMediator
     - Masonry
+    - MGJRouter
     - MJRefresh
     - ReactiveObjC
     - SDWebImage
@@ -61,6 +64,7 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MGJRouter: 15d94541eb2cc81eff7d577337288feb7ae9575f
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
@@ -69,6 +73,6 @@ SPEC CHECKSUMS:
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: ed3d413c026cfcaeb1b802beadbf84e182c13bc3
+PODFILE CHECKSUM: 6bbafed280a74a2bd4bda15300bbaf78aba9b85b
 
 COCOAPODS: 1.6.0.beta.2

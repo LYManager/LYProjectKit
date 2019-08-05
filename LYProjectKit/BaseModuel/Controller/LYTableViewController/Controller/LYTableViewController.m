@@ -58,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 必须要实现的，暂这样写，外部重写就可以了
+// 必须要实现的，暂这样写，外部重写就可以了
     return nil;
 }
 

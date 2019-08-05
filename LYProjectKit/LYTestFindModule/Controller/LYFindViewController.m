@@ -7,6 +7,7 @@
 // <#Class des#>
 #import "LYFindViewController.h"
 #import "LYFindModel.h"
+#import "LYFindTableViewCell.h"
 @interface LYFindViewController ()
 
 @end
@@ -16,9 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   
     [self registerCellWithIdentifiers:@[@"LYFindTableViewCell"]];
     
-//    [self addRefresh];
+    [self addRefresh];
     
     NSMutableArray * arr = [NSMutableArray array];
     for (int i = 0 ; i < 20; i++) {
@@ -35,7 +37,7 @@
             [self.tableView reloadData];
 //        });
 //    });
-    
+
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [self.tableView reloadData];
 //    });
@@ -54,8 +56,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return  0;
+    return  self.dataArray.count;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LYFindTableViewCell * cell =  [tableView dequeueReusableCellWithIdentifier:@"LYFindTableViewCell" forIndexPath:indexPath];
+    [cell p_setModel];
+    return cell;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%ld",indexPath.row);

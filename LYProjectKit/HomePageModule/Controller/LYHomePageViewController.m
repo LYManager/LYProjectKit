@@ -7,7 +7,7 @@
 // <#Class des#>
 #import "LYHomePageViewController.h"
 #import "LYAlert.h"
-
+#import <MGJRouter.h>
 @interface LYHomePageViewController ()
 
 @end
@@ -41,8 +41,15 @@
 #pragma mark - Life
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    LYHomePageViewController *vc = [LYHomePageViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+    [MGJRouter openURL:@"test" withUserInfo:
+            @{
+              @"navigationVC":self.navigationController
+              }
+            completion:^(id result) {
+                NSLog(@"%@",result);
+    }];
+//    LYHomePageViewController *vc = [LYHomePageViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - Public Methods
 
