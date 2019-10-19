@@ -83,16 +83,26 @@
                                         <constraint firstAttribute="width" secondItem="0yw-sK-ob7" secondAttribute="height" multiplier="1:1" id="nbM-Iw-8o9"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fu7-iW-Lgl">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="80"/>
+                                    <connections>
+                                        <action selector="btnAction_AGC_Balance:" destination="iN0-l3-epB" eventType="touchUpInside" id="QfH-ED-xDq"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.097041793170000001" green="0.1156408563" blue="0.20273289080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="Fu7-iW-Lgl" firstAttribute="top" secondItem="xsE-jj-Fmz" secondAttribute="top" id="4p0-mI-ax3"/>
                                 <constraint firstAttribute="trailing" secondItem="dlW-sQ-481" secondAttribute="trailing" id="4q2-Eh-SYh"/>
                                 <constraint firstItem="dlW-sQ-481" firstAttribute="top" secondItem="5n5-Vv-ZTl" secondAttribute="bottom" constant="5" id="5dd-2E-WFK"/>
                                 <constraint firstItem="5n5-Vv-ZTl" firstAttribute="leading" secondItem="0yw-sK-ob7" secondAttribute="trailing" constant="10" id="7WA-Oq-pEy"/>
                                 <constraint firstItem="5n5-Vv-ZTl" firstAttribute="centerX" secondItem="xsE-jj-Fmz" secondAttribute="centerX" constant="15" id="9ws-Bn-aVm"/>
                                 <constraint firstItem="dlW-sQ-481" firstAttribute="leading" secondItem="xsE-jj-Fmz" secondAttribute="leading" id="MKY-TK-Ah9"/>
+                                <constraint firstAttribute="bottom" secondItem="Fu7-iW-Lgl" secondAttribute="bottom" id="R3o-sH-xuO"/>
                                 <constraint firstItem="5n5-Vv-ZTl" firstAttribute="centerY" secondItem="0yw-sK-ob7" secondAttribute="centerY" id="Wfn-FA-1dB"/>
+                                <constraint firstItem="Fu7-iW-Lgl" firstAttribute="leading" secondItem="xsE-jj-Fmz" secondAttribute="leading" id="crd-Zt-2DY"/>
                                 <constraint firstItem="dlW-sQ-481" firstAttribute="top" secondItem="xsE-jj-Fmz" secondAttribute="centerY" constant="5" id="mEv-VL-nhQ"/>
+                                <constraint firstAttribute="trailing" secondItem="Fu7-iW-Lgl" secondAttribute="trailing" id="wcI-Oh-N3Y"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtZ-6V-1MX">
@@ -125,6 +135,12 @@
                                         <constraint firstAttribute="width" secondItem="oW2-iU-vyl" secondAttribute="height" multiplier="1:1" id="r1z-Xe-Bzu"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4t-Fh-RbJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="80"/>
+                                    <connections>
+                                        <action selector="myLevelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="N8X-t4-amr"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.093089245259999995" green="0.1115741655" blue="0.20281949639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -132,9 +148,13 @@
                                 <constraint firstItem="ay3-Vs-iFg" firstAttribute="leading" secondItem="BtZ-6V-1MX" secondAttribute="leading" id="6l3-kJ-YTm"/>
                                 <constraint firstAttribute="trailing" secondItem="ay3-Vs-iFg" secondAttribute="trailing" id="9GW-gh-3mg"/>
                                 <constraint firstItem="ZRB-SJ-wGt" firstAttribute="leading" secondItem="oW2-iU-vyl" secondAttribute="trailing" constant="10" id="N3L-Na-7FP"/>
+                                <constraint firstAttribute="bottom" secondItem="d4t-Fh-RbJ" secondAttribute="bottom" id="NbJ-Ko-olr"/>
                                 <constraint firstItem="ay3-Vs-iFg" firstAttribute="top" secondItem="BtZ-6V-1MX" secondAttribute="centerY" constant="5" id="VKi-tJ-H92"/>
                                 <constraint firstItem="ZRB-SJ-wGt" firstAttribute="centerX" secondItem="BtZ-6V-1MX" secondAttribute="centerX" constant="15" id="dEL-Gd-xRx"/>
+                                <constraint firstItem="d4t-Fh-RbJ" firstAttribute="leading" secondItem="BtZ-6V-1MX" secondAttribute="leading" id="eZZ-lQ-PVb"/>
+                                <constraint firstAttribute="trailing" secondItem="d4t-Fh-RbJ" secondAttribute="trailing" id="gzV-PG-FYT"/>
                                 <constraint firstItem="ay3-Vs-iFg" firstAttribute="top" secondItem="ZRB-SJ-wGt" secondAttribute="bottom" constant="5" id="i6T-UA-bV1"/>
+                                <constraint firstItem="d4t-Fh-RbJ" firstAttribute="top" secondItem="BtZ-6V-1MX" secondAttribute="top" id="p0d-F4-8xR"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12345.66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwX-Ay-mOZ">
@@ -171,6 +191,9 @@
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="19" maxY="-28"/>
                             <inset key="imageEdgeInsets" minX="53" minY="-24" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="我的团队" image="ly_tab_bar_item_four_selected"/>
+                            <connections>
+                                <action selector="myTeamAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aaA-Qs-4GQ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEB-UA-PsF">
                             <rect key="frame" x="187.5" y="0.0" width="187.5" height="90"/>
@@ -178,6 +201,9 @@
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="18" maxY="-30"/>
                             <inset key="imageEdgeInsets" minX="53" minY="-25" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="我的账单" image="ly_tab_bar_item_four_selected"/>
+                            <connections>
+                                <action selector="myBillAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="TtY-Wq-Dn7"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -204,6 +230,9 @@
                             <state key="normal" title="邀请好友  &gt;">
                                 <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </state>
+                            <connections>
+                                <action selector="inviteFriendAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="hff-jS-CyT"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.097099311650000006" green="0.1112896875" blue="0.21083545679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

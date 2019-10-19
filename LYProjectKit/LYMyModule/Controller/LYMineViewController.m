@@ -8,7 +8,7 @@
 #import "LYMineViewController.h"
 #import "LYMineHeaderView.h"
 #import "LYMineTableViewCell.h"
-@interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< icons*/
 @property(nonatomic,strong)NSArray<NSString *> * iconsArr;
@@ -25,12 +25,35 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     [self configTableView];
     
     self.navigationItem.title = @"我的";
-    
-   
-    
-    
-    // Do any additional setup after loading the view from its nib.
+
 }
+#pragma mark🐒------LYMineHeaderViewDelegate------🐒
+
+/// AGC余额
+- (void)clickAGCBalance {
+        
+}
+
+/// 邀请好友
+- (void)clickInviteFriend {
+    
+}
+
+/// 我的账单
+- (void)clickMyBill {
+    
+}
+
+/// 我的等级
+- (void)clickMyLevel {
+    
+}
+
+/// 我的团队
+- (void)clickMyTeam {
+    
+}
+#pragma mark🐒------end------🐒
 
 - (void) configTableView{
     self.tableView.rowHeight = UIScreen.mainScreen.bounds.size.width * 53 / 333;
@@ -45,6 +68,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     headerView.frame = CGRectMake(0, 0, width, width * 322  / 375);
 //  UIView * headerView =    [[UIView alloc]initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 200)];
     self.tableView.tableHeaderView = headerView;
+    headerView.delegate = self;
     self.tableView.tableFooterView = [UIView new];
 }
 
@@ -76,9 +100,9 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     return 0.01f;
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    return [UIView new];
-//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return [UIView new];
+}
 
 #pragma mark🐒------lazy------🐒
 - (NSArray<NSString *> *)iconsArr{
@@ -110,5 +134,8 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
 
 @end

@@ -35,6 +35,19 @@
 		63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B6D2359E98D00D5E138 /* LYMineHeaderView.xib */; };
 		63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B70235A0D3800D5E138 /* LYMineTableViewCell.m */; };
 		63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B71235A0D3800D5E138 /* LYMineTableViewCell.xib */; };
+		63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B79235AB97E00D5E138 /* LYSafeSettingViewController.m */; };
+		63933B7C235AB97E00D5E138 /* LYSafeSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B7A235AB97E00D5E138 /* LYSafeSettingViewController.xib */; };
+		63933B80235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B7E235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m */; };
+		63933B81235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B7F235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib */; };
+		63933B85235ABEBE00D5E138 /* LYLoginPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B83235ABEBE00D5E138 /* LYLoginPwdViewController.m */; };
+		63933B86235ABEBE00D5E138 /* LYLoginPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B84235ABEBE00D5E138 /* LYLoginPwdViewController.xib */; };
+		63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B88235AC55700D5E138 /* NSString+Placeholder.m */; };
+		63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B8B235AC72D00D5E138 /* LYRealNameAuthViewController.m */; };
+		63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B8C235AC72D00D5E138 /* LYRealNameAuthViewController.xib */; };
+		63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B90235AFF1E00D5E138 /* LYMayiGongHuiViewController.m */; };
+		63933B93235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B91235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib */; };
+		63933B96235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B95235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m */; };
+		63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B97235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
@@ -121,6 +134,26 @@
 		63933B6F235A0D3800D5E138 /* LYMineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMineTableViewCell.h; sourceTree = "<group>"; };
 		63933B70235A0D3800D5E138 /* LYMineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMineTableViewCell.m; sourceTree = "<group>"; };
 		63933B71235A0D3800D5E138 /* LYMineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMineTableViewCell.xib; sourceTree = "<group>"; };
+		63933B78235AB97E00D5E138 /* LYSafeSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSafeSettingViewController.h; sourceTree = "<group>"; };
+		63933B79235AB97E00D5E138 /* LYSafeSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSafeSettingViewController.m; sourceTree = "<group>"; };
+		63933B7A235AB97E00D5E138 /* LYSafeSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYSafeSettingViewController.xib; sourceTree = "<group>"; };
+		63933B7D235ABA3C00D5E138 /* LYSafeSettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSafeSettingTableViewCell.h; sourceTree = "<group>"; };
+		63933B7E235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSafeSettingTableViewCell.m; sourceTree = "<group>"; };
+		63933B7F235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYSafeSettingTableViewCell.xib; sourceTree = "<group>"; };
+		63933B82235ABEBE00D5E138 /* LYLoginPwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYLoginPwdViewController.h; sourceTree = "<group>"; };
+		63933B83235ABEBE00D5E138 /* LYLoginPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYLoginPwdViewController.m; sourceTree = "<group>"; };
+		63933B84235ABEBE00D5E138 /* LYLoginPwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYLoginPwdViewController.xib; sourceTree = "<group>"; };
+		63933B87235AC55700D5E138 /* NSString+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Placeholder.h"; sourceTree = "<group>"; };
+		63933B88235AC55700D5E138 /* NSString+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Placeholder.m"; sourceTree = "<group>"; };
+		63933B8A235AC72D00D5E138 /* LYRealNameAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRealNameAuthViewController.h; sourceTree = "<group>"; };
+		63933B8B235AC72D00D5E138 /* LYRealNameAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRealNameAuthViewController.m; sourceTree = "<group>"; };
+		63933B8C235AC72D00D5E138 /* LYRealNameAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYRealNameAuthViewController.xib; sourceTree = "<group>"; };
+		63933B8F235AFF1E00D5E138 /* LYMayiGongHuiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMayiGongHuiViewController.h; sourceTree = "<group>"; };
+		63933B90235AFF1E00D5E138 /* LYMayiGongHuiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMayiGongHuiViewController.m; sourceTree = "<group>"; };
+		63933B91235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMayiGongHuiViewController.xib; sourceTree = "<group>"; };
+		63933B94235AFF7000D5E138 /* LYMayiGongHuiHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMayiGongHuiHeaderView.h; sourceTree = "<group>"; };
+		63933B95235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMayiGongHuiHeaderView.m; sourceTree = "<group>"; };
+		63933B97235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMayiGongHuiHeaderView.xib; sourceTree = "<group>"; };
 		63C2243C22FBE10100821544 /* LYTestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTestWebViewController.h; sourceTree = "<group>"; };
 		63C2243D22FBE10100821544 /* LYTestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTestWebViewController.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
@@ -269,6 +302,7 @@
 				63E9989622377D0700A1168B /* LYTestFindModule */,
 				6336750F2234E7A600B87968 /* LYCommonModule */,
 				63933B5C2359E80D00D5E138 /* LYMyModule */,
+				63933B74235AB96700D5E138 /* LYSafeSettingModule */,
 				634220F52233925E00A2CD27 /* Assets.xcassets */,
 				634220FA2233925E00A2CD27 /* Info.plist */,
 				6342215C22340CD600A2CD27 /* LYProjectKit.pch */,
@@ -332,6 +366,8 @@
 				63933B542359DB7600D5E138 /* UIColor+Extention.m */,
 				63933B592359DFDE00D5E138 /* UIButton+Gradient.h */,
 				63933B5A2359DFDE00D5E138 /* UIButton+Gradient.m */,
+				63933B87235AC55700D5E138 /* NSString+Placeholder.h */,
+				63933B88235AC55700D5E138 /* NSString+Placeholder.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -458,6 +494,9 @@
 				63933B652359E8F300D5E138 /* LYMineViewController.h */,
 				63933B662359E8F300D5E138 /* LYMineViewController.m */,
 				63933B672359E8F300D5E138 /* LYMineViewController.xib */,
+				63933B8F235AFF1E00D5E138 /* LYMayiGongHuiViewController.h */,
+				63933B90235AFF1E00D5E138 /* LYMayiGongHuiViewController.m */,
+				63933B91235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -478,6 +517,52 @@
 				63933B6F235A0D3800D5E138 /* LYMineTableViewCell.h */,
 				63933B70235A0D3800D5E138 /* LYMineTableViewCell.m */,
 				63933B71235A0D3800D5E138 /* LYMineTableViewCell.xib */,
+				63933B94235AFF7000D5E138 /* LYMayiGongHuiHeaderView.h */,
+				63933B95235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m */,
+				63933B97235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63933B74235AB96700D5E138 /* LYSafeSettingModule */ = {
+			isa = PBXGroup;
+			children = (
+				63933B75235AB96700D5E138 /* Controller */,
+				63933B76235AB96700D5E138 /* Model */,
+				63933B77235AB96700D5E138 /* View */,
+			);
+			path = LYSafeSettingModule;
+			sourceTree = "<group>";
+		};
+		63933B75235AB96700D5E138 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63933B78235AB97E00D5E138 /* LYSafeSettingViewController.h */,
+				63933B79235AB97E00D5E138 /* LYSafeSettingViewController.m */,
+				63933B7A235AB97E00D5E138 /* LYSafeSettingViewController.xib */,
+				63933B82235ABEBE00D5E138 /* LYLoginPwdViewController.h */,
+				63933B83235ABEBE00D5E138 /* LYLoginPwdViewController.m */,
+				63933B84235ABEBE00D5E138 /* LYLoginPwdViewController.xib */,
+				63933B8A235AC72D00D5E138 /* LYRealNameAuthViewController.h */,
+				63933B8B235AC72D00D5E138 /* LYRealNameAuthViewController.m */,
+				63933B8C235AC72D00D5E138 /* LYRealNameAuthViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63933B76235AB96700D5E138 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63933B77235AB96700D5E138 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63933B7D235ABA3C00D5E138 /* LYSafeSettingTableViewCell.h */,
+				63933B7E235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m */,
+				63933B7F235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -701,10 +786,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */,
+				63933B7C235AB97E00D5E138 /* LYSafeSettingViewController.xib in Resources */,
 				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
+				63933B86235ABEBE00D5E138 /* LYLoginPwdViewController.xib in Resources */,
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
+				63933B81235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib in Resources */,
+				63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */,
+				63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
+				63933B93235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib in Resources */,
 				634221392233B8A300A2CD27 /* Localizable.strings in Resources */,
 				63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */,
 			);
@@ -782,6 +873,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63933B96235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m in Sources */,
 				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
@@ -791,21 +883,27 @@
 				63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */,
 				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
 				63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */,
+				63933B85235ABEBE00D5E138 /* LYLoginPwdViewController.m in Sources */,
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
 				638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */,
+				63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
 				6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */,
+				63933B80235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
 				6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */,
 				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
 				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
 				634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */,
+				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
+				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
+				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
 				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,
 				63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */,
 			);

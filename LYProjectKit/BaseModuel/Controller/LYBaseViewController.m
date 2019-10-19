@@ -26,10 +26,16 @@
 }
 
 #pragma mark - Life
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 #pragma mark - Public Methods
 - (void)pushViewControllerWithClassName:(NSString *)controllerName params:(NSDictionary *)params
 {
+    if (controllerName.length == 0) {
+        [self.view makeToast:@"功能正在开发中..." duration:2 position:CSToastPositionCenter];
+        return;
+    }
     LYBaseViewController *vc = (LYBaseViewController *)[[(NSClassFromString(controllerName))alloc]init];
     vc.params = params;
     [self.navigationController pushViewController:vc animated:YES];
