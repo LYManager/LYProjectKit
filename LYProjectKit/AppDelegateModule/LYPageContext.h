@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)shareInstance;
 
 
-
 /**
  设置主控制器
  */

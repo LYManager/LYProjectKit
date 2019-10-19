@@ -20,7 +20,7 @@
   
     
     
-    NSLog(@"传过来的参数 ======  %@",self.params);
+    
 //    self.navigationController.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }

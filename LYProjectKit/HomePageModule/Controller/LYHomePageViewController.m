@@ -8,6 +8,7 @@
 #import "LYHomePageViewController.h"
 #import "LYAlert.h"
 #import <MGJRouter.h>
+#import "UIButton+Gradient.h"
 @interface LYHomePageViewController ()
 
 @end
@@ -19,15 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(100, 100, 100, 100);
-    button.backgroundColor = [UIColor redColor];
     [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
+    [button ly_gradint];
     [self.view addSubview:button];
-    
-    
+
 
 }
 
@@ -41,7 +39,7 @@
 #pragma mark - Life
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [MGJRouter openURL:@"test" withUserInfo:
+    [MGJRouter openURL:@"mineVC" withUserInfo:
             @{
               @"navigationVC":self.navigationController
               }

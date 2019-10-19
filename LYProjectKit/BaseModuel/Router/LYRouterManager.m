@@ -8,14 +8,24 @@
 #import "LYRouterManager.h"
 #import <MGJRouter.h>
 #import "LYFindViewController.h"
+#import "LYTestWebViewController.h"
+#import "LYMineViewController.h"
 @implementation LYRouterManager
 + (void)load{
-    [MGJRouter registerURLPattern:@"test" toHandler:^(NSDictionary *routerParameters) {
-        LYFindViewController *vc = [LYFindViewController new];
+    [MGJRouter registerURLPattern:@"mineVC" toHandler:^(NSDictionary *routerParameters) {
+        LYMineViewController *vc = [[LYMineViewController alloc]initWithNibName:@"LYMineViewController" bundle:NSBundle.mainBundle];;
         UINavigationController *navigationVC = routerParameters[MGJRouterParameterUserInfo][@"navigationVC"];
         void(^block)(id result) = routerParameters[MGJRouterParameterCompletion];
         !block ?: block(@"完成");
         [navigationVC pushViewController:vc animated:YES];
     }];
+    
+    [MGJRouter registerURLPattern:@"test" toHandler:^(NSDictionary *routerParameters) {
+           LYMineViewController *vc = [[LYMineViewController alloc]initWithNibName:@"LYMineViewController" bundle:NSBundle.mainBundle];;
+           UINavigationController *navigationVC = routerParameters[MGJRouterParameterUserInfo][@"navigationVC"];
+           void(^block)(id result) = routerParameters[MGJRouterParameterCompletion];
+           !block ?: block(@"完成");
+           [navigationVC pushViewController:vc animated:YES];
+       }];
 }
 @end

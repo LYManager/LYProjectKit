@@ -27,6 +27,15 @@
 		634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634221472233BA9400A2CD27 /* InfoPlist.strings */; };
 		634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */; };
 		638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638A3FCE22F8099600F0C59B /* LYRouterManager.m */; };
+		63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B542359DB7600D5E138 /* UIColor+Extention.m */; };
+		63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B5A2359DFDE00D5E138 /* UIButton+Gradient.m */; };
+		63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B662359E8F300D5E138 /* LYMineViewController.m */; };
+		63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B672359E8F300D5E138 /* LYMineViewController.xib */; };
+		63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B6B2359E98300D5E138 /* LYMineHeaderView.m */; };
+		63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B6D2359E98D00D5E138 /* LYMineHeaderView.xib */; };
+		63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B70235A0D3800D5E138 /* LYMineTableViewCell.m */; };
+		63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B71235A0D3800D5E138 /* LYMineTableViewCell.xib */; };
+		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
 		63E99894223777B400A1168B /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E99892223777B400A1168B /* LYTableViewController.m */; };
@@ -99,6 +108,21 @@
 		6342215C22340CD600A2CD27 /* LYProjectKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYProjectKit.pch; sourceTree = "<group>"; };
 		638A3FCD22F8099600F0C59B /* LYRouterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRouterManager.h; sourceTree = "<group>"; };
 		638A3FCE22F8099600F0C59B /* LYRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRouterManager.m; sourceTree = "<group>"; };
+		63933B532359DB7600D5E138 /* UIColor+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
+		63933B542359DB7600D5E138 /* UIColor+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extention.m"; sourceTree = "<group>"; };
+		63933B592359DFDE00D5E138 /* UIButton+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Gradient.h"; sourceTree = "<group>"; };
+		63933B5A2359DFDE00D5E138 /* UIButton+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Gradient.m"; sourceTree = "<group>"; };
+		63933B652359E8F300D5E138 /* LYMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMineViewController.h; sourceTree = "<group>"; };
+		63933B662359E8F300D5E138 /* LYMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMineViewController.m; sourceTree = "<group>"; };
+		63933B672359E8F300D5E138 /* LYMineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMineViewController.xib; sourceTree = "<group>"; };
+		63933B6A2359E98300D5E138 /* LYMineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMineHeaderView.h; sourceTree = "<group>"; };
+		63933B6B2359E98300D5E138 /* LYMineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMineHeaderView.m; sourceTree = "<group>"; };
+		63933B6D2359E98D00D5E138 /* LYMineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMineHeaderView.xib; sourceTree = "<group>"; };
+		63933B6F235A0D3800D5E138 /* LYMineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMineTableViewCell.h; sourceTree = "<group>"; };
+		63933B70235A0D3800D5E138 /* LYMineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMineTableViewCell.m; sourceTree = "<group>"; };
+		63933B71235A0D3800D5E138 /* LYMineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMineTableViewCell.xib; sourceTree = "<group>"; };
+		63C2243C22FBE10100821544 /* LYTestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTestWebViewController.h; sourceTree = "<group>"; };
+		63C2243D22FBE10100821544 /* LYTestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTestWebViewController.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
 		63E9988B2237504A00A1168B /* LYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWebViewController.m; sourceTree = "<group>"; };
 		63E9988D2237545B00A1168B /* LYWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebView.h; sourceTree = "<group>"; };
@@ -244,6 +268,7 @@
 				6342211D22339BE400A2CD27 /* HomePageModule */,
 				63E9989622377D0700A1168B /* LYTestFindModule */,
 				6336750F2234E7A600B87968 /* LYCommonModule */,
+				63933B5C2359E80D00D5E138 /* LYMyModule */,
 				634220F52233925E00A2CD27 /* Assets.xcassets */,
 				634220FA2233925E00A2CD27 /* Info.plist */,
 				6342215C22340CD600A2CD27 /* LYProjectKit.pch */,
@@ -303,6 +328,10 @@
 				634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */,
 				6336751D22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.h */,
 				6336751E22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m */,
+				63933B532359DB7600D5E138 /* UIColor+Extention.h */,
+				63933B542359DB7600D5E138 /* UIColor+Extention.m */,
+				63933B592359DFDE00D5E138 /* UIButton+Gradient.h */,
+				63933B5A2359DFDE00D5E138 /* UIButton+Gradient.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -368,6 +397,8 @@
 			children = (
 				6342212322339C0000A2CD27 /* LYHomePageViewController.h */,
 				6342212422339C0000A2CD27 /* LYHomePageViewController.m */,
+				63C2243C22FBE10100821544 /* LYTestWebViewController.h */,
+				63C2243D22FBE10100821544 /* LYTestWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -409,6 +440,46 @@
 				638A3FCE22F8099600F0C59B /* LYRouterManager.m */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		63933B5C2359E80D00D5E138 /* LYMyModule */ = {
+			isa = PBXGroup;
+			children = (
+				63933B5D2359E80D00D5E138 /* Controller */,
+				63933B5E2359E80D00D5E138 /* Model */,
+				63933B5F2359E80D00D5E138 /* View */,
+			);
+			path = LYMyModule;
+			sourceTree = "<group>";
+		};
+		63933B5D2359E80D00D5E138 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63933B652359E8F300D5E138 /* LYMineViewController.h */,
+				63933B662359E8F300D5E138 /* LYMineViewController.m */,
+				63933B672359E8F300D5E138 /* LYMineViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63933B5E2359E80D00D5E138 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63933B5F2359E80D00D5E138 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63933B6A2359E98300D5E138 /* LYMineHeaderView.h */,
+				63933B6B2359E98300D5E138 /* LYMineHeaderView.m */,
+				63933B6D2359E98D00D5E138 /* LYMineHeaderView.xib */,
+				63933B6F235A0D3800D5E138 /* LYMineTableViewCell.h */,
+				63933B70235A0D3800D5E138 /* LYMineTableViewCell.m */,
+				63933B71235A0D3800D5E138 /* LYMineTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		63E998862237503400A1168B /* LYWebView */ = {
@@ -629,10 +700,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */,
+				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
 				634221392233B8A300A2CD27 /* Localizable.strings in Resources */,
+				63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,12 +782,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
 				6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */,
 				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
 				63E9988F2237545B00A1168B /* LYWebView.m in Sources */,
+				63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */,
 				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
+				63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */,
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
@@ -722,11 +799,14 @@
 				6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
 				6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */,
+				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
 				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
 				634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */,
 				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
+				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
+				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,
 				63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -962,7 +1042,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				DEVELOPMENT_TEAM = 8D3CFMJ397;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -978,6 +1058,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = LYProjectKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -994,7 +1075,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N2Y7YB87T9;
+				DEVELOPMENT_TEAM = 8D3CFMJ397;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1010,6 +1091,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = LYProjectKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

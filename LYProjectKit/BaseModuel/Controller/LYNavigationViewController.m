@@ -6,7 +6,7 @@
 // 
 // <#Class des#>
 #import "LYNavigationViewController.h"
-
+#import "UIColor+Extention.h"
 @interface LYNavigationViewController ()
 
 @end
@@ -47,7 +47,10 @@
  */
 - (void)initConfig
 {
-//    [self.navigationBar setBarTintColor:[UIColor whiteColor]];
+    self.navigationBar.translucent = NO;
+    [self.navigationBar setBarTintColor:[UIColor ly_colorWithHexString:@"#0E1018"]];
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],
+    NSFontAttributeName : [UIFont systemFontOfSize:17]}];
 }
 #pragma mark - Lazy
 
