@@ -16,5 +16,7 @@
 #import <ReactiveObjC.h>
 // --------------------自定义
 #import "LYAlert.h"
+// --------------------分类
+#import "UIButton+Gradient.h"
 
 #endif /* LYProjectKit_pch */
