@@ -26,8 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**< 传参*/
 @property(nonatomic,strong)NSDictionary * params;
-// 测试
-- (void) pushViewControllerWithClassName:(NSString *)controllerName params:(NSDictionary *)params;
+// 跳转
+- (void) pushViewControllerWithClassName:(NSString *)controllerName
+                                  params:(nullable NSDictionary *)params;
 @end
 
 
