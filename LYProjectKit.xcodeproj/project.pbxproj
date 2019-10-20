@@ -58,6 +58,10 @@
 		829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D36235B405C004F9641 /* MyBillViewController.m */; };
 		829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D37235B405C004F9641 /* MyBillViewController.xib */; };
 		829C2D3B235C08A2004F9641 /* invitback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D3A235C08A1004F9641 /* invitback.jpg */; };
+		829C2D3F235C0C93004F9641 /* MyBillableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D3D235C0C93004F9641 /* MyBillableViewCell.m */; };
+		829C2D40235C0C93004F9641 /* MyBillableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D3E235C0C93004F9641 /* MyBillableViewCell.xib */; };
+		829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */; };
+		829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */; };
 		82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */; };
 		82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34E235AF08500A6D038 /* ContactCustomerViewController.xib */; };
 		82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34F235AF08500A6D038 /* InvitationViewController.xib */; };
@@ -206,6 +210,13 @@
 		829C2D36235B405C004F9641 /* MyBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBillViewController.m; sourceTree = "<group>"; };
 		829C2D37235B405C004F9641 /* MyBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBillViewController.xib; sourceTree = "<group>"; };
 		829C2D3A235C08A1004F9641 /* invitback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = invitback.jpg; sourceTree = "<group>"; };
+		829C2D3C235C0C93004F9641 /* MyBillableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBillableViewCell.h; sourceTree = "<group>"; };
+		829C2D3D235C0C93004F9641 /* MyBillableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBillableViewCell.m; sourceTree = "<group>"; };
+		829C2D3E235C0C93004F9641 /* MyBillableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBillableViewCell.xib; sourceTree = "<group>"; };
+		829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWOAuthCodeView.m; sourceTree = "<group>"; };
+		829C2D42235C2CBB004F9641 /* SWOAuthCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWOAuthCodeView.h; sourceTree = "<group>"; };
+		829C2D44235C2D54004F9641 /* SWOACItemBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWOACItemBoxView.h; sourceTree = "<group>"; };
+		829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWOACItemBoxView.m; sourceTree = "<group>"; };
 		82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
 		82FBA34A235AF08500A6D038 /* TopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopUpViewController.h; sourceTree = "<group>"; };
 		82FBA34B235AF08500A6D038 /* ModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyViewController.h; sourceTree = "<group>"; };
@@ -819,6 +830,13 @@
 				82FBA38C235B2B9D00A6D038 /* AcceptanceTableViewCell.h */,
 				82FBA38D235B2B9D00A6D038 /* AcceptanceTableViewCell.m */,
 				82FBA38E235B2B9D00A6D038 /* AcceptanceTableViewCell.xib */,
+				829C2D3C235C0C93004F9641 /* MyBillableViewCell.h */,
+				829C2D3D235C0C93004F9641 /* MyBillableViewCell.m */,
+				829C2D3E235C0C93004F9641 /* MyBillableViewCell.xib */,
+				829C2D42235C2CBB004F9641 /* SWOAuthCodeView.h */,
+				829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */,
+				829C2D44235C2D54004F9641 /* SWOACItemBoxView.h */,
+				829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -959,6 +977,7 @@
 				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
 				82FBA375235AF2D100A6D038 /* code.jpg in Resources */,
 				63933B7C235AB97E00D5E138 /* LYSafeSettingViewController.xib in Resources */,
+				829C2D40235C0C93004F9641 /* MyBillableViewCell.xib in Resources */,
 				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
 				829C2D3B235C08A2004F9641 /* invitback.jpg in Resources */,
 				82FBA390235B2B9D00A6D038 /* AcceptanceTableViewCell.xib in Resources */,
@@ -1102,6 +1121,7 @@
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
+				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
 				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
@@ -1109,6 +1129,8 @@
 				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
 				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
+				829C2D3F235C0C93004F9641 /* MyBillableViewCell.m in Sources */,
+				829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */,
 				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,
 				82FBA38F235B2B9D00A6D038 /* AcceptanceTableViewCell.m in Sources */,
 				63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */,
