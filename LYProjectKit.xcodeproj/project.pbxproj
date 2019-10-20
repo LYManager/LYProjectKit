@@ -48,6 +48,16 @@
 		63933B93235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B91235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib */; };
 		63933B96235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B95235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m */; };
 		63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B97235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib */; };
+		63933B9B235B27E100D5E138 /* LYMayiGongHuiFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B9A235B27E100D5E138 /* LYMayiGongHuiFooterView.m */; };
+		63933B9D235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933B9C235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib */; };
+		63933BA1235B360600D5E138 /* LYShengTaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B9F235B360600D5E138 /* LYShengTaiViewController.m */; };
+		63933BA2235B360600D5E138 /* LYShengTaiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933BA0235B360600D5E138 /* LYShengTaiViewController.xib */; };
+		63933BA5235B366F00D5E138 /* LYShengTaiHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933BA4235B366F00D5E138 /* LYShengTaiHeaderView.m */; };
+		63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933BA6235B368600D5E138 /* LYShengTaiHeaderView.xib */; };
+		63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933BA9235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m */; };
+		63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933BAB235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib */; };
+		63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */; };
+		63933BB1235B415600D5E138 /* LYShengTaiShopCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
@@ -154,6 +164,21 @@
 		63933B94235AFF7000D5E138 /* LYMayiGongHuiHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMayiGongHuiHeaderView.h; sourceTree = "<group>"; };
 		63933B95235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMayiGongHuiHeaderView.m; sourceTree = "<group>"; };
 		63933B97235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMayiGongHuiHeaderView.xib; sourceTree = "<group>"; };
+		63933B99235B27E100D5E138 /* LYMayiGongHuiFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMayiGongHuiFooterView.h; sourceTree = "<group>"; };
+		63933B9A235B27E100D5E138 /* LYMayiGongHuiFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMayiGongHuiFooterView.m; sourceTree = "<group>"; };
+		63933B9C235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYMayiGongHuiFooterView.xib; sourceTree = "<group>"; };
+		63933B9E235B360600D5E138 /* LYShengTaiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiViewController.h; sourceTree = "<group>"; };
+		63933B9F235B360600D5E138 /* LYShengTaiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiViewController.m; sourceTree = "<group>"; };
+		63933BA0235B360600D5E138 /* LYShengTaiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYShengTaiViewController.xib; sourceTree = "<group>"; };
+		63933BA3235B366F00D5E138 /* LYShengTaiHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiHeaderView.h; sourceTree = "<group>"; };
+		63933BA4235B366F00D5E138 /* LYShengTaiHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiHeaderView.m; sourceTree = "<group>"; };
+		63933BA6235B368600D5E138 /* LYShengTaiHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYShengTaiHeaderView.xib; sourceTree = "<group>"; };
+		63933BA8235B3B2700D5E138 /* LYShengTaiSessionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiSessionHeaderView.h; sourceTree = "<group>"; };
+		63933BA9235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiSessionHeaderView.m; sourceTree = "<group>"; };
+		63933BAB235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYShengTaiSessionHeaderView.xib; sourceTree = "<group>"; };
+		63933BAD235B415600D5E138 /* LYShengTaiShopCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiShopCardCell.h; sourceTree = "<group>"; };
+		63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiShopCardCell.m; sourceTree = "<group>"; };
+		63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYShengTaiShopCardCell.xib; sourceTree = "<group>"; };
 		63C2243C22FBE10100821544 /* LYTestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTestWebViewController.h; sourceTree = "<group>"; };
 		63C2243D22FBE10100821544 /* LYTestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTestWebViewController.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
@@ -435,6 +460,9 @@
 				6342212422339C0000A2CD27 /* LYHomePageViewController.m */,
 				63C2243C22FBE10100821544 /* LYTestWebViewController.h */,
 				63C2243D22FBE10100821544 /* LYTestWebViewController.m */,
+				63933B9E235B360600D5E138 /* LYShengTaiViewController.h */,
+				63933B9F235B360600D5E138 /* LYShengTaiViewController.m */,
+				63933BA0235B360600D5E138 /* LYShengTaiViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,6 +477,15 @@
 		6342212222339BE400A2CD27 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				63933BA3235B366F00D5E138 /* LYShengTaiHeaderView.h */,
+				63933BA4235B366F00D5E138 /* LYShengTaiHeaderView.m */,
+				63933BA6235B368600D5E138 /* LYShengTaiHeaderView.xib */,
+				63933BA8235B3B2700D5E138 /* LYShengTaiSessionHeaderView.h */,
+				63933BA9235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m */,
+				63933BAB235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib */,
+				63933BAD235B415600D5E138 /* LYShengTaiShopCardCell.h */,
+				63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */,
+				63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -520,6 +557,9 @@
 				63933B94235AFF7000D5E138 /* LYMayiGongHuiHeaderView.h */,
 				63933B95235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m */,
 				63933B97235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib */,
+				63933B99235B27E100D5E138 /* LYMayiGongHuiFooterView.h */,
+				63933B9A235B27E100D5E138 /* LYMayiGongHuiFooterView.m */,
+				63933B9C235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -787,14 +827,19 @@
 			files = (
 				63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */,
 				63933B7C235AB97E00D5E138 /* LYSafeSettingViewController.xib in Resources */,
+				63933BA2235B360600D5E138 /* LYShengTaiViewController.xib in Resources */,
+				63933BB1235B415600D5E138 /* LYShengTaiShopCardCell.xib in Resources */,
 				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
 				63933B86235ABEBE00D5E138 /* LYLoginPwdViewController.xib in Resources */,
+				63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */,
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
+				63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */,
 				63933B81235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib in Resources */,
 				63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */,
 				63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
+				63933B9D235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib in Resources */,
 				63933B93235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib in Resources */,
 				634221392233B8A300A2CD27 /* Localizable.strings in Resources */,
 				63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */,
@@ -874,6 +919,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63933B96235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m in Sources */,
+				63933BA5235B366F00D5E138 /* LYShengTaiHeaderView.m in Sources */,
 				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
@@ -886,7 +932,9 @@
 				63933B85235ABEBE00D5E138 /* LYLoginPwdViewController.m in Sources */,
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
+				63933BA1235B360600D5E138 /* LYShengTaiViewController.m in Sources */,
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
+				63933B9B235B27E100D5E138 /* LYMayiGongHuiFooterView.m in Sources */,
 				638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */,
 				63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
@@ -900,8 +948,10 @@
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
+				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
+				63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
 				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
 				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,

@@ -49,7 +49,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     
 }
 
-/// 我的团队
+/// t我的团队
 - (void)clickMyTeam {
     
 }

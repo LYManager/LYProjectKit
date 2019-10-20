@@ -6,8 +6,9 @@
 // 
 
 #import "LYMayiGongHuiViewController.h"
-
-@interface LYMayiGongHuiViewController ()
+#import "LYMayiGongHuiHeaderView.h"
+#import "LYMayiGongHuiFooterView.h"
+@interface LYMayiGongHuiViewController ()<LYMayiGongHuiHeaderViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -16,9 +17,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"蚂蚁工会";
+    [self configTableView];
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void) configTableView {
+    [self configTableViewHeaderFooterView];
+//    [self.tableView registerNib:[UINib nibWithNibName:kMineTableViewCellIdentifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:kMineTableViewCellIdentifier];
+}
+- (void) configTableViewHeaderFooterView{
+     LYMayiGongHuiHeaderView *headerView = [[NSBundle mainBundle]loadNibNamed:@"LYMayiGongHuiHeaderView" owner:self options:nil][0];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CGFloat width = UIScreen.mainScreen.bounds.size.width - 30;
+        headerView.frame = CGRectMake(0, 0, width, width * 471  / 402);
+        self.tableView.tableHeaderView = headerView;
+    });
+    headerView.delegate = self;
+    
+    
+    LYMayiGongHuiFooterView * footerView = [[NSBundle mainBundle]loadNibNamed:@"LYMayiGongHuiFooterView" owner:self options:nil][0];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CGFloat width = UIScreen.mainScreen.bounds.size.width;
+        footerView.frame = CGRectMake(0, 0, width, width * 808  / 397);
+        self.tableView.tableHeaderView = headerView;
+    });
+    self.tableView.tableFooterView = footerView;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+    return nil;
+}
+
+#pragma mark🐒------LYMayiGongHuiHeaderViewDelegate------🐒
+- (void)useCardWithType:(CardType)cardType{
+    
+}
+
+- (void)sendCaardWithType:(CardType)cardType{
+    
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+//    [self.headerView configUI];
+}
 /*
 #pragma mark - Navigation
 

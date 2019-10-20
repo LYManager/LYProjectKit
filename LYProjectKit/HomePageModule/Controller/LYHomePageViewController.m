@@ -39,7 +39,7 @@
 #pragma mark - Life
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [MGJRouter openURL:@"mineVC" withUserInfo:
+    [MGJRouter openURL:@"shengTaiVC" withUserInfo:
             @{
               @"navigationVC":self.navigationController
               }

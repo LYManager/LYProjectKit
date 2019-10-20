@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LYShengTaiSessionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONT-wS-nzC">
+                    <rect key="frame" x="0.0" y="5" width="136.5" height="52"/>
+                    <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="任务卡商城">
+                        <color key="titleColor" red="0.27338030930000001" green="0.40165901180000002" blue="0.53055459260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.38183391090000002" green="0.69836467499999999" blue="0.91479408740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cardShopAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dqo-cU-Ea7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-Zs-IGK">
+                    <rect key="frame" x="138.5" y="5" width="137" height="52"/>
+                    <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="我的任务卡">
+                        <color key="titleColor" red="0.26944246890000001" green="0.39773246649999999" blue="0.52662479880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.39431715010000001" green="0.70258074999999998" blue="0.90660250190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="workCardAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Sp-wQ-Foc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-u6-HRr">
+                    <rect key="frame" x="277.5" y="5" width="136.5" height="52"/>
+                    <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="过期任务卡">
+                        <color key="titleColor" red="0.24653968209999999" green="0.35852697490000002" blue="0.48321014639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.39431715010000001" green="0.70258074999999998" blue="0.90660250190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="pastTimeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="dXl-AC-x6a"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.054561547940000003" green="0.062184117730000002" blue="0.091224797070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ix7-u6-HRr" secondAttribute="trailing" id="5GH-1U-fBo"/>
+                <constraint firstItem="Ix7-u6-HRr" firstAttribute="top" secondItem="ONT-wS-nzC" secondAttribute="top" id="5u6-4S-gu8"/>
+                <constraint firstItem="N0Y-Zs-IGK" firstAttribute="top" secondItem="ONT-wS-nzC" secondAttribute="top" id="6pU-a7-107"/>
+                <constraint firstItem="Ix7-u6-HRr" firstAttribute="height" secondItem="ONT-wS-nzC" secondAttribute="height" id="AkE-GR-VRw"/>
+                <constraint firstItem="N0Y-Zs-IGK" firstAttribute="leading" secondItem="ONT-wS-nzC" secondAttribute="trailing" constant="2" id="Bcs-ty-Hfa"/>
+                <constraint firstAttribute="bottom" secondItem="ONT-wS-nzC" secondAttribute="bottom" id="GX9-1S-b5E"/>
+                <constraint firstItem="ONT-wS-nzC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Gbc-SM-g2M"/>
+                <constraint firstItem="Ix7-u6-HRr" firstAttribute="width" secondItem="ONT-wS-nzC" secondAttribute="width" id="Glb-QX-uy6"/>
+                <constraint firstItem="ONT-wS-nzC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Pxf-2h-2Jk"/>
+                <constraint firstItem="N0Y-Zs-IGK" firstAttribute="width" secondItem="ONT-wS-nzC" secondAttribute="width" id="n30-Of-BfZ"/>
+                <constraint firstItem="N0Y-Zs-IGK" firstAttribute="height" secondItem="ONT-wS-nzC" secondAttribute="height" id="oGm-ns-zFk"/>
+                <constraint firstItem="Ix7-u6-HRr" firstAttribute="leading" secondItem="N0Y-Zs-IGK" secondAttribute="trailing" constant="2" id="vnn-ok-4DG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cardShopBtn" destination="ONT-wS-nzC" id="ja9-BT-8su"/>
+                <outlet property="pastTimeCardBtn" destination="Ix7-u6-HRr" id="dcV-Dp-eOE"/>
+                <outlet property="workCardBtn" destination="N0Y-Zs-IGK" id="J18-0d-AhU"/>
+            </connections>
+            <point key="canvasLocation" x="27.536231884057973" y="308.37053571428572"/>
+        </view>
+    </objects>
+</document>
