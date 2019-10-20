@@ -18,6 +18,7 @@
    gradientLayer.locations = @[@0,@1];
     self.layer.cornerRadius = self.frame.size.height / 2;
     self.clipsToBounds = true;
-   [self.layer addSublayer:gradientLayer];
+//   [self.layer addSublayer:gradientLayer];
+    [self.layer insertSublayer:gradientLayer atIndex:0];
 }
 @end

@@ -11,6 +11,8 @@
 #import "LYTestWebViewController.h"
 #import "LYMineViewController.h"
 #import "LYSafeSettingViewController.h"
+#import "LYMayiGongHuiViewController.h"
+#import "LYShengTaiViewController.h"
 @implementation LYRouterManager
 + (void)load{
     [MGJRouter registerURLPattern:@"mineVC" toHandler:^(NSDictionary *routerParameters) {
@@ -28,5 +30,22 @@
            !block ?: block(@"完成");
            [navigationVC pushViewController:vc animated:YES];
        }];
+    
+    [MGJRouter registerURLPattern:@"mayiGHVC" toHandler:^(NSDictionary *routerParameters) {
+              LYMayiGongHuiViewController *vc = [[LYMayiGongHuiViewController alloc]initWithNibName:@"LYMayiGongHuiViewController" bundle:NSBundle.mainBundle];;
+              UINavigationController *navigationVC = routerParameters[MGJRouterParameterUserInfo][@"navigationVC"];
+              void(^block)(id result) = routerParameters[MGJRouterParameterCompletion];
+              !block ?: block(@"完成");
+              [navigationVC pushViewController:vc animated:YES];
+          }];
+    [MGJRouter registerURLPattern:@"shengTaiVC" toHandler:^(NSDictionary *routerParameters) {
+        LYShengTaiViewController *vc = [[LYShengTaiViewController alloc]initWithNibName:@"LYShengTaiViewController" bundle:NSBundle.mainBundle];;
+        UINavigationController *navigationVC = routerParameters[MGJRouterParameterUserInfo][@"navigationVC"];
+        void(^block)(id result) = routerParameters[MGJRouterParameterCompletion];
+        !block ?: block(@"完成");
+        [navigationVC pushViewController:vc animated:YES];
+    }];
+    
+    
 }
 @end
