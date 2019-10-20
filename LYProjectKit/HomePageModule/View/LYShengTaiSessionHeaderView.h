@@ -6,11 +6,16 @@
 // 
 
 #import <UIKit/UIKit.h>
-
+#import "LYShengTaiCardType.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LYShengTaiSessionHeaderView : UIView
+@protocol LYShengTaiSessionHeaderViewDelegate <NSObject>
+- (void) selectCardType:(LYShengTaiShopCardType)cardType;
+@end
 
+@interface LYShengTaiSessionHeaderView : UIView
+/**< */
+@property(nonatomic,weak)id<LYShengTaiSessionHeaderViewDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

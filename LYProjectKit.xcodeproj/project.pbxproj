@@ -16,6 +16,7 @@
 		63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DD7235C150600293467 /* NSBundle+GHLLanguage.m */; };
 		63264DDB235C161700293467 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DDA235C161700293467 /* NSData+AES.m */; };
 		63264DDE235C29F600293467 /* NSDictionary+TypeSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DDD235C29F600293467 /* NSDictionary+TypeSafe.m */; };
+		63264DE1235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DE0235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m */; };
 		633442E82238E92300035BBA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 633442E72238E92300035BBA /* README.md */; };
 		633674FA2234E01700B87968 /* LYProjectKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633674F92234E01700B87968 /* LYProjectKitTests.m */; };
 		633675082234E24100B87968 /* LYProjectKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675072234E24100B87968 /* LYProjectKitUITests.m */; };
@@ -147,6 +148,8 @@
 		63264DDA235C161700293467 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
 		63264DDC235C29F600293467 /* NSDictionary+TypeSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TypeSafe.h"; sourceTree = "<group>"; };
 		63264DDD235C29F600293467 /* NSDictionary+TypeSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TypeSafe.m"; sourceTree = "<group>"; };
+		63264DDF235C3E7C00293467 /* LYShengTaiBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiBaseTableViewCell.h; sourceTree = "<group>"; };
+		63264DE0235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiBaseTableViewCell.m; sourceTree = "<group>"; };
 		633442E72238E92300035BBA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		633674F72234E01700B87968 /* LYProjectKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYProjectKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		633674F92234E01700B87968 /* LYProjectKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYProjectKitTests.m; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		63933BAD235B415600D5E138 /* LYShengTaiShopCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiShopCardCell.h; sourceTree = "<group>"; };
 		63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiShopCardCell.m; sourceTree = "<group>"; };
 		63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYShengTaiShopCardCell.xib; sourceTree = "<group>"; };
+		6397A62E235C4ACF00F8A2D2 /* LYShengTaiCardType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiCardType.h; sourceTree = "<group>"; };
 		63C2243C22FBE10100821544 /* LYTestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTestWebViewController.h; sourceTree = "<group>"; };
 		63C2243D22FBE10100821544 /* LYTestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTestWebViewController.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
@@ -632,9 +636,12 @@
 				63933BA8235B3B2700D5E138 /* LYShengTaiSessionHeaderView.h */,
 				63933BA9235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m */,
 				63933BAB235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib */,
+				63264DDF235C3E7C00293467 /* LYShengTaiBaseTableViewCell.h */,
+				63264DE0235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m */,
 				63933BAD235B415600D5E138 /* LYShengTaiShopCardCell.h */,
 				63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */,
 				63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */,
+				6397A62E235C4ACF00F8A2D2 /* LYShengTaiCardType.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1191,6 +1198,7 @@
 				63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */,
 				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
 				63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */,
+				63264DE1235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m in Sources */,
 				63933B85235ABEBE00D5E138 /* LYLoginPwdViewController.m in Sources */,
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,

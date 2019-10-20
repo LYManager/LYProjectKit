@@ -5,12 +5,14 @@
 // Copyright © 2019 赵良育. All rights reserved. 
 // 
 
-#import <UIKit/UIKit.h>
-
+#import "LYShengTaiBaseTableViewCell.h"
+#import "LYShengTaiCardType.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LYShengTaiShopCardCell : UITableViewCell
 
+
+@interface LYShengTaiShopCardCell : LYShengTaiBaseTableViewCell
+- (void) configData:(id)data type:(LYShengTaiShopCardType)cardType;
 @end
 
 NS_ASSUME_NONNULL_END

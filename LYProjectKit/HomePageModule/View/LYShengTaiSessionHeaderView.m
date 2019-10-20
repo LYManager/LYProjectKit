@@ -16,16 +16,42 @@
 
 @implementation LYShengTaiSessionHeaderView
 
-- (IBAction)cardShopAction:(id)sender {
-    [self configSelectedWithBtn:sender];
+- (void)awakeFromNib{
+    [super awakeFromNib];
+//    默认
+    self.cardShopBtn.selected = YES;
 }
 
-- (IBAction)workCardAction:(id)sender {
+- (IBAction)cardShopAction:(UIButton *)sender {
+    if (sender.selected) {
+        return;
+    }
     [self configSelectedWithBtn:sender];
+
+    if ([self.delegate respondsToSelector:@selector(selectCardType:)]) {
+        [self.delegate selectCardType:LYShengTaiShopCardType_ShopCard];
+    }
 }
 
-- (IBAction)pastTimeAction:(id)sender {
+- (IBAction)workCardAction:(UIButton *)sender {
+    if (sender.selected) {
+           return;
+       }
     [self configSelectedWithBtn:sender];
+      
+    if ([self.delegate respondsToSelector:@selector(selectCardType:)]) {
+           [self.delegate selectCardType:LYShengTaiShopCardType_TaskCard];
+       }
+}
+
+- (IBAction)pastTimeAction:(UIButton *)sender {
+    if (sender.selected) {
+           return;
+       }
+    [self configSelectedWithBtn:sender];
+    if ([self.delegate respondsToSelector:@selector(selectCardType:)]) {
+           [self.delegate selectCardType:LYShengTaiShopCardType_PastCard];
+    }
 }
 
 

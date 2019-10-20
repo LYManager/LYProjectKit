@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONT-wS-nzC">
-                    <rect key="frame" x="0.0" y="5" width="136.5" height="52"/>
+                    <rect key="frame" x="0.0" y="5" width="136.5" height="51"/>
                     <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="任务卡商城">
@@ -28,7 +28,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-Zs-IGK">
-                    <rect key="frame" x="138.5" y="5" width="137" height="52"/>
+                    <rect key="frame" x="138.5" y="5" width="137" height="51"/>
                     <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="我的任务卡">
@@ -42,7 +42,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-u6-HRr">
-                    <rect key="frame" x="277.5" y="5" width="136.5" height="52"/>
+                    <rect key="frame" x="277.5" y="5" width="136.5" height="51"/>
                     <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="过期任务卡">
@@ -63,7 +63,7 @@
                 <constraint firstItem="N0Y-Zs-IGK" firstAttribute="top" secondItem="ONT-wS-nzC" secondAttribute="top" id="6pU-a7-107"/>
                 <constraint firstItem="Ix7-u6-HRr" firstAttribute="height" secondItem="ONT-wS-nzC" secondAttribute="height" id="AkE-GR-VRw"/>
                 <constraint firstItem="N0Y-Zs-IGK" firstAttribute="leading" secondItem="ONT-wS-nzC" secondAttribute="trailing" constant="2" id="Bcs-ty-Hfa"/>
-                <constraint firstAttribute="bottom" secondItem="ONT-wS-nzC" secondAttribute="bottom" id="GX9-1S-b5E"/>
+                <constraint firstAttribute="bottom" secondItem="ONT-wS-nzC" secondAttribute="bottom" constant="1" id="GX9-1S-b5E"/>
                 <constraint firstItem="ONT-wS-nzC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Gbc-SM-g2M"/>
                 <constraint firstItem="Ix7-u6-HRr" firstAttribute="width" secondItem="ONT-wS-nzC" secondAttribute="width" id="Glb-QX-uy6"/>
                 <constraint firstItem="ONT-wS-nzC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Pxf-2h-2Jk"/>
@@ -73,9 +73,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="cardShopBtn" destination="ONT-wS-nzC" id="ja9-BT-8su"/>
-                <outlet property="pastTimeCardBtn" destination="Ix7-u6-HRr" id="dcV-Dp-eOE"/>
-                <outlet property="workCardBtn" destination="N0Y-Zs-IGK" id="J18-0d-AhU"/>
+                <outlet property="cardShopBtn" destination="ONT-wS-nzC" id="zFc-nw-uux"/>
+                <outlet property="pastTimeCardBtn" destination="Ix7-u6-HRr" id="cqn-AE-Tk9"/>
+                <outlet property="workCardBtn" destination="N0Y-Zs-IGK" id="3iz-wy-4Aq"/>
             </connections>
             <point key="canvasLocation" x="27.536231884057973" y="308.37053571428572"/>
         </view>

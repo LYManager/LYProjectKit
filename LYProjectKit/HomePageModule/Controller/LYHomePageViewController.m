@@ -20,11 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [LYNetwork POSTWithApiPath:getMobileCodeURL requestParams:@{@"loginDTO":@{
-                                                                      @"mobile":@"16675178115"
-       }} handler:^(NSDictionary * _Nonnull response, NSError * _Nonnull error) {
-           
-       }];
+//    [LYNetwork POSTWithApiPath:getMobileCodeURL requestParams:@{@"loginDTO":@{
+//                                                                      @"mobile":@"16675178115"
+//       }} handler:^(NSDictionary * _Nonnull response, NSError * _Nonnull error) {
+//           
+//       }];
     
 //    [LYNetwork POSTWithApiPath:registerURL requestParams:@{@"loginDTO":@{
 //                                                                   @"inviteCode":@"",

@@ -7,10 +7,15 @@
 
 #import "LYShengTaiViewController.h"
 #import "LYShengTaiHeaderView.h"
+#import "LYShengTaiSessionHeaderView.h"
 #import "LYShengTaiShopCardCell.h"
 #import "UIColor+Extention.h"
-@interface LYShengTaiViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LYShengTaiViewController ()<UITableViewDelegate,UITableViewDataSource,LYShengTaiSessionHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+/**< 卡类型*/
+@property(nonatomic,assign)LYShengTaiShopCardType cardType;
+/**< sessionHeaderView*/
+@property(nonatomic,strong)LYShengTaiSessionHeaderView * sessionHeaderView;
 @end
 static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
 @implementation LYShengTaiViewController
@@ -19,9 +24,19 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
     [super viewDidLoad];
     self.navigationItem.title = @"生态";
     [self configTableView];
+//    默认
+    self.cardType = LYShengTaiShopCardType_ShopCard;
     
     // Do any additional setup after loading the view from its nib.
 }
+
+#pragma mark🐒------LYShengTaiSessionHeaderViewDelegate------🐒
+- (void)selectCardType:(LYShengTaiShopCardType)cardType{
+    self.cardType = cardType;
+//   TODO: 请求数据
+    [self.tableView reloadData];
+}
+
 - (void) configTableView {
     [self configTableViewHeaderFooterView];
     [self.tableView registerNib:[UINib nibWithNibName:kCardShopCellIdentifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:kCardShopCellIdentifier];
@@ -51,15 +66,24 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LYShengTaiShopCardCell * cell = [tableView dequeueReusableCellWithIdentifier:kCardShopCellIdentifier forIndexPath:indexPath];
+    [cell configData:@"" type:self.cardType];
     return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    return [[NSBundle mainBundle]loadNibNamed:@"LYShengTaiSessionHeaderView" owner:self options:nil][0];
+    return self.sessionHeaderView;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50;
+    return 40;
+}
+
+- (LYShengTaiSessionHeaderView *)sessionHeaderView{
+    if (!_sessionHeaderView) {
+        _sessionHeaderView = [[NSBundle mainBundle]loadNibNamed:@"LYShengTaiSessionHeaderView" owner:self options:nil][0];
+        _sessionHeaderView.delegate = self;
+    }
+    return _sessionHeaderView;
 }
 /*
 #pragma mark - Navigation
