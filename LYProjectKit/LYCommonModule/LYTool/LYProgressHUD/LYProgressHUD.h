@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  转菊花
  */
 + (void) ly_showHUD;
-+ (void) ly_showHUDWithStatus:(NSString *)status;
++ (void) ly_showHUDWithStatus:(nullable NSString *)status;
 
 /**
  消失菊花
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param messageTip 错误信息 （默认时长2秒）
  */
-+ (void) ly_showErrorWithMessageTip:(NSString *)messageTip;
++ (void) ly_showErrorWithMessageTip:(nullable NSString *)messageTip;
 
 /**
  展示错误信息

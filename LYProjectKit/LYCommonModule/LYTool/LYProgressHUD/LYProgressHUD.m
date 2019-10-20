@@ -12,14 +12,17 @@
 
 + (void)startDefaultConfig
 {
-    [SVProgressHUD appearance].offsetFromCenter = UIOffsetMake(0, 50);
-//    [SVProgressHUD appearance].foregroundColor = LYMainColor;
+//    [SVProgressHUD appearance].offsetFromCenter = UIOffsetMake(0, 50);
+    [[SVProgressHUD appearance] setBackgroundColor:[UIColor clearColor]];
+    [[SVProgressHUD appearance] setForegroundColor:[UIColor whiteColor]];
     [SVProgressHUD appearance].defaultAnimationType = SVProgressHUDAnimationTypeNative;
+    [SVProgressHUD appearance].defaultStyle = SVProgressHUDStyleCustom;
+//    [SVProgressHUD appearance].defaultMaskType = SVProgressHUDMaskTypeClear;
 }
 
 + (void)ly_showHUD
 {
-    [self ly_showHUDWithStatus:@""];
+    [self ly_showHUDWithStatus:nil];
 }
 + (void)ly_showHUDWithStatus:(NSString *)status
 {

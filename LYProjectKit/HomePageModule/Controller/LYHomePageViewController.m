@@ -20,6 +20,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [LYNetwork POSTWithApiPath:getMobileCodeURL requestParams:@{@"loginDTO":@{
+                                                                      @"mobile":@"16675178115"
+       }} handler:^(NSDictionary * _Nonnull response, NSError * _Nonnull error) {
+           
+       }];
+    
+//    [LYNetwork POSTWithApiPath:registerURL requestParams:@{@"loginDTO":@{
+//                                                                   @"inviteCode":@"",
+//                                                                   @"mobile":@"16675178115",
+//                                                                   @"mobileCode":@"",
+//                                                                   @"password":@"123456",
+//                                                                   @"transPassword":@""
+//    }} handler:^(NSDictionary * _Nonnull response, NSError * _Nonnull error) {
+//        
+//    }];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [LYProgressHUD ly_dismissHUD];
+//    });
+    
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(100, 100, 100, 100);
     [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];

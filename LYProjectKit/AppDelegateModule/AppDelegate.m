@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self _setupWindow];
+    [self configProgressHUD];
     // Override point for customization after application launch.
     return YES;
 }
@@ -48,6 +49,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark🐒------public------🐒
+- (void)showLogin
+{
+    //    BTGLoginVC *loginVC = [[BTGLoginVC alloc] init];
+    //    MCLoginVC * loginVC = [[MCLoginVC alloc] init];
+    
+//    StarFirstLoginVC * loginVC = [StarFirstLoginVC new];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+//    [nav.navigationBar setTranslucent:NO];
+//    self.window.rootViewController = nav;
+}
+
 #pragma mark🐒------Private 私有方法------🐒
 - (void)_setupWindow
 {
@@ -57,5 +70,8 @@
     [[LYPageContext shareInstance] setupMainViewController];
 }
 
+- (void) configProgressHUD{
+    [LYProgressHUD startDefaultConfig];
+}
 
 @end
