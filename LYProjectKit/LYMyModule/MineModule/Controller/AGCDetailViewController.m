@@ -11,6 +11,7 @@
 #import "AGCDetailTableViewCell.h"
 #import "TopUpViewController.h"
 #import "WithdrawalViewController.h"
+#import "AcceptanceViewController.h"
 @interface AGCDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)UIButton *withdrwBtn;
@@ -28,7 +29,10 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     
     self.navigationItem.title = @"AGC详情";
     [self setUI];
+    UIBarButtonItem *rigButton = [[UIBarButtonItem alloc] initWithTitle:@"承兑商" style:UIBarButtonItemStylePlain target:self action:@selector(exitBtnAction)];
+    [rigButton setTintColor:[UIColor whiteColor]];
     
+    self.navigationItem.rightBarButtonItem = rigButton;
    
     
     
@@ -101,6 +105,7 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     [self.withdrwBtn setTitle:@"充值" forState:UIControlStateNormal];
     self.withdrwBtn.layer.cornerRadius = 20;
     [self.withdrwBtn addTarget:self action:@selector(withdrwBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.withdrwBtn ly_gradint];
     [self.view addSubview:self.withdrwBtn];
     
     
@@ -109,6 +114,8 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     [self.topBtn setTitle:@"提币" forState:UIControlStateNormal];
     self.topBtn.layer.cornerRadius = 20;
     [self.topBtn addTarget:self action:@selector(topBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.topBtn ly_gradint];
+    
     
     [self.view addSubview:self.topBtn];
 }
@@ -122,6 +129,11 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     TopUpViewController *topVC = [[TopUpViewController alloc]init];
       
     [self.navigationController pushViewController:topVC animated:YES];
+}
+-(void)exitBtnAction
+{
+    AcceptanceViewController *accVC = [[AcceptanceViewController alloc]init];
+    [self.navigationController pushViewController:accVC animated:YES];
 }
 /*
 #pragma mark - Navigation

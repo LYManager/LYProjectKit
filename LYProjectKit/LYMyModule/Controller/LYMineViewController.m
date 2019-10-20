@@ -37,12 +37,15 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// AGC余额
 - (void)clickAGCBalance {
+    AGCDetailViewController *AGCVC = [[AGCDetailViewController alloc]init];
+    [self.navigationController pushViewController:AGCVC animated:YES];
         
 }
 
 /// 邀请好友
 - (void)clickInviteFriend {
-    
+    InvitationViewController *invitVC = [[InvitationViewController alloc]init];
+    [self.navigationController pushViewController:invitVC animated:YES];
 }
 
 /// 我的账单
@@ -110,8 +113,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 {
     NSLog(@"%ld",indexPath.row);
     if (indexPath.section == 0) {
-        AGCDetailViewController *AGCVC = [[AGCDetailViewController alloc]init];
-        [self.navigationController pushViewController:AGCVC animated:YES];
+        
     }
     if (indexPath.section == 1) {
         SystemSettingViewController *systemVC = [[SystemSettingViewController alloc]init];

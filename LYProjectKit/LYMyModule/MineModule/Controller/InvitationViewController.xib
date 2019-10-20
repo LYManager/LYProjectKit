@@ -21,11 +21,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hat-tJ-VMW">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ShO-T7-2La">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invitback.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ShO-T7-2La">
                             <rect key="frame" x="47" y="20" width="320" height="715"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Tn-HZ-x9D">
-                            <rect key="frame" x="286" y="458" width="48" height="48"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Tn-HZ-x9D">
+                            <rect key="frame" x="286" y="370" width="48" height="48"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="92D-Kv-HKw"/>
                                 <constraint firstAttribute="width" constant="48" id="qVQ-bq-vbu"/>
@@ -53,15 +55,16 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="73D-wc-LvF">
-                            <rect key="frame" x="222" y="326" width="112" height="112"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="73D-wc-LvF">
+                            <rect key="frame" x="258" y="280" width="76" height="70"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="112" id="iRD-8T-uKN"/>
-                                <constraint firstAttribute="width" constant="112" id="nWD-IP-lfE"/>
+                                <constraint firstAttribute="height" constant="70" id="iRD-8T-uKN"/>
+                                <constraint firstAttribute="width" constant="76" id="nWD-IP-lfE"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老惹怒于海" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phh-oj-k1U">
-                            <rect key="frame" x="234" y="516" width="100" height="12"/>
+                            <rect key="frame" x="234" y="428" width="100" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="hve-3J-tOG"/>
                                 <constraint firstAttribute="width" constant="100" id="yER-A7-3GU"/>
@@ -71,7 +74,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推广码：123123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5k-bg-Hyf">
-                            <rect key="frame" x="184" y="539" width="150" height="14"/>
+                            <rect key="frame" x="184" y="451" width="150" height="14"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="2PC-ei-6rI"/>
                                 <constraint firstAttribute="height" constant="14" id="WSm-GZ-Pep"/>
@@ -88,7 +91,7 @@
                         <constraint firstItem="40A-rg-z3J" firstAttribute="top" secondItem="ShO-T7-2La" secondAttribute="bottom" constant="17" id="7SB-sd-StF"/>
                         <constraint firstAttribute="trailing" secondItem="ShO-T7-2La" secondAttribute="trailing" constant="47" id="8jd-kU-09E"/>
                         <constraint firstAttribute="bottom" secondItem="ShO-T7-2La" secondAttribute="bottom" constant="83" id="9So-8H-FHb"/>
-                        <constraint firstItem="73D-wc-LvF" firstAttribute="top" secondItem="hat-tJ-VMW" secondAttribute="top" constant="326" id="Bnp-L4-JLc"/>
+                        <constraint firstItem="73D-wc-LvF" firstAttribute="top" secondItem="hat-tJ-VMW" secondAttribute="top" constant="280" id="Bnp-L4-JLc"/>
                         <constraint firstAttribute="trailing" secondItem="f5k-bg-Hyf" secondAttribute="trailing" constant="80" id="Dbf-LB-NKB"/>
                         <constraint firstItem="ShO-T7-2La" firstAttribute="leading" secondItem="hat-tJ-VMW" secondAttribute="leading" constant="47" id="FXI-gI-Vpg"/>
                         <constraint firstAttribute="trailing" secondItem="8Tn-HZ-x9D" secondAttribute="trailing" constant="80" id="J3g-gP-Fgq"/>
@@ -113,4 +116,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>
         </view>
     </objects>
+    <resources>
+        <image name="code.jpg" width="256" height="256"/>
+        <image name="invitback.jpg" width="1080" height="1920"/>
+        <image name="timg.jpg" width="600" height="674"/>
+    </resources>
 </document>
