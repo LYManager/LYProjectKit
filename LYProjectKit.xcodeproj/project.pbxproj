@@ -1026,7 +1026,7 @@
 				82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
 				82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */,
->>>>>>> 5d8911e79173c8f8cce02cde86ee746d3bd49bfe
+
 				63933B81235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib in Resources */,
 				63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */,
 				63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */,
