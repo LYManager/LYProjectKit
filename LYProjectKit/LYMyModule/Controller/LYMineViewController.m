@@ -8,6 +8,12 @@
 #import "LYMineViewController.h"
 #import "LYMineHeaderView.h"
 #import "LYMineTableViewCell.h"
+
+#import "InvitationViewController.h"
+#import "ContactCustomerViewController.h"
+#import "SystemSettingViewController.h"
+#import "AGCDetailViewController.h"
+
 @interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< icons*/
@@ -31,12 +37,15 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// AGC余额
 - (void)clickAGCBalance {
+    AGCDetailViewController *AGCVC = [[AGCDetailViewController alloc]init];
+    [self.navigationController pushViewController:AGCVC animated:YES];
         
 }
 
 /// 邀请好友
 - (void)clickInviteFriend {
-    
+    InvitationViewController *invitVC = [[InvitationViewController alloc]init];
+    [self.navigationController pushViewController:invitVC animated:YES];
 }
 
 /// 我的账单
@@ -99,6 +108,29 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 {
     return 0.01f;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%ld",indexPath.row);
+    if (indexPath.section == 0) {
+        
+    }
+    if (indexPath.section == 1) {
+        SystemSettingViewController *systemVC = [[SystemSettingViewController alloc]init];
+        [self.navigationController pushViewController:systemVC animated:YES];
+    }
+    if (indexPath.section == 2) {
+        
+    }
+    if (indexPath.section == 3) {
+        ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
+        [self.navigationController pushViewController:custmVC animated:YES];
+    }
+}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    return [UIView new];
+//}
+
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return [UIView new];
