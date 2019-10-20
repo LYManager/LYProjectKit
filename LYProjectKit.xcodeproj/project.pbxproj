@@ -64,7 +64,6 @@
 		63E99894223777B400A1168B /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E99892223777B400A1168B /* LYTableViewController.m */; };
 		63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989B22377D2500A1168B /* LYFindViewController.m */; };
 		63E9989F22377D5200A1168B /* LYFindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989E22377D5200A1168B /* LYFindModel.m */; };
-		63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E998A122377DED00A1168B /* LYFindTableViewCell.m */; };
 		829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D36235B405C004F9641 /* MyBillViewController.m */; };
 		829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D37235B405C004F9641 /* MyBillViewController.xib */; };
 		829C2D3B235C08A2004F9641 /* invitback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D3A235C08A1004F9641 /* invitback.jpg */; };
@@ -225,7 +224,6 @@
 		63E9989B22377D2500A1168B /* LYFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindViewController.m; sourceTree = "<group>"; };
 		63E9989D22377D5200A1168B /* LYFindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindModel.h; sourceTree = "<group>"; };
 		63E9989E22377D5200A1168B /* LYFindModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindModel.m; sourceTree = "<group>"; };
-		63E998A022377DED00A1168B /* LYFindTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindTableViewCell.h; sourceTree = "<group>"; };
 		63E998A122377DED00A1168B /* LYFindTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindTableViewCell.m; sourceTree = "<group>"; };
 		829C2D35235B405C004F9641 /* MyBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBillViewController.h; sourceTree = "<group>"; };
 		829C2D36235B405C004F9641 /* MyBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBillViewController.m; sourceTree = "<group>"; };
@@ -311,6 +309,13 @@
 				3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		63264DC1235C0DC400293467 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		633674F82234E01700B87968 /* LYProjectKitTests */ = {
@@ -434,6 +439,7 @@
 		63422105223393EB00A2CD27 /* BaseModuel */ = {
 			isa = PBXGroup;
 			children = (
+				63264DC1235C0DC400293467 /* Networking */,
 				638A3FCC22F8097E00F0C59B /* Router */,
 				63422106223393EB00A2CD27 /* ViewModel */,
 				63422107223393EB00A2CD27 /* LocationDataModel */,
@@ -1005,11 +1011,8 @@
 				829C2D3B235C08A2004F9641 /* invitback.jpg in Resources */,
 				82FBA390235B2B9D00A6D038 /* AcceptanceTableViewCell.xib in Resources */,
 				63933B86235ABEBE00D5E138 /* LYLoginPwdViewController.xib in Resources */,
-
 				63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */,
-
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
-
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
 				82FBA36E235AF08500A6D038 /* LoginViewController.xib in Resources */,
@@ -1017,16 +1020,13 @@
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
-
 				63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */,
-
 				82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */,
 				829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */,
 				82FBA377235AF5CF00A6D038 /* timg.jpg in Resources */,
 				82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
 				82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */,
-
 				63933B81235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib in Resources */,
 				63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */,
 				63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */,
@@ -1152,12 +1152,8 @@
 				829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */,
 				82FBA371235AF08500A6D038 /* InvitationViewController.m in Sources */,
 				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
-				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
-				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
-				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
-				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */,
