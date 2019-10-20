@@ -29,6 +29,16 @@ NS_ASSUME_NONNULL_BEGIN
 // 跳转
 - (void) pushViewControllerWithClassName:(NSString *)controllerName
                                   params:(nullable NSDictionary *)params;
+
+
+/// 弹出购买弹框
+- (void) popBuyController;
+
+/// 使用道具弹框
+- (void) popToolsController;
+
+- (void) popSendToolsController;
+
 @end
 
 

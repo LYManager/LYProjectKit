@@ -31,7 +31,7 @@ NS_INLINE NSString * select_image_name(NSInteger index){
 NS_INLINE NSArray<Class> *controllerArray(){
     return  @[
               NSClassFromString(@"LYHomePageViewController"),
-              NSClassFromString(@"LYFindViewController"),
+              NSClassFromString(@"LYHomePageViewController"),
               NSClassFromString(@"LYHomePageViewController"),
               NSClassFromString(@"LYHomePageViewController")
               ];

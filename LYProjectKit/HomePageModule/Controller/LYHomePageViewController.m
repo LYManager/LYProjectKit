@@ -59,6 +59,10 @@
 #pragma mark - Life
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    
+//    [self popBuyController];
+    [self popSendToolsController];
+    return;
     [MGJRouter openURL:@"shengTaiVC" withUserInfo:
             @{
               @"navigationVC":self.navigationController

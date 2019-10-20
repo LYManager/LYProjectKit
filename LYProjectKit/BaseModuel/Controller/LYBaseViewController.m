@@ -6,7 +6,10 @@
 // 
 // <#Class des#>
 #import "LYBaseViewController.h"
-
+// 购买弹框
+#import "LYPayPopViewController.h"
+#import "LYPopToolsViewController.h" // 使用道具
+#import "LYPopSendToolsViewController.h"
 @interface LYBaseViewController ()<UINavigationControllerDelegate>
 
 @end
@@ -51,6 +54,30 @@
     navigationController.delegate = viewController;//防止有的失效
     [self.navigationController setNavigationBarHidden:viewController.isHideNavigationBar animated:YES];
 }
+
+#pragma mark🐒------弹框------🐒
+- (void)popBuyController{
+    LYPayPopViewController * payVC = [[LYPayPopViewController alloc]initWithNibName:@"LYPayPopViewController" bundle:NSBundle.mainBundle];
+    payVC.modalPresentationStyle = UIModalPresentationCurrentContext;
+    payVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self.navigationController presentViewController:payVC animated:NO completion:nil];
+}
+
+- (void)popToolsController{
+    LYPopToolsViewController * payVC = [[LYPopToolsViewController alloc]initWithNibName:@"LYPopToolsViewController" bundle:NSBundle.mainBundle];
+   payVC.modalPresentationStyle = UIModalPresentationCurrentContext;
+   payVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+   [self.navigationController presentViewController:payVC animated:NO completion:nil];
+}
+
+- (void)popSendToolsController{
+    
+    LYPopSendToolsViewController * payVC = [[LYPopSendToolsViewController alloc]initWithNibName:@"LYPopSendToolsViewController" bundle:NSBundle.mainBundle];
+      payVC.modalPresentationStyle = UIModalPresentationCurrentContext;
+      payVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+      [self.navigationController presentViewController:payVC animated:NO completion:nil];
+}
+
 #pragma mark - Private Methods
 
 
