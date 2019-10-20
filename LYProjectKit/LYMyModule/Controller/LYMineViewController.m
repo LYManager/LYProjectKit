@@ -13,7 +13,8 @@
 #import "ContactCustomerViewController.h"
 #import "SystemSettingViewController.h"
 #import "AGCDetailViewController.h"
-
+#import "LYSafeSettingViewController.h"
+#import "MyBillViewController.h"
 @interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< icons*/
@@ -50,6 +51,8 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// 我的账单
 - (void)clickMyBill {
+    MyBillViewController *billVC = [[MyBillViewController alloc]init];
+    [self.navigationController pushViewController:billVC animated:YES];
     
 }
 
@@ -113,7 +116,8 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 {
     NSLog(@"%ld",indexPath.row);
     if (indexPath.section == 0) {
-        
+        LYSafeSettingViewController *safeVC = [[LYSafeSettingViewController alloc]init];
+        [self.navigationController pushViewController:safeVC animated:YES];
     }
     if (indexPath.section == 1) {
         SystemSettingViewController *systemVC = [[SystemSettingViewController alloc]init];
