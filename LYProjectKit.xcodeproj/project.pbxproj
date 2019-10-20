@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63264DC4235C106000293467 /* LYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DC3235C106000293467 /* LYNetworkManager.m */; };
+		63264DC7235C112100293467 /* LYConstInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DC6235C112100293467 /* LYConstInterface.m */; };
+		63264DCB235C132E00293467 /* KGDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DCA235C132E00293467 /* KGDataCenter.m */; };
+		63264DCE235C136300293467 /* PersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DCC235C136300293467 /* PersistenceHelper.m */; };
+		63264DD1235C144A00293467 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DD0235C144A00293467 /* NSString+Extension.m */; };
+		63264DD5235C14A000293467 /* GHLLocalizable.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DD3235C14A000293467 /* GHLLocalizable.m */; };
+		63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DD7235C150600293467 /* NSBundle+GHLLanguage.m */; };
+		63264DDB235C161700293467 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DDA235C161700293467 /* NSData+AES.m */; };
+		63264DDE235C29F600293467 /* NSDictionary+TypeSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DDD235C29F600293467 /* NSDictionary+TypeSafe.m */; };
 		633442E82238E92300035BBA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 633442E72238E92300035BBA /* README.md */; };
 		633674FA2234E01700B87968 /* LYProjectKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633674F92234E01700B87968 /* LYProjectKitTests.m */; };
 		633675082234E24100B87968 /* LYProjectKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675072234E24100B87968 /* LYProjectKitUITests.m */; };
@@ -64,7 +73,6 @@
 		63E99894223777B400A1168B /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E99892223777B400A1168B /* LYTableViewController.m */; };
 		63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989B22377D2500A1168B /* LYFindViewController.m */; };
 		63E9989F22377D5200A1168B /* LYFindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989E22377D5200A1168B /* LYFindModel.m */; };
-		63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E998A122377DED00A1168B /* LYFindTableViewCell.m */; };
 		829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D36235B405C004F9641 /* MyBillViewController.m */; };
 		829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D37235B405C004F9641 /* MyBillViewController.xib */; };
 		829C2D3B235C08A2004F9641 /* invitback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D3A235C08A1004F9641 /* invitback.jpg */; };
@@ -125,6 +133,24 @@
 /* Begin PBXFileReference section */
 		124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYProjectKit.release.xcconfig"; path = "Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit.release.xcconfig"; sourceTree = "<group>"; };
+		63264DC2235C106000293467 /* LYNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYNetworkManager.h; sourceTree = "<group>"; };
+		63264DC3235C106000293467 /* LYNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYNetworkManager.m; sourceTree = "<group>"; };
+		63264DC5235C112100293467 /* LYConstInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYConstInterface.h; sourceTree = "<group>"; };
+		63264DC6235C112100293467 /* LYConstInterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYConstInterface.m; sourceTree = "<group>"; };
+		63264DC9235C132E00293467 /* KGDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGDataCenter.h; sourceTree = "<group>"; };
+		63264DCA235C132E00293467 /* KGDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGDataCenter.m; sourceTree = "<group>"; };
+		63264DCC235C136300293467 /* PersistenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceHelper.m; sourceTree = "<group>"; };
+		63264DCD235C136300293467 /* PersistenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceHelper.h; sourceTree = "<group>"; };
+		63264DCF235C144900293467 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		63264DD0235C144A00293467 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		63264DD3235C14A000293467 /* GHLLocalizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHLLocalizable.m; sourceTree = "<group>"; };
+		63264DD4235C14A000293467 /* GHLLocalizable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHLLocalizable.h; sourceTree = "<group>"; };
+		63264DD6235C150600293467 /* NSBundle+GHLLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+GHLLanguage.h"; sourceTree = "<group>"; };
+		63264DD7235C150600293467 /* NSBundle+GHLLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+GHLLanguage.m"; sourceTree = "<group>"; };
+		63264DD9235C161700293467 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		63264DDA235C161700293467 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		63264DDC235C29F600293467 /* NSDictionary+TypeSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TypeSafe.h"; sourceTree = "<group>"; };
+		63264DDD235C29F600293467 /* NSDictionary+TypeSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TypeSafe.m"; sourceTree = "<group>"; };
 		633442E72238E92300035BBA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		633674F72234E01700B87968 /* LYProjectKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYProjectKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		633674F92234E01700B87968 /* LYProjectKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYProjectKitTests.m; sourceTree = "<group>"; };
@@ -229,7 +255,6 @@
 		63E9989B22377D2500A1168B /* LYFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindViewController.m; sourceTree = "<group>"; };
 		63E9989D22377D5200A1168B /* LYFindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindModel.h; sourceTree = "<group>"; };
 		63E9989E22377D5200A1168B /* LYFindModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindModel.m; sourceTree = "<group>"; };
-		63E998A022377DED00A1168B /* LYFindTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindTableViewCell.h; sourceTree = "<group>"; };
 		63E998A122377DED00A1168B /* LYFindTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindTableViewCell.m; sourceTree = "<group>"; };
 		829C2D35235B405C004F9641 /* MyBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBillViewController.h; sourceTree = "<group>"; };
 		829C2D36235B405C004F9641 /* MyBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBillViewController.m; sourceTree = "<group>"; };
@@ -322,6 +347,45 @@
 				3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		63264DC1235C0DC400293467 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				63264DD2235C14A000293467 /* Utils */,
+				63264DC8235C132E00293467 /* LocalData */,
+				63264DC2235C106000293467 /* LYNetworkManager.h */,
+				63264DC3235C106000293467 /* LYNetworkManager.m */,
+				63264DC5235C112100293467 /* LYConstInterface.h */,
+				63264DC6235C112100293467 /* LYConstInterface.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		63264DC8235C132E00293467 /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+				63264DCD235C136300293467 /* PersistenceHelper.h */,
+				63264DCC235C136300293467 /* PersistenceHelper.m */,
+				63264DC9235C132E00293467 /* KGDataCenter.h */,
+				63264DCA235C132E00293467 /* KGDataCenter.m */,
+			);
+			path = LocalData;
+			sourceTree = "<group>";
+		};
+		63264DD2235C14A000293467 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				63264DDC235C29F600293467 /* NSDictionary+TypeSafe.h */,
+				63264DDD235C29F600293467 /* NSDictionary+TypeSafe.m */,
+				63264DD9235C161700293467 /* NSData+AES.h */,
+				63264DDA235C161700293467 /* NSData+AES.m */,
+				63264DD6235C150600293467 /* NSBundle+GHLLanguage.h */,
+				63264DD7235C150600293467 /* NSBundle+GHLLanguage.m */,
+				63264DD3235C14A000293467 /* GHLLocalizable.m */,
+				63264DD4235C14A000293467 /* GHLLocalizable.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		633674F82234E01700B87968 /* LYProjectKitTests */ = {
@@ -445,6 +509,7 @@
 		63422105223393EB00A2CD27 /* BaseModuel */ = {
 			isa = PBXGroup;
 			children = (
+				63264DC1235C0DC400293467 /* Networking */,
 				638A3FCC22F8097E00F0C59B /* Router */,
 				63422106223393EB00A2CD27 /* ViewModel */,
 				63422107223393EB00A2CD27 /* LocationDataModel */,
@@ -474,6 +539,8 @@
 		63422108223393EB00A2CD27 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				63264DCF235C144900293467 /* NSString+Extension.h */,
+				63264DD0235C144A00293467 /* NSString+Extension.m */,
 				6342212F2233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.h */,
 				634221302233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m */,
 				634221562233FC2B00A2CD27 /* UIViewController+Aspects.h */,
@@ -784,7 +851,6 @@
 		63E9989922377D0700A1168B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				63E998A022377DED00A1168B /* LYFindTableViewCell.h */,
 				63E998A122377DED00A1168B /* LYFindTableViewCell.m */,
 			);
 			path = View;
@@ -1026,11 +1092,8 @@
 				829C2D3B235C08A2004F9641 /* invitback.jpg in Resources */,
 				82FBA390235B2B9D00A6D038 /* AcceptanceTableViewCell.xib in Resources */,
 				63933B86235ABEBE00D5E138 /* LYLoginPwdViewController.xib in Resources */,
-
 				63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */,
-
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
-
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
 				82FBA36E235AF08500A6D038 /* LoginViewController.xib in Resources */,
@@ -1038,16 +1101,13 @@
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
-
 				63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */,
-
 				82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */,
 				829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */,
 				82FBA377235AF5CF00A6D038 /* timg.jpg in Resources */,
 				82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
 				82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */,
-
 				63933B81235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib in Resources */,
 				63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */,
 				63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */,
@@ -1146,6 +1206,7 @@
 				82FBA366235AF08500A6D038 /* LoginViewController.m in Sources */,
 				82FBA36C235AF08500A6D038 /* ModifyViewController.m in Sources */,
 				82FBA37F235AFBAC00A6D038 /* AGCDetailHeadView.m in Sources */,
+				63264DCB235C132E00293467 /* KGDataCenter.m in Sources */,
 				82FBA38A235B296400A6D038 /* AcceptanceViewController.m in Sources */,
 				63E9988F2237545B00A1168B /* LYWebView.m in Sources */,
 				63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */,
@@ -1158,6 +1219,8 @@
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
 				63933B9B235B27E100D5E138 /* LYMayiGongHuiFooterView.m in Sources */,
 				638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */,
+				63264DD1235C144A00293467 /* NSString+Extension.m in Sources */,
+				63264DD5235C14A000293467 /* GHLLocalizable.m in Sources */,
 				63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
 				82FBA385235B003800A6D038 /* AGCDetailTableViewCell.m in Sources */,
@@ -1165,31 +1228,35 @@
 				6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */,
 				63933B80235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
+				63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */,
 				6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */,
 				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
 				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
 				634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */,
 				82FBA372235AF08500A6D038 /* SystemSettingViewController.m in Sources */,
 				829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */,
+				63264DC4235C106000293467 /* LYNetworkManager.m in Sources */,
 				82FBA371235AF08500A6D038 /* InvitationViewController.m in Sources */,
 				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
-				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
-				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
 				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63E998A222377DED00A1168B /* LYFindTableViewCell.m in Sources */,
+				63264DCE235C136300293467 /* PersistenceHelper.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */,
+				63264DDB235C161700293467 /* NSData+AES.m in Sources */,
 				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
+				63264DC7235C112100293467 /* LYConstInterface.m in Sources */,
 				63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
 				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
 				829C2D3F235C0C93004F9641 /* MyBillableViewCell.m in Sources */,
 				829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */,
 				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,
+				63264DDE235C29F600293467 /* NSDictionary+TypeSafe.m in Sources */,
 				82FBA38F235B2B9D00A6D038 /* AcceptanceTableViewCell.m in Sources */,
 				63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */,
 				82FBA367235AF08500A6D038 /* ContactCustomerViewController.m in Sources */,
