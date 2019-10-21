@@ -6,7 +6,7 @@
 // 
 
 #import "LYHomeViewController.h"
-
+#import "LYMineViewController.h"
 @interface LYHomeViewController ()
 
 @end
@@ -22,6 +22,7 @@
 /// 生态
 /// @param sender s
 - (IBAction)shengTaiAction:(UIButton *)sender {
+    [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
     NSLog(@"生态");
 }
 

@@ -23,10 +23,17 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count > 0) {
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"back_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+        backItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+        viewController.navigationItem.leftBarButtonItem = backItem;
         viewController.hidesBottomBarWhenPushed = YES;
     }
     
     [super pushViewController:viewController animated:animated];
+    self.interactivePopGestureRecognizer.delegate = nil;
+}
+- (void) back {
+    [self popViewControllerAnimated:YES];
 }
 #pragma mark - Public Methods
 - (UIViewController *)childViewControllerForStatusBarStyle

@@ -32,6 +32,11 @@
 
 - (void)setupMainViewController
 {
+   UIImage *backButtonImage = [[UIImage imageNamed:@"back_icon"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 140, 0, 0) resizingMode:UIImageResizingModeTile];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin,NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
+  
+    
     LYHomeViewController * homeVC = [[LYHomeViewController alloc]initWithNibName:@"LYHomeViewController" bundle:nil];
     homeVC.hideNavigationBar = YES;
     LYNavigationViewController * navc = [[LYNavigationViewController alloc]initWithRootViewController:homeVC];
