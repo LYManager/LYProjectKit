@@ -10,6 +10,7 @@
 #import "LYPayPopViewController.h"
 #import "LYPopToolsViewController.h" // 使用道具
 #import "LYPopSendToolsViewController.h"
+#import "LYPopErrorViewController.h"
 @interface LYBaseViewController ()<UINavigationControllerDelegate>
 
 @end
@@ -55,27 +56,38 @@
     [self.navigationController setNavigationBarHidden:viewController.isHideNavigationBar animated:YES];
 }
 
-#pragma mark🐒------弹框------🐒
+#pragma mark🐒------弹框------     使用时候强转对应vc🐒
 - (void)popBuyController{
-    LYPayPopViewController * payVC = [[LYPayPopViewController alloc]initWithNibName:@"LYPayPopViewController" bundle:NSBundle.mainBundle];
-    payVC.modalPresentationStyle = UIModalPresentationCurrentContext;
-    payVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self.navigationController presentViewController:payVC animated:NO completion:nil];
+    LYBaseViewController *vc = [self _getPopVC:@"LYPayPopViewController"];
+    [self.navigationController presentViewController:vc animated:NO completion:nil];
 }
 
 - (void)popToolsController{
-    LYPopToolsViewController * payVC = [[LYPopToolsViewController alloc]initWithNibName:@"LYPopToolsViewController" bundle:NSBundle.mainBundle];
-   payVC.modalPresentationStyle = UIModalPresentationCurrentContext;
-   payVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-   [self.navigationController presentViewController:payVC animated:NO completion:nil];
+    LYBaseViewController *vc = [self _getPopVC:@"LYPopToolsViewController"];
+   [self.navigationController presentViewController:vc animated:NO completion:nil];
 }
 
 - (void)popSendToolsController{
-    
-    LYPopSendToolsViewController * payVC = [[LYPopSendToolsViewController alloc]initWithNibName:@"LYPopSendToolsViewController" bundle:NSBundle.mainBundle];
-      payVC.modalPresentationStyle = UIModalPresentationCurrentContext;
-      payVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-      [self.navigationController presentViewController:payVC animated:NO completion:nil];
+     LYBaseViewController *vc = [self _getPopVC:@"LYPopSendToolsViewController"];
+      [self.navigationController presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)popErrorController{
+    LYBaseViewController *vc = [self _getPopVC:@"LYPopErrorViewController"];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+}
+
+- (LYBaseViewController *)_getPopVC:(NSString *)popName{
+     LYBaseViewController * vc = [[NSClassFromString(popName) alloc]initWithNibName:popName bundle:NSBundle.mainBundle];
+    vc.forbidConfigBgColor = YES;
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+       vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    return vc;
+}
+
+- (void)setForbidConfigBgColor:(BOOL)forbidConfigBgColor{
+    _forbidConfigBgColor = forbidConfigBgColor;
 }
 
 #pragma mark - Private Methods

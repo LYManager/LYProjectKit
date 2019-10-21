@@ -38,6 +38,8 @@
 		634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */; };
 		63531BF8235CC7040072A093 /* LYPopSendToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */; };
 		63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */; };
+		63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CB2235D5F00000B505A /* LYPopErrorViewController.m */; };
+		63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */; };
 		638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638A3FCE22F8099600F0C59B /* LYRouterManager.m */; };
 		63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B542359DB7600D5E138 /* UIColor+Extention.m */; };
 		63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B5A2359DFDE00D5E138 /* UIButton+Gradient.m */; };
@@ -204,6 +206,9 @@
 		63531BF5235CC7040072A093 /* LYPopSendToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopSendToolsViewController.h; sourceTree = "<group>"; };
 		63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopSendToolsViewController.m; sourceTree = "<group>"; };
 		63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopSendToolsViewController.xib; sourceTree = "<group>"; };
+		63848CB1235D5F00000B505A /* LYPopErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopErrorViewController.h; sourceTree = "<group>"; };
+		63848CB2235D5F00000B505A /* LYPopErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopErrorViewController.m; sourceTree = "<group>"; };
+		63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopErrorViewController.xib; sourceTree = "<group>"; };
 		638A3FCD22F8099600F0C59B /* LYRouterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRouterManager.h; sourceTree = "<group>"; };
 		638A3FCE22F8099600F0C59B /* LYRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRouterManager.m; sourceTree = "<group>"; };
 		63933B532359DB7600D5E138 /* UIColor+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
@@ -808,6 +813,9 @@
 				63531BF5235CC7040072A093 /* LYPopSendToolsViewController.h */,
 				63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */,
 				63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */,
+				63848CB1235D5F00000B505A /* LYPopErrorViewController.h */,
+				63848CB2235D5F00000B505A /* LYPopErrorViewController.m */,
+				63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */,
 			);
 			path = PopModule;
 			sourceTree = "<group>";
@@ -1142,6 +1150,7 @@
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
+				63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */,
 				63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */,
 				63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */,
 				82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */,
@@ -1285,6 +1294,7 @@
 				829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */,
 				63264DC4235C106000293467 /* LYNetworkManager.m in Sources */,
 				82FBA371235AF08500A6D038 /* InvitationViewController.m in Sources */,
+				63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,

@@ -41,7 +41,7 @@
 //    });
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 100, 100, 100);
+    button.frame = CGRectMake(100, 2, 100, 100);
     [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
     [button ly_gradint];
     [self.view addSubview:button];
@@ -61,7 +61,7 @@
 {
     
 //    [self popBuyController];
-    [self popSendToolsController];
+    [self popErrorController];
     return;
     [MGJRouter openURL:@"shengTaiVC" withUserInfo:
             @{

@@ -15,7 +15,9 @@
 {
     [NSClassFromString(@"LYBaseViewController") aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo>acpectInfo){
          LYBaseViewController * instance = [acpectInfo instance];
-        instance.view.backgroundColor = [UIColor ly_vc_bgColor];
+        if (!instance.isForbidConfigBgColor) {
+             instance.view.backgroundColor = [UIColor ly_vc_bgColor];
+        }
         instance.statusBarStyle = UIStatusBarStyleLightContent;
         instance.navigationController.delegate = (id<UINavigationControllerDelegate>)instance;
     } error:nil];
