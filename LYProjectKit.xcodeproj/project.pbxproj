@@ -95,6 +95,7 @@
 		829C2D40235C0C93004F9641 /* MyBillableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D3E235C0C93004F9641 /* MyBillableViewCell.xib */; };
 		829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */; };
 		829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */; };
+		829C2D49235C4369004F9641 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D48235C4369004F9641 /* TeamViewController.m */; };
 		82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */; };
 		82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34E235AF08500A6D038 /* ContactCustomerViewController.xib */; };
 		82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34F235AF08500A6D038 /* InvitationViewController.xib */; };
@@ -309,6 +310,8 @@
 		829C2D42235C2CBB004F9641 /* SWOAuthCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWOAuthCodeView.h; sourceTree = "<group>"; };
 		829C2D44235C2D54004F9641 /* SWOACItemBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWOACItemBoxView.h; sourceTree = "<group>"; };
 		829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWOACItemBoxView.m; sourceTree = "<group>"; };
+		829C2D47235C4369004F9641 /* TeamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		829C2D48235C4369004F9641 /* TeamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
 		82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
 		82FBA34A235AF08500A6D038 /* TopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopUpViewController.h; sourceTree = "<group>"; };
 		82FBA34B235AF08500A6D038 /* ModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyViewController.h; sourceTree = "<group>"; };
@@ -1018,6 +1021,8 @@
 				829C2D35235B405C004F9641 /* MyBillViewController.h */,
 				829C2D36235B405C004F9641 /* MyBillViewController.m */,
 				829C2D37235B405C004F9641 /* MyBillViewController.xib */,
+				829C2D47235C4369004F9641 /* TeamViewController.h */,
+				829C2D48235C4369004F9641 /* TeamViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1325,6 +1330,7 @@
 				63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */,
 				63264DE1235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m in Sources */,
 				63933B85235ABEBE00D5E138 /* LYLoginPwdViewController.m in Sources */,
+				829C2D49235C4369004F9641 /* TeamViewController.m in Sources */,
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
 				63933BA1235B360600D5E138 /* LYShengTaiViewController.m in Sources */,
@@ -1355,7 +1361,10 @@
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
+
 				635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */,
+
+				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63264DCE235C136300293467 /* PersistenceHelper.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,

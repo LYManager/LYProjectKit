@@ -60,18 +60,6 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-//    [self popBuyController];
-    [self popErrorController];
-    return;
-    [MGJRouter openURL:@"shengTaiVC" withUserInfo:
-            @{
-              @"navigationVC":self.navigationController
-              }
-            completion:^(id result) {
-                NSLog(@"%@",result);
-    }];
-//    LYHomePageViewController *vc = [LYHomePageViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - Public Methods
 
