@@ -115,7 +115,7 @@
         boxView.cursorLayer.fillColor =  self.boxHighlightBorderColor.CGColor;
         if (index == 0) {
             //初始化第一个view为选择状态
-            [boxView setCursorIsHidden:NO];
+            [boxView setCursorIsHidden:YES];
             boxView.layer.borderColor = self.boxHighlightBorderColor.CGColor;
         }else{
             //未选中状态
@@ -148,7 +148,7 @@
         boxView.textLabel.font = self.boxTextFont;
         
         BOOL isHideCursor = (index != contentText.length);
-        boxView.layer.borderColor = isHideCursor?self.boxNormalBorderColor.CGColor:self.boxHighlightBorderColor.CGColor;
+        boxView.layer.borderColor = isHideCursor?self.boxNormalBorderColor.CGColor:self.boxNormalBorderColor.CGColor;
         
         index ++;
     }

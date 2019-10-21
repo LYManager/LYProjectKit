@@ -7,8 +7,16 @@
 
 #import "LYMineHeaderView.h"
 
-@implementation LYMineHeaderView
+@interface LYMineHeaderView ()
+@property (weak, nonatomic) IBOutlet UIButton *mayiGonghuiBtn;
 
+@end
+
+@implementation LYMineHeaderView
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self.mayiGonghuiBtn ly_gradintLeftCircle];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -16,6 +24,15 @@
     // Drawing code
 }
 */
+
+- (IBAction)mayigonghuiAction:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(clickMayiGonghui)]) {
+        [self.delegate clickMayiGonghui];
+    }
+}
+
+
+
 - (IBAction)btnAction_AGC_Balance:(id)sender {
     if ([self.delegate respondsToSelector:@selector(clickAGCBalance)]) {
         [self.delegate clickAGCBalance];

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DD7235C150600293467 /* NSBundle+GHLLanguage.m */; };
 		63264DDB235C161700293467 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DDA235C161700293467 /* NSData+AES.m */; };
 		63264DDE235C29F600293467 /* NSDictionary+TypeSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DDD235C29F600293467 /* NSDictionary+TypeSafe.m */; };
+		63264DE1235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63264DE0235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m */; };
 		633442E82238E92300035BBA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 633442E72238E92300035BBA /* README.md */; };
 		633674FA2234E01700B87968 /* LYProjectKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633674F92234E01700B87968 /* LYProjectKitTests.m */; };
 		633675082234E24100B87968 /* LYProjectKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675072234E24100B87968 /* LYProjectKitUITests.m */; };
@@ -35,6 +36,13 @@
 		634221392233B8A300A2CD27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6342213B2233B8A300A2CD27 /* Localizable.strings */; };
 		634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634221472233BA9400A2CD27 /* InfoPlist.strings */; };
 		634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */; };
+		63531BF8235CC7040072A093 /* LYPopSendToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */; };
+		63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */; };
+		63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CB2235D5F00000B505A /* LYPopErrorViewController.m */; };
+		63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */; };
+		63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CBB235D76D1000B505A /* LYHomeViewController.m */; };
+		63848CBE235D76D1000B505A /* LYHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CBC235D76D1000B505A /* LYHomeViewController.xib */; };
+		63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CC0235D8BD8000B505A /* LYHomeBottomView.m */; };
 		638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638A3FCE22F8099600F0C59B /* LYRouterManager.m */; };
 		63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B542359DB7600D5E138 /* UIColor+Extention.m */; };
 		63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B5A2359DFDE00D5E138 /* UIButton+Gradient.m */; };
@@ -67,11 +75,15 @@
 		63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933BAB235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib */; };
 		63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */; };
 		63933BB1235B415600D5E138 /* LYShengTaiShopCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */; };
+		6397A633235C54C400F8A2D2 /* LYPayPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A631235C54C400F8A2D2 /* LYPayPopViewController.m */; };
+		6397A634235C54C400F8A2D2 /* LYPayPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6397A632235C54C400F8A2D2 /* LYPayPopViewController.xib */; };
+		6397A637235CB3C800F8A2D2 /* LYPopContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A636235CB3C800F8A2D2 /* LYPopContentView.m */; };
+		6397A63A235CBCD900F8A2D2 /* LYPayPwdViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A639235CBCD900F8A2D2 /* LYPayPwdViewManager.m */; };
+		6397A63E235CC02B00F8A2D2 /* LYPopToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */; };
+		6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
-		63E99894223777B400A1168B /* LYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E99892223777B400A1168B /* LYTableViewController.m */; };
-		63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989B22377D2500A1168B /* LYFindViewController.m */; };
 		63E9989F22377D5200A1168B /* LYFindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989E22377D5200A1168B /* LYFindModel.m */; };
 		829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D36235B405C004F9641 /* MyBillViewController.m */; };
 		829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D37235B405C004F9641 /* MyBillViewController.xib */; };
@@ -152,6 +164,8 @@
 		63264DDA235C161700293467 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
 		63264DDC235C29F600293467 /* NSDictionary+TypeSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TypeSafe.h"; sourceTree = "<group>"; };
 		63264DDD235C29F600293467 /* NSDictionary+TypeSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TypeSafe.m"; sourceTree = "<group>"; };
+		63264DDF235C3E7C00293467 /* LYShengTaiBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiBaseTableViewCell.h; sourceTree = "<group>"; };
+		63264DE0235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiBaseTableViewCell.m; sourceTree = "<group>"; };
 		633442E72238E92300035BBA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		633674F72234E01700B87968 /* LYProjectKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYProjectKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		633674F92234E01700B87968 /* LYProjectKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYProjectKitTests.m; sourceTree = "<group>"; };
@@ -193,6 +207,17 @@
 		634221562233FC2B00A2CD27 /* UIViewController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Aspects.h"; sourceTree = "<group>"; };
 		634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Aspects.m"; sourceTree = "<group>"; };
 		6342215C22340CD600A2CD27 /* LYProjectKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYProjectKit.pch; sourceTree = "<group>"; };
+		63531BF5235CC7040072A093 /* LYPopSendToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopSendToolsViewController.h; sourceTree = "<group>"; };
+		63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopSendToolsViewController.m; sourceTree = "<group>"; };
+		63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopSendToolsViewController.xib; sourceTree = "<group>"; };
+		63848CB1235D5F00000B505A /* LYPopErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopErrorViewController.h; sourceTree = "<group>"; };
+		63848CB2235D5F00000B505A /* LYPopErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopErrorViewController.m; sourceTree = "<group>"; };
+		63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopErrorViewController.xib; sourceTree = "<group>"; };
+		63848CBA235D76D1000B505A /* LYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeViewController.h; sourceTree = "<group>"; };
+		63848CBB235D76D1000B505A /* LYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeViewController.m; sourceTree = "<group>"; };
+		63848CBC235D76D1000B505A /* LYHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYHomeViewController.xib; sourceTree = "<group>"; };
+		63848CBF235D8BD8000B505A /* LYHomeBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeBottomView.h; sourceTree = "<group>"; };
+		63848CC0235D8BD8000B505A /* LYHomeBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeBottomView.m; sourceTree = "<group>"; };
 		638A3FCD22F8099600F0C59B /* LYRouterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRouterManager.h; sourceTree = "<group>"; };
 		638A3FCE22F8099600F0C59B /* LYRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRouterManager.m; sourceTree = "<group>"; };
 		63933B532359DB7600D5E138 /* UIColor+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
@@ -243,6 +268,17 @@
 		63933BAD235B415600D5E138 /* LYShengTaiShopCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiShopCardCell.h; sourceTree = "<group>"; };
 		63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiShopCardCell.m; sourceTree = "<group>"; };
 		63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYShengTaiShopCardCell.xib; sourceTree = "<group>"; };
+		6397A62E235C4ACF00F8A2D2 /* LYShengTaiCardType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiCardType.h; sourceTree = "<group>"; };
+		6397A630235C54C400F8A2D2 /* LYPayPopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPayPopViewController.h; sourceTree = "<group>"; };
+		6397A631235C54C400F8A2D2 /* LYPayPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPayPopViewController.m; sourceTree = "<group>"; };
+		6397A632235C54C400F8A2D2 /* LYPayPopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPayPopViewController.xib; sourceTree = "<group>"; };
+		6397A635235CB3C800F8A2D2 /* LYPopContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopContentView.h; sourceTree = "<group>"; };
+		6397A636235CB3C800F8A2D2 /* LYPopContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopContentView.m; sourceTree = "<group>"; };
+		6397A638235CBCD900F8A2D2 /* LYPayPwdViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPayPwdViewManager.h; sourceTree = "<group>"; };
+		6397A639235CBCD900F8A2D2 /* LYPayPwdViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPayPwdViewManager.m; sourceTree = "<group>"; };
+		6397A63B235CC02B00F8A2D2 /* LYPopToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopToolsViewController.h; sourceTree = "<group>"; };
+		6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopToolsViewController.m; sourceTree = "<group>"; };
+		6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopToolsViewController.xib; sourceTree = "<group>"; };
 		63C2243C22FBE10100821544 /* LYTestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTestWebViewController.h; sourceTree = "<group>"; };
 		63C2243D22FBE10100821544 /* LYTestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTestWebViewController.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
@@ -252,11 +288,8 @@
 		63E99892223777B400A1168B /* LYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableViewController.m; sourceTree = "<group>"; };
 		63E99893223777B400A1168B /* LYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTableViewController.h; sourceTree = "<group>"; };
 		63E99895223777D000A1168B /* LYCellModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCellModelProtocol.h; sourceTree = "<group>"; };
-		63E9989A22377D2500A1168B /* LYFindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindViewController.h; sourceTree = "<group>"; };
-		63E9989B22377D2500A1168B /* LYFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindViewController.m; sourceTree = "<group>"; };
 		63E9989D22377D5200A1168B /* LYFindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindModel.h; sourceTree = "<group>"; };
 		63E9989E22377D5200A1168B /* LYFindModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindModel.m; sourceTree = "<group>"; };
-		63E998A122377DED00A1168B /* LYFindTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindTableViewCell.m; sourceTree = "<group>"; };
 		829C2D35235B405C004F9641 /* MyBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBillViewController.h; sourceTree = "<group>"; };
 		829C2D36235B405C004F9641 /* MyBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBillViewController.m; sourceTree = "<group>"; };
 		829C2D37235B405C004F9641 /* MyBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBillViewController.xib; sourceTree = "<group>"; };
@@ -482,7 +515,9 @@
 			children = (
 				63422102223393EB00A2CD27 /* AppDelegateModule */,
 				63422105223393EB00A2CD27 /* BaseModuel */,
+				6397A62F235C542E00F8A2D2 /* PopModule */,
 				6342211D22339BE400A2CD27 /* HomePageModule */,
+				63848CB6235D76B4000B505A /* HomeModule */,
 				63E9989622377D0700A1168B /* LYTestFindModule */,
 				6336750F2234E7A600B87968 /* LYCommonModule */,
 				63933B5C2359E80D00D5E138 /* LYMyModule */,
@@ -646,9 +681,12 @@
 				63933BA8235B3B2700D5E138 /* LYShengTaiSessionHeaderView.h */,
 				63933BA9235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m */,
 				63933BAB235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib */,
+				63264DDF235C3E7C00293467 /* LYShengTaiBaseTableViewCell.h */,
+				63264DE0235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m */,
 				63933BAD235B415600D5E138 /* LYShengTaiShopCardCell.h */,
 				63933BAE235B415600D5E138 /* LYShengTaiShopCardCell.m */,
 				63933BAF235B415600D5E138 /* LYShengTaiShopCardCell.xib */,
+				6397A62E235C4ACF00F8A2D2 /* LYShengTaiCardType.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -667,6 +705,42 @@
 			children = (
 			);
 			path = LYCollectionViewController;
+			sourceTree = "<group>";
+		};
+		63848CB6235D76B4000B505A /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				63848CB7235D76B4000B505A /* Controller */,
+				63848CB8235D76B4000B505A /* Model */,
+				63848CB9235D76B4000B505A /* View */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		63848CB7235D76B4000B505A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63848CBA235D76D1000B505A /* LYHomeViewController.h */,
+				63848CBB235D76D1000B505A /* LYHomeViewController.m */,
+				63848CBC235D76D1000B505A /* LYHomeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63848CB8235D76B4000B505A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63848CB9235D76B4000B505A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63848CBF235D8BD8000B505A /* LYHomeBottomView.h */,
+				63848CC0235D8BD8000B505A /* LYHomeBottomView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		638A3FCC22F8097E00F0C59B /* Router */ = {
@@ -771,6 +845,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6397A62F235C542E00F8A2D2 /* PopModule */ = {
+			isa = PBXGroup;
+			children = (
+				6397A635235CB3C800F8A2D2 /* LYPopContentView.h */,
+				6397A636235CB3C800F8A2D2 /* LYPopContentView.m */,
+				6397A638235CBCD900F8A2D2 /* LYPayPwdViewManager.h */,
+				6397A639235CBCD900F8A2D2 /* LYPayPwdViewManager.m */,
+				6397A630235C54C400F8A2D2 /* LYPayPopViewController.h */,
+				6397A631235C54C400F8A2D2 /* LYPayPopViewController.m */,
+				6397A632235C54C400F8A2D2 /* LYPayPopViewController.xib */,
+				6397A63B235CC02B00F8A2D2 /* LYPopToolsViewController.h */,
+				6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */,
+				6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */,
+				63531BF5235CC7040072A093 /* LYPopSendToolsViewController.h */,
+				63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */,
+				63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */,
+				63848CB1235D5F00000B505A /* LYPopErrorViewController.h */,
+				63848CB2235D5F00000B505A /* LYPopErrorViewController.m */,
+				63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */,
+			);
+			path = PopModule;
+			sourceTree = "<group>";
+		};
 		63E998862237503400A1168B /* LYWebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,8 +933,6 @@
 		63E9989722377D0700A1168B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				63E9989A22377D2500A1168B /* LYFindViewController.h */,
-				63E9989B22377D2500A1168B /* LYFindViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -854,7 +949,6 @@
 		63E9989922377D0700A1168B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				63E998A122377DED00A1168B /* LYFindTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1083,6 +1177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6397A634235C54C400F8A2D2 /* LYPayPopViewController.xib in Resources */,
+				6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */,
 				63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */,
 				82FBA368235AF08500A6D038 /* TopUpViewController.xib in Resources */,
 				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
@@ -1104,7 +1200,9 @@
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
+				63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */,
 				63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */,
+				63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */,
 				82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */,
 				829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */,
 				82FBA377235AF5CF00A6D038 /* timg.jpg in Resources */,
@@ -1121,6 +1219,7 @@
 				82FBA386235B003800A6D038 /* AGCDetailTableViewCell.xib in Resources */,
 				82FBA369235AF08500A6D038 /* RegisteredViewController.xib in Resources */,
 				82FBA381235AFBCC00A6D038 /* AGCDetailHeadView.xib in Resources */,
+				63848CBE235D76D1000B505A /* LYHomeViewController.xib in Resources */,
 				63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1134,18 +1233,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1201,20 +1293,26 @@
 				63933BA5235B366F00D5E138 /* LYShengTaiHeaderView.m in Sources */,
 				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
+				63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */,
 				82FBA370235AF08500A6D038 /* RegisteredViewController.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
 				6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */,
+				63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */,
 				82FBA37B235AF9A000A6D038 /* AGCDetailViewController.m in Sources */,
 				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
 				82FBA366235AF08500A6D038 /* LoginViewController.m in Sources */,
+				6397A637235CB3C800F8A2D2 /* LYPopContentView.m in Sources */,
 				82FBA36C235AF08500A6D038 /* ModifyViewController.m in Sources */,
 				82FBA37F235AFBAC00A6D038 /* AGCDetailHeadView.m in Sources */,
 				63264DCB235C132E00293467 /* KGDataCenter.m in Sources */,
+				6397A63A235CBCD900F8A2D2 /* LYPayPwdViewManager.m in Sources */,
 				82FBA38A235B296400A6D038 /* AcceptanceViewController.m in Sources */,
 				63E9988F2237545B00A1168B /* LYWebView.m in Sources */,
 				63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */,
 				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
+				63531BF8235CC7040072A093 /* LYPopSendToolsViewController.m in Sources */,
 				63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */,
+				63264DE1235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m in Sources */,
 				63933B85235ABEBE00D5E138 /* LYLoginPwdViewController.m in Sources */,
 				829C2D49235C4369004F9641 /* TeamViewController.m in Sources */,
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
@@ -1224,6 +1322,7 @@
 				63933B9B235B27E100D5E138 /* LYMayiGongHuiFooterView.m in Sources */,
 				638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */,
 				63264DD1235C144A00293467 /* NSString+Extension.m in Sources */,
+				6397A633235C54C400F8A2D2 /* LYPayPopViewController.m in Sources */,
 				63264DD5235C14A000293467 /* GHLLocalizable.m in Sources */,
 				63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
@@ -1233,6 +1332,7 @@
 				63933B80235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
 				63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */,
+				6397A63E235CC02B00F8A2D2 /* LYPopToolsViewController.m in Sources */,
 				6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */,
 				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
 				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
@@ -1241,7 +1341,7 @@
 				829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */,
 				63264DC4235C106000293467 /* LYNetworkManager.m in Sources */,
 				82FBA371235AF08500A6D038 /* InvitationViewController.m in Sources */,
-				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
+				63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
@@ -1261,7 +1361,6 @@
 				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,
 				63264DDE235C29F600293467 /* NSDictionary+TypeSafe.m in Sources */,
 				82FBA38F235B2B9D00A6D038 /* AcceptanceTableViewCell.m in Sources */,
-				63E9989C22377D2500A1168B /* LYFindViewController.m in Sources */,
 				82FBA367235AF08500A6D038 /* ContactCustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1520,7 +1619,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sunshine.LYProjectKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1553,7 +1652,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sunshine.LYProjectKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

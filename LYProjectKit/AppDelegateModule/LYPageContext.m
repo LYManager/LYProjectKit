@@ -15,6 +15,9 @@
 /** 数据 */
 #import "LYTabBarData.h"
 
+#import "LYHomeViewController.h"
+#import "LYNavigationViewController.h"
+#import "LoginViewController.h"
 @implementation LYPageContext
 + (instancetype)shareInstance
 {
@@ -30,18 +33,27 @@
 
 - (void)setupMainViewController
 {
-    NSArray * controllers = controllerArray();
-    NSMutableArray * navcs = [NSMutableArray array];
-    [controllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LYBaseViewController * vc = [((Class)obj) new];
-        LYNavigationViewController *navc = [self _getNavcWithCurrentVC:vc];
-        [navcs addObject:navc];
-    }];
+   UIImage *backButtonImage = [[UIImage imageNamed:@"back_icon"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 140, 0, 0) resizingMode:UIImageResizingModeTile];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin,NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
+  
     
-    LYTabBarViewController * tabBarVC = [[LYTabBarViewController alloc]init];
-    tabBarVC.viewControllers = navcs;
-    [self _configDataTabBarVC:tabBarVC];
-    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVC;
+    LoginViewController * loginVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    loginVC.hideNavigationBar = YES;
+    LYNavigationViewController * navc = [[LYNavigationViewController alloc]initWithRootViewController:loginVC];
+    [UIApplication sharedApplication].keyWindow.rootViewController = navc;
+//    NSArray * controllers = controllerArray();
+//    NSMutableArray * navcs = [NSMutableArray array];
+//    [controllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        LYBaseViewController * vc = [((Class)obj) new];
+//        LYNavigationViewController *navc = [self _getNavcWithCurrentVC:vc];
+//        [navcs addObject:navc];
+//    }];
+//
+//    LYTabBarViewController * tabBarVC = [[LYTabBarViewController alloc]init];
+//    tabBarVC.viewControllers = navcs;
+//    [self _configDataTabBarVC:tabBarVC];
+//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVC;
 }
 
 - (void)_configDataTabBarVC:(LYTabBarViewController *)tabBarVC

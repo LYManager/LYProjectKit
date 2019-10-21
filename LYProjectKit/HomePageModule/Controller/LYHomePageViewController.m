@@ -20,11 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [LYNetwork POSTWithApiPath:getMobileCodeURL requestParams:@{@"loginDTO":@{
-                                                                      @"mobile":@"16675178115"
-       }} handler:^(NSDictionary * _Nonnull response, NSError * _Nonnull error) {
-           
-       }];
+//    [LYNetwork POSTWithApiPath:getMobileCodeURL requestParams:@{@"loginDTO":@{
+//                                                                      @"mobile":@"16675178115"
+//       }} handler:^(NSDictionary * _Nonnull response, NSError * _Nonnull error) {
+//           
+//       }];
     
 //    [LYNetwork POSTWithApiPath:registerURL requestParams:@{@"loginDTO":@{
 //                                                                   @"inviteCode":@"",
@@ -41,7 +41,7 @@
 //    });
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 100, 100, 100);
+    button.frame = CGRectMake(100, 2, 100, 100);
     [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
     [button ly_gradint];
     [self.view addSubview:button];
@@ -59,15 +59,7 @@
 #pragma mark - Life
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [MGJRouter openURL:@"mineVC" withUserInfo:
-            @{
-              @"navigationVC":self.navigationController
-              }
-            completion:^(id result) {
-                NSLog(@"%@",result);
-    }];
-//    LYHomePageViewController *vc = [LYHomePageViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 #pragma mark - Public Methods
 

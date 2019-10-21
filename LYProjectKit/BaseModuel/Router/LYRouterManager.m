@@ -7,7 +7,7 @@
 
 #import "LYRouterManager.h"
 #import <MGJRouter.h>
-#import "LYFindViewController.h"
+
 #import "LYTestWebViewController.h"
 #import "LYMineViewController.h"
 #import "LYSafeSettingViewController.h"

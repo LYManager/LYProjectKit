@@ -89,7 +89,6 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
     oacView.boxBGColor = [UIColor whiteColor];  //方框的背景色
     oacView.boxTextColor = [UIColor blackColor]; //方框内文字的颜色
     /* -----设置可选的属性 end----- */
-
     //显示键盘，可以输入验证码了
     [oacView beginEdit];
 

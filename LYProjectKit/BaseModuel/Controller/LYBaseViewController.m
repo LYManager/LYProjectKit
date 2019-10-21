@@ -6,7 +6,11 @@
 // 
 // <#Class des#>
 #import "LYBaseViewController.h"
-
+// 购买弹框
+#import "LYPayPopViewController.h"
+#import "LYPopToolsViewController.h" // 使用道具
+#import "LYPopSendToolsViewController.h"
+#import "LYPopErrorViewController.h"
 @interface LYBaseViewController ()<UINavigationControllerDelegate>
 
 @end
@@ -51,6 +55,41 @@
     navigationController.delegate = viewController;//防止有的失效
     [self.navigationController setNavigationBarHidden:viewController.isHideNavigationBar animated:YES];
 }
+
+#pragma mark🐒------弹框------     使用时候强转对应vc🐒
+- (void)popBuyController{
+    LYBaseViewController *vc = [self _getPopVC:@"LYPayPopViewController"];
+    [self.navigationController presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)popToolsController{
+    LYBaseViewController *vc = [self _getPopVC:@"LYPopToolsViewController"];
+   [self.navigationController presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)popSendToolsController{
+     LYBaseViewController *vc = [self _getPopVC:@"LYPopSendToolsViewController"];
+      [self.navigationController presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)popErrorController{
+    LYBaseViewController *vc = [self _getPopVC:@"LYPopErrorViewController"];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+}
+
+- (LYBaseViewController *)_getPopVC:(NSString *)popName{
+     LYBaseViewController * vc = [[NSClassFromString(popName) alloc]initWithNibName:popName bundle:NSBundle.mainBundle];
+    vc.forbidConfigBgColor = YES;
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+       vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    return vc;
+}
+
+- (void)setForbidConfigBgColor:(BOOL)forbidConfigBgColor{
+    _forbidConfigBgColor = forbidConfigBgColor;
+}
+
 #pragma mark - Private Methods
 
 

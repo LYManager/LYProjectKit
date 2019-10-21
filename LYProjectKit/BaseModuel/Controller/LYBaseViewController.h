@@ -23,12 +23,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 是否隐藏导航栏(初始化控制器时候 赋值)*/
 @property(nonatomic,assign,getter=isHideNavigationBar)BOOL hideNavigationBar;
-
+/**< 禁止配置背景色 (蚂蚁项目)使用*/
+@property(nonatomic,assign,getter=isForbidConfigBgColor)BOOL forbidConfigBgColor;
 /**< 传参*/
 @property(nonatomic,strong)NSDictionary * params;
 // 跳转
 - (void) pushViewControllerWithClassName:(NSString *)controllerName
                                   params:(nullable NSDictionary *)params;
+
+
+/// 弹出购买弹框
+- (void) popBuyController;
+
+/// 使用道具弹框
+- (void) popToolsController;
+
+/// 赠送道具
+- (void) popSendToolsController;
+
+/// 错误弹框
+- (void) popErrorController;
+
 @end
 
 

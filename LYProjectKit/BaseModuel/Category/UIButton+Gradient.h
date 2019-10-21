@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 渐变
 - (void) ly_gradint;
+
+- (void) ly_gradintLeftCircle;
 @end
 
 NS_ASSUME_NONNULL_END
