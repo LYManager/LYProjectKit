@@ -58,12 +58,12 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
      [LYProgressHUD ly_showHUD];
     NSMutableDictionary * paramsNew = [NSMutableDictionary dictionaryWithDictionary:requestParams];
     
-    if (DATACENTER.accessToken) {
-        [paramsNew setValue:DATACENTER.accessToken forKey:@"token"];
+    if ([LYUserInfoManager shareInstance].userInfo.token) {
+        [paramsNew setValue:[LYUserInfoManager shareInstance].userInfo.token forKey:@"token"];
     }
     
-    if (DATACENTER.userId) {
-        [paramsNew setValue:DATACENTER.userId forKey:@"userId"];
+    if ([LYUserInfoManager shareInstance].userInfo.userId) {
+        [paramsNew setValue:[LYUserInfoManager shareInstance].userInfo.userId forKey:@"userId"];
     }
     NSLog(@"%@",paramsNew);
     NSString * lanuageStr = [GHLLocalizable userLanguage];

@@ -57,6 +57,7 @@
 - (void)setupLoginViewController{
 //    如果有值，登录过
     if ([LYUserDefault shareInstance].userInfoDict) {
+        [LYUserInfoManager shareInstance].userInfo = [LYUserInfo modelWithDictionary:[LYUserDefault shareInstance].userInfoDict[@"data"]];
         [self setupMainViewController];
         return;
     }

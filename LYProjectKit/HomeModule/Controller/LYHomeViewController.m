@@ -23,13 +23,14 @@
 
 - (void)loadRequest{
     
-//    [LYNetwork POSTWithApiPath:homeURL requestParams:@{
-//        
+    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
+    
+    [LYNetwork POSTWithApiPath:homeURL requestParams:@{
 //              @"userId":@"9322559"
-//        
-//    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-//
-//    }];
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+
+    }];
+    //LYNetwork POSTWithApiPath:homeURL requestParams:<#(nonnull NSDictionary *)#> handler:<#^(NSDictionary * _Nullable response, NSError * _Nullable error)handler#>
 }
 
 
