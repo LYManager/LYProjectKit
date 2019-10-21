@@ -18,4 +18,7 @@ NSString * const registerURL      = @"/ant-api/user/register";
 
 // 获取验证码
 NSString * const getMobileCodeURL = @"/ant-api/user/mobileCode";
+// 登录
+NSString * const loginURL         = @"/ant-api/user/login";
 
+NSString * const homeURL          = @"/ant-api/ant/info";

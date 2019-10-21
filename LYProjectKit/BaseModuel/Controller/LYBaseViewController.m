@@ -29,6 +29,8 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)loadRequest{}
+
 #pragma mark - Life
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];

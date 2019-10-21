@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) pushViewControllerWithClassName:(NSString *)controllerName
                                   params:(nullable NSDictionary *)params;
 
+- (void) loadRequest;
+
 
 /// 弹出购买弹框
 - (void) popBuyController;

@@ -38,6 +38,9 @@
 		634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 634221572233FC2B00A2CD27 /* UIViewController+Aspects.m */; };
 		63531BF8235CC7040072A093 /* LYPopSendToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */; };
 		63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */; };
+		635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C31A1235DFAFB0015889B /* LaunchScreen.storyboard */; };
+		635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C31A4235E05FF0015889B /* LYUserInfo.m */; };
+		635C31A8235E0AEB0015889B /* LYUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C31A7235E0AEB0015889B /* LYUserInfoManager.m */; };
 		63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CB2235D5F00000B505A /* LYPopErrorViewController.m */; };
 		63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */; };
 		63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CBB235D76D1000B505A /* LYHomeViewController.m */; };
@@ -209,6 +212,12 @@
 		63531BF5235CC7040072A093 /* LYPopSendToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopSendToolsViewController.h; sourceTree = "<group>"; };
 		63531BF6235CC7040072A093 /* LYPopSendToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopSendToolsViewController.m; sourceTree = "<group>"; };
 		63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopSendToolsViewController.xib; sourceTree = "<group>"; };
+		635C31A1235DFAFB0015889B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		635C31A3235E05FF0015889B /* LYUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LYUserInfo.h; path = LYProjectKit/LYUserInfo.h; sourceTree = SOURCE_ROOT; };
+		635C31A4235E05FF0015889B /* LYUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LYUserInfo.m; path = LYProjectKit/LYUserInfo.m; sourceTree = SOURCE_ROOT; };
+		635C31A6235E0AEB0015889B /* LYUserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LYUserInfoManager.h; path = LYProjectKit/LYUserInfoManager.h; sourceTree = SOURCE_ROOT; };
+		635C31A7235E0AEB0015889B /* LYUserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LYUserInfoManager.m; path = LYProjectKit/LYUserInfoManager.m; sourceTree = SOURCE_ROOT; };
+		635C31A9235E0CC60015889B /* LYResponseCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYResponseCode.h; sourceTree = "<group>"; };
 		63848CB1235D5F00000B505A /* LYPopErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopErrorViewController.h; sourceTree = "<group>"; };
 		63848CB2235D5F00000B505A /* LYPopErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopErrorViewController.m; sourceTree = "<group>"; };
 		63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopErrorViewController.xib; sourceTree = "<group>"; };
@@ -391,6 +400,7 @@
 				63264DC3235C106000293467 /* LYNetworkManager.m */,
 				63264DC5235C112100293467 /* LYConstInterface.h */,
 				63264DC6235C112100293467 /* LYConstInterface.m */,
+				635C31A9235E0CC60015889B /* LYResponseCode.h */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -526,6 +536,7 @@
 				634221472233BA9400A2CD27 /* InfoPlist.strings */,
 				6342213B2233B8A300A2CD27 /* Localizable.strings */,
 				634220FB2233925E00A2CD27 /* main.m */,
+				635C31A1235DFAFB0015889B /* LaunchScreen.storyboard */,
 			);
 			path = LYProjectKit;
 			sourceTree = "<group>";
@@ -1014,6 +1025,10 @@
 		82FBA361235AF08500A6D038 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				635C31A3235E05FF0015889B /* LYUserInfo.h */,
+				635C31A4235E05FF0015889B /* LYUserInfo.m */,
+				635C31A6235E0AEB0015889B /* LYUserInfoManager.h */,
+				635C31A7235E0AEB0015889B /* LYUserInfoManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1190,6 +1205,7 @@
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
 				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
+				635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */,
 				82FBA36E235AF08500A6D038 /* LoginViewController.xib in Resources */,
 				82FBA37C235AF9A000A6D038 /* AGCDetailViewController.xib in Resources */,
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
@@ -1339,10 +1355,12 @@
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
+				635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */,
 				63264DCE235C136300293467 /* PersistenceHelper.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */,
+				635C31A8235E0AEB0015889B /* LYUserInfoManager.m in Sources */,
 				63264DDB235C161700293467 /* NSData+AES.m in Sources */,
 				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
 				63264DC7235C112100293467 /* LYConstInterface.m in Sources */,
@@ -1589,6 +1607,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8D3CFMJ397;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1622,6 +1641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 8D3CFMJ397;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (

@@ -18,6 +18,8 @@
 #import "NSDictionary+TypeSafe.h"
 
 #import "AppDelegate.h"
+#import "LYResponseCode.h"
+#import "LYPageContext.h"
 #define kAppDelegate                       ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
@@ -91,9 +93,20 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
         NSLog(@"%@",formData);
         [LYProgressHUD ly_dismissHUD];
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+         if ([responseObject[@"code"] integerValue] == ResponseCodePasteLogin) {
+        //            清除用户信息
+            [LYUserDefault shareInstance].userInfoDict = nil;
+            [LYUserInfoManager shareInstance].userInfo = nil;
+            [[LYPageContext shareInstance]setupLoginViewController];
+         }else{
+             !handler ?: handler(responseObject,nil);
+         }
          [LYProgressHUD ly_dismissHUD];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         !handler ?: handler(nil,error);
+        [[UIApplication sharedApplication].keyWindow makeToast:[NSString stringWithFormat:@"错误码：%ld",error.code] duration:2 position:CSToastPositionCenter];
          [LYProgressHUD ly_dismissHUD];
+       
     }];
 }
 #pragma mark🐒------处理请求数据------🐒

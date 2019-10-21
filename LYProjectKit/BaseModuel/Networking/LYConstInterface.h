@@ -34,3 +34,7 @@ UIKIT_EXTERN NSString * const BaseURL;
 UIKIT_EXTERN NSString * const registerURL;
 
 UIKIT_EXTERN NSString * const getMobileCodeURL;
+
+UIKIT_EXTERN NSString * const loginURL;
+
+UIKIT_EXTERN NSString * const homeURL;

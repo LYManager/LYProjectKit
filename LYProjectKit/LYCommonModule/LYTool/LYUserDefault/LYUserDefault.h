@@ -11,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+//NS_ASSUME_NONNULL_BEGIN
 
 #define CREATE_SETGET_UTILS_H(type,strongOrWeak,name) \
 \
@@ -22,7 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype) shareInstance;
 /* 测试存储 */
 CREATE_SETGET_UTILS_H(NSString *, copy, test)
+//o 用户信息dict
+CREATE_SETGET_UTILS_H(NSDictionary *, strong, userInfoDict)
 
 @end
 
-NS_ASSUME_NONNULL_END
+//NS_ASSUME_NONNULL_END

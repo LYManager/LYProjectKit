@@ -64,10 +64,11 @@
 #pragma mark🐒------Private 私有方法------🐒
 - (void)_setupWindow
 {
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    [[LYPageContext shareInstance] setupMainViewController];
+    [[LYPageContext shareInstance] setupLoginViewController];
 }
 
 - (void) configProgressHUD{
