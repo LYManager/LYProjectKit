@@ -15,6 +15,8 @@
 /** 数据 */
 #import "LYTabBarData.h"
 
+#import "LYHomeViewController.h"
+#import "LYNavigationViewController.h"
 @implementation LYPageContext
 + (instancetype)shareInstance
 {
@@ -30,18 +32,22 @@
 
 - (void)setupMainViewController
 {
-    NSArray * controllers = controllerArray();
-    NSMutableArray * navcs = [NSMutableArray array];
-    [controllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        LYBaseViewController * vc = [((Class)obj) new];
-        LYNavigationViewController *navc = [self _getNavcWithCurrentVC:vc];
-        [navcs addObject:navc];
-    }];
-    
-    LYTabBarViewController * tabBarVC = [[LYTabBarViewController alloc]init];
-    tabBarVC.viewControllers = navcs;
-    [self _configDataTabBarVC:tabBarVC];
-    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVC;
+    LYHomeViewController * homeVC = [[LYHomeViewController alloc]initWithNibName:@"LYHomeViewController" bundle:nil];
+    homeVC.hideNavigationBar = YES;
+    LYNavigationViewController * navc = [[LYNavigationViewController alloc]initWithRootViewController:homeVC];
+    [UIApplication sharedApplication].keyWindow.rootViewController = navc;
+//    NSArray * controllers = controllerArray();
+//    NSMutableArray * navcs = [NSMutableArray array];
+//    [controllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        LYBaseViewController * vc = [((Class)obj) new];
+//        LYNavigationViewController *navc = [self _getNavcWithCurrentVC:vc];
+//        [navcs addObject:navc];
+//    }];
+//
+//    LYTabBarViewController * tabBarVC = [[LYTabBarViewController alloc]init];
+//    tabBarVC.viewControllers = navcs;
+//    [self _configDataTabBarVC:tabBarVC];
+//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVC;
 }
 
 - (void)_configDataTabBarVC:(LYTabBarViewController *)tabBarVC

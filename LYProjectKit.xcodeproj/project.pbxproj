@@ -40,6 +40,9 @@
 		63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63531BF7235CC7040072A093 /* LYPopSendToolsViewController.xib */; };
 		63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CB2235D5F00000B505A /* LYPopErrorViewController.m */; };
 		63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */; };
+		63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CBB235D76D1000B505A /* LYHomeViewController.m */; };
+		63848CBE235D76D1000B505A /* LYHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CBC235D76D1000B505A /* LYHomeViewController.xib */; };
+		63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CC0235D8BD8000B505A /* LYHomeBottomView.m */; };
 		638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638A3FCE22F8099600F0C59B /* LYRouterManager.m */; };
 		63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B542359DB7600D5E138 /* UIColor+Extention.m */; };
 		63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63933B5A2359DFDE00D5E138 /* UIButton+Gradient.m */; };
@@ -209,6 +212,11 @@
 		63848CB1235D5F00000B505A /* LYPopErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopErrorViewController.h; sourceTree = "<group>"; };
 		63848CB2235D5F00000B505A /* LYPopErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopErrorViewController.m; sourceTree = "<group>"; };
 		63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopErrorViewController.xib; sourceTree = "<group>"; };
+		63848CBA235D76D1000B505A /* LYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeViewController.h; sourceTree = "<group>"; };
+		63848CBB235D76D1000B505A /* LYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeViewController.m; sourceTree = "<group>"; };
+		63848CBC235D76D1000B505A /* LYHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYHomeViewController.xib; sourceTree = "<group>"; };
+		63848CBF235D8BD8000B505A /* LYHomeBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeBottomView.h; sourceTree = "<group>"; };
+		63848CC0235D8BD8000B505A /* LYHomeBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeBottomView.m; sourceTree = "<group>"; };
 		638A3FCD22F8099600F0C59B /* LYRouterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRouterManager.h; sourceTree = "<group>"; };
 		638A3FCE22F8099600F0C59B /* LYRouterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRouterManager.m; sourceTree = "<group>"; };
 		63933B532359DB7600D5E138 /* UIColor+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extention.h"; sourceTree = "<group>"; };
@@ -506,6 +514,7 @@
 				63422105223393EB00A2CD27 /* BaseModuel */,
 				6397A62F235C542E00F8A2D2 /* PopModule */,
 				6342211D22339BE400A2CD27 /* HomePageModule */,
+				63848CB6235D76B4000B505A /* HomeModule */,
 				63E9989622377D0700A1168B /* LYTestFindModule */,
 				6336750F2234E7A600B87968 /* LYCommonModule */,
 				63933B5C2359E80D00D5E138 /* LYMyModule */,
@@ -693,6 +702,42 @@
 			children = (
 			);
 			path = LYCollectionViewController;
+			sourceTree = "<group>";
+		};
+		63848CB6235D76B4000B505A /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				63848CB7235D76B4000B505A /* Controller */,
+				63848CB8235D76B4000B505A /* Model */,
+				63848CB9235D76B4000B505A /* View */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		63848CB7235D76B4000B505A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63848CBA235D76D1000B505A /* LYHomeViewController.h */,
+				63848CBB235D76D1000B505A /* LYHomeViewController.m */,
+				63848CBC235D76D1000B505A /* LYHomeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63848CB8235D76B4000B505A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63848CB9235D76B4000B505A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63848CBF235D8BD8000B505A /* LYHomeBottomView.h */,
+				63848CC0235D8BD8000B505A /* LYHomeBottomView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		638A3FCC22F8097E00F0C59B /* Router */ = {
@@ -1169,6 +1214,7 @@
 				82FBA386235B003800A6D038 /* AGCDetailTableViewCell.xib in Resources */,
 				82FBA369235AF08500A6D038 /* RegisteredViewController.xib in Resources */,
 				82FBA381235AFBCC00A6D038 /* AGCDetailHeadView.xib in Resources */,
+				63848CBE235D76D1000B505A /* LYHomeViewController.xib in Resources */,
 				63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1249,9 +1295,11 @@
 				63933BA5235B366F00D5E138 /* LYShengTaiHeaderView.m in Sources */,
 				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
+				63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */,
 				82FBA370235AF08500A6D038 /* RegisteredViewController.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
 				6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */,
+				63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */,
 				82FBA37B235AF9A000A6D038 /* AGCDetailViewController.m in Sources */,
 				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
 				82FBA366235AF08500A6D038 /* LoginViewController.m in Sources */,
