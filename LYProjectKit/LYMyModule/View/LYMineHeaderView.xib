@@ -38,16 +38,19 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRw-X9-h7s">
-                                    <rect key="frame" x="283.5" y="30" width="91.5" height="30"/>
+                                    <rect key="frame" x="275.5" y="30" width="99.5" height="30"/>
                                     <color key="backgroundColor" red="0.044875755910000002" green="0.71185487510000001" blue="0.66866952180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <state key="normal" title="蚂蚁工会"/>
+                                    <state key="normal" title="蚂蚁工会" image="mayi_icon"/>
+                                    <connections>
+                                        <action selector="mayigonghuiAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="coZ-fK-M4a"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.09715030342" green="0.11156042670000001" blue="0.2027975917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="sjX-Li-X1e" firstAttribute="top" secondItem="H0h-On-gEO" secondAttribute="top" constant="20" id="0HA-Xq-cea"/>
-                                <constraint firstItem="dRw-X9-h7s" firstAttribute="width" secondItem="H0h-On-gEO" secondAttribute="width" multiplier="0.244" id="1GU-pp-sye"/>
+                                <constraint firstItem="dRw-X9-h7s" firstAttribute="width" secondItem="H0h-On-gEO" secondAttribute="width" multiplier="0.266" id="1GU-pp-sye"/>
                                 <constraint firstItem="dCn-Ih-XBU" firstAttribute="bottom" secondItem="sjX-Li-X1e" secondAttribute="centerY" constant="-3" id="2px-HR-uRz"/>
                                 <constraint firstAttribute="trailing" secondItem="dRw-X9-h7s" secondAttribute="trailing" id="EwW-NX-ZOp"/>
                                 <constraint firstItem="dRw-X9-h7s" firstAttribute="centerY" secondItem="sjX-Li-X1e" secondAttribute="centerY" id="Eyy-Z7-CQG"/>
@@ -75,9 +78,9 @@
                                     <color key="textColor" red="0.43938618899999998" green="0.79287832979999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0yw-sK-ob7">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="0yw-sK-ob7">
                                     <rect key="frame" x="55" y="24" width="15" height="15"/>
-                                    <color key="backgroundColor" red="0.044875755910000002" green="0.71185487510000001" blue="0.66866952180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="15" id="blB-eC-0jj"/>
                                         <constraint firstAttribute="width" secondItem="0yw-sK-ob7" secondAttribute="height" multiplier="1:1" id="nbM-Iw-8o9"/>
@@ -127,9 +130,9 @@
                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oW2-iU-vyl">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_level_icon" translatesAutoresizingMaskIntoConstraints="NO" id="oW2-iU-vyl">
                                     <rect key="frame" x="55" y="24" width="15" height="15"/>
-                                    <color key="backgroundColor" red="0.044875755910000002" green="0.71185487510000001" blue="0.66866952180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="15" id="2nR-aX-xyC"/>
                                         <constraint firstAttribute="width" secondItem="oW2-iU-vyl" secondAttribute="height" multiplier="1:1" id="r1z-Xe-Bzu"/>
@@ -189,8 +192,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="187.5" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="19" maxY="-28"/>
-                            <inset key="imageEdgeInsets" minX="53" minY="-24" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="我的团队" image="ly_tab_bar_item_four_selected"/>
+                            <inset key="imageEdgeInsets" minX="61" minY="-24" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="我的团队" image="qunzuduoren"/>
                             <connections>
                                 <action selector="myTeamAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aaA-Qs-4GQ"/>
                             </connections>
@@ -199,8 +202,8 @@
                             <rect key="frame" x="187.5" y="0.0" width="187.5" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="18" maxY="-30"/>
-                            <inset key="imageEdgeInsets" minX="53" minY="-25" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="我的账单" image="ly_tab_bar_item_four_selected"/>
+                            <inset key="imageEdgeInsets" minX="61" minY="-25" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="我的账单" image="bangding"/>
                             <connections>
                                 <action selector="myBillAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="TtY-Wq-Dn7"/>
                             </connections>
@@ -258,10 +261,18 @@
                 <constraint firstItem="Ycj-NW-5Wz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yAH-kB-hLY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mayiGonghuiBtn" destination="dRw-X9-h7s" id="Umq-Rs-OOI"/>
+            </connections>
             <point key="canvasLocation" x="113.768115942029" y="217.63392857142856"/>
         </view>
     </objects>
     <resources>
+        <image name="A" width="17" height="17"/>
+        <image name="bangding" width="23" height="23"/>
         <image name="ly_tab_bar_item_four_selected" width="20" height="20"/>
+        <image name="mayi_icon" width="18" height="14"/>
+        <image name="my_level_icon" width="17" height="17"/>
+        <image name="qunzuduoren" width="23" height="23"/>
     </resources>
 </document>

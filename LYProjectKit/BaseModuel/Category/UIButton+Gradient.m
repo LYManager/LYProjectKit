@@ -21,4 +21,25 @@
 //   [self.layer addSublayer:gradientLayer];
     [self.layer insertSublayer:gradientLayer atIndex:0];
 }
+
+- (void)ly_gradintLeftCircle{
+    CAGradientLayer * gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = self.bounds;
+    gradientLayer.colors = @[(__bridge id)[UIColor ly_colorWithHexString:@"#0DC2A6"].CGColor,(__bridge id)[UIColor ly_colorWithHexString:@"#02A9ED"].CGColor];
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(1, 0);
+    gradientLayer.locations = @[@0,@1];
+    [self.layer addSublayer:gradientLayer];
+//     [self.layer insertSublayer:gradientLayer atIndex:0];
+    
+    CGFloat radio = self.frame.size.height / 2;
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect: self.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerBottomLeft cornerRadii:CGSizeMake(radio,radio)];
+   CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+   maskLayer.frame = self.bounds;
+   //赋值
+   maskLayer.path = maskPath.CGPath;
+   self.layer.mask = maskLayer;
+    [self bringSubviewToFront:self.imageView];
+    
+}
 @end

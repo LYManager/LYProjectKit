@@ -17,6 +17,7 @@
 
 #import "LYHomeViewController.h"
 #import "LYNavigationViewController.h"
+#import "LoginViewController.h"
 @implementation LYPageContext
 + (instancetype)shareInstance
 {
@@ -37,9 +38,9 @@
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin,NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
   
     
-    LYHomeViewController * homeVC = [[LYHomeViewController alloc]initWithNibName:@"LYHomeViewController" bundle:nil];
-    homeVC.hideNavigationBar = YES;
-    LYNavigationViewController * navc = [[LYNavigationViewController alloc]initWithRootViewController:homeVC];
+    LoginViewController * loginVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    loginVC.hideNavigationBar = YES;
+    LYNavigationViewController * navc = [[LYNavigationViewController alloc]initWithRootViewController:loginVC];
     [UIApplication sharedApplication].keyWindow.rootViewController = navc;
 //    NSArray * controllers = controllerArray();
 //    NSMutableArray * navcs = [NSMutableArray array];

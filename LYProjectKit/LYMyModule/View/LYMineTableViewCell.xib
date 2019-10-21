@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ly_tab_bar_item_one_selected" translatesAutoresizingMaskIntoConstraints="NO" id="zOx-0l-TVc">
-                        <rect key="frame" x="20" y="11.5" width="21" height="21"/>
+                        <rect key="frame" x="20" y="13" width="17.5" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="zOx-0l-TVc" secondAttribute="height" multiplier="1:1" id="evh-AF-SpK"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安全设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt4-yc-Qkf">
-                        <rect key="frame" x="51" y="0.0" width="242" height="44"/>
+                        <rect key="frame" x="47.5" y="0.0" width="245.5" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                     <constraint firstItem="zOx-0l-TVc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OnE-ye-Xoa"/>
                     <constraint firstItem="Kt4-yc-Qkf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="deE-4B-7zV"/>
                     <constraint firstItem="Kt4-yc-Qkf" firstAttribute="leading" secondItem="zOx-0l-TVc" secondAttribute="trailing" constant="10" id="nCc-sU-aik"/>
-                    <constraint firstItem="zOx-0l-TVc" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.48" id="qVK-SL-hJk"/>
+                    <constraint firstItem="zOx-0l-TVc" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="qVK-SL-hJk"/>
                     <constraint firstItem="zOx-0l-TVc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rPW-SL-18u"/>
                     <constraint firstAttribute="bottom" secondItem="Kt4-yc-Qkf" secondAttribute="bottom" id="vG5-YN-JNk"/>
                 </constraints>

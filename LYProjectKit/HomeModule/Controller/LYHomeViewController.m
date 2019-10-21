@@ -7,6 +7,7 @@
 
 #import "LYHomeViewController.h"
 #import "LYMineViewController.h"
+#import "LYShengTaiViewController.h"
 @interface LYHomeViewController ()
 
 @end
@@ -22,23 +23,26 @@
 /// 生态
 /// @param sender s
 - (IBAction)shengTaiAction:(UIButton *)sender {
-    [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
+    [self pushViewControllerWithClassName:@"LYShengTaiViewController" params:nil];
     NSLog(@"生态");
 }
 
 /// 资讯
 /// @param sender sender
 - (IBAction)zixunAction:(UIButton *)sender {
+    [self pushViewControllerWithClassName:@"" params:nil];
 }
 
 /// 交易
 /// @param sender sender
 - (IBAction)jiaoyiAction:(UIButton *)sender {
+    [self pushViewControllerWithClassName:@"" params:nil];
 }
 
 /// 我的
 /// @param sender sender
 - (IBAction)mineAction:(UIButton *)sender {
+    [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
 }
 
 /*

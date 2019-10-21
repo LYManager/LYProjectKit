@@ -15,6 +15,7 @@
 #import "AGCDetailViewController.h"
 #import "LYSafeSettingViewController.h"
 #import "MyBillViewController.h"
+#import "LYMayiGongHuiViewController.h"
 @interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< icons*/
@@ -58,12 +59,16 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// 我的等级
 - (void)clickMyLevel {
-    
+     [self pushViewControllerWithClassName:@"" params:nil];
 }
 
 /// t我的团队
 - (void)clickMyTeam {
-    
+     [self pushViewControllerWithClassName:@"" params:nil];
+}
+// 蚂蚁工会
+- (void)clickMayiGonghui{
+    [self pushViewControllerWithClassName:@"LYMayiGongHuiViewController" params:nil];
 }
 #pragma mark🐒------end------🐒
 
@@ -143,10 +148,10 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 #pragma mark🐒------lazy------🐒
 - (NSArray<NSString *> *)iconsArr{
     if (_iconsArr == nil) {
-        _iconsArr = @[@"ly_tab_bar_item_one_selected"
-                      ,@"ly_tab_bar_item_one_selected",
-                      @"ly_tab_bar_item_one_selected",
-                      @"ly_tab_bar_item_one_selected"];
+        _iconsArr = @[@"suoding"
+                      ,@"system_setting_icon",
+                      @"wenhao",
+                      @"banbengengxin"];
     }
     return _iconsArr;
 }
