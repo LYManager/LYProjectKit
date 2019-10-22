@@ -13,6 +13,11 @@
 @property (weak, nonatomic) IBOutlet LYPopContentView *contentView;
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 
+@property (weak, nonatomic) IBOutlet UILabel *cardNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *topLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
+/**< pwd*/
+@property(nonatomic,copy)NSString *  pwd;
 @end
 
 @implementation LYPopToolsViewController
@@ -21,7 +26,40 @@
     [super viewDidLoad];
     
     [self configPwdView];
+    
+    [self configData];
     // Do any additional setup after loading the view from its nib.
+}
+
+/// 只能使用工会卡
+/// @param sender sender
+- (IBAction)useToolsAction:(UIButton *)sender {
+    if (self.pwd.length != 6) {
+        [self.view makeToast:@"请输入六位支付密码" duration:2 position:CSToastPositionCenter];
+        return;
+    }
+//    认证卡回调回去
+    if (self.callBack) {
+        self.callBack(self.pwd);
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
+    
+    [LYNetwork POSTWithApiPath:useCardURL requestParams:@{
+        @"keyWords":self.pwd
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        [[UIApplication sharedApplication].keyWindow makeToast:@"使用成功" duration:2 position:CSToastPositionCenter];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
+
+- (void)oauthCodeView:(SWOAuthCodeView *)mqView didInputFinish:(NSString *)finalText{
+    self.pwd = finalText;
+}
+
+- (void) configData{
+    self.cardNameLabel.text = self.cardModel.cardName;
+    self.bottomLabel.text = self.cardModel.cardId == 1 ? @"使用后即可进行实名认证" : @"使用后即可加入蚂蚁工会";
 }
 
 - (void) configPwdView{

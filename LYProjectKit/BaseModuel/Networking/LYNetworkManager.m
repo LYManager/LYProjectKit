@@ -103,7 +103,7 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
              if (code == 0) {
                  !handler ?: handler(responseObject,nil);
              }else{
-                 [[UIApplication sharedApplication].keyWindow makeToast:[NSString stringWithFormat:@"%ld-%@",code,responseObject[@"message"]] duration:2 position:CSToastPositionCenter];
+                 [[UIApplication sharedApplication].keyWindow makeToast:[NSString stringWithFormat:@"%@",responseObject[@"message"]] duration:2 position:CSToastPositionCenter];
              }
              
          }

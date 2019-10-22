@@ -82,11 +82,50 @@
 
 #pragma mark🐒------LYMayiGongHuiHeaderViewDelegate------🐒
 - (void)useCardWithType:(CardType)cardType{
-    
+    if (cardType == CardType_RealCard) {
+        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        model.cardCount = 1;
+        if (model.cardCount > 0) {
+//            去实名认证
+            [self pushViewControllerWithClassName:@"LYRealNameAuthViewController" params:@{
+                @"realNameCardModel":model
+            }];
+        }else{
+//            联系客服弹框
+             [self popErrorControllerIsSend:NO isRealNameCard:YES];
+        }
+    }else{
+        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        if (model.cardCount > 0) {
+            [self popToolsController:self.data.data.propsCardList.lastObject callBack:nil];
+        }else{
+        //  联系客服弹框
+              [self popErrorControllerIsSend:NO isRealNameCard:NO];
+        }
+         
+    }
 }
 
 - (void)sendCaardWithType:(CardType)cardType{
-    
+    if (cardType == CardType_RealCard) {
+        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        model.cardCount = 0;
+        if (model.cardCount > 0) {
+            [self popSendToolsController:self.data.data.propsCardList.firstObject];
+        }else{
+        //  联系客服弹框
+             [self popErrorControllerIsSend:YES isRealNameCard:YES];
+        }
+    }else{
+        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        model.cardCount = 0;
+        if (model.cardCount > 0) {
+            [self popSendToolsController:self.data.data.propsCardList.lastObject];
+        }else{
+        //  联系客服弹框
+             [self popErrorControllerIsSend:YES isRealNameCard:NO];
+        }
+    }
 }
 
 - (void)viewDidLayoutSubviews{

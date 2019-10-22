@@ -10,7 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYPopToolsViewController : LYBaseViewController
+/**< */
+@property(nonatomic,strong)LYAntCardModel * cardModel;
 
+/**< <#des#>*/
+@property(nonatomic,copy)void(^callBack)(NSString *pwd);
 @end
 
 NS_ASSUME_NONNULL_END

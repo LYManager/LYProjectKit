@@ -11,7 +11,7 @@
 #import "LYShengTaiShopCardCell.h"
 #import "UIColor+Extention.h"
 #import "LYShengTaiData.h"
-@interface LYShengTaiViewController ()<UITableViewDelegate,UITableViewDataSource,LYShengTaiSessionHeaderViewDelegate>
+@interface LYShengTaiViewController ()<UITableViewDelegate,UITableViewDataSource,LYShengTaiSessionHeaderViewDelegate,LYShengTaiShopCardCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< 卡类型*/
 @property(nonatomic,assign)LYShengTaiShopCardType cardType;
@@ -47,6 +47,12 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
     }];
 }
 
+#pragma mark🐒------购买------🐒
+- (void)buyBtnActionCell:(LYShengTaiBaseTableViewCell *)cell{
+    NSIndexPath *indxtPath = [self.tableView indexPathForCell:cell];
+    [self popBuyController:self.cardArray[indxtPath.row]];
+}
+
 
 - (void) config {
     [self.headerView configDataWithEarn:self.data.data.agcDayEarning huoyue:self.data.data.liveness];
@@ -62,8 +68,6 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
 
 - (void) configTableView {
     [self configTableViewHeaderFooterView];
-    self.tableView.contentMode =  UIViewContentModeCenter;
-    self.tableView.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"mayi_icon"].CGImage);
     [self.tableView registerNib:[UINib nibWithNibName:kCardShopCellIdentifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:kCardShopCellIdentifier];
 }
 - (void) configTableViewHeaderFooterView{
@@ -92,6 +96,7 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LYShengTaiShopCardCell * cell = [tableView dequeueReusableCellWithIdentifier:kCardShopCellIdentifier forIndexPath:indexPath];
     [cell configData:self.cardArray[indexPath.row] type:self.cardType];
+    cell.delegate = self;
     return cell;
 }
 

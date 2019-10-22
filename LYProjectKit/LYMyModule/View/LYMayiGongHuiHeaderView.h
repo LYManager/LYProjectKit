@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger,CardType) {
-    CardType_RealCard,
+    CardType_RealCard = 1,
     CardType_MayiCard
 };
 
