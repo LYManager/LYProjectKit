@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
  设置主控制器
  */
 - (void)setupMainViewController;
+
+- (void)setupLoginViewController;
 @end
 
 NS_ASSUME_NONNULL_END

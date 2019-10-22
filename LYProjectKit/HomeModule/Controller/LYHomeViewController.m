@@ -16,8 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self loadRequest];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)loadRequest{
+    
+    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
+    
+    [LYNetwork POSTWithApiPath:homeURL requestParams:@{
+//              @"userId":@"9322559"
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+
+    }];
+    //LYNetwork POSTWithApiPath:homeURL requestParams:<#(nonnull NSDictionary *)#> handler:<#^(NSDictionary * _Nullable response, NSError * _Nullable error)handler#>
+}
+
 
 
 /// 生态

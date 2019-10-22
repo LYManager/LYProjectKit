@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "LYConstInterface.h"
 NS_ASSUME_NONNULL_BEGIN
-typedef void(^NetworkCompletionHandler)(NSDictionary *response, NSError* _Nullable error);
+typedef void(^NetworkCompletionHandler)(NSDictionary  *_Nullable response, NSError* _Nullable error);
 #define LYNetwork [LYNetworkManager sharedInstance]
 @interface LYNetworkManager : NSObject
 + (instancetype) sharedInstance;

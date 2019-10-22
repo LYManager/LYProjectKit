@@ -39,4 +39,7 @@ return param; \
 
 CREATE_SETGET_UTILS_M(NSString *, test, Test)
 
+CREATE_SETGET_UTILS_M(NSDictionary *, userInfoDict, UserInfoDict)
+
+
 @end
