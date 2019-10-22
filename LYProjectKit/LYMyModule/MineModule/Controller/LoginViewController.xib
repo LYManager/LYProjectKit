@@ -18,14 +18,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-kg-2H8">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-kg-2H8">
                     <rect key="frame" x="161.5" y="153" width="91" height="91"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="91" id="Snm-v9-owd"/>
                         <constraint firstAttribute="width" constant="91" id="bej-1R-ZcG"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Icg-rg-6Th">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kind" translatesAutoresizingMaskIntoConstraints="NO" id="Icg-rg-6Th">
                     <rect key="frame" x="152.5" y="257" width="109" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="1Sq-Jf-D2D"/>
@@ -190,4 +190,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>
         </view>
     </objects>
+    <resources>
+        <image name="kind" width="109" height="25"/>
+        <image name="shape" width="91" height="90.5"/>
+    </resources>
 </document>

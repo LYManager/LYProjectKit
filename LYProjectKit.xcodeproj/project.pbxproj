@@ -24,7 +24,6 @@
 		6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675152234E7A600B87968 /* LYUserDefault.m */; };
 		6336751C2234E7A600B87968 /* LYAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 633675192234E7A600B87968 /* LYAlert.m */; };
 		6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336751E22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m */; };
-		634220F62233925E00A2CD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634220F52233925E00A2CD27 /* Assets.xcassets */; };
 		634220FC2233925E00A2CD27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 634220FB2233925E00A2CD27 /* main.m */; };
 		6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63422104223393EB00A2CD27 /* AppDelegate.m */; };
 		6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6342210E2233942000A2CD27 /* LYBaseViewController.m */; };
@@ -93,6 +92,11 @@
 		829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */; };
 		829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */; };
 		829C2D49235C4369004F9641 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D48235C4369004F9641 /* TeamViewController.m */; };
+		82EAAD81235DF35B00991124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EAAD80235DF35B00991124 /* Assets.xcassets */; };
+		82EAAD8A235E08E300991124 /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EAAD85235E08E200991124 /* ImageTableViewCell.m */; };
+		82EAAD8B235E08E300991124 /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EAAD86235E08E200991124 /* TextTableViewCell.m */; };
+		82EAAD8C235E08E300991124 /* 123123.png in Resources */ = {isa = PBXBuildFile; fileRef = 82EAAD89235E08E200991124 /* 123123.png */; };
+		82EAAD8F235E08F000991124 /* NodeArchitectureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EAAD8D235E08EF00991124 /* NodeArchitectureViewController.m */; };
 		82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */; };
 		82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34E235AF08500A6D038 /* ContactCustomerViewController.xib */; };
 		82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34F235AF08500A6D038 /* InvitationViewController.xib */; };
@@ -182,7 +186,6 @@
 		6336751D22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AdjustScrollViewLayout.h"; sourceTree = "<group>"; };
 		6336751E22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AdjustScrollViewLayout.m"; sourceTree = "<group>"; };
 		634220E92233925C00A2CD27 /* LYProjectKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYProjectKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		634220F52233925E00A2CD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		634220FA2233925E00A2CD27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634220FB2233925E00A2CD27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63422103223393EB00A2CD27 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -303,6 +306,14 @@
 		829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWOACItemBoxView.m; sourceTree = "<group>"; };
 		829C2D47235C4369004F9641 /* TeamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
 		829C2D48235C4369004F9641 /* TeamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		82EAAD80235DF35B00991124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82EAAD85235E08E200991124 /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
+		82EAAD86235E08E200991124 /* TextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTableViewCell.m; sourceTree = "<group>"; };
+		82EAAD87235E08E200991124 /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		82EAAD88235E08E200991124 /* TextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTableViewCell.h; sourceTree = "<group>"; };
+		82EAAD89235E08E200991124 /* 123123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123123.png; sourceTree = "<group>"; };
+		82EAAD8D235E08EF00991124 /* NodeArchitectureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeArchitectureViewController.m; sourceTree = "<group>"; };
+		82EAAD8E235E08F000991124 /* NodeArchitectureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeArchitectureViewController.h; sourceTree = "<group>"; };
 		82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
 		82FBA34A235AF08500A6D038 /* TopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopUpViewController.h; sourceTree = "<group>"; };
 		82FBA34B235AF08500A6D038 /* ModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyViewController.h; sourceTree = "<group>"; };
@@ -522,13 +533,13 @@
 				6336750F2234E7A600B87968 /* LYCommonModule */,
 				63933B5C2359E80D00D5E138 /* LYMyModule */,
 				63933B74235AB96700D5E138 /* LYSafeSettingModule */,
-				634220F52233925E00A2CD27 /* Assets.xcassets */,
 				82FBA373235AF2C000A6D038 /* Image */,
 				634220FA2233925E00A2CD27 /* Info.plist */,
 				6342215C22340CD600A2CD27 /* LYProjectKit.pch */,
 				634221472233BA9400A2CD27 /* InfoPlist.strings */,
 				6342213B2233B8A300A2CD27 /* Localizable.strings */,
 				634220FB2233925E00A2CD27 /* main.m */,
+				82EAAD80235DF35B00991124 /* Assets.xcassets */,
 			);
 			path = LYProjectKit;
 			sourceTree = "<group>";
@@ -1012,6 +1023,8 @@
 				829C2D37235B405C004F9641 /* MyBillViewController.xib */,
 				829C2D47235C4369004F9641 /* TeamViewController.h */,
 				829C2D48235C4369004F9641 /* TeamViewController.m */,
+				82EAAD8E235E08F000991124 /* NodeArchitectureViewController.h */,
+				82EAAD8D235E08EF00991124 /* NodeArchitectureViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1042,6 +1055,11 @@
 				829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */,
 				829C2D44235C2D54004F9641 /* SWOACItemBoxView.h */,
 				829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */,
+				82EAAD89235E08E200991124 /* 123123.png */,
+				82EAAD87235E08E200991124 /* ImageTableViewCell.h */,
+				82EAAD85235E08E200991124 /* ImageTableViewCell.m */,
+				82EAAD88235E08E200991124 /* TextTableViewCell.h */,
+				82EAAD86235E08E200991124 /* TextTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1179,6 +1197,7 @@
 			files = (
 				6397A634235C54C400F8A2D2 /* LYPayPopViewController.xib in Resources */,
 				6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */,
+				82EAAD81235DF35B00991124 /* Assets.xcassets in Resources */,
 				63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */,
 				82FBA368235AF08500A6D038 /* TopUpViewController.xib in Resources */,
 				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
@@ -1193,10 +1212,10 @@
 				63933B86235ABEBE00D5E138 /* LYLoginPwdViewController.xib in Resources */,
 				63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */,
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
-				634220F62233925E00A2CD27 /* Assets.xcassets in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
 				82FBA36E235AF08500A6D038 /* LoginViewController.xib in Resources */,
 				82FBA37C235AF9A000A6D038 /* AGCDetailViewController.xib in Resources */,
+				82EAAD8C235E08E300991124 /* 123123.png in Resources */,
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
@@ -1293,6 +1312,7 @@
 				63933BA5235B366F00D5E138 /* LYShengTaiHeaderView.m in Sources */,
 				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
+				82EAAD8A235E08E300991124 /* ImageTableViewCell.m in Sources */,
 				63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */,
 				82FBA370235AF08500A6D038 /* RegisteredViewController.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
@@ -1317,6 +1337,7 @@
 				829C2D49235C4369004F9641 /* TeamViewController.m in Sources */,
 				634221152233946F00A2CD27 /* LYNavigationViewController.m in Sources */,
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
+				82EAAD8F235E08F000991124 /* NodeArchitectureViewController.m in Sources */,
 				63933BA1235B360600D5E138 /* LYShengTaiViewController.m in Sources */,
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
 				63933B9B235B27E100D5E138 /* LYMayiGongHuiFooterView.m in Sources */,
@@ -1344,8 +1365,8 @@
 				63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
+				82EAAD8B235E08E300991124 /* TextTableViewCell.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
-				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63264DCE235C136300293467 /* PersistenceHelper.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,

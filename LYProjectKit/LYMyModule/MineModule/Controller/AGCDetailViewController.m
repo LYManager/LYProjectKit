@@ -34,6 +34,10 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     
     self.navigationItem.rightBarButtonItem = rigButton;
    
+    [LYNetwork POSTWithApiPath:@"" requestParams:@"" handler:^(NSDictionary * _Nonnull response, NSError * _Nullable error) {
+        
+        
+    }];
     
     
     // Do any additional setup after loading the view from its nib.
