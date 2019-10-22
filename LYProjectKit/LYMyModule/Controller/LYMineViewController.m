@@ -16,6 +16,7 @@
 #import "LYSafeSettingViewController.h"
 #import "MyBillViewController.h"
 #import "LYMayiGongHuiViewController.h"
+#import "NodeArchitectureViewController.h"
 @interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< LYMineHeaderView*/
@@ -81,7 +82,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// t我的团队
 - (void)clickMyTeam {
-     [self pushViewControllerWithClassName:@"" params:nil];
+     [self pushViewControllerWithClassName:@"NodeArchitectureViewController" params:nil];
 }
 // 蚂蚁工会
 - (void)clickMayiGonghui{
