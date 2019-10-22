@@ -1,8 +1,8 @@
 // LYNetworkManager.m 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/20. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/20. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import "LYNetworkManager.h"
@@ -93,18 +93,24 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
         NSLog(@"%@",formData);
         [LYProgressHUD ly_dismissHUD];
     } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         if ([responseObject[@"code"] integerValue] == ResponseCodePasteLogin) {
+        NSInteger code = [responseObject[@"code"] integerValue];
+        if (code == ResponseCodePasteLogin) {
         //            清除用户信息
             [LYUserDefault shareInstance].userInfoDict = nil;
             [LYUserInfoManager shareInstance].userInfo = nil;
             [[LYPageContext shareInstance]setupLoginViewController];
          }else{
-             !handler ?: handler(responseObject,nil);
+             if (code == 0) {
+                 !handler ?: handler(responseObject,nil);
+             }else{
+                 [[UIApplication sharedApplication].keyWindow makeToast:[NSString stringWithFormat:@"%ld-%@",code,responseObject[@"message"]] duration:2 position:CSToastPositionCenter];
+             }
+             
          }
          [LYProgressHUD ly_dismissHUD];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
          !handler ?: handler(nil,error);
-        [[UIApplication sharedApplication].keyWindow makeToast:[NSString stringWithFormat:@"错误码：%ld",error.code] duration:2 position:CSToastPositionCenter];
+        
          [LYProgressHUD ly_dismissHUD];
        
     }];

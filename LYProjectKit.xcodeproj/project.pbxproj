@@ -41,6 +41,13 @@
 		635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C31A1235DFAFB0015889B /* LaunchScreen.storyboard */; };
 		635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C31A4235E05FF0015889B /* LYUserInfo.m */; };
 		635C31A8235E0AEB0015889B /* LYUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C31A7235E0AEB0015889B /* LYUserInfoManager.m */; };
+		637754F2235E846100FEA141 /* LYHomeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754F1235E846100FEA141 /* LYHomeData.m */; };
+		637754F5235E847600FEA141 /* LYBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754F4235E847600FEA141 /* LYBaseModel.m */; };
+		637754F8235E859B00FEA141 /* LYRubbishModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754F7235E859B00FEA141 /* LYRubbishModel.m */; };
+		637754FB235EA78000FEA141 /* LYAntGonghuiData.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754FA235EA78000FEA141 /* LYAntGonghuiData.m */; };
+		637754FE235EA8DC00FEA141 /* LYAntCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754FD235EA8DC00FEA141 /* LYAntCardModel.m */; };
+		63775501235EC43D00FEA141 /* LYShengTaiData.m in Sources */ = {isa = PBXBuildFile; fileRef = 63775500235EC43D00FEA141 /* LYShengTaiData.m */; };
+		63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63775503235EC70C00FEA141 /* LYTaskCardModel.m */; };
 		63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CB2235D5F00000B505A /* LYPopErrorViewController.m */; };
 		63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */; };
 		63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CBB235D76D1000B505A /* LYHomeViewController.m */; };
@@ -219,6 +226,20 @@
 		635C31A6235E0AEB0015889B /* LYUserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LYUserInfoManager.h; path = LYProjectKit/LYUserInfoManager.h; sourceTree = SOURCE_ROOT; };
 		635C31A7235E0AEB0015889B /* LYUserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LYUserInfoManager.m; path = LYProjectKit/LYUserInfoManager.m; sourceTree = SOURCE_ROOT; };
 		635C31A9235E0CC60015889B /* LYResponseCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYResponseCode.h; sourceTree = "<group>"; };
+		637754F0235E846100FEA141 /* LYHomeData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeData.h; sourceTree = "<group>"; };
+		637754F1235E846100FEA141 /* LYHomeData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeData.m; sourceTree = "<group>"; };
+		637754F3235E847600FEA141 /* LYBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYBaseModel.h; sourceTree = "<group>"; };
+		637754F4235E847600FEA141 /* LYBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYBaseModel.m; sourceTree = "<group>"; };
+		637754F6235E859B00FEA141 /* LYRubbishModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishModel.h; sourceTree = "<group>"; };
+		637754F7235E859B00FEA141 /* LYRubbishModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishModel.m; sourceTree = "<group>"; };
+		637754F9235EA78000FEA141 /* LYAntGonghuiData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAntGonghuiData.h; sourceTree = "<group>"; };
+		637754FA235EA78000FEA141 /* LYAntGonghuiData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAntGonghuiData.m; sourceTree = "<group>"; };
+		637754FC235EA8DC00FEA141 /* LYAntCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAntCardModel.h; sourceTree = "<group>"; };
+		637754FD235EA8DC00FEA141 /* LYAntCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAntCardModel.m; sourceTree = "<group>"; };
+		637754FF235EC43D00FEA141 /* LYShengTaiData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYShengTaiData.h; sourceTree = "<group>"; };
+		63775500235EC43D00FEA141 /* LYShengTaiData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiData.m; sourceTree = "<group>"; };
+		63775502235EC70C00FEA141 /* LYTaskCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTaskCardModel.h; sourceTree = "<group>"; };
+		63775503235EC70C00FEA141 /* LYTaskCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTaskCardModel.m; sourceTree = "<group>"; };
 		63848CB1235D5F00000B505A /* LYPopErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopErrorViewController.h; sourceTree = "<group>"; };
 		63848CB2235D5F00000B505A /* LYPopErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopErrorViewController.m; sourceTree = "<group>"; };
 		63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopErrorViewController.xib; sourceTree = "<group>"; };
@@ -625,6 +646,8 @@
 		6342210A223393EB00A2CD27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				637754F3235E847600FEA141 /* LYBaseModel.h */,
+				637754F4235E847600FEA141 /* LYBaseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -679,6 +702,10 @@
 		6342212122339BE400A2CD27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				637754FF235EC43D00FEA141 /* LYShengTaiData.h */,
+				63775500235EC43D00FEA141 /* LYShengTaiData.m */,
+				63775502235EC70C00FEA141 /* LYTaskCardModel.h */,
+				63775503235EC70C00FEA141 /* LYTaskCardModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -741,6 +768,10 @@
 		63848CB8235D76B4000B505A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				637754F0235E846100FEA141 /* LYHomeData.h */,
+				637754F1235E846100FEA141 /* LYHomeData.m */,
+				637754F6235E859B00FEA141 /* LYRubbishModel.h */,
+				637754F7235E859B00FEA141 /* LYRubbishModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -790,6 +821,10 @@
 		63933B5E2359E80D00D5E138 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				637754F9235EA78000FEA141 /* LYAntGonghuiData.h */,
+				637754FA235EA78000FEA141 /* LYAntGonghuiData.m */,
+				637754FC235EA8DC00FEA141 /* LYAntCardModel.h */,
+				637754FD235EA8DC00FEA141 /* LYAntCardModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1137,7 +1172,7 @@
 			attributes = {
 				CLASSPREFIX = LY;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "赵良育";
+				ORGANIZATIONNAME = Sunshie;
 				TargetAttributes = {
 					633674F62234E01700B87968 = {
 						CreatedOnToolsVersion = 10.1;
@@ -1313,6 +1348,7 @@
 				82FBA370235AF08500A6D038 /* RegisteredViewController.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
 				6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */,
+				63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */,
 				63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */,
 				82FBA37B235AF9A000A6D038 /* AGCDetailViewController.m in Sources */,
 				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
@@ -1326,6 +1362,7 @@
 				63E9988F2237545B00A1168B /* LYWebView.m in Sources */,
 				63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */,
 				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
+				637754F5235E847600FEA141 /* LYBaseModel.m in Sources */,
 				63531BF8235CC7040072A093 /* LYPopSendToolsViewController.m in Sources */,
 				63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */,
 				63264DE1235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m in Sources */,
@@ -1336,6 +1373,7 @@
 				63933BA1235B360600D5E138 /* LYShengTaiViewController.m in Sources */,
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
 				63933B9B235B27E100D5E138 /* LYMayiGongHuiFooterView.m in Sources */,
+				637754FB235EA78000FEA141 /* LYAntGonghuiData.m in Sources */,
 				638A3FCF22F8099600F0C59B /* LYRouterManager.m in Sources */,
 				63264DD1235C144A00293467 /* NSString+Extension.m in Sources */,
 				6397A633235C54C400F8A2D2 /* LYPayPopViewController.m in Sources */,
@@ -1348,6 +1386,7 @@
 				63933B80235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
 				63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */,
+				63775501235EC43D00FEA141 /* LYShengTaiData.m in Sources */,
 				6397A63E235CC02B00F8A2D2 /* LYPopToolsViewController.m in Sources */,
 				6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */,
 				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
@@ -1357,14 +1396,12 @@
 				829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */,
 				63264DC4235C106000293467 /* LYNetworkManager.m in Sources */,
 				82FBA371235AF08500A6D038 /* InvitationViewController.m in Sources */,
+				637754F2235E846100FEA141 /* LYHomeData.m in Sources */,
 				63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
-
 				635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */,
-
-				63E99894223777B400A1168B /* LYTableViewController.m in Sources */,
 				63264DCE235C136300293467 /* PersistenceHelper.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
@@ -1373,7 +1410,9 @@
 				63264DDB235C161700293467 /* NSData+AES.m in Sources */,
 				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
 				63264DC7235C112100293467 /* LYConstInterface.m in Sources */,
+				637754F8235E859B00FEA141 /* LYRubbishModel.m in Sources */,
 				63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */,
+				637754FE235EA8DC00FEA141 /* LYAntCardModel.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
 				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
 				829C2D3F235C0C93004F9641 /* MyBillableViewCell.m in Sources */,

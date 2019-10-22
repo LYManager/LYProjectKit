@@ -1,14 +1,19 @@
 // LYMineHeaderView.m 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/18. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/18. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import "LYMineHeaderView.h"
 
 @interface LYMineHeaderView ()
 @property (weak, nonatomic) IBOutlet UIButton *mayiGonghuiBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nicknameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (weak, nonatomic) IBOutlet UILabel *agcCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 
 @end
 
@@ -17,6 +22,15 @@
     [super awakeFromNib];
     [self.mayiGonghuiBtn ly_gradintLeftCircle];
 }
+
+- (void)configDataWithUserInfo:(LYUserInfo *)userInfo{
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:userInfo.actor]];
+    self.nicknameLabel.text = userInfo.userName;
+    self.agcCountLabel.text = [NSString stringWithFormat:@"%.2f",userInfo.agcAmount];
+    self.idLabel.text = [NSString stringWithFormat:@"ID:%@",userInfo.userId];
+    self.levelLabel.text = userInfo.antLevel;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -58,6 +72,12 @@
     if ([self.delegate respondsToSelector:@selector(clickInviteFriend)]) {
            [self.delegate clickInviteFriend];
        }
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.headImageView.layer.cornerRadius = self.headImageView.frame.size.height/2;
+    self.headImageView.clipsToBounds = YES;
 }
 
 @end

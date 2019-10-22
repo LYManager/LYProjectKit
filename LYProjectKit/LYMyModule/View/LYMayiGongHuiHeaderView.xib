@@ -216,13 +216,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3K-Hs-BH2">
-                            <rect key="frame" x="91.5" y="262.5" width="48" height="25.5"/>
+                            <rect key="frame" x="91.5" y="262" width="50" height="26.5"/>
                             <state key="normal">
                                 <attributedString key="attributedTitle">
                                     <fragment content="联系客服">
                                         <attributes>
                                             <color key="NSColor" red="0.044875755910000002" green="0.71185487510000001" blue="0.66866952180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                            <font key="NSFont" metaFont="cellTitle"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -289,12 +289,17 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="antGonghuiCardNameLabel" destination="Yo2-ew-AC8" id="7fl-Z2-2vq"/>
+                <outlet property="huoyueLabel" destination="3BG-cE-LHS" id="240-vr-tlF"/>
+                <outlet property="levelLabel" destination="ME3-fz-ptg" id="KDF-Lz-tnq"/>
                 <outlet property="mayiCardSendBtn" destination="q2S-62-tIY" id="emu-iA-nb7"/>
                 <outlet property="mayiCardUseBtn" destination="grg-Vx-Fml" id="ZHq-xu-utF"/>
                 <outlet property="myyiCardNumberLabel" destination="Zj3-3N-6aY" id="nqo-v5-I8I"/>
                 <outlet property="realCardNumberLabel" destination="iPs-9Q-PaN" id="QJ9-04-AqS"/>
+                <outlet property="realCheckCardNameLabel" destination="hui-JL-idW" id="fB3-U3-Vry"/>
                 <outlet property="realNameCardSendBtn" destination="Bwb-gA-aEh" id="Hzc-iy-CSz"/>
                 <outlet property="realNameCardUseBtn" destination="x0Y-dN-G6a" id="6Kw-fq-jhX"/>
+                <outlet property="zhituiNumLabel" destination="DIa-2z-dYW" id="x6F-Un-7TE"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="347.20982142857139"/>
         </view>

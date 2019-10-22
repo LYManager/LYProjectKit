@@ -1,8 +1,8 @@
 // LYConstInterface.m
 // LYProjectKit
 //
-// Created by 赵良育 on 2019/10/20.
-// Copyright © 2019 赵良育. All rights reserved.
+// Created by Sunshie on 2019/10/20.
+// Copyright © 2019 Sunshie. All rights reserved.
 //  接口
 
 #import "LYConstInterface.h"
@@ -22,3 +22,9 @@ NSString * const getMobileCodeURL = @"/ant-api/user/mobileCode";
 NSString * const loginURL         = @"/ant-api/user/login";
 
 NSString * const homeURL          = @"/ant-api/ant/info";
+
+NSString * const mineURL = @"/ant-api/user/myInfo";
+
+NSString * const antGonghuiURL = @"/ant-api/ant/consortia";
+
+NSString * const shengTaiURL = @"/ant-api/ant/store";

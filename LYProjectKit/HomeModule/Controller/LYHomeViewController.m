@@ -1,15 +1,22 @@
 // LYHomeViewController.m 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/21. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/21. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import "LYHomeViewController.h"
 #import "LYMineViewController.h"
 #import "LYShengTaiViewController.h"
+//数据
+#import "LYHomeData.h"
 @interface LYHomeViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UILabel *agcLabel;
 
+
+/**< data*/
+@property(nonatomic,strong)LYHomeData * data;
 @end
 
 @implementation LYHomeViewController
@@ -26,11 +33,12 @@
     NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
     
     [LYNetwork POSTWithApiPath:homeURL requestParams:@{
-//              @"userId":@"9322559"
+        @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@""
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-
+        self.data = [LYHomeData modelWithDictionary:response];
+        [self configUIWithData:self.data.data];
     }];
-    //LYNetwork POSTWithApiPath:homeURL requestParams:<#(nonnull NSDictionary *)#> handler:<#^(NSDictionary * _Nullable response, NSError * _Nullable error)handler#>
+    
 }
 
 
@@ -58,6 +66,13 @@
 /// @param sender sender
 - (IBAction)mineAction:(UIButton *)sender {
     [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
+}
+
+/// 展示网络数据
+/// @param model 数据模型
+- (void) configUIWithData:(LYHomeDataModel *)model{
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.actor]];
+    self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.agcAmount];
 }
 
 /*

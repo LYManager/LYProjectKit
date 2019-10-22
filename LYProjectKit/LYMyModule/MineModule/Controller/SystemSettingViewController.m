@@ -3,7 +3,7 @@
 //  LYProjectKit
 //
 //  Created by 李帅 on 2019/10/19.
-//  Copyright © 2019 赵良育. All rights reserved.
+//  Copyright © 2019 Sunshie. All rights reserved.
 //
 
 #import "SystemSettingViewController.h"

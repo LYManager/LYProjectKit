@@ -23,6 +23,11 @@
                             <constraint firstAttribute="width" secondItem="Ky0-gz-5gG" secondAttribute="height" multiplier="27:17" id="ecI-u3-KoG"/>
                             <constraint firstAttribute="height" constant="17" id="tDB-66-5UW"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入门公益卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6q-nd-MPh">
                         <rect key="frame" x="47" y="16.5" width="61.5" height="14.5"/>
@@ -85,8 +90,10 @@
             <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="buyBtn" destination="0B5-tI-I9f" id="V2M-39-URp"/>
+                <outlet property="cardIconImageView" destination="Ky0-gz-5gG" id="y4P-b4-RFx"/>
                 <outlet property="leftBottomLabel" destination="iKQ-c1-xHu" id="SLZ-Jj-rbn"/>
                 <outlet property="leftTopLabel" destination="Elo-m5-2Gj" id="ri5-OW-S6p"/>
+                <outlet property="reduceDesLabel" destination="Cb1-qd-2VS" id="st7-rJ-X5C"/>
                 <outlet property="reduceLabel" destination="rrQ-ch-lFU" id="ChO-mA-oqM"/>
                 <outlet property="typeLabel" destination="j6q-nd-MPh" id="YgR-B5-VCJ"/>
             </connections>

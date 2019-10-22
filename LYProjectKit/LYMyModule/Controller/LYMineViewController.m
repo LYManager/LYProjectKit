@@ -1,8 +1,8 @@
 // LYMineViewController.m 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/18. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/18. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import "LYMineViewController.h"
@@ -18,10 +18,15 @@
 #import "LYMayiGongHuiViewController.h"
 @interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+/**< LYMineHeaderView*/
+@property(nonatomic,strong)LYMineHeaderView * headerView;
 /**< icons*/
 @property(nonatomic,strong)NSArray<NSString *> * iconsArr;
 /**< titleArray*/
 @property(nonatomic,strong)NSArray<NSString *> * titlesArr;
+
+/**< userInfo*/
+@property(nonatomic,strong)LYUserInfo * userInfo;
 @end
 static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 @implementation LYMineViewController
@@ -33,7 +38,19 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     [self configTableView];
     
     self.navigationItem.title = @"我的";
+    
+    [self loadRequest];
+}
+- (void)loadRequest{
+    [LYNetwork POSTWithApiPath:mineURL requestParams:@{} handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        self.userInfo = [LYUserInfo modelWithDictionary:response[@"data"]];
+        [self configUIWithUserInfo:self.userInfo];
+    }];
+}
 
+- (void)configUIWithUserInfo:(LYUserInfo *)userInfo{
+    [self.headerView configDataWithUserInfo:userInfo];
+    
 }
 #pragma mark🐒------LYMineHeaderViewDelegate------🐒
 
@@ -86,6 +103,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 //  UIView * headerView =    [[UIView alloc]initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 200)];
     self.tableView.tableHeaderView = headerView;
     headerView.delegate = self;
+    self.headerView = headerView;
     self.tableView.tableFooterView = [UIView new];
 }
 

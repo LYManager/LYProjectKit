@@ -128,6 +128,10 @@
                 <constraint firstItem="qet-SK-FqD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="w8h-P1-Nqf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomImageView" destination="GQg-ei-PwN" id="a4A-7c-Iga"/>
+                <outlet property="tomImageView" destination="RLK-3A-1Gc" id="Nfy-ua-Ydh"/>
+            </connections>
             <point key="canvasLocation" x="125.36231884057972" y="255.80357142857142"/>
         </view>
     </objects>

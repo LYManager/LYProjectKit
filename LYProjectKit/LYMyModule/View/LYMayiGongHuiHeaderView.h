@@ -1,12 +1,12 @@
 // LYMayiGongHuiHeaderView.h 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/19. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/19. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import <UIKit/UIKit.h>
-
+@class LYAntGonghuiDataModel;
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger,CardType) {
@@ -25,7 +25,8 @@ typedef NS_ENUM(NSUInteger,CardType) {
 @interface LYMayiGongHuiHeaderView : UIView
 /**< */
 @property(nonatomic,weak)id<LYMayiGongHuiHeaderViewDelegate> delegate;
-- (void) configUI;
+
+- (void) configDataWithModel:(LYAntGonghuiDataModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END

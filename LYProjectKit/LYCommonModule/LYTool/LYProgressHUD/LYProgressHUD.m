@@ -1,8 +1,8 @@
 // LYProgressHUD.m 
 // CloudBuy 
 // 
-// Created by 赵良育 on 2018/11/29. 
-// Copyright © 2018 赵良育. All rights reserved. 
+// Created by Sunshie on 2018/11/29. 
+// Copyright © 2018 Sunshie. All rights reserved. 
 // 
 
 #import "LYProgressHUD.h"

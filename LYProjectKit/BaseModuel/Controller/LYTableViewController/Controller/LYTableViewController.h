@@ -1,8 +1,8 @@
 // LYTableViewController.h 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/3/9. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/3/9. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 /**
     类描述

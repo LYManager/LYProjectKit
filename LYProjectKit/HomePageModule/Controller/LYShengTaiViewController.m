@@ -1,8 +1,8 @@
 // LYShengTaiViewController.m 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/19. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/19. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import "LYShengTaiViewController.h"
@@ -10,12 +10,20 @@
 #import "LYShengTaiSessionHeaderView.h"
 #import "LYShengTaiShopCardCell.h"
 #import "UIColor+Extention.h"
+#import "LYShengTaiData.h"
 @interface LYShengTaiViewController ()<UITableViewDelegate,UITableViewDataSource,LYShengTaiSessionHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< 卡类型*/
 @property(nonatomic,assign)LYShengTaiShopCardType cardType;
+
+/**< headerView*/
+@property(nonatomic,strong)LYShengTaiHeaderView * headerView;
 /**< sessionHeaderView*/
 @property(nonatomic,strong)LYShengTaiSessionHeaderView * sessionHeaderView;
+/**< data*/
+@property(nonatomic,strong)LYShengTaiData * data;
+/**< 卡 数组*/
+@property(nonatomic,strong)NSArray<LYTaskCardModel *> * cardArray;
 @end
 static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
 @implementation LYShengTaiViewController
@@ -26,19 +34,36 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
     [self configTableView];
 //    默认
     self.cardType = LYShengTaiShopCardType_ShopCard;
-    
+    [self loadRequest];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void) loadRequest{
+    [LYNetwork POSTWithApiPath:shengTaiURL requestParams:@{
+        @"areaType":@(self.cardType)
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        self.data = [LYShengTaiData modelWithDictionary:response];
+        [self config];
+    }];
+}
+
+
+- (void) config {
+    [self.headerView configDataWithEarn:self.data.data.agcDayEarning huoyue:self.data.data.liveness];
+    self.cardArray = self.data.data.taskList;
+    [self.tableView reloadData];
 }
 
 #pragma mark🐒------LYShengTaiSessionHeaderViewDelegate------🐒
 - (void)selectCardType:(LYShengTaiShopCardType)cardType{
     self.cardType = cardType;
-//   TODO: 请求数据
-    [self.tableView reloadData];
+    [self loadRequest];
 }
 
 - (void) configTableView {
     [self configTableViewHeaderFooterView];
+    self.tableView.contentMode =  UIViewContentModeCenter;
+    self.tableView.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"mayi_icon"].CGImage);
     [self.tableView registerNib:[UINib nibWithNibName:kCardShopCellIdentifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:kCardShopCellIdentifier];
 }
 - (void) configTableViewHeaderFooterView{
@@ -49,8 +74,8 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
        headerView.frame = CGRectMake(0, 0, width, width * 140  / 414);
        self.tableView.tableHeaderView = headerView;
    });
+    self.headerView = headerView;
     self.tableView.tableFooterView = [UIView new];
-    
     self.tableView.rowHeight = width * 104 / 333;
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.tableView.separatorColor = [UIColor ly_colorWithHexString:@"#0C0D13"];
@@ -61,12 +86,12 @@ static NSString * const kCardShopCellIdentifier = @"LYShengTaiShopCardCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return self.cardArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     LYShengTaiShopCardCell * cell = [tableView dequeueReusableCellWithIdentifier:kCardShopCellIdentifier forIndexPath:indexPath];
-    [cell configData:@"" type:self.cardType];
+    [cell configData:self.cardArray[indexPath.row] type:self.cardType];
     return cell;
 }
 

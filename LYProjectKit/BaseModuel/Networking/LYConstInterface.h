@@ -1,8 +1,8 @@
 // LYConstInterface.h 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/20. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/20. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 //  接口
 
 #import <Foundation/Foundation.h>
@@ -38,3 +38,9 @@ UIKIT_EXTERN NSString * const getMobileCodeURL;
 UIKIT_EXTERN NSString * const loginURL;
 
 UIKIT_EXTERN NSString * const homeURL;
+
+UIKIT_EXTERN NSString * const mineURL;
+
+UIKIT_EXTERN NSString * const antGonghuiURL;
+
+UIKIT_EXTERN NSString * const shengTaiURL;

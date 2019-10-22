@@ -1,16 +1,23 @@
 // LYMayiGongHuiViewController.m 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/19. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/19. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import "LYMayiGongHuiViewController.h"
 #import "LYMayiGongHuiHeaderView.h"
 #import "LYMayiGongHuiFooterView.h"
+
+#import "LYAntGonghuiData.h"
 @interface LYMayiGongHuiViewController ()<LYMayiGongHuiHeaderViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+/**< headerView*/
+@property(nonatomic,strong)LYMayiGongHuiHeaderView * headerView;
+/**< footer*/
+@property(nonatomic,strong)LYMayiGongHuiFooterView * footerView;
+/**< 数据*/
+@property(nonatomic,strong)LYAntGonghuiData * data;
 @end
 
 @implementation LYMayiGongHuiViewController
@@ -19,7 +26,20 @@
     [super viewDidLoad];
     self.navigationItem.title = @"蚂蚁工会";
     [self configTableView];
+    [self loadRequest];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)loadRequest{
+    [LYNetwork POSTWithApiPath:antGonghuiURL requestParams:@{} handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        self.data = [LYAntGonghuiData modelWithDictionary:response];
+        [self configDataWithModel:self.data.data];
+    }];
+}
+
+- (void) configDataWithModel:(LYAntGonghuiDataModel *)model{
+    [self.headerView configDataWithModel:model];
+    [self.footerView configDataWithModel:model];
 }
 
 - (void) configTableView {
@@ -33,6 +53,7 @@
         headerView.frame = CGRectMake(0, 0, width, width * 471  / 402);
         self.tableView.tableHeaderView = headerView;
     });
+    self.headerView = headerView;
     headerView.delegate = self;
     
     
@@ -42,6 +63,7 @@
         footerView.frame = CGRectMake(0, 0, width, width * 808  / 397);
         self.tableView.tableHeaderView = headerView;
     });
+    self.footerView = footerView;
     self.tableView.tableFooterView = footerView;
 }
 

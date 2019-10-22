@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ly_tab_bar_item_four_selected" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-Ga-UJF">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mayi_icon" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-Ga-UJF">
                     <rect key="frame" x="15" y="15" width="11" height="11"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="uNS-Ga-UJF" secondAttribute="height" multiplier="1:1" id="2Yy-HR-lBV"/>
@@ -32,7 +32,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="≈8888USDT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIw-F8-25a">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="≈8888USDT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIw-F8-25a">
                     <rect key="frame" x="104.5" y="40.5" width="55" height="11"/>
                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                     <color key="textColor" red="0.21972137689999999" green="0.3154958189" blue="0.43183261160000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,10 +67,15 @@
                 <constraint firstItem="nQv-ih-DNJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="vxJ-22-dk9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="earnLabel" destination="raJ-B5-AVr" id="vI4-ld-owT"/>
+                <outlet property="headImageView" destination="uNS-Ga-UJF" id="CbM-4h-Tbi"/>
+                <outlet property="huoyueLabel" destination="eXs-lR-tqg" id="Tri-0w-jJM"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="320.75892857142856"/>
         </view>
     </objects>
     <resources>
-        <image name="ly_tab_bar_item_four_selected" width="20" height="20"/>
+        <image name="mayi_icon" width="18" height="14"/>
     </resources>
 </document>

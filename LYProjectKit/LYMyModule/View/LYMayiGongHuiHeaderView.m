@@ -1,12 +1,12 @@
 // LYMayiGongHuiHeaderView.m 
 // LYProjectKit 
 // 
-// Created by 赵良育 on 2019/10/19. 
-// Copyright © 2019 赵良育. All rights reserved. 
+// Created by Sunshie on 2019/10/19. 
+// Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
 #import "LYMayiGongHuiHeaderView.h"
-
+#import "LYAntGonghuiData.h"
 @interface LYMayiGongHuiHeaderView ()
 @property (weak, nonatomic) IBOutlet UIButton *realNameCardSendBtn;
 @property (weak, nonatomic) IBOutlet UIButton *realNameCardUseBtn;
@@ -15,13 +15,34 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *realCardNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *myyiCardNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *zhituiNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *huoyueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *realCheckCardNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *antGonghuiCardNameLabel;
 @end
 
 @implementation LYMayiGongHuiHeaderView
 
 
+- (void)configDataWithModel:(LYAntGonghuiDataModel *)model{
+    self.levelLabel.text = model.levelName;
+    self.zhituiNumLabel.text = [@(model.childNums)stringValue];
+    self.huoyueLabel.text = [@(model.liveness) stringValue];
+    [self configCardWithModel:model.propsCardList.firstObject];
+    [self configCardWithModel:model.propsCardList.lastObject];
+}
 
+- (void) configCardWithModel:(LYAntCardModel *)cardModel{
+    if (cardModel.cardId == 1) {
+        self.realCheckCardNameLabel.text = cardModel.cardName;
+        self.realCardNumberLabel.text = [NSString stringWithFormat:@"×%ld张",cardModel.cardCount];
+    }else{
+        self.antGonghuiCardNameLabel.text =cardModel.cardName;
+         self.myyiCardNumberLabel.text = [NSString stringWithFormat:@"×%ld张",cardModel.cardCount];
+    }
+}
 
 - (void) configUI {
     [self.realNameCardUseBtn ly_gradint];
@@ -29,7 +50,6 @@
     [self.mayiCardUseBtn ly_gradint];
     [self.mayiCardSendBtn ly_gradint];
 }
-
 
 - (IBAction)realCardUserBtnAction:(id)sender {
     if ([self.delegate respondsToSelector:@selector(useCardWithType:)]) {

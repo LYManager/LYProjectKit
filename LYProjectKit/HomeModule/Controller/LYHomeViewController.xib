@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYHomeViewController">
             <connections>
+                <outlet property="agcLabel" destination="Bx1-Nl-zLd" id="tOV-QC-dRo"/>
+                <outlet property="headImageView" destination="g9o-Ub-IeF" id="cRP-Hz-dzk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,14 +25,14 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_agc_bg_icon" translatesAutoresizingMaskIntoConstraints="NO" id="aL2-3f-ctP">
                             <rect key="frame" x="0.0" y="0.0" width="142" height="60"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_icon" translatesAutoresizingMaskIntoConstraints="NO" id="g9o-Ub-IeF">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g9o-Ub-IeF">
                             <rect key="frame" x="8" y="7" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="g9o-Ub-IeF" secondAttribute="height" multiplier="1:1" id="HfZ-G4-rTH"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="101012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-Nl-zLd">
-                            <rect key="frame" x="105.5" y="30.5" width="36.5" height="13.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx1-Nl-zLd">
+                            <rect key="frame" x="98" y="30.5" width="7" height="13.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -39,6 +41,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="aTb-8z-SIC" secondAttribute="height" multiplier="431:182" id="2IR-Bx-G33"/>
+                        <constraint firstItem="Bx1-Nl-zLd" firstAttribute="leading" secondItem="g9o-Ub-IeF" secondAttribute="trailing" constant="50" id="3Ae-Di-lxa"/>
                         <constraint firstAttribute="bottom" secondItem="Bx1-Nl-zLd" secondAttribute="bottom" constant="16" id="7hL-tI-eLL"/>
                         <constraint firstAttribute="trailing" secondItem="aL2-3f-ctP" secondAttribute="trailing" id="8P5-SR-d2u"/>
                         <constraint firstAttribute="bottom" secondItem="aL2-3f-ctP" secondAttribute="bottom" id="GRS-0S-UZj"/>
@@ -47,7 +50,6 @@
                         <constraint firstItem="g9o-Ub-IeF" firstAttribute="width" secondItem="aL2-3f-ctP" secondAttribute="width" multiplier="0.28" id="dYn-O6-dew"/>
                         <constraint firstItem="g9o-Ub-IeF" firstAttribute="leading" secondItem="aTb-8z-SIC" secondAttribute="leading" constant="8" id="gLV-6c-yMp"/>
                         <constraint firstItem="aL2-3f-ctP" firstAttribute="leading" secondItem="aTb-8z-SIC" secondAttribute="leading" id="mk8-71-Jgy"/>
-                        <constraint firstAttribute="trailing" secondItem="Bx1-Nl-zLd" secondAttribute="trailing" id="p9Q-vl-WzQ"/>
                         <constraint firstItem="aL2-3f-ctP" firstAttribute="top" secondItem="aTb-8z-SIC" secondAttribute="top" id="rwq-Ei-sqy"/>
                     </constraints>
                 </view>
@@ -187,7 +189,6 @@
     </objects>
     <resources>
         <image name="h3" width="118" height="141"/>
-        <image name="head_icon" width="180" height="180"/>
         <image name="home_agc_bg_icon" width="215.5" height="91"/>
         <image name="home_bottom_bg" width="457" height="94"/>
         <image name="home_top_right" width="113" height="114"/>
