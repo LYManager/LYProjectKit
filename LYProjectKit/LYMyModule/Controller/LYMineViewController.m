@@ -18,6 +18,7 @@
 #import "LYMayiGongHuiViewController.h"
 #import "NodeArchitectureViewController.h"
 #import "InvitFriendViewController.h"
+#import "AboutUsViewController.h"
 @interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< LYMineHeaderView*/
@@ -158,7 +159,9 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
         [self.navigationController pushViewController:systemVC animated:YES];
     }
     if (indexPath.section == 2) {
-        
+        AboutUsViewController *custmVC = [[AboutUsViewController alloc]init];
+              
+        [self.navigationController pushViewController:custmVC animated:YES];
     }
     if (indexPath.section == 3) {
         ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];

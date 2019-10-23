@@ -64,3 +64,9 @@ UIKIT_EXTERN NSString * const useCardURL;
 UIKIT_EXTERN NSString * const idCardValiURL;
 
 UIKIT_EXTERN NSString * const sendCardURL;
+UIKIT_EXTERN NSString * const resetLogURL;
+UIKIT_EXTERN NSString * const sendCodeURL;
+UIKIT_EXTERN NSString * const resetZhiURL;
+UIKIT_EXTERN NSString * const registURL;
+
+UIKIT_EXTERN NSString * const codelogURL;
