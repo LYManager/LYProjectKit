@@ -21,8 +21,12 @@
 @property (nonatomic,strong)AssetModel *model;
 @property (nonatomic,strong)CoinDetailModel *coinmodel;
 @property (nonatomic,strong)NSMutableArray *coinArr;
+
 @property (nonatomic,strong)NSString *chongtzhiStr;
 @property (nonatomic,strong)NSString *tiStr;
+
+@property (nonatomic,assign)NSInteger currage;
+
 
 @end
 static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
@@ -40,13 +44,36 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     [rigButton setTintColor:[UIColor whiteColor]];
     
 //    self.navigationItem.rightBarButtonItem = rigButton;//暂时隐藏
-    [self loadRequest];
+        [self addRefresh];
+        
+        
+        // Do any additional setup after loading the view from its nib.
    
 }
-- (void)loadRequest{
+- (void)addRefresh
+{
+      
+    @weakify(self)
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self loadRequest:NO];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+       [self loadRequest:YES];
+    }];
     
-    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
-    
+
+}
+- (void)loadRequest:(BOOL)more{
+
+    if (!more) {
+           [self.coinArr removeAllObjects];
+       }
+       if (more) {
+           _currage++;
+       }else{
+           _currage =1;
+       }
     [LYNetwork POSTWithApiPath:assetURL requestParams:@{
         @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@""
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
@@ -58,8 +85,20 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
             @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
             @"userInfoDTO":@{@"coinType":self.model.coinType},
             @"pageSize":@"10",
-            @"pageNum":@"1"
+            @"pageNum":[NSString stringWithFormat:@"%ld",(long)self.currage]
         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+            
+            [self.tableView.mj_header endRefreshing];
+            [self.tableView.mj_footer endRefreshing];
+            NSString *page = [NSString stringWithFormat:@"%@",[[response[@"data"]objectForKey:@"coinBill"] objectForKey:@"pages"]];
+            if (self.currage < [page integerValue]) {
+                [self.tableView.mj_footer resetNoMoreData];
+            }
+            else
+            {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            }
+            
             NSArray *arr = [[response[@"data"]objectForKey:@"coinBill"]objectForKey:@"pageList"];
             for (int i = 0; i<arr.count; i++) {
                 CoinDetailModel *coinmodel = [CoinDetailModel modelWithDictionary:arr[i]];
@@ -119,6 +158,8 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     cell.nameLab.text = model.content;
     cell.timeLab.text = [self dateWithString:model.tradeTime];
     cell.coinShowLab.text = model.amount;
+    [tableView  setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+
     if ([cell.coinShowLab.text containsString:@"-"]) {
         cell.coinShowLab.textColor = RGB(0, 153, 84, 1.0);
     }

@@ -18,6 +18,13 @@
     [self.tomImageView sd_setImageWithURL:[NSURL URLWithString:model.upgradeRules]];
     [self.bottomImageView sd_setImageWithURL:[NSURL URLWithString:model.bonusScheeme]];
 }
+
+- (IBAction)contactKefu:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(contactKefu)]) {
+        [self.delegate contactKefu];
+    }
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

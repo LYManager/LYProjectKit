@@ -34,10 +34,11 @@
     self.oldPwdTF.keyboardType = UIKeyboardTypeNumberPad;
 
     if ([self.myTag isEqualToString:@"交易密码"]) {
-         self.pwdTF.keyboardType = UIKeyboardTypeNumberPad;
-               self.pwdAgainTF.keyboardType = UIKeyboardTypeNumberPad;
+        self.pwdTF.keyboardType = UIKeyboardTypeNumberPad;
+        self.pwdAgainTF.keyboardType = UIKeyboardTypeNumberPad;
     }
-    
+    self.pwdTF.secureTextEntry = YES;
+    self.pwdAgainTF.secureTextEntry = YES;
     
 }
 #pragma mark🐒------提交------🐒
@@ -102,6 +103,11 @@
 //发送验证码
 - (IBAction)sendAction:(UIButton *)sender {
    
+    if (self.phoneText.text.length !=11)
+    {
+        [self.view makeToast:@"手机号输入不正确" duration:2 position:CSToastPositionCenter];
+        return;
+    }
     [LYNetwork POSTWithApiPath:sendCodeURL requestParams:@{
         @"loginDTO":@{@"mobile":self.phoneText.text},
        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {

@@ -27,6 +27,12 @@
 static NSInteger local = 0;
 @implementation LYHomeViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[LYUserInfoManager shareInstance].userInfo.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -126,7 +132,7 @@ static NSInteger local = 0;
 /// 展示网络数据
 /// @param model 数据模型
 - (void) configUIWithData:(LYHomeDataModel *)model{
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.actor]];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
     self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.agcAmount];
     @try {
         for (int i = 0; i < 6; i ++) {

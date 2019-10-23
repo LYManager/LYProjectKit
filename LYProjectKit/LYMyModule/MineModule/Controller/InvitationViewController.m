@@ -27,11 +27,15 @@
     [self loadRequest];
     self.nameLab.text = self.nameStr;
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:self.iconStr]];
+    self.headImage.layer.cornerRadius = 24;
+    self.headImage.layer.masksToBounds = YES;
+
     
     
     UIBarButtonItem *rigButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(exitBtnAction)];
     [rigButton setTintColor:[UIColor whiteColor]];
     [rigButton setImage:[UIImage imageNamed:@"fenxiang"]];
+
     
     self.navigationItem.rightBarButtonItem = rigButton;
 //    NSString *imagePath=[[NSBundle mainBundle]pathForResource:@"invitback" ofType:@"jpg"];

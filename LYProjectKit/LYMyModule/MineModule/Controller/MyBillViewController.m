@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)SWOAuthCodeView *codeView;
 @property (nonatomic,strong)NSMutableArray *dataArr;
+
+@property (nonatomic,assign)NSInteger currage;
+
+
 @end
 static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
 
@@ -28,25 +32,52 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
     [self configTableView];
     
     self.navigationItem.title = @"我的账单";
-    [self loadRequest];
+    [self addRefresh];
     
     
     // Do any additional setup after loading the view from its nib.
 }
-- (void)loadRequest{
+- (void)addRefresh
+{
+    @weakify(self)
+      self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+          [self loadRequest:NO];
+      }];
+      [self.tableView.mj_header beginRefreshing];
+      self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+          [self loadRequest:YES];
+      }];
+
+}
+- (void)loadRequest:(BOOL)more{
     
-    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
-    
+    if (!more) {
+        [self.dataArr removeAllObjects];
+    }
+    if (more) {
+        _currage++;
+    }else{
+        _currage =1;
+    }
     [LYNetwork POSTWithApiPath:billURL requestParams:@{
         @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
         @"pageSize":@"10",
-        @"pageNum":@"1"
+        @"pageNum":[NSString stringWithFormat:@"%ld",(long)self.currage]
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        NSString *page = [NSString stringWithFormat:@"%@",[response[@"data"]objectForKey:@"pages"]];
+        if (self.currage < [page integerValue]) {
+            [self.tableView.mj_footer resetNoMoreData];
+        }
+        else
+        {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
         NSArray *arr = [response[@"data"]objectForKey:@"pageList"];
         for (int i = 0; i<arr.count; i++) {
             BillModel *model = [BillModel modelWithDictionary:arr[i]];
             [self.dataArr addObject:model];
-            
         }
         
         
@@ -80,6 +111,7 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
     BillModel *model = self.dataArr[indexPath.row];
     cell.nameLab.text = model.content;
     cell.timeLab.text = [self dateWithString:model.createDate];
+    [tableView  setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     NSString *coinStr;
     if ([model.coinType isEqualToString:@"1"]) {
         coinStr = @"AGC";
@@ -150,6 +182,18 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
 //  
     
 }
+
+- (void)headerRefreshFinish
+{
+    
+};
+- (void)footerRefreshFinish
+{
+    
+}
+;
+
+
 //将时间戳转换为时间字符串
 -(NSString*)dateWithString:(NSString*)str
 

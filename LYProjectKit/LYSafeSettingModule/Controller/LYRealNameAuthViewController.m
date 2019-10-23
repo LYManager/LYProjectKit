@@ -38,6 +38,20 @@
 #pragma mark🐒------提交------🐒
 - (IBAction)commitAction:(UIButton *)sender {
     
+    if (self.realNameTF.text.length == 0) {
+           [self.view makeToast:@"姓名不能为空" duration:2 position:CSToastPositionCenter];
+           return;
+       }
+    if (self.phoneNumberTF.text.length !=11) {
+        [self.view makeToast:@"手机号输入不正确" duration:2 position:CSToastPositionCenter];
+        return;
+    }
+    if (self.cardTF.text.length ==0) {
+        [self.view makeToast:@"身份证号不能为空" duration:2 position:CSToastPositionCenter];
+        return;
+    }
+   
+    
 //    提交参数
     LYAntCardModel * model = self.params[@"realNameCardModel"];
     [self popToolsController:model callBack:^(NSString * _Nonnull pwd) {

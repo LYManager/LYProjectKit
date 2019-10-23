@@ -10,7 +10,7 @@
 #import "LYMayiGongHuiFooterView.h"
 
 #import "LYAntGonghuiData.h"
-@interface LYMayiGongHuiViewController ()<LYMayiGongHuiHeaderViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface LYMayiGongHuiViewController ()<LYMayiGongHuiHeaderViewDelegate,UITableViewDelegate,UITableViewDataSource,LYMayiGongHuiFooterViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< headerView*/
 @property(nonatomic,strong)LYMayiGongHuiHeaderView * headerView;
@@ -37,11 +37,19 @@
     }];
 }
 
+
+
 - (void) configDataWithModel:(LYAntGonghuiDataModel *)model{
     self.headerView.hidden = NO;
     self.footerView.hidden = NO;
     [self.headerView configDataWithModel:model];
     [self.footerView configDataWithModel:model];
+}
+- (void)headerContackKefu{
+    [self pushViewControllerWithClassName:@"ContactCustomerViewController" params:nil];
+}
+- (void)contactKefu{
+    [self pushViewControllerWithClassName:@"ContactCustomerViewController" params:nil];
 }
 
 - (void) configTableView {
@@ -68,6 +76,7 @@
     });
     self.footerView = footerView;
     self.footerView.hidden = YES;
+    self.footerView.delegate =self;
     self.tableView.tableFooterView = footerView;
 }
 

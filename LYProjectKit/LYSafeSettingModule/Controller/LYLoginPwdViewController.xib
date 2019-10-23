@@ -34,6 +34,7 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E36-mS-Vlr">
                             <rect key="frame" x="86.5" y="0.0" width="297.5" height="61"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -77,6 +78,7 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kO9-F7-j1a">
                             <rect key="frame" x="86.5" y="0.0" width="297.5" height="61"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -103,6 +105,7 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入新密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uP5-5y-JKJ">
                             <rect key="frame" x="86.5" y="0.0" width="297.5" height="61.5"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -143,7 +146,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写正确手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jcf-QR-qUi">
-                            <rect key="frame" x="76" y="0.0" width="308" height="61.5"/>
+                            <rect key="frame" x="86" y="0.0" width="298" height="61.5"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -153,7 +156,7 @@
                     <constraints>
                         <constraint firstItem="vcB-pn-GL2" firstAttribute="leading" secondItem="T45-jy-3ut" secondAttribute="leading" constant="15" id="1mn-ZN-w7D"/>
                         <constraint firstItem="Jcf-QR-qUi" firstAttribute="top" secondItem="T45-jy-3ut" secondAttribute="top" id="5Yo-Xq-kBN"/>
-                        <constraint firstItem="Jcf-QR-qUi" firstAttribute="leading" secondItem="vcB-pn-GL2" secondAttribute="trailing" id="C6A-WJ-Hfs"/>
+                        <constraint firstItem="Jcf-QR-qUi" firstAttribute="leading" secondItem="vcB-pn-GL2" secondAttribute="trailing" constant="10" id="C6A-WJ-Hfs"/>
                         <constraint firstAttribute="trailing" secondItem="Jcf-QR-qUi" secondAttribute="trailing" id="VRc-mE-0bx"/>
                         <constraint firstAttribute="bottom" secondItem="vcB-pn-GL2" secondAttribute="bottom" id="jcp-fN-wAK"/>
                         <constraint firstAttribute="bottom" secondItem="Jcf-QR-qUi" secondAttribute="bottom" id="tPJ-on-waY"/>

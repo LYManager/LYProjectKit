@@ -23,10 +23,20 @@
     [self.submitBtn ly_gradint];
 }
 - (IBAction)submitAction:(id)sender {
+    
+    if (self.nameText.text.length == 0) {
+        [self.view makeToast:@"昵称不能为空" duration:1 position:CSToastPositionCenter];
+        return;
+    }
+    
+    
     [LYNetwork POSTWithApiPath:resetNameUrl requestParams:@{
            @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
            @"loginDTO":@{@"nickname":self.nameText.text}
        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+
+        [self.view makeToast:@"昵称修改成功" duration:1 position:CSToastPositionCenter];
+        
 
        }];
        

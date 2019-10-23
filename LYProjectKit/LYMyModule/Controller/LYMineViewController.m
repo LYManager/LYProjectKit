@@ -35,6 +35,10 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 @implementation LYMineViewController
 ////vccccceshi
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self loadRequest];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -42,7 +46,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     
     self.navigationItem.title = @"我的";
     
-    [self loadRequest];
+   // [self loadRequest];
 }
 - (void)loadRequest{
     [LYNetwork POSTWithApiPath:mineURL requestParams:@{} handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {

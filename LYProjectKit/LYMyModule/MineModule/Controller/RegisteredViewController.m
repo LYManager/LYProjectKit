@@ -36,7 +36,9 @@
     self.phoneLab.keyboardType = UIKeyboardTypeNumberPad;
     self.codeText.keyboardType = UIKeyboardTypeNumberPad;
     self.moneyPwText.keyboardType = UIKeyboardTypeNumberPad;
-    
+    self.pwAgainText.secureTextEntry = YES;
+    self.moneyPwText.secureTextEntry = YES;
+
 
     
 }
