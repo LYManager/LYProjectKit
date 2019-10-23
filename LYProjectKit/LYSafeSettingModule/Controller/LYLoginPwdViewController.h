@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LYLoginPwdViewController : LYBaseViewController
 
+@property (nonatomic,strong)NSString *myTag;
+
 @end
 
 NS_ASSUME_NONNULL_END

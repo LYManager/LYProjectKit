@@ -112,6 +112,10 @@
 		82ECDE6A235EF831002D6532 /* AssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ECDE69235EF831002D6532 /* AssetModel.m */; };
 		82ECDE6D235F00DB002D6532 /* CoinDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ECDE6C235F00DB002D6532 /* CoinDetailModel.m */; };
 		82ECDE70235F5010002D6532 /* InvitFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ECDE6F235F5010002D6532 /* InvitFriendViewController.m */; };
+		82ECDE74236047E6002D6532 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ECDE72236047E6002D6532 /* AboutUsViewController.m */; };
+		82ECDE75236047E6002D6532 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82ECDE73236047E6002D6532 /* AboutUsViewController.xib */; };
+		82ECDE772360481D002D6532 /* aboutUs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82ECDE762360481D002D6532 /* aboutUs.jpg */; };
+		82ECDE7A2360560F002D6532 /* UIButton+Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ECDE792360560F002D6532 /* UIButton+Timer.m */; };
 		82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */; };
 		82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34E235AF08500A6D038 /* ContactCustomerViewController.xib */; };
 		82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA34F235AF08500A6D038 /* InvitationViewController.xib */; };
@@ -359,6 +363,12 @@
 		82ECDE6C235F00DB002D6532 /* CoinDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoinDetailModel.m; sourceTree = "<group>"; };
 		82ECDE6E235F5010002D6532 /* InvitFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvitFriendViewController.h; sourceTree = "<group>"; };
 		82ECDE6F235F5010002D6532 /* InvitFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvitFriendViewController.m; sourceTree = "<group>"; };
+		82ECDE71236047E6002D6532 /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		82ECDE72236047E6002D6532 /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		82ECDE73236047E6002D6532 /* AboutUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		82ECDE762360481D002D6532 /* aboutUs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aboutUs.jpg; sourceTree = "<group>"; };
+		82ECDE782360560F002D6532 /* UIButton+Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Timer.h"; sourceTree = "<group>"; };
+		82ECDE792360560F002D6532 /* UIButton+Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Timer.m"; sourceTree = "<group>"; };
 		82FBA349235AF08500A6D038 /* WithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
 		82FBA34A235AF08500A6D038 /* TopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopUpViewController.h; sourceTree = "<group>"; };
 		82FBA34B235AF08500A6D038 /* ModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyViewController.h; sourceTree = "<group>"; };
@@ -1088,6 +1098,9 @@
 				829C2D48235C4369004F9641 /* TeamViewController.m */,
 				82EAAD8E235E08F000991124 /* NodeArchitectureViewController.h */,
 				82EAAD8D235E08EF00991124 /* NodeArchitectureViewController.m */,
+				82ECDE71236047E6002D6532 /* AboutUsViewController.h */,
+				82ECDE72236047E6002D6532 /* AboutUsViewController.m */,
+				82ECDE73236047E6002D6532 /* AboutUsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1114,6 +1127,8 @@
 		82FBA362235AF08500A6D038 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				82ECDE782360560F002D6532 /* UIButton+Timer.h */,
+				82ECDE792360560F002D6532 /* UIButton+Timer.m */,
 				82FBA37D235AFBAC00A6D038 /* AGCDetailHeadView.h */,
 				82FBA37E235AFBAC00A6D038 /* AGCDetailHeadView.m */,
 				82FBA380235AFBCC00A6D038 /* AGCDetailHeadView.xib */,
@@ -1142,6 +1157,7 @@
 		82FBA373235AF2C000A6D038 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				82ECDE762360481D002D6532 /* aboutUs.jpg */,
 				82FBA374235AF2D100A6D038 /* code.jpg */,
 				82FBA376235AF5CE00A6D038 /* timg.jpg */,
 				829C2D3A235C08A1004F9641 /* 1.jpg */,
@@ -1273,6 +1289,7 @@
 				6397A634235C54C400F8A2D2 /* LYPayPopViewController.xib in Resources */,
 				6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */,
 				82EAAD81235DF35B00991124 /* Assets.xcassets in Resources */,
+				82ECDE772360481D002D6532 /* aboutUs.jpg in Resources */,
 				63933B73235A0D3800D5E138 /* LYMineTableViewCell.xib in Resources */,
 				82FBA368235AF08500A6D038 /* TopUpViewController.xib in Resources */,
 				63933B692359E8F300D5E138 /* LYMineViewController.xib in Resources */,
@@ -1296,6 +1313,7 @@
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
 				63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */,
+				82ECDE75236047E6002D6532 /* AboutUsViewController.xib in Resources */,
 				63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */,
 				63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */,
 				82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */,
@@ -1449,6 +1467,7 @@
 				82FBA371235AF08500A6D038 /* InvitationViewController.m in Sources */,
 				637754F2235E846100FEA141 /* LYHomeData.m in Sources */,
 				63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */,
+				82ECDE7A2360560F002D6532 /* UIButton+Timer.m in Sources */,
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				82EAAD8B235E08E300991124 /* TextTableViewCell.m in Sources */,
@@ -1464,6 +1483,7 @@
 				63264DC7235C112100293467 /* LYConstInterface.m in Sources */,
 				637754F8235E859B00FEA141 /* LYRubbishModel.m in Sources */,
 				63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */,
+				82ECDE74236047E6002D6532 /* AboutUsViewController.m in Sources */,
 				637754FE235EA8DC00FEA141 /* LYAntCardModel.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
 				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
@@ -1708,7 +1728,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8D3CFMJ397;
+				DEVELOPMENT_TEAM = G8G6BXAV68;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1742,7 +1762,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8D3CFMJ397;
+				DEVELOPMENT_TEAM = G8G6BXAV68;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

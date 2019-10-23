@@ -7,7 +7,7 @@
 
 #import "LYSafeSettingViewController.h"
 #import "LYSafeSettingTableViewCell.h"
-//#import "LYLoginPwdViewController.h"
+#import "LYLoginPwdViewController.h"
 typedef NSString * ControllerName;
 @interface LYSafeSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -59,7 +59,24 @@ static NSString * const kSettingCellIdentifier = @"LYSafeSettingTableViewCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    LYLoginPwdViewController * vc = [[LYLoginPwdViewController alloc]initWithNibName:@"LYLoginPwdViewController" bundle:NSBundle.mainBundle];
 //    [self.navigationController pushViewController:vc animated:YES];
-    [self pushViewControllerWithClassName:self.controllerNames[indexPath.section] params:nil];
+    
+    if (indexPath.section == 0) {
+        LYLoginPwdViewController *logVC = [[LYLoginPwdViewController alloc]init];
+        logVC.myTag =  @"登录密码";
+        [self.navigationController pushViewController:logVC animated:YES];
+    }
+    else if (indexPath.section == 1)
+    {
+        LYLoginPwdViewController *logVC = [[LYLoginPwdViewController alloc]init];
+        logVC.myTag =  @"交易密码";
+        [self.navigationController pushViewController:logVC animated:YES];
+    }
+    else
+    {
+        [self pushViewControllerWithClassName:self.controllerNames[indexPath.section] params:nil];
+
+    }
+    
 }
 
 - (NSArray<NSString *> *)titleArray{

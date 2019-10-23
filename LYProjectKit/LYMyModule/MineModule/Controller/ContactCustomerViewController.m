@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
 
+@property (nonatomic,strong)NSString *urlStr;
 @end
 
 @implementation ContactCustomerViewController
@@ -32,12 +33,23 @@
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         [self.iconImage sd_setImageWithURL:[NSURL URLWithString:[[response objectForKey:@"data"] objectForKey:@"imgUrl"]]];
         self.titleLab.text = [NSString stringWithFormat:@"%@%@",@"客服微信号",[[response objectForKey:@"data"] objectForKey:@"phone"]];
+        self.urlStr = [[response objectForKey:@"data"] objectForKey:@"phone"];
         
     }];
     
 }
 
 - (IBAction)fuzhiAction:(id)sender {
+    
+    UIPasteboard *pab = [UIPasteboard generalPasteboard];
+       pab.string = self.urlStr;
+       if (pab == nil) {
+           [self.view makeToast:@"复制失败" duration:1 position:CSToastPositionCenter];
+
+       } else {
+           [self.view makeToast:@"已复制" duration:1 position:CSToastPositionCenter];
+
+       }
 }
 
 /*

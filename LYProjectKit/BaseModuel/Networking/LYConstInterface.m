@@ -58,3 +58,13 @@ NSString * const useCardURL = @"/ant-api/ant/useCard";
 NSString * const idCardValiURL = @"/ant-api/IdVali/iDCardVali"; // 实名认证
 
 NSString * const sendCardURL = @"/ant-api/ant/giveCard";
+
+NSString * const resetLogURL = @"/ant-api/user/changeLoginPassword";
+
+NSString * const sendCodeURL = @"/ant-api/user/mobileCode";
+
+NSString * const resetZhiURL = @"/ant-api/user/changePayPassword";
+
+NSString * const registURL = @"/ant-api/user/register";
+
+NSString * const codelogURL = @"/ant-api/user/mobileLogin";
