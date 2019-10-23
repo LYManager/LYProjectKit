@@ -56,8 +56,15 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
                        handler:(NetworkCompletionHandler)handler
 {
      [LYProgressHUD ly_showHUD];
-    NSMutableDictionary * paramsNew = [NSMutableDictionary dictionaryWithDictionary:requestParams];
     
+    
+    
+    NSMutableDictionary * paramsNew = [NSMutableDictionary dictionaryWithDictionary:requestParams];
+    NSData * imageData = nil;
+   if ([paramsNew objectForKey:@"imageData"]) {
+       imageData = [paramsNew objectForKey:@"imageData"];
+       [paramsNew removeObjectForKey:@"imageData"];
+   }
     if ([LYUserInfoManager shareInstance].userInfo.token) {
         [paramsNew setValue:[LYUserInfoManager shareInstance].userInfo.token forKey:@"token"];
     }
@@ -76,7 +83,7 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
     
     NSString * str =[NSString stringWithFormat:@"O%i",dataInt];
     
-    
+   
     [self.manager POST:apiPath parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSData *paramsData =[paramsNewStr dataUsingEncoding:NSUTF8StringEncoding];
         NSData *dateStr =[str dataUsingEncoding:NSUTF8StringEncoding];
@@ -89,6 +96,13 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
         }else{
             NSData *lanStr =[@"" dataUsingEncoding:NSUTF8StringEncoding];
             [formData appendPartWithFormData:lanStr name:@"language"];
+        }
+        if (imageData) {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            formatter.dateFormat =@"yyyyMMddHHmmss";
+            NSString *str = [formatter stringFromDate:[NSDate date]];
+            NSString *fileName = [NSString stringWithFormat:@"%@.jpg", str];
+            [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpeg"];
         }
         NSLog(@"%@",formData);
         [LYProgressHUD ly_dismissHUD];
@@ -115,6 +129,9 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
        
     }];
 }
+
+
+
 #pragma mark🐒------处理请求数据------🐒
 - (void)_handleGenerallResponse:(id)response
           withCompletionHandler:(NetworkCompletionHandler)handler

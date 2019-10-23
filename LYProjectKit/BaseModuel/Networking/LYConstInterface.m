@@ -45,7 +45,7 @@ NSString * const resetNameUrl = @"/ant-api/user/modifyName";
 //邀请好友
 NSString * const inviteUrl = @"/ant-api/user/inviteView";
 //图片上传
-NSString * const uploadImageUrl = @"/ant-api/user/inviteView";
+NSString * const uploadImageUrl = @"/ant-api//user/uploadIcon";
 
 //NSString * const shengTaiURL      = @"/ant-api/ant/store";
 

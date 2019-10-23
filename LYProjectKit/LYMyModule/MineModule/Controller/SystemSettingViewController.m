@@ -217,20 +217,20 @@
     
     //1 //UIImage转换为NSData
     self.imageData = UIImageJPEGRepresentation(saveImage, 0.5);
-    NSString *imageStr = [self.imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-    self.headImage.image = saveImage;
+//    NSString *imageStr = [self.imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
     
     
     //上传
     NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
     
     [LYNetwork POSTWithApiPath:uploadImageUrl requestParams:@{
-        @"file":imageStr,
+        @"imageData":_imageData,
         @"tempDTO":@{@"fileType":@"1"}
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
    
         NSLog(@"%@",response);
-        
+        [self.headImage sd_setImageWithURL:[NSURL URLWithString:response[@"data"][@"url"]]];
     }];
     
     

@@ -21,13 +21,29 @@
     // Do any additional setup after loading the view from its nib.
     self.accountNumberTF.attributedPlaceholder = [self.accountNumberTF.placeholder ly_attributePlaceholder];
     self.pwdTF.attributedPlaceholder = [self.pwdTF.placeholder ly_attributePlaceholder];
+#if DEBUG
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    tap.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:tap];
+#endif
+}
+
+- (void) tapAction:(UITapGestureRecognizer *)tap{
+    self.pwdTF.text = @"123456";
+    self.accountNumberTF.text = @"333333";
 }
 
 - (IBAction)loginBtnAction:(UIButton *)sender {
+    
+    if (self.pwdTF.text.length == 0 || self.accountNumberTF.text.length == 0) {
+        [self.view makeToast:@"请填写正确信息" duration:1 position:CSToastPositionCenter];
+        return;
+    }
+    
     [LYNetwork POSTWithApiPath:loginURL requestParams:@{
         @"loginDTO":@{
-                @"mobile":@"555555",
-                @"password":@"123456"
+                @"mobile":self.accountNumberTF.text,
+                @"password":self.pwdTF.text
         }
     } handler:^(NSDictionary * _Nonnull response, NSError * _Nullable error) {
         if (!error) {

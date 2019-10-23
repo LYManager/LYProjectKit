@@ -16,6 +16,8 @@ typedef void(^NetworkCompletionHandler)(NSDictionary  *_Nullable response, NSErr
 - (void)POSTWithApiPath:(NSString*)apiPath
           requestParams:(NSDictionary*)requestParams
                 handler:(NetworkCompletionHandler)handler;
+
+- (void) uploadIcon:(NSString *)url param:(NSDictionary *)requestParams;
 @end
 
 NS_ASSUME_NONNULL_END
