@@ -9,6 +9,8 @@
 #import "ContactCustomerViewController.h"
 
 @interface ContactCustomerViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
 
 @end
 
@@ -19,6 +21,23 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"联系客服";
+    [self loadRequest];
+}
+- (void)loadRequest{
+    
+    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
+    
+    [LYNetwork POSTWithApiPath:contactUrl requestParams:@{
+        @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@""
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        [self.iconImage sd_setImageWithURL:[NSURL URLWithString:[[response objectForKey:@"data"] objectForKey:@"imgUrl"]]];
+        self.titleLab.text = [NSString stringWithFormat:@"%@%@",@"客服微信号",[[response objectForKey:@"data"] objectForKey:@"phone"]];
+        
+    }];
+    
+}
+
+- (IBAction)fuzhiAction:(id)sender {
 }
 
 /*

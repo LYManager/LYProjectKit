@@ -27,7 +27,27 @@ NSString * const mineURL          = @"/ant-api/user/myInfo";
 
 NSString * const antGonghuiURL    = @"/ant-api/ant/consortia";
 
-NSString * const shengTaiURL      = @"/ant-api/ant/store";
+NSString * const shengTaiURL = @"/ant-api/ant/store";
+//团队
+NSString * const teamURL = @"/ant-api/user/myTeamInfo";
+//账单
+NSString * const billURL = @"/ant-api/user/myNewBill";
+//钱包
+NSString * const assetURL = @"/ant-api/asset/myAsset";
+//币种明细
+NSString * const coinTypeURL = @"/ant-api/asset/coinInfo";
+//币种tixin
+NSString * const coinWithdraw = @"/ant-api/asset/withdraw";
+//客服
+NSString * const contactUrl = @"/ant-api/user/customerService";
+//修改昵称
+NSString * const resetNameUrl = @"/ant-api/user/modifyName";
+//邀请好友
+NSString * const inviteUrl = @"/ant-api/user/inviteView";
+//图片上传
+NSString * const uploadImageUrl = @"/ant-api/user/inviteView";
+
+//NSString * const shengTaiURL      = @"/ant-api/ant/store";
 
 NSString * const payTaskURL       = @"/ant-api/ant/buyTask";
 

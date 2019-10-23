@@ -9,6 +9,14 @@
 #import "WithdrawalViewController.h"
 
 @interface WithdrawalViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *coinLab;
+@property (weak, nonatomic) IBOutlet UILabel *rmbLab;
+@property (weak, nonatomic) IBOutlet UITextField *addressText;
+@property (weak, nonatomic) IBOutlet UITextField *numberText;
+@property (weak, nonatomic) IBOutlet UITextField *pwText;
+@property (weak, nonatomic) IBOutlet UILabel *detailLab;
+@property (weak, nonatomic) IBOutlet UIButton *submitBtn;
 
 @end
 
@@ -16,7 +24,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.title = @"提现";
+    self.nameLab.text = self.assModel.name;
+    self.coinLab.text = self.assModel.agcAmount;
+    self.rmbLab.text = [NSString stringWithFormat:@"%@%@",@"=",self.assModel.agcToRmb];
+
+    self.addressText.attributedPlaceholder = [[self.addressText placeholder] ly_attributePlaceholder];
+    self.numberText.attributedPlaceholder = [[self.numberText placeholder] ly_attributePlaceholder];
+    self.pwText.attributedPlaceholder = [[self.pwText placeholder] ly_attributePlaceholder];
+
+    [self.submitBtn ly_gradint];
+    
+    self.detailLab.text = self.wicon;
+
+}
+- (IBAction)submitBtnAction:(id)sender {
+    
+    
+    
+    [LYNetwork POSTWithApiPath:coinWithdraw requestParams:@{
+             @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",@"withdrawDTO":@{@"address":self.assModel.userAddress,@"coinType":self.assModel.coinType,@"amount":self.numberText.text,@"transPassword":self.pwText.text},
+         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        NSLog(@"成功");
+    }];
+    
 }
 
 /*

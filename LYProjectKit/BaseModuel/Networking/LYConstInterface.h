@@ -45,6 +45,16 @@ UIKIT_EXTERN NSString * const antGonghuiURL;
 
 UIKIT_EXTERN NSString * const shengTaiURL;
 
+UIKIT_EXTERN NSString * const teamURL;
+UIKIT_EXTERN NSString * const billURL;
+UIKIT_EXTERN NSString * const assetURL;
+UIKIT_EXTERN NSString * const coinTypeURL;
+UIKIT_EXTERN NSString * const coinWithdraw;
+UIKIT_EXTERN NSString * const contactUrl;
+UIKIT_EXTERN NSString * const resetNameUrl;
+UIKIT_EXTERN NSString * const inviteUrl;
+UIKIT_EXTERN NSString * const uploadImageUrl;
+
 UIKIT_EXTERN NSString * const payTaskURL;
 
 UIKIT_EXTERN NSString * const sendTaskCardURL;

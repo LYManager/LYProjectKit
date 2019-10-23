@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="width" constant="120" id="h8K-Z8-Qcu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -71,6 +71,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="coinShowLab" destination="2fa-wr-qyg" id="Hna-iu-O0T"/>
+                <outlet property="nameLab" destination="jUR-xW-tUJ" id="ssM-2a-7S7"/>
+                <outlet property="timeLab" destination="QPr-3F-bhx" id="P44-Rq-Shx"/>
+            </connections>
             <point key="canvasLocation" x="147.82608695652175" y="136.60714285714286"/>
         </tableViewCell>
     </objects>

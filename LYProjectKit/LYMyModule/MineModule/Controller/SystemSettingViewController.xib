@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SystemSettingViewController">
             <connections>
+                <outlet property="exitBtn" destination="qbL-Xu-Ksw" id="oqs-vk-MfT"/>
                 <outlet property="headImage" destination="vUY-5n-Dv2" id="Waf-9Y-qOe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLN-sw-N6s">
                     <rect key="frame" x="14" y="44" width="386" height="128"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-5n-Dv2">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-5n-Dv2">
                             <rect key="frame" x="16" y="16" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="TQg-J3-LiP"/>
@@ -106,6 +107,9 @@
                     <state key="normal" title="退出登录">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="editAction:" destination="-1" eventType="touchUpInside" id="5Nh-Lx-ehU"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.027717040849999999" green="0.03371883556" blue="0.1098119095" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -123,6 +127,5 @@
     </objects>
     <resources>
         <image name="rightArrow" width="8" height="14"/>
-        <image name="timg.jpg" width="600" height="674"/>
     </resources>
 </document>

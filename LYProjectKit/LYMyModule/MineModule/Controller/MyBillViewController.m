@@ -9,12 +9,13 @@
 #import "MyBillViewController.h"
 #import "MyBillableViewCell.h"
 #import "SWOAuthCodeView.h"
+#import "BillModel.h"
 #define ScreenScale6    (SCREEN_WIDTH/iPhone6ScreenWidth)
 
 @interface MyBillViewController ()<UITableViewDelegate,UITableViewDataSource,SWOAuthCodeViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)SWOAuthCodeView *codeView;
-
+@property (nonatomic,strong)NSMutableArray *dataArr;
 @end
 static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
 
@@ -23,16 +24,36 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.dataArr = [NSMutableArray array];
     [self configTableView];
     
     self.navigationItem.title = @"我的账单";
-   
+    [self loadRequest];
     
     
     // Do any additional setup after loading the view from its nib.
 }
-
+- (void)loadRequest{
+    
+    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
+    
+    [LYNetwork POSTWithApiPath:billURL requestParams:@{
+        @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
+        @"pageSize":@"10",
+        @"pageNum":@"1"
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        NSArray *arr = [response[@"data"]objectForKey:@"pageList"];
+        for (int i = 0; i<arr.count; i++) {
+            BillModel *model = [BillModel modelWithDictionary:arr[i]];
+            [self.dataArr addObject:model];
+            
+        }
+        
+        
+        [self.tableView reloadData];
+    }];
+    
+}
 - (void) configTableView{
     self.tableView.rowHeight = 54;
     [self.tableView registerNib:[UINib nibWithNibName:kAGCCellIdentifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:kAGCCellIdentifier];
@@ -48,7 +69,7 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -56,6 +77,33 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
     MyBillableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kAGCCellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    BillModel *model = self.dataArr[indexPath.row];
+    cell.nameLab.text = model.content;
+    cell.timeLab.text = [self dateWithString:model.createDate];
+    NSString *coinStr;
+    if ([model.coinType isEqualToString:@"1"]) {
+        coinStr = @"AGC";
+    }
+    if ([model.coinType isEqualToString:@"2"]) {
+        coinStr = @"贡献值";
+    }
+    if ([model.coinType isEqualToString:@"3"]) {
+        coinStr = @"USDT";
+    }
+    if ([model.coinType isEqualToString:@"4"]) {
+        coinStr = @"活跃度";
+    }
+    cell.titShowLab.text = [NSString stringWithFormat:@"%@%@",model.coinAmount,coinStr];
+    if ([cell.titShowLab.text containsString:@"-"]) {
+        cell.titShowLab.textColor = RGB(0, 153, 84, 1.0);
+    }
+    else
+    {
+        cell.titShowLab.textColor = RGB(239, 22, 17, 1.0);
+    }
+    
+    
+    
     
     
     return cell;
@@ -77,30 +125,50 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //创建view时，需要指定验证码的长度
-    SWOAuthCodeView *oacView = [[SWOAuthCodeView alloc] initWithMaxLength:6];
-    [self.view addSubview:oacView];
-    /* -----设置可选的属性 start----- */
-    oacView.delegate = self; //设置代理
-    oacView.boxNormalBorderColor = [UIColor blueColor]; //方框的边框正常状态时的边框颜色
-    oacView.boxHighlightBorderColor = [UIColor redColor]; //方框的边框输入状态时的边框颜色
-    oacView.boxBorderWidth = 2; //方框的边框宽度
-    oacView.boxCornerRadius = 6; //方框的圆角半径
-    oacView.boxBGColor = [UIColor whiteColor];  //方框的背景色
-    oacView.boxTextColor = [UIColor blackColor]; //方框内文字的颜色
-    /* -----设置可选的属性 end----- */
-    //显示键盘，可以输入验证码了
-    [oacView beginEdit];
-
-    //可选步骤：Masonry布局/设置frame
-    [oacView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(oacView.superview).offset(15);
-        make.right.equalTo(oacView.superview).offset(-15);
-        make.top.equalTo(oacView.superview).offset(150);
-        make.height.mas_equalTo(44);
-    }];
-  
+//    //创建view时，需要指定验证码的长度
+//    SWOAuthCodeView *oacView = [[SWOAuthCodeView alloc] initWithMaxLength:6];
+//    [self.view addSubview:oacView];
+//    /* -----设置可选的属性 start----- */
+//    oacView.delegate = self; //设置代理
+//    oacView.boxNormalBorderColor = [UIColor blueColor]; //方框的边框正常状态时的边框颜色
+//    oacView.boxHighlightBorderColor = [UIColor redColor]; //方框的边框输入状态时的边框颜色
+//    oacView.boxBorderWidth = 2; //方框的边框宽度
+//    oacView.boxCornerRadius = 6; //方框的圆角半径
+//    oacView.boxBGColor = [UIColor whiteColor];  //方框的背景色
+//    oacView.boxTextColor = [UIColor blackColor]; //方框内文字的颜色
+//    /* -----设置可选的属性 end----- */
+//    //显示键盘，可以输入验证码了
+//    [oacView beginEdit];
+//
+//    //可选步骤：Masonry布局/设置frame
+//    [oacView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(oacView.superview).offset(15);
+//        make.right.equalTo(oacView.superview).offset(-15);
+//        make.top.equalTo(oacView.superview).offset(150);
+//        make.height.mas_equalTo(44);
+//    }];
+//  
     
+}
+//将时间戳转换为时间字符串
+-(NSString*)dateWithString:(NSString*)str
+
+{
+
+    NSTimeInterval time = [str doubleValue];
+
+    /** [[NSDate date] timeIntervalSince1970]*1000;*/
+
+    NSDate *detaildate = [NSDate dateWithTimeIntervalSince1970:time];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
+
+    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];//设定时间格式,这里可以设置成自己需要的格式
+
+    NSString*currentDateStr = [dateFormatter stringFromDate:detaildate];
+
+    return currentDateStr;
+
 }
 
 
