@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYPopSendToolsViewController">
             <connections>
+                <outlet property="cardNameLabel" destination="Z6d-qj-8rA" id="Bnb-D2-YCd"/>
                 <outlet property="commitBtn" destination="ab3-cR-gve" id="Uvk-77-Ahl"/>
                 <outlet property="contentView" destination="8nA-Sv-H5R" id="9x6-0B-ljH"/>
                 <outlet property="pwdView" destination="Nxh-P6-ZlM" id="Stc-xR-2IX"/>

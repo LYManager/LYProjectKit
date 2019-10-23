@@ -7,6 +7,7 @@
 
 #import "LYMayiGongHuiHeaderView.h"
 #import "LYAntGonghuiData.h"
+#import "UIColor+Extention.h"
 @interface LYMayiGongHuiHeaderView ()
 @property (weak, nonatomic) IBOutlet UIButton *realNameCardSendBtn;
 @property (weak, nonatomic) IBOutlet UIButton *realNameCardUseBtn;
@@ -27,12 +28,28 @@
 
 
 - (void)configDataWithModel:(LYAntGonghuiDataModel *)model{
+//    model.isUseLaborCard = YES;
     self.levelLabel.text = model.levelName;
     self.zhituiNumLabel.text = [@(model.childNums)stringValue];
     self.huoyueLabel.text = [@(model.liveness) stringValue];
     [self configCardWithModel:model.propsCardList.firstObject];
     [self configCardWithModel:model.propsCardList.lastObject];
+    [self configBtn:self.realNameCardUseBtn isUsed:model.isUseNameCard];
+    [self configBtn:self.mayiCardUseBtn isUsed:model.isUseLaborCard];
 }
+
+- (void) configBtn:(UIButton *)button isUsed:(BOOL)isUsed{
+    [button setTitle:isUsed ? @"已使用" : @"立即使用" forState:UIControlStateNormal];
+    if (isUsed) {
+         [button setBackgroundColor:[UIColor ly_colorWithHexString:@"#313656"]];
+        button.layer.cornerRadius = button.frame.size.height / 2;
+    }else{
+        [button ly_gradint];
+    }
+    button.enabled = !isUsed;
+}
+
+
 
 - (void) configCardWithModel:(LYAntCardModel *)cardModel{
     if (cardModel.cardId == 1) {
@@ -45,9 +62,9 @@
 }
 
 - (void) configUI {
-    [self.realNameCardUseBtn ly_gradint];
+//    [self.realNameCardUseBtn ly_gradint];
     [self.realNameCardSendBtn ly_gradint];
-    [self.mayiCardUseBtn ly_gradint];
+//    [self.mayiCardUseBtn ly_gradint];
     [self.mayiCardSendBtn ly_gradint];
 }
 

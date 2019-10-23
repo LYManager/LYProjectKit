@@ -9,8 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYPayPopViewController">
             <connections>
+                <outlet property="cardNameLabel" destination="hR5-Ri-0vT" id="sKj-kf-BOp"/>
                 <outlet property="commitBtn" destination="XjQ-vm-nsE" id="PNV-OZ-Qln"/>
                 <outlet property="contentView" destination="FCb-0s-OBl" id="20B-ID-Hlk"/>
+                <outlet property="cycleTimeLabel" destination="HOo-Ob-83k" id="eSs-kU-Rva"/>
+                <outlet property="priceLabel" destination="3oz-ea-DcS" id="g9i-ou-6ae"/>
                 <outlet property="pwdView" destination="TJj-PF-zmT" id="B4r-rx-yYW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,6 +39,9 @@
                                 <constraint firstAttribute="width" secondItem="lnB-1w-ldN" secondAttribute="height" multiplier="1:1" id="YC0-Ke-Jth"/>
                             </constraints>
                             <state key="normal" image="cancel_icon"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="88n-AP-VDH"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjQ-vm-nsE">
                             <rect key="frame" x="20" y="296.5" width="286" height="41.5"/>
@@ -45,6 +51,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="commitBtnAction:" destination="-1" eventType="touchUpInside" id="EGz-ld-lrJ"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入六位数支付密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-it-b1l">
                             <rect key="frame" x="0.0" y="273" width="326" height="13.5"/>

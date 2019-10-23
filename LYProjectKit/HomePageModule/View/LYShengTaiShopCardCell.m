@@ -29,8 +29,16 @@
     // Initialization code
 }
 
+- (IBAction)buyBtnAction:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(buyBtnActionCell:)]) {
+        [self.delegate buyBtnActionCell:self];
+    }
+}
+
+
 - (void)configData:(LYTaskCardModel *)data type:(LYShengTaiShopCardType)cardType{
     [self hidenBuyBtn:cardType != LYShengTaiShopCardType_ShopCard];
+    self.typeLabel.text = data.taskName;
     [self.cardIconImageView sd_setImageWithURL:[NSURL URLWithString:data.taskUrl]];
     switch (cardType) {
         case LYShengTaiShopCardType_ShopCard:
@@ -42,15 +50,15 @@
             break;
         case LYShengTaiShopCardType_TaskCard:
            {
-               self.leftTopLabel.text = [NSString stringWithFormat:@"购买时间:%@",data.createTime];
+               self.leftTopLabel.text = [NSString stringWithFormat:@"购买时间:%@",[self dateWithString:data.createTime Format:@"yyyy-MM-dd"]];
                self.leftBottomLabel.text = [NSString stringWithFormat:@"剩余天数:%ld天",data.remainDays];
                self.reduceLabel.text = [NSString stringWithFormat:@"%ldAGC",data.nowEarning];
            }
            break;
         case LYShengTaiShopCardType_PastCard:
            {
-                self.leftTopLabel.text = [NSString stringWithFormat:@"购买时间:%@",data.createTime];
-                self.leftBottomLabel.text = [NSString stringWithFormat:@"过期时间:%@",data.endTime];
+                self.leftTopLabel.text = [NSString stringWithFormat:@"购买时间:%@",[self dateWithString:data.createTime Format:@"yyyy-MM-dd"]];
+                self.leftBottomLabel.text = [NSString stringWithFormat:@"过期时间:%@",[self dateWithString:data.endTime Format:@"yyyy-MM-dd"]];
                 self.reduceLabel.text = [NSString stringWithFormat:@"%ldAGC",data.nowEarning];
            }
            break;
@@ -62,6 +70,28 @@
     self.buyBtn.hidden = hiden;
     self.reduceDesLabel.text = hiden ? @"已产生收益" : @"消耗";
     self.reduceLabel.font = [UIFont systemFontOfSize:hiden ? 12 : 16];
+}
+
+
+//将时间戳转换为时间字符串
+- (NSString*)dateWithString:(NSString*)str Format:(NSString*)format
+
+{
+
+    NSTimeInterval time = [str doubleValue];
+
+    /** [[NSDate date] timeIntervalSince1970]*1000;*/
+
+    NSDate *detaildate = [NSDate dateWithTimeIntervalSince1970:time];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
+
+    [dateFormatter setDateFormat:format];//设定时间格式,这里可以设置成自己需要的格式
+
+    NSString*currentDateStr = [dateFormatter stringFromDate:detaildate];
+
+    return currentDateStr;
+
 }
 
 - (void) configUI {

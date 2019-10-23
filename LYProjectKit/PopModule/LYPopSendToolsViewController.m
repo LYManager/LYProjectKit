@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet LYPopContentView *contentView;
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 @property (weak, nonatomic) IBOutlet UITextField *userIdTF;
+@property (weak, nonatomic) IBOutlet UILabel *cardNameLabel;
+
 @end
 
 @implementation LYPopSendToolsViewController
@@ -21,6 +23,7 @@
     [super viewDidLoad];
     [self configPwdView];
     self.userIdTF.attributedPlaceholder = [self.userIdTF.placeholder ly_attributePlaceholder];
+    [self configData];
     // Do any additional setup after loading the view from its nib.
 }
 - (void) configPwdView{
@@ -30,6 +33,10 @@
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     
+}
+
+- (void) configData{
+    self.cardNameLabel.text = self.cardModel.cardName;
 }
 
 - (void)viewWillAppear:(BOOL)animated{

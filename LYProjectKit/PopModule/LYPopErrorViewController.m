@@ -8,6 +8,9 @@
 #import "LYPopErrorViewController.h"
 #import "LYPopContentView.h"
 @interface LYPopErrorViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *topLabel;
+
 @property (weak, nonatomic) IBOutlet LYPopContentView *contentView;
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 @end
@@ -17,7 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self configUI];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void) configUI{
+    self.titleLabel.text = self.isSend ? @"赠送失败" : @"使用失败";
+    self.topLabel.text = self.isRealNameCard ? @"您的实名认证卡" : @"您的蚂蚁工会卡";
 }
 - (void)viewWillAppear:(BOOL)animated{
     CABasicAnimation *theAnimation = [self fromValue:@(0.6) toValue:@1];

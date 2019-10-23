@@ -68,6 +68,9 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="购买"/>
+                        <connections>
+                            <action selector="buyBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cl7-Pr-YNm"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

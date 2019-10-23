@@ -10,7 +10,8 @@
 
 
 #import "UIViewController+AdjustScrollViewLayout.h"
-
+#import "LYTaskCardModel.h"
+#import "LYAntCardModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYBaseViewController : UIViewController
@@ -35,16 +36,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 弹出购买弹框
-- (void) popBuyController;
+- (void) popBuyController:(nullable LYTaskCardModel *)cardModel;
 
 /// 使用道具弹框
-- (void) popToolsController;
+- (void) popToolsController:(LYAntCardModel *)antTaskModel callBack:(nullable void(^)(NSString *))callBack;
 
 /// 赠送道具
-- (void) popSendToolsController;
+- (void) popSendToolsController:(LYAntCardModel *)antTaskModel;
 
 /// 错误弹框
-- (void) popErrorController;
+- (void)popErrorControllerIsSend:(BOOL)isSend isRealNameCard:(BOOL)isRealNameCard;
 
 @end
 

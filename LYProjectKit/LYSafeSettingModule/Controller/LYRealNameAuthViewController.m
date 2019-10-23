@@ -25,6 +25,7 @@
     [self.commitBtn ly_gradint];
     
     self.navigationItem.title = @"实名认证";
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -36,8 +37,30 @@
 
 #pragma mark🐒------提交------🐒
 - (IBAction)commitAction:(UIButton *)sender {
+    
+//    提交参数
+    LYAntCardModel * model = self.params[@"realNameCardModel"];
+    [self popToolsController:model callBack:^(NSString * _Nonnull pwd) {
+//        提交认证
+        [self loadRequestWithPwd:pwd];
+    }];
 }
-
+//提交数据
+- (void) loadRequestWithPwd:(NSString *)pwd{
+    [LYNetwork POSTWithApiPath:idCardValiURL requestParams:@{
+        @"keyWords":pwd,
+        @"userCardDto":@{
+                @"mobile":self.phoneNumberTF.text ?:@"",
+                @"userCardNum":self.cardTF.text ?:@"",
+                @"userName":self.realNameTF.text ?:@""
+        }
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        [self.view makeToast:@"认证成功" duration:1 position:CSToastPositionCenter];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+    }];
+}
 
 /*
 #pragma mark - Navigation

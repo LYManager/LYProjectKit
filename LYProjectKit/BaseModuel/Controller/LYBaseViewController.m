@@ -11,6 +11,8 @@
 #import "LYPopToolsViewController.h" // 使用道具
 #import "LYPopSendToolsViewController.h"
 #import "LYPopErrorViewController.h"
+
+
 @interface LYBaseViewController ()<UINavigationControllerDelegate>
 
 @end
@@ -55,23 +57,31 @@
 }
 
 #pragma mark🐒------弹框------     使用时候强转对应vc🐒
-- (void)popBuyController{
-    LYBaseViewController *vc = [self _getPopVC:@"LYPayPopViewController"];
-    [self.navigationController presentViewController:vc animated:NO completion:nil];
+- (void)popBuyController:(LYTaskCardModel *)cardModel{
+    LYPayPopViewController *vc = (LYPayPopViewController *)[self _getPopVC:@"LYPayPopViewController"];
+    vc.model = cardModel;
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)popToolsController{
-    LYBaseViewController *vc = [self _getPopVC:@"LYPopToolsViewController"];
-   [self.navigationController presentViewController:vc animated:NO completion:nil];
+- (void)popToolsController:(LYAntCardModel *)antTaskModel callBack:(nullable void (^)(NSString * _Nonnull))callBack{
+    LYPopToolsViewController *vc = (LYPopToolsViewController *)[self _getPopVC:@"LYPopToolsViewController"];
+    vc.cardModel = antTaskModel;
+    if (antTaskModel.cardId == 1) {
+        vc.callBack = callBack;
+    }
+   [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)popSendToolsController{
-     LYBaseViewController *vc = [self _getPopVC:@"LYPopSendToolsViewController"];
-      [self.navigationController presentViewController:vc animated:NO completion:nil];
+- (void)popSendToolsController:(LYAntCardModel *)antTaskModel{
+     LYPopSendToolsViewController *vc = (LYPopSendToolsViewController *)[self _getPopVC:@"LYPopSendToolsViewController"];
+    vc.cardModel = antTaskModel;
+      [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)popErrorController{
-    LYBaseViewController *vc = [self _getPopVC:@"LYPopErrorViewController"];
+- (void)popErrorControllerIsSend:(BOOL)isSend isRealNameCard:(BOOL)isRealNameCard{
+    LYPopErrorViewController *vc = (LYPopErrorViewController *)[self _getPopVC:@"LYPopErrorViewController"];
+    vc.isSend = isSend;
+    vc.isRealNameCard = isRealNameCard;
     [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
