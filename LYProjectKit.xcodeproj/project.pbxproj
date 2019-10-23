@@ -40,6 +40,8 @@
 		635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C31A1235DFAFB0015889B /* LaunchScreen.storyboard */; };
 		635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C31A4235E05FF0015889B /* LYUserInfo.m */; };
 		635C31A8235E0AEB0015889B /* LYUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C31A7235E0AEB0015889B /* LYUserInfoManager.m */; };
+		63684BD8236042610066D0C9 /* LYHomeCycleItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63684BD7236042610066D0C9 /* LYHomeCycleItemView.m */; };
+		63684BDB23605BF90066D0C9 /* LYHomeCycleBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63684BDA23605BF90066D0C9 /* LYHomeCycleBgView.m */; };
 		637754F2235E846100FEA141 /* LYHomeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754F1235E846100FEA141 /* LYHomeData.m */; };
 		637754F5235E847600FEA141 /* LYBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754F4235E847600FEA141 /* LYBaseModel.m */; };
 		637754F8235E859B00FEA141 /* LYRubbishModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754F7235E859B00FEA141 /* LYRubbishModel.m */; };
@@ -234,6 +236,10 @@
 		635C31A6235E0AEB0015889B /* LYUserInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LYUserInfoManager.h; path = LYProjectKit/LYUserInfoManager.h; sourceTree = SOURCE_ROOT; };
 		635C31A7235E0AEB0015889B /* LYUserInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LYUserInfoManager.m; path = LYProjectKit/LYUserInfoManager.m; sourceTree = SOURCE_ROOT; };
 		635C31A9235E0CC60015889B /* LYResponseCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYResponseCode.h; sourceTree = "<group>"; };
+		63684BD6236042610066D0C9 /* LYHomeCycleItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeCycleItemView.h; sourceTree = "<group>"; };
+		63684BD7236042610066D0C9 /* LYHomeCycleItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeCycleItemView.m; sourceTree = "<group>"; };
+		63684BD923605BF90066D0C9 /* LYHomeCycleBgView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeCycleBgView.h; sourceTree = "<group>"; };
+		63684BDA23605BF90066D0C9 /* LYHomeCycleBgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeCycleBgView.m; sourceTree = "<group>"; };
 		637754F0235E846100FEA141 /* LYHomeData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHomeData.h; sourceTree = "<group>"; };
 		637754F1235E846100FEA141 /* LYHomeData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYHomeData.m; sourceTree = "<group>"; };
 		637754F3235E847600FEA141 /* LYBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYBaseModel.h; sourceTree = "<group>"; };
@@ -807,6 +813,10 @@
 			children = (
 				63848CBF235D8BD8000B505A /* LYHomeBottomView.h */,
 				63848CC0235D8BD8000B505A /* LYHomeBottomView.m */,
+				63684BD6236042610066D0C9 /* LYHomeCycleItemView.h */,
+				63684BD7236042610066D0C9 /* LYHomeCycleItemView.m */,
+				63684BD923605BF90066D0C9 /* LYHomeCycleBgView.h */,
+				63684BDA23605BF90066D0C9 /* LYHomeCycleBgView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1420,6 +1430,7 @@
 				634221122233945300A2CD27 /* LYTabBarViewController.m in Sources */,
 				82EAAD8F235E08F000991124 /* NodeArchitectureViewController.m in Sources */,
 				63933BA1235B360600D5E138 /* LYShengTaiViewController.m in Sources */,
+				63684BD8236042610066D0C9 /* LYHomeCycleItemView.m in Sources */,
 				634221582233FC2B00A2CD27 /* UIViewController+Aspects.m in Sources */,
 				63933B9B235B27E100D5E138 /* LYMayiGongHuiFooterView.m in Sources */,
 				637754FB235EA78000FEA141 /* LYAntGonghuiData.m in Sources */,
@@ -1428,6 +1439,7 @@
 				6397A633235C54C400F8A2D2 /* LYPayPopViewController.m in Sources */,
 				63264DD5235C14A000293467 /* GHLLocalizable.m in Sources */,
 				63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */,
+				63684BDB23605BF90066D0C9 /* LYHomeCycleBgView.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
 				82FBA385235B003800A6D038 /* AGCDetailTableViewCell.m in Sources */,
 				82FBA36F235AF08500A6D038 /* TopUpViewController.m in Sources */,

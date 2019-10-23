@@ -123,10 +123,7 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
          }
          [LYProgressHUD ly_dismissHUD];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         !handler ?: handler(nil,error);
-        
          [LYProgressHUD ly_dismissHUD];
-       
     }];
 }
 
