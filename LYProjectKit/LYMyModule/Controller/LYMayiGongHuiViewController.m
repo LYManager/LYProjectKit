@@ -38,6 +38,8 @@
 }
 
 - (void) configDataWithModel:(LYAntGonghuiDataModel *)model{
+    self.headerView.hidden = NO;
+    self.footerView.hidden = NO;
     [self.headerView configDataWithModel:model];
     [self.footerView configDataWithModel:model];
 }
@@ -54,6 +56,7 @@
         self.tableView.tableHeaderView = headerView;
     });
     self.headerView = headerView;
+    self.headerView.hidden = YES;
     headerView.delegate = self;
     
     
@@ -64,6 +67,7 @@
         self.tableView.tableHeaderView = headerView;
     });
     self.footerView = footerView;
+    self.footerView.hidden = YES;
     self.tableView.tableFooterView = footerView;
 }
 
@@ -84,7 +88,6 @@
 - (void)useCardWithType:(CardType)cardType{
     if (cardType == CardType_RealCard) {
         LYAntCardModel * model = self.data.data.propsCardList.firstObject;
-        model.cardCount = 1;
         if (model.cardCount > 0) {
 //            去实名认证
             [self pushViewControllerWithClassName:@"LYRealNameAuthViewController" params:@{
@@ -109,7 +112,6 @@
 - (void)sendCaardWithType:(CardType)cardType{
     if (cardType == CardType_RealCard) {
         LYAntCardModel * model = self.data.data.propsCardList.firstObject;
-        model.cardCount = 0;
         if (model.cardCount > 0) {
             [self popSendToolsController:self.data.data.propsCardList.firstObject];
         }else{
@@ -118,7 +120,6 @@
         }
     }else{
         LYAntCardModel * model = self.data.data.propsCardList.firstObject;
-        model.cardCount = 0;
         if (model.cardCount > 0) {
             [self popSendToolsController:self.data.data.propsCardList.lastObject];
         }else{

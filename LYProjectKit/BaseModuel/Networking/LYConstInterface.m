@@ -36,3 +36,5 @@ NSString * const sendTaskCardURL = @"/ant-api/ant/giveCard";
 NSString * const useCardURL = @"/ant-api/ant/useCard";
 
 NSString * const idCardValiURL = @"/ant-api/IdVali/iDCardVali"; // 实名认证
+
+NSString * const sendCardURL = @"/ant-api/ant/giveCard";

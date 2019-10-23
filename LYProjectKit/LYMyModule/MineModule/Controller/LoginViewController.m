@@ -24,7 +24,7 @@
 - (IBAction)loginBtnAction:(UIButton *)sender {
     [LYNetwork POSTWithApiPath:loginURL requestParams:@{
         @"loginDTO":@{
-                @"mobile":@"333333",
+                @"mobile":@"555555",
                 @"password":@"123456"
         }
     } handler:^(NSDictionary * _Nonnull response, NSError * _Nullable error) {

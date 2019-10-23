@@ -52,3 +52,5 @@ UIKIT_EXTERN NSString * const sendTaskCardURL;
 UIKIT_EXTERN NSString * const useCardURL;
 
 UIKIT_EXTERN NSString * const idCardValiURL;
+
+UIKIT_EXTERN NSString * const sendCardURL;
