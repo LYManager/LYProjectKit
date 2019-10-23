@@ -9,6 +9,8 @@
 #import "ModifyViewController.h"
 
 @interface ModifyViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *nameText;
+@property (weak, nonatomic) IBOutlet UIButton *submitBtn;
 
 @end
 
@@ -17,6 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"修改昵称";
+    self.nameText.text = self.nameStr;
+    [self.submitBtn ly_gradint];
+}
+- (IBAction)submitAction:(id)sender {
+    [LYNetwork POSTWithApiPath:resetNameUrl requestParams:@{
+           @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
+           @"loginDTO":@{@"nickname":self.nameText.text}
+       } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+
+       }];
+       
+}
+- (void)loadRequest{
+    
+    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
+    
+   
 }
 
 /*

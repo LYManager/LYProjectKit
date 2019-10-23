@@ -21,9 +21,9 @@
                         <rect key="frame" x="14" y="0.0" width="300" height="53"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[账单名称]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyX-4Q-e6G">
-                                <rect key="frame" x="17" y="13" width="100" height="13"/>
+                                <rect key="frame" x="17" y="13" width="138" height="13"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Mqc-zE-7rA"/>
+                                    <constraint firstAttribute="width" constant="138" id="Mqc-zE-7rA"/>
                                     <constraint firstAttribute="height" constant="13" id="hs7-A0-wU2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -72,6 +72,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="nameLab" destination="fyX-4Q-e6G" id="Ljp-yp-lUH"/>
+                <outlet property="timeLab" destination="6rD-50-wpJ" id="cG2-fR-udr"/>
+                <outlet property="titShowLab" destination="rxv-Gj-MAh" id="YrI-DU-4Uh"/>
+            </connections>
             <point key="canvasLocation" x="143.47826086956522" y="127.90178571428571"/>
         </tableViewCell>
     </objects>

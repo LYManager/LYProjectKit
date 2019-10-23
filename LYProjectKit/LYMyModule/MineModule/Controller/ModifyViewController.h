@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ModifyViewController : LYBaseViewController
 
+@property (nonatomic,strong)NSString *nameStr;
+
 @end
 
 NS_ASSUME_NONNULL_END

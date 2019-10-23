@@ -12,10 +12,17 @@
 #import "TopUpViewController.h"
 #import "WithdrawalViewController.h"
 #import "AcceptanceViewController.h"
+#import "AssetModel.h"
+#import "CoinDetailModel.h"
 @interface AGCDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)UIButton *withdrwBtn;
 @property (nonatomic,strong)UIButton *topBtn;
+@property (nonatomic,strong)AssetModel *model;
+@property (nonatomic,strong)CoinDetailModel *coinmodel;
+@property (nonatomic,strong)NSMutableArray *coinArr;
+@property (nonatomic,strong)NSString *chongtzhiStr;
+@property (nonatomic,strong)NSString *tiStr;
 
 @end
 static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
@@ -24,7 +31,7 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.coinArr = [NSMutableArray  array];
     [self configTableView];
     
     self.navigationItem.title = @"AGC详情";
@@ -32,17 +39,48 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     UIBarButtonItem *rigButton = [[UIBarButtonItem alloc] initWithTitle:@"承兑商" style:UIBarButtonItemStylePlain target:self action:@selector(exitBtnAction)];
     [rigButton setTintColor:[UIColor whiteColor]];
     
-    self.navigationItem.rightBarButtonItem = rigButton;
+//    self.navigationItem.rightBarButtonItem = rigButton;//暂时隐藏
+    [self loadRequest];
    
-    [LYNetwork POSTWithApiPath:@"" requestParams:@"" handler:^(NSDictionary * _Nonnull response, NSError * _Nullable error) {
+}
+- (void)loadRequest{
+    
+    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
+    
+    [LYNetwork POSTWithApiPath:assetURL requestParams:@{
+        @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@""
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        self.model = [AssetModel modelWithDictionary:response[@"data"]];
+         [self configTableViewHeaderFooterView];
         
+        //列表
+        [LYNetwork POSTWithApiPath:coinTypeURL requestParams:@{
+            @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
+            @"userInfoDTO":@{@"coinType":self.model.coinType},
+            @"pageSize":@"10",
+            @"pageNum":@"1"
+        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+            NSArray *arr = [[response[@"data"]objectForKey:@"coinBill"]objectForKey:@"pageList"];
+            for (int i = 0; i<arr.count; i++) {
+                CoinDetailModel *coinmodel = [CoinDetailModel modelWithDictionary:arr[i]];
+                [self.coinArr addObject:coinmodel];
+   
+            }
+            self.chongtzhiStr = [[response[@"data"]objectForKey:@"coinInfo"]objectForKey:@"recon"];
+            self.tiStr = [[response[@"data"]objectForKey:@"coinInfo"]objectForKey:@"wicon"];
+
+            [self.tableView reloadData];
+        }];
         
     }];
     
     
-    // Do any additional setup after loading the view from its nib.
+    
 }
-
+-(void)setUIData
+{
+    
+}
 - (void) configTableView{
     self.tableView.rowHeight = 60;
     [self configTableViewHeaderFooterView];
@@ -57,7 +95,11 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     dispatch_async(dispatch_get_main_queue(), ^{
         self.tableView.tableHeaderView = headerView;
     });
-    
+    headerView.nameLab.text = self.model.name;
+    headerView.coinShowLab.text = self.model.agcAmount;
+    headerView.rmbLab.text = [NSString stringWithFormat:@"%@%@",@"=",self.model.agcToRmb];
+
+    headerView.nameLab.textColor = [UIColor whiteColor];
     self.tableView.tableFooterView = [UIView new];
 }
 
@@ -67,17 +109,47 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return self.coinArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     AGCDetailTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kAGCCellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor redColor];
-    
+    CoinDetailModel *model = self.coinArr[indexPath.row];
+    cell.nameLab.text = model.content;
+    cell.timeLab.text = [self dateWithString:model.tradeTime];
+    cell.coinShowLab.text = model.amount;
+    if ([cell.coinShowLab.text containsString:@"-"]) {
+        cell.coinShowLab.textColor = RGB(0, 153, 84, 1.0);
+    }
+    else
+    {
+        cell.coinShowLab.textColor = RGB(239, 22, 17, 1.0);
+    }
+        
     
     return cell;
 }
+//将时间戳转换为时间字符串
+-(NSString*)dateWithString:(NSString*)str
 
+{
+
+    NSTimeInterval time = [str doubleValue];
+
+    /** [[NSDate date] timeIntervalSince1970]*1000;*/
+
+    NSDate *detaildate = [NSDate dateWithTimeIntervalSince1970:time];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
+
+    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];//设定时间格式,这里可以设置成自己需要的格式
+
+    NSString*currentDateStr = [dateFormatter stringFromDate:detaildate];
+
+    return currentDateStr;
+
+}
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *view= [[UIView alloc]init];
@@ -125,14 +197,18 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
 }
 -(void)withdrwBtnAction
 {
-    WithdrawalViewController *withVC = [[WithdrawalViewController alloc]init];
-    [self.navigationController pushViewController:withVC animated:YES];
+    TopUpViewController *topVC = [[TopUpViewController alloc]init];
+    topVC.assModel = self.model;
+    topVC.recon = self.chongtzhiStr;
+    [self.navigationController pushViewController:topVC animated:YES];
 }
 -(void)topBtnAction
 {
-    TopUpViewController *topVC = [[TopUpViewController alloc]init];
-      
-    [self.navigationController pushViewController:topVC animated:YES];
+    WithdrawalViewController *withVC = [[WithdrawalViewController alloc]init];
+    withVC.assModel = self.model;
+    withVC.wicon = self.tiStr;
+    [self.navigationController pushViewController:withVC animated:YES];
+    
 }
 -(void)exitBtnAction
 {

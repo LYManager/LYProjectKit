@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SystemSettingViewController : LYBaseViewController
+@property (nonatomic,strong)NSString *nameStr;
+@property (nonatomic,strong)NSString *iconStr;
 
 @end
 

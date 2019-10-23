@@ -9,6 +9,13 @@
 #import "TopUpViewController.h"
 
 @interface TopUpViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *coinLab;
+@property (weak, nonatomic) IBOutlet UILabel *rmbLab;
+@property (weak, nonatomic) IBOutlet UIImageView *codeImage;
+@property (weak, nonatomic) IBOutlet UILabel *urlLab;
+@property (weak, nonatomic) IBOutlet UIButton *fuzhiBtn;
+@property (weak, nonatomic) IBOutlet UILabel *detailLab;
 
 @end
 
@@ -16,7 +23,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"充值";
+    self.nameLab.text = self.assModel.name;
+    self.coinLab.text = self.assModel.agcAmount;
+    self.rmbLab.text = [NSString stringWithFormat:@"%@%@",@"=",self.assModel.agcToRmb];
+    [self.codeImage sd_setImageWithURL:[NSURL URLWithString:self.assModel.iconUrl]];
+    self.urlLab.text = self.assModel.userAddress;
+
+    self.detailLab.text = self.recon;
+
+
+}
+- (IBAction)fuzhiAction:(id)sender {
 }
 
 /*

@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface InvitationViewController : LYBaseViewController
+@property (nonatomic,strong)NSString *nameStr;
+@property (nonatomic,strong)NSString *iconStr;
 
 @end
 

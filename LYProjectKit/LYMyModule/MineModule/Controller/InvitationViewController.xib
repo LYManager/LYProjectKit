@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvitationViewController">
             <connections>
+                <outlet property="backImage" destination="ShO-T7-2La" id="ZTb-Vk-xLL"/>
+                <outlet property="codeLab" destination="f5k-bg-Hyf" id="CEc-Rd-MPy"/>
+                <outlet property="headImage" destination="8Tn-HZ-x9D" id="nuP-KC-mJu"/>
+                <outlet property="invitImage" destination="73D-wc-LvF" id="Xo0-S4-Tsv"/>
+                <outlet property="nameLab" destination="phh-oj-k1U" id="8Hd-3m-AKM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,7 +32,7 @@
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Tn-HZ-x9D">
                             <rect key="frame" x="286" y="370" width="48" height="48"/>
-                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="92D-Kv-HKw"/>
                                 <constraint firstAttribute="width" constant="48" id="qVQ-bq-vbu"/>
@@ -43,6 +48,9 @@
                             <state key="normal" title="下一张">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="fgq-Ju-JxO"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40A-rg-z3J">
                             <rect key="frame" x="47" y="752" width="60" height="14"/>
@@ -54,10 +62,13 @@
                             <state key="normal" title="上一张">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="topAction:" destination="-1" eventType="touchUpInside" id="Lqi-FL-ogF"/>
+                            </connections>
                         </button>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="73D-wc-LvF">
                             <rect key="frame" x="258" y="280" width="76" height="70"/>
-                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="iRD-8T-uKN"/>
                                 <constraint firstAttribute="width" constant="76" id="nWD-IP-lfE"/>

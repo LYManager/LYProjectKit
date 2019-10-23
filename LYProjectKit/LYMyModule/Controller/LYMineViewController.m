@@ -17,6 +17,7 @@
 #import "MyBillViewController.h"
 #import "LYMayiGongHuiViewController.h"
 #import "NodeArchitectureViewController.h"
+#import "InvitFriendViewController.h"
 @interface LYMineViewController ()<UITableViewDelegate,UITableViewDataSource,LYMineHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< LYMineHeaderView*/
@@ -64,7 +65,13 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// 邀请好友
 - (void)clickInviteFriend {
-    InvitationViewController *invitVC = [[InvitationViewController alloc]init];
+//    InvitationViewController *invitVC = [[InvitationViewController alloc]init];
+//    invitVC.iconStr = self.userInfo.actor;
+//    invitVC.nameStr = self.userInfo.userName;
+//    [self.navigationController pushViewController:invitVC animated:YES];
+    InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
+    invitVC.iconStr = self.userInfo.actor;
+    invitVC.nameStr = self.userInfo.userName;
     [self.navigationController pushViewController:invitVC animated:YES];
 }
 
@@ -145,6 +152,9 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     }
     if (indexPath.section == 1) {
         SystemSettingViewController *systemVC = [[SystemSettingViewController alloc]init];
+        systemVC.nameStr = self.userInfo.userName;
+        systemVC.iconStr = self.userInfo.actor;
+
         [self.navigationController pushViewController:systemVC animated:YES];
     }
     if (indexPath.section == 2) {

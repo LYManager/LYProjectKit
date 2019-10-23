@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.accountNumberTF.attributedPlaceholder = [self.accountNumberTF.placeholder ly_attributePlaceholder];
+    self.pwdTF.attributedPlaceholder = [self.pwdTF.placeholder ly_attributePlaceholder];
 }
 
 - (IBAction)loginBtnAction:(UIButton *)sender {

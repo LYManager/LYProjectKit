@@ -11,6 +11,8 @@
 #import "ImageTableViewCell.h"
 #import "TextTableViewCell.h"
 
+#import "TeamModel.h"
+
 #define kScreenW [[UIScreen mainScreen] bounds].size.width
 #define kScreenH [[UIScreen mainScreen] bounds].size.height
 #define RGB(R, G, B, A)\
@@ -29,6 +31,7 @@
 @property (nonatomic,strong)UILabel *allAttributionShowLab;  /*总节点展示*/
 
 @property (nonatomic,strong)UITableView *baseTbleView;   /*列表tab*/
+@property (nonatomic,strong)TeamModel *model;
 
 @end
 
@@ -39,12 +42,23 @@
    // [self setHeadUI];
     [self.view addSubview:self.baseTbleView];
 //    self.baseTbleView.tableHeaderView = self.headView;
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"节点架构";
-    
+    self.view.backgroundColor = [UIColor colorWithRed:16/255.0 green:18/255.0 blue:27/255.0 alpha:1.0];
+    self.title = @"我的团队";
+    [self loadRequest];
     
 }
-
+- (void)loadRequest{
+    
+    NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
+    
+    [LYNetwork POSTWithApiPath:teamURL requestParams:@{
+        @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@""
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        self.model = [TeamModel modelWithDictionary:response[@"data"]];
+        [self.baseTbleView reloadData];
+    }];
+    
+}
 -(UITableView *)baseTbleView
 {
     if (_baseTbleView== nil) {
@@ -80,13 +94,13 @@
         return 1;
     }else if (section == 1)
     {
-        return 10;
-    }else if (section == 1)
+        return 0;
+    }else if (section == 2)
     {
-        return 14;
+        return self.model.notActiveChilds.count +1;
     }else
     {
-        return 14;
+         return self.model.childsList.count +1;
     }
     
     
@@ -102,10 +116,10 @@
         }
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.ruleImage.image = [UIImage imageNamed:@"123123"];
+        [cell.ruleImage sd_setImageWithURL:[NSURL URLWithString:self.model.contCoinRule]];
         return cell;
     }
-    else
+    else if (indexPath.section == 1)
     {
         TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
         if (cell == nil) {
@@ -116,6 +130,49 @@
         cell.codeLab.text = @"编号";
         cell.phoneLab.text = @"手机号";
         cell.idLab.text = @"ID";
+        return cell;
+    }
+    else if (indexPath.section == 2)
+    {
+           TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+           if (cell == nil) {
+               cell = [[TextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+           }
+           tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+           cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (indexPath.row == 0) {
+            cell.codeLab.text = @"编号";
+            cell.phoneLab.text = @"手机号";
+            cell.idLab.text = @"ID";
+        }
+        else
+        {
+          
+            cell.codeLab.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+            cell.phoneLab.text = [self.model.notActiveChilds[indexPath.row-1]objectForKey:@"mobile"];
+            cell.idLab.text = [NSString stringWithFormat:@"%@",[self.model.notActiveChilds[indexPath.row-1]objectForKey:@"userId"]];
+        }
+        return cell;
+    }
+    else
+    {
+        TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        if (cell == nil) {
+            cell = [[TextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        }
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+       if (indexPath.row == 0) {
+            cell.codeLab.text = @"编号";
+            cell.phoneLab.text = @"手机号";
+            cell.idLab.text = @"ID";
+        }
+        else
+        {
+            cell.codeLab.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+            cell.phoneLab.text = [self.model.childsList[indexPath.row-1]objectForKey:@"mobile"];
+            cell.idLab.text = [NSString stringWithFormat:@"%@",[self.model.childsList[indexPath.row-1]objectForKey:@"userId"]];
+        }
         return cell;
     }
 }
@@ -138,16 +195,17 @@
         [titleLable sizeToFit];
         
         [titileView addSubview:titleLable];
-        UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-164, 0,134, 40)];
+        UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-174, 0,134, 40)];
         titleshowLable.backgroundColor = [UIColor clearColor];
         titleshowLable.textColor = [UIColor whiteColor];
         titleshowLable.font = [UIFont systemFontOfSize:14];
-        titleshowLable.text = @"10893";
+        titleshowLable.text = [NSString stringWithFormat:@"%ld",(long)self.model.contAmount];
         titleshowLable.textAlignment = NSTextAlignmentRight;
-        
-        UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-30, 12, 22, 22)];
+        [titileView addSubview:titleshowLable];
+
+        UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-30, 17.5, 10, 5)];
         lastImageView.backgroundColor = [UIColor clearColor];
-        lastImageView.image = [UIImage imageNamed:@"my_kefu_icon_arrow_xia"];
+        lastImageView.image = [UIImage imageNamed:@"x"];
         [titileView addSubview:lastImageView];
         [titileView addTarget:self action:@selector(sectionAction:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -171,7 +229,7 @@
          titleshowLable.backgroundColor = [UIColor clearColor];
          titleshowLable.textColor = [UIColor whiteColor];
          titleshowLable.font = [UIFont systemFontOfSize:14];
-         titleshowLable.text = @"10893";
+        titleshowLable.text = [NSString stringWithFormat:@"%ld",(long)self.model.teamNums];
          titleshowLable.textAlignment = NSTextAlignmentRight;
 
         // [titleshowLable sizeToFit];
@@ -197,20 +255,20 @@
                [titleLable sizeToFit];
                [titileView addSubview:titleLable];
                
-               UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-164, 0,134, 40)];
+               UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-174, 0,134, 40)];
                titleshowLable.backgroundColor = [UIColor clearColor];
                titleshowLable.textColor = [UIColor whiteColor];
                titleshowLable.font = [UIFont systemFontOfSize:14];
-               titleshowLable.text = @"10893";
+        titleshowLable.text = [NSString stringWithFormat:@"%ld",(long)self.model.notActiveNums];
                titleshowLable.textAlignment = NSTextAlignmentRight;
 
               // [titleshowLable sizeToFit];
                
                [titileView addSubview:titleshowLable];
                
-               UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-30, 12, 22, 22)];
+               UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-30, 17.5, 10, 5)];
                lastImageView.backgroundColor = [UIColor clearColor];
-               lastImageView.image = [UIImage imageNamed:@"my_kefu_icon_arrow_xia"];
+               lastImageView.image = [UIImage imageNamed:@"x"];
                [titileView addSubview:lastImageView];
                [titileView addTarget:self action:@selector(section3Action:) forControlEvents:UIControlEventTouchUpInside];
                
@@ -230,20 +288,20 @@
         [titleLable sizeToFit];
         [titileView addSubview:titleLable];
         
-        UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-164, 0,134, 40)];
+        UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-174, 0,134, 40)];
         titleshowLable.backgroundColor = [UIColor clearColor];
         titleshowLable.textColor = [UIColor whiteColor];
         titleshowLable.font = [UIFont systemFontOfSize:14];
-        titleshowLable.text = @"10893";
+        titleshowLable.text = [NSString stringWithFormat:@"%ld",(long)self.model.activedNums];
         titleshowLable.textAlignment = NSTextAlignmentRight;
 
        // [titleshowLable sizeToFit];
         
         [titileView addSubview:titleshowLable];
         
-        UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-30, 12, 22, 22)];
+        UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-30, 17.5, 10, 5)];
         lastImageView.backgroundColor = [UIColor clearColor];
-        lastImageView.image = [UIImage imageNamed:@"my_kefu_icon_arrow_xia"];
+        lastImageView.image = [UIImage imageNamed:@"x"];
         [titileView addSubview:lastImageView];
         [titileView addTarget:self action:@selector(section4Action:) forControlEvents:UIControlEventTouchUpInside];
         
