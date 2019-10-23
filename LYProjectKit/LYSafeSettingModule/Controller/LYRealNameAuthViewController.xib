@@ -32,6 +32,7 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a75-RS-3BB">
                             <rect key="frame" x="101" y="0.0" width="283" height="61"/>
+                            <color key="textColor" red="0.045983619990000002" green="0.75571590659999999" blue="0.67130625249999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -59,6 +60,7 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的身份证号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="teu-ag-w8v">
                             <rect key="frame" x="101" y="0.0" width="283" height="61"/>
+                            <color key="textColor" red="0.051094092430000002" green="0.76780819889999996" blue="0.66273170709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -85,6 +87,7 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的电话号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6or-S5-WOW">
                             <rect key="frame" x="101" y="0.0" width="283" height="61.5"/>
+                            <color key="textColor" red="0.051094092430000002" green="0.76780819889999996" blue="0.66273170709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -112,12 +115,21 @@
                         <action selector="commitAction:" destination="-1" eventType="touchUpInside" id="7Zp-pB-ibL"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注意：认证失败同样将扣除一张认证卡，身份证号必须与手机号运营商处所保留的信息一致，请再次确认填写的信息是否有误" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ6-CB-8I7">
+                    <rect key="frame" x="30" y="200.5" width="354" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.35403680799999998" green="0.52700197699999995" blue="0.67266088719999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="pPf-L6-jfk" firstAttribute="top" secondItem="adm-5O-VJ5" secondAttribute="bottom" constant="1" id="4o7-jX-dBt"/>
+                <constraint firstItem="uQ6-CB-8I7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="BgM-Vx-8fE"/>
                 <constraint firstItem="adm-5O-VJ5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Dl4-jZ-Mtz"/>
+                <constraint firstAttribute="trailing" secondItem="uQ6-CB-8I7" secondAttribute="trailing" constant="30" id="GE0-Sk-64s"/>
                 <constraint firstItem="gE4-00-J1A" firstAttribute="width" secondItem="BGR-Hy-qRQ" secondAttribute="width" id="JYU-JB-ABm"/>
+                <constraint firstItem="uQ6-CB-8I7" firstAttribute="top" secondItem="TWG-IZ-slv" secondAttribute="bottom" constant="15" id="T4F-Vc-c9O"/>
                 <constraint firstItem="TWG-IZ-slv" firstAttribute="width" secondItem="adm-5O-VJ5" secondAttribute="width" id="VJa-nP-QBW"/>
                 <constraint firstItem="pPf-L6-jfk" firstAttribute="leading" secondItem="adm-5O-VJ5" secondAttribute="leading" id="VRW-dq-ROc"/>
                 <constraint firstItem="pPf-L6-jfk" firstAttribute="width" secondItem="adm-5O-VJ5" secondAttribute="width" id="YzY-hB-3yk"/>

@@ -28,8 +28,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)loadRequest{
-    
+- (void)loadRequest{    
     NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
     
     [LYNetwork POSTWithApiPath:homeURL requestParams:@{
@@ -38,6 +37,8 @@
         self.data = [LYHomeData modelWithDictionary:response];
         [self configUIWithData:self.data.data];
     }];
+    
+    
     
 }
 

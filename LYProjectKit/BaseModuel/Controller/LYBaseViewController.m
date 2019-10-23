@@ -52,8 +52,11 @@
     if ([viewController isKindOfClass:[UITabBarController class]]) {
         return;
     }
-    //navigationController.delegate = viewController;//防止有的失效
-    //[self.navigationController setNavigationBarHidden:viewController.isHideNavigationBar animated:YES];
+    if ([viewController isKindOfClass:NSClassFromString(@"PUPhotoPickerHostViewController")]) {
+        return;
+    }
+    navigationController.delegate = viewController;//防止有的失效
+    [self.navigationController setNavigationBarHidden:viewController.isHideNavigationBar animated:YES];
 }
 
 #pragma mark🐒------弹框------     使用时候强转对应vc🐒
