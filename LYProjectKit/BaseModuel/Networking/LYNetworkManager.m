@@ -56,9 +56,6 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
                        handler:(NetworkCompletionHandler)handler
 {
      [LYProgressHUD ly_showHUD];
-    
-    
-    
     NSMutableDictionary * paramsNew = [NSMutableDictionary dictionaryWithDictionary:requestParams];
     NSData * imageData = nil;
    if ([paramsNew objectForKey:@"imageData"]) {

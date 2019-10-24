@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// p
 /// @param earn 今日收益
 /// @param huoyue 活跃度
-- (void) configDataWithEarn:(long)earn huoyue:(NSInteger)huoyue;
+- (void) configDataWithEarn:(NSString *)earn huoyue:(NSInteger)huoyue;
 @end
 
 NS_ASSUME_NONNULL_END

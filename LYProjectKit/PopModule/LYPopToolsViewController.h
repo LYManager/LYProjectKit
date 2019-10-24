@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**< */
 @property(nonatomic,strong)LYAntCardModel * cardModel;
 
-/**< <#des#>*/
+/**< 是否是实名认证*/
+@property(nonatomic,assign)BOOL isRealCheck;
+/**<  */
 @property(nonatomic,copy)void(^callBack)(NSString *pwd);
 @end
 

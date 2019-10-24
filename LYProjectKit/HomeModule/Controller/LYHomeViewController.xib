@@ -13,6 +13,7 @@
                 <outlet property="bgImageView" destination="Tr9-Vk-zTg" id="NKF-80-LLB"/>
                 <outlet property="earthImageView" destination="NnT-dI-ZBf" id="Y2h-L2-ZSg"/>
                 <outlet property="headImageView" destination="g9o-Ub-IeF" id="cRP-Hz-dzk"/>
+                <outlet property="homeCycleBgView" destination="Kgd-Dt-G1v" id="F2T-H1-oPe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -161,7 +162,7 @@
                             <rect key="frame" x="30" y="30" width="294" height="294"/>
                         </imageView>
                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NnT-dI-ZBf">
-                            <rect key="frame" x="124" y="124" width="106" height="106"/>
+                            <rect key="frame" x="97.5" y="97.5" width="159" height="159"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="NnT-dI-ZBf" secondAttribute="height" multiplier="1:1" id="f8w-Jh-YAi"/>
                             </constraints>
@@ -175,7 +176,7 @@
                         <constraint firstAttribute="trailing" secondItem="Tr9-Vk-zTg" secondAttribute="trailing" constant="30" id="G1Z-cK-voc"/>
                         <constraint firstItem="Tr9-Vk-zTg" firstAttribute="centerY" secondItem="Kgd-Dt-G1v" secondAttribute="centerY" id="L7B-xP-iPM"/>
                         <constraint firstAttribute="bottom" secondItem="Tr9-Vk-zTg" secondAttribute="bottom" constant="30" id="S5V-3g-VEr"/>
-                        <constraint firstItem="NnT-dI-ZBf" firstAttribute="width" secondItem="Kgd-Dt-G1v" secondAttribute="width" multiplier="0.3" id="VM6-wE-C18"/>
+                        <constraint firstItem="NnT-dI-ZBf" firstAttribute="width" secondItem="Kgd-Dt-G1v" secondAttribute="width" multiplier="0.45" id="VM6-wE-C18"/>
                         <constraint firstItem="NnT-dI-ZBf" firstAttribute="centerY" secondItem="Kgd-Dt-G1v" secondAttribute="centerY" id="i5E-GM-6V1"/>
                         <constraint firstItem="Tr9-Vk-zTg" firstAttribute="top" secondItem="Kgd-Dt-G1v" secondAttribute="top" constant="30" id="rzD-uM-B3e"/>
                         <constraint firstAttribute="width" secondItem="Kgd-Dt-G1v" secondAttribute="height" multiplier="1:1" id="uPb-Lz-7vU"/>

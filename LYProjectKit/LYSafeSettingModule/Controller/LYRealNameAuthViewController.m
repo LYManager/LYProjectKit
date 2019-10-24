@@ -40,9 +40,8 @@
     
 //    提交参数
     LYAntCardModel * model = self.params[@"realNameCardModel"];
-    [self popToolsController:model callBack:^(NSString * _Nonnull pwd) {
-//        提交认证
-        [self loadRequestWithPwd:pwd];
+    [self popToolsController:model isRealCheck:YES callBack:^(NSString * _Nonnull pwd) {
+       [self loadRequestWithPwd:pwd];
     }];
 }
 //提交数据

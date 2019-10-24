@@ -35,16 +35,17 @@
         for (UIView *view in self.subviews) {
             if ([view isKindOfClass:[UIImageView class]]) {
                 for (UIView * child in view.subviews) {
-                     NSLog(@"===== %@",NSStringFromCGRect(child.layer.presentationLayer.frame));
-//                    CALayer * layer = [child.layer.presentationLayer hitTest:locationPointWindow];
-//                    if (layer) {
-//                        LYHomeCycleItemView * click = (LYHomeCycleItemView *)child;
-//                        NSLog(@"===== %@",click.model.rubbishName);
-//                    }
+                    LYHomeCycleItemView * click = (LYHomeCycleItemView *)child;
+//                     NSLog(@"===== %@",NSStringFromCGRect(click.imageView.layer.presentationLayer.frame));
+                    CALayer * layer = [click.layer.presentationLayer hitTest:locationPointWindow];
+                    if (layer) {
+                        LYHomeCycleItemView * click = (LYHomeCycleItemView *)child;
+                        NSLog(@"===== %@",click.model.rubbishName);
+                    }
                 }
             }
         }
-        NSLog(@"TouchLocationWindow:(%.1f,%.1f)",locationPointWindow.x,locationPointWindow.y);
+//        NSLog(@"TouchLocationWindow:(%.1f,%.1f)",locationPointWindow.x,locationPointWindow.y);
     } else {
         
     }

@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet LYPopContentView *contentView;
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 
+@property (weak, nonatomic) IBOutlet UILabel *topTitleLabel;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *cardNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
@@ -58,8 +61,17 @@
 }
 
 - (void) configData{
+    if (self.isRealCheck && self.cardModel == nil) {
+        self.topTitleLabel.text = @"实名认证卡";
+        self.cardNameLabel.hidden = YES;
+        self.topLabel.hidden = YES;
+        self.bottomLabel.text = @"确定后将扣除一张认证卡";
+        return;
+    }
     self.cardNameLabel.text = self.cardModel.cardName;
     self.bottomLabel.text = self.cardModel.cardId == 1 ? @"使用后即可进行实名认证" : @"使用后即可加入蚂蚁工会";
+    
+    
 }
 
 - (void) configPwdView{

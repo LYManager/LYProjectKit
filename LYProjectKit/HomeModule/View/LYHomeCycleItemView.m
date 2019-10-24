@@ -8,8 +8,7 @@
 #import "LYHomeCycleItemView.h"
 //#import "LYRubbishModel.h"
 @interface LYHomeCycleItemView ()
-/**< imageView*/
-@property(nonatomic,strong)UIImageView * imageView;
+
 
 /**< itemImageView*/
 @property(nonatomic,strong)UIImageView * itemImageView;
@@ -34,7 +33,12 @@
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    return self.imageView;
+    UIView *view = [super hitTest:point withEvent:event];
+     CGPoint buttonPoint = [self.imageView convertPoint:point fromView:self];
+    if ([self.imageView pointInside:buttonPoint withEvent:event]) {
+      return self.imageView;
+    }
+    return view;
 }
 
 - (void)configDataWithModel:(LYRubbishModel *)rubbishModel{
@@ -45,14 +49,13 @@
          [weakSelf.activityIndicator stopAnimating];
     }];
     self.titleLabel.text = rubbishModel.rubbishName;
-   
-    
 }
 
 - (void)tapAction:(UITapGestureRecognizer *)tap{
-//    CGPoint touchPoint = [tap locationInView:self];
+    CGPoint touchPoint = [tap locationInView:self];
 //    if ([self.imageView.layer.presentationLayer hitTest:touchPoint]) {
-//        NSLog(@"presentationLayer");
+        NSLog(@"%@",self.model.rubbishName);
+    
 //    }
 }
 
@@ -61,8 +64,8 @@
     self.imageView = imageView;
     imageView.userInteractionEnabled = YES;
     [self addSubview:imageView];
-//    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
-//    [self.imageView addGestureRecognizer:tap];
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    [self.imageView addGestureRecognizer:tap];
 //    
     
     UIImageView * itemImageView = [[UIImageView alloc]initWithFrame:CGRectZero];

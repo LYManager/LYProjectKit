@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYHomeCycleItemView : UIView
+/**< imageView*/
+@property(nonatomic,strong)UIImageView * imageView;
 @property(nonatomic,strong)LYRubbishModel * model;
 - (void) configDataWithModel:(LYRubbishModel *)rubbishModel;
 @end

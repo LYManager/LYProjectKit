@@ -182,6 +182,7 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     self.withdrwBtn.layer.cornerRadius = 20;
     [self.withdrwBtn addTarget:self action:@selector(withdrwBtnAction) forControlEvents:UIControlEventTouchUpInside];
     [self.withdrwBtn ly_gradint];
+    [self.withdrwBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:self.withdrwBtn];
     
     
@@ -190,6 +191,7 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     [self.topBtn setTitle:@"提币" forState:UIControlStateNormal];
     self.topBtn.layer.cornerRadius = 20;
     [self.topBtn addTarget:self action:@selector(topBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.topBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.topBtn ly_gradint];
     
     

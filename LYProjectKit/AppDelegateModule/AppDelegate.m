@@ -9,6 +9,7 @@
 #import "LYPageContext.h"
 
 @interface AppDelegate ()
+/**< <#des#>*/
 
 @end
 
@@ -18,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self _setupWindow];
     [self configProgressHUD];
-    // Override point for customization after application launch.
+
     return YES;
 }
 

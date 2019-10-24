@@ -54,10 +54,10 @@
 - (void) configCardWithModel:(LYAntCardModel *)cardModel{
     if (cardModel.cardId == 1) {
         self.realCheckCardNameLabel.text = cardModel.cardName;
-        self.realCardNumberLabel.text = [NSString stringWithFormat:@"×%ld张",cardModel.cardCount];
+        self.realCardNumberLabel.text = [NSString stringWithFormat:@"拥有%ld张",cardModel.cardCount];
     }else{
         self.antGonghuiCardNameLabel.text =cardModel.cardName;
-         self.myyiCardNumberLabel.text = [NSString stringWithFormat:@"×%ld张",cardModel.cardCount];
+         self.myyiCardNumberLabel.text = [NSString stringWithFormat:@"拥有%ld张",cardModel.cardCount];
     }
 }
 

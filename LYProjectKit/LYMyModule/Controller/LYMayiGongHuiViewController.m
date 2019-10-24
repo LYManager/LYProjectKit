@@ -113,7 +113,9 @@
     if (cardType == CardType_RealCard) {
         LYAntCardModel * model = self.data.data.propsCardList.firstObject;
         if (model.cardCount > 0) {
-            [self popSendToolsController:self.data.data.propsCardList.firstObject];
+            [self popSendToolsController:self.data.data.propsCardList.firstObject backBlock:^{
+                [self loadRequest];
+            }];
         }else{
         //  联系客服弹框
              [self popErrorControllerIsSend:YES isRealNameCard:YES];
@@ -121,7 +123,9 @@
     }else{
         LYAntCardModel * model = self.data.data.propsCardList.firstObject;
         if (model.cardCount > 0) {
-            [self popSendToolsController:self.data.data.propsCardList.lastObject];
+            [self popSendToolsController:self.data.data.propsCardList.lastObject backBlock:^{
+                [self loadRequest];
+            }];
         }else{
         //  联系客服弹框
              [self popErrorControllerIsSend:YES isRealNameCard:NO];

@@ -16,10 +16,10 @@
 @end
 
 @implementation LYShengTaiHeaderView
-- (void)configDataWithEarn:(long)earn huoyue:(NSInteger)huoyue{
+- (void)configDataWithEarn:(NSString *)earn huoyue:(NSInteger)huoyue{
 //    NSString *imageUrl = [LYUserInfoManager shareInstance].userInfo.actor;
 //    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
-    self.earnLabel.text = [NSString stringWithFormat:@"%ld",earn];
+    self.earnLabel.text = [NSString stringWithFormat:@"%@",earn];
     self.huoyueLabel.text = [@(huoyue) stringValue];
 }
 /*

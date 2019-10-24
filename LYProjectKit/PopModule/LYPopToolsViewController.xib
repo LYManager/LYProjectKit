@@ -15,6 +15,7 @@
                 <outlet property="contentView" destination="W6z-N6-OTD" id="oYR-YF-tpw"/>
                 <outlet property="pwdView" destination="v6m-Ub-DKx" id="Wgk-Ad-DkR"/>
                 <outlet property="topLabel" destination="WeC-TV-E4P" id="wbJ-1C-fsQ"/>
+                <outlet property="topTitleLabel" destination="y0W-eR-82y" id="X8a-q8-GWa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

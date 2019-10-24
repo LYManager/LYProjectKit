@@ -67,17 +67,23 @@
 }
 
 - (void)popToolsController:(LYAntCardModel *)antTaskModel callBack:(nullable void (^)(NSString * _Nonnull))callBack{
+    [self popToolsController:antTaskModel isRealCheck:NO callBack:callBack];
+}
+- (void) popToolsController:(LYAntCardModel *)antTaskModel isRealCheck:(BOOL)isRealCheck callBack:(nullable void(^)(NSString *))callBack{
     LYPopToolsViewController *vc = (LYPopToolsViewController *)[self _getPopVC:@"LYPopToolsViewController"];
-    vc.cardModel = antTaskModel;
-    if (antTaskModel.cardId == 1) {
-        vc.callBack = callBack;
-    }
-   [self.navigationController presentViewController:vc animated:YES completion:nil];
+       vc.cardModel = antTaskModel;
+    vc.isRealCheck = isRealCheck;
+   if (antTaskModel.cardId == 1) {
+       vc.callBack = callBack;
+   }
+  [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)popSendToolsController:(LYAntCardModel *)antTaskModel{
+
+- (void)popSendToolsController:(LYAntCardModel *)antTaskModel backBlock:(nonnull void (^)(void))backBlock{
      LYPopSendToolsViewController *vc = (LYPopSendToolsViewController *)[self _getPopVC:@"LYPopSendToolsViewController"];
     vc.cardModel = antTaskModel;
+    vc.backBlock = backBlock;
       [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
