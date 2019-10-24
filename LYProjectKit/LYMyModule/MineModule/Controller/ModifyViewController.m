@@ -29,10 +29,13 @@
         return;
     }
     
+//    NSString *str1 = [self.nameText.text stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSString *str1 = [self URLEncodedString:self.nameText.text];
+
     
     [LYNetwork POSTWithApiPath:resetNameUrl requestParams:@{
            @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
-           @"loginDTO":@{@"nickname":self.nameText.text}
+           @"loginDTO":@{@"nickname":str1}
        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
 
         [self.view makeToast:@"昵称修改成功" duration:1 position:CSToastPositionCenter];
@@ -41,12 +44,29 @@
        }];
        
 }
+- (NSString *)URLEncodedString:(NSString *)string
+{
+    // CharactersToBeEscaped = @":/?&=;+!@#$()~',*";
+    // CharactersToLeaveUnescaped = @"[].";
+
+    NSString *unencodedString = string;
+    NSString *encodedString = (NSString *)
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                              (CFStringRef)unencodedString,
+                                                              NULL,
+                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                              kCFStringEncodingUTF8));
+
+    return encodedString;
+}
+
 - (void)loadRequest{
     
     NSLog(@"用户id ===  %@",[LYUserInfoManager shareInstance].userInfo.userId);
     
    
 }
+
 
 /*
 #pragma mark - Navigation

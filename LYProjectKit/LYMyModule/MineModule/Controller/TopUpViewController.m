@@ -29,13 +29,14 @@
     self.title = @"充值";
     self.nameLab.text = self.assModel.name;
     self.coinLab.text = self.assModel.agcAmount;
-    self.rmbLab.text = [NSString stringWithFormat:@"%@%@",@"=",self.assModel.agcToRmb];
+    self.rmbLab.text = [NSString stringWithFormat:@"%@%@%@",@"≈",self.assModel.agcToRmb,@"CNY"];
     [self.codeImage sd_setImageWithURL:[NSURL URLWithString:self.assModel.iconUrl]];
     self.urlLab.text = self.assModel.userAddress;
     self.urlStr = self.assModel.userAddress;
 
+    NSString *strUrl = [self.recon stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
 
-    self.detailLab.text = self.recon;
+    self.detailLab.text = strUrl;
 
 
 }

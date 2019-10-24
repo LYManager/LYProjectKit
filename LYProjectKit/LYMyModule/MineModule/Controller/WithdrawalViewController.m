@@ -28,7 +28,8 @@
     self.title = @"提现";
     self.nameLab.text = self.assModel.name;
     self.coinLab.text = self.assModel.agcAmount;
-    self.rmbLab.text = [NSString stringWithFormat:@"%@%@",@"=",self.assModel.agcToRmb];
+    self.rmbLab.text =[NSString stringWithFormat:@"%@%@%@",@"≈",self.assModel.agcToRmb,@"CNY"];
+   
 
     self.addressText.attributedPlaceholder = [[self.addressText placeholder] ly_attributePlaceholder];
     self.numberText.attributedPlaceholder = [[self.numberText placeholder] ly_attributePlaceholder];
@@ -36,7 +37,9 @@
 
     [self.submitBtn ly_gradint];
     
-    self.detailLab.text = self.wicon;
+    self.detailLab.numberOfLines = 0;
+    NSString *strUrl = [self.wicon stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+    self.detailLab.text = strUrl;
 
 }
 - (IBAction)submitBtnAction:(id)sender {

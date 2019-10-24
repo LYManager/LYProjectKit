@@ -136,7 +136,7 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     });
     headerView.nameLab.text = self.model.name;
     headerView.coinShowLab.text = self.model.agcAmount;
-    headerView.rmbLab.text = [NSString stringWithFormat:@"%@%@",@"=",self.model.agcToRmb];
+    headerView.rmbLab.text = [NSString stringWithFormat:@"%@%@%@",@"≈",self.model.agcToRmb,@"CNY"];
 
     headerView.nameLab.textColor = [UIColor whiteColor];
     self.tableView.tableFooterView = [UIView new];
@@ -165,6 +165,8 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     }
     else
     {
+        cell.coinShowLab.text = [NSString stringWithFormat:@"%@%@",@"+",model.amount];
+
         cell.coinShowLab.textColor = RGB(239, 22, 17, 1.0);
     }
         
@@ -176,7 +178,7 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
 
 {
 
-    NSTimeInterval time = [str doubleValue];
+    NSTimeInterval time = [str doubleValue]/1000;
 
     /** [[NSDate date] timeIntervalSince1970]*1000;*/
 
@@ -208,6 +210,7 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%ld",indexPath.row);
+    
     if (indexPath.section == 0) {
         
     }

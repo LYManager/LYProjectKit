@@ -17,6 +17,7 @@
                 <outlet property="pwBtn" destination="HiN-vV-XKh" id="MsP-ZW-Fc1"/>
                 <outlet property="pwLab" destination="tMb-nj-sSe" id="eEl-jw-ui2"/>
                 <outlet property="pwdTF" destination="xss-vn-GCf" id="tBd-sp-bk9"/>
+                <outlet property="registBtn" destination="imW-me-q21" id="kiO-td-LWN"/>
                 <outlet property="sendBtn" destination="L5e-vm-vMx" id="K2u-ex-jC0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,23 +41,23 @@
                         <constraint firstAttribute="width" constant="109" id="OUM-iV-con"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiN-vV-XKh">
-                    <rect key="frame" x="35" y="395" width="50" height="24"/>
-                    <color key="backgroundColor" red="0.059832096099853516" green="0.75790828466415405" blue="0.65882033109664917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• 密码登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiN-vV-XKh">
+                    <rect key="frame" x="35" y="395" width="59" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="CKw-km-IgM"/>
-                        <constraint firstAttribute="width" constant="50" id="gIw-4y-scC"/>
+                        <constraint firstAttribute="width" constant="59" id="gIw-4y-scC"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="highlightedColor" red="0.059832096099853516" green="0.75790828466415405" blue="0.65882033109664917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="验证码登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5o-gt-2HF">
-                    <rect key="frame" x="113" y="395" width="62" height="24"/>
-                    <color key="backgroundColor" red="0.098406665030000007" green="0.11187631639999999" blue="0.20785421130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="113" y="395" width="72" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="DKk-jX-hy4"/>
-                        <constraint firstAttribute="width" constant="62" id="tC0-aI-NVR"/>
+                        <constraint firstAttribute="width" constant="72" id="tC0-aI-NVR"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,7 +164,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <state key="normal" title="忘记密码">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" red="0.46309608221054077" green="0.46848851442337036" blue="0.600017249584198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                     <connections>
                         <action selector="forgetBtnAction:" destination="-1" eventType="touchUpInside" id="EEJ-oG-GJb"/>
@@ -207,7 +208,7 @@
                 <constraint firstItem="v5o-gt-2HF" firstAttribute="top" secondItem="Icg-rg-6Th" secondAttribute="bottom" constant="113" id="FJV-OU-8nz"/>
                 <constraint firstItem="h3z-kg-2H8" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="109" id="FoD-Su-mP5"/>
                 <constraint firstItem="tHM-Cd-GMt" firstAttribute="top" secondItem="cc9-kg-v9n" secondAttribute="bottom" constant="9" id="G9P-jg-UOB"/>
-                <constraint firstItem="v5o-gt-2HF" firstAttribute="leading" secondItem="HiN-vV-XKh" secondAttribute="trailing" constant="28" id="GPF-y2-N54"/>
+                <constraint firstItem="v5o-gt-2HF" firstAttribute="leading" secondItem="HiN-vV-XKh" secondAttribute="trailing" constant="19" id="GPF-y2-N54"/>
                 <constraint firstItem="iX1-pc-omw" firstAttribute="top" secondItem="cc9-kg-v9n" secondAttribute="bottom" constant="44" id="GSY-21-Hen"/>
                 <constraint firstItem="iX1-pc-omw" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="33" id="JCi-L3-xQZ"/>
                 <constraint firstItem="HiN-vV-XKh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="35" id="Vre-90-Gu3"/>

@@ -78,7 +78,7 @@
 
 {
 
-    NSTimeInterval time = [str doubleValue];
+    NSTimeInterval time = [str doubleValue]/1000;;
 
     /** [[NSDate date] timeIntervalSince1970]*1000;*/
 
