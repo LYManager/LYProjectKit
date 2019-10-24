@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**< 禁止配置背景色 (蚂蚁项目)使用*/
 @property(nonatomic,assign,getter=isForbidConfigBgColor)BOOL forbidConfigBgColor;
 /**< 传参*/
-@property(nonatomic,strong)NSDictionary * params;
+@property(nonatomic,strong,nullable)NSDictionary * params;
 // 跳转
 - (void) pushViewControllerWithClassName:(NSString *)controllerName
                                   params:(nullable NSDictionary *)params;

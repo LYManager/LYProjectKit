@@ -20,6 +20,8 @@ typedef NS_ENUM(NSUInteger,CardType) {
 
 - (void) sendCaardWithType:(CardType)cardType;
 
+- (void) headerContackKefu;
+
 @end
 
 @interface LYMayiGongHuiHeaderView : UIView

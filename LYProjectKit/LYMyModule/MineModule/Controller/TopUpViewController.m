@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *urlLab;
 @property (weak, nonatomic) IBOutlet UIButton *fuzhiBtn;
 @property (weak, nonatomic) IBOutlet UILabel *detailLab;
+@property (nonatomic,strong)NSString *urlStr;
+
 
 @end
 
@@ -30,12 +32,23 @@
     self.rmbLab.text = [NSString stringWithFormat:@"%@%@",@"=",self.assModel.agcToRmb];
     [self.codeImage sd_setImageWithURL:[NSURL URLWithString:self.assModel.iconUrl]];
     self.urlLab.text = self.assModel.userAddress;
+    self.urlStr = self.assModel.userAddress;
+
 
     self.detailLab.text = self.recon;
 
 
 }
 - (IBAction)fuzhiAction:(id)sender {
+    UIPasteboard *pab = [UIPasteboard generalPasteboard];
+          pab.string = self.urlStr;
+          if (pab == nil) {
+              [self.view makeToast:@"复制失败" duration:1 position:CSToastPositionCenter];
+
+          } else {
+              [self.view makeToast:@"已复制" duration:1 position:CSToastPositionCenter];
+
+          }
 }
 
 /*

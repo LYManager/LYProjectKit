@@ -26,7 +26,7 @@
     self.title = @"系统设置";
     [self.exitBtn ly_gradint];
     self.headImage.layer.cornerRadius = 20;
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:self.iconStr]];
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:self.iconStr]placeholderImage:[UIImage imageNamed:@"head_icon"]];
     
     self.headImage.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture= [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
@@ -231,6 +231,7 @@
    
         NSLog(@"%@",response);
         [self.headImage sd_setImageWithURL:[NSURL URLWithString:response[@"data"][@"url"]]];
+        [LYUserInfoManager shareInstance].userInfo.actor = response[@"data"][@"url"];
     }];
     
     

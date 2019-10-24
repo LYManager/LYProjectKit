@@ -32,6 +32,7 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backImage" translatesAutoresizingMaskIntoConstraints="NO" id="pOX-tP-a1n">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" red="0.11003319174051285" green="0.12039078027009964" blue="0.18824377655982971" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape" translatesAutoresizingMaskIntoConstraints="NO" id="vPJ-XD-0N2">
                             <rect key="frame" x="34" y="84" width="68" height="68"/>
@@ -60,7 +61,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNR-Vj-MR5">
                             <rect key="frame" x="34" y="176" width="346" height="290"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号/邮箱：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnw-Nh-UYY">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnw-Nh-UYY">
                                     <rect key="frame" x="20" y="0.0" width="78" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="78" id="jYt-gG-fBv"/>
@@ -70,7 +71,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWP-sF-sbf">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWP-sF-sbf">
                                     <rect key="frame" x="103" y="0.0" width="243" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="45x-gR-Hw7"/>
@@ -81,7 +82,7 @@
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-2e-9Tb">
                                     <rect key="frame" x="0.0" y="40" width="346" height="10"/>
-                                    <color key="backgroundColor" red="0.027717040849999999" green="0.03371883556" blue="0.1098119095" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.086454533040523529" green="0.097161345183849335" blue="0.14902624487876892" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="X3r-yd-abw"/>
                                     </constraints>
@@ -96,7 +97,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5t-Mj-LS8">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5t-Mj-LS8">
                                     <rect key="frame" x="103" y="50" width="243" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="URS-j8-wS7"/>
@@ -121,7 +122,7 @@
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-z4-sBC">
                                     <rect key="frame" x="0.0" y="90" width="346" height="10"/>
-                                    <color key="backgroundColor" red="0.027717040849999999" green="0.03371883556" blue="0.1098119095" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.10214982181787491" green="0.11278501898050308" blue="0.16863459348678589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="hs2-AW-02J"/>
                                     </constraints>
@@ -136,7 +137,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggl-0N-e4a">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggl-0N-e4a">
                                     <rect key="frame" x="103" y="100" width="243" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="2np-C0-p3e"/>
@@ -147,7 +148,7 @@
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFw-kI-0a2">
                                     <rect key="frame" x="0.0" y="140" width="346" height="10"/>
-                                    <color key="backgroundColor" red="0.027717040849999999" green="0.03371883556" blue="0.1098119095" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.10212249308824539" green="0.10894077271223068" blue="0.16079095005989075" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="pYi-Jg-WMB"/>
                                     </constraints>
@@ -162,7 +163,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-44-YaQ">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-44-YaQ">
                                     <rect key="frame" x="103" y="150" width="243" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="XE4-pd-gJe"/>
@@ -173,7 +174,7 @@
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79Q-OJ-BTW">
                                     <rect key="frame" x="0.0" y="190" width="346" height="10"/>
-                                    <color key="backgroundColor" red="0.027717040849999999" green="0.03371883556" blue="0.1098119095" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.10213590413331985" green="0.10886085778474808" blue="0.16471290588378906" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="Rzi-GC-K6v"/>
                                     </constraints>
@@ -188,7 +189,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NzH-RX-b5U">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入邀请码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NzH-RX-b5U">
                                     <rect key="frame" x="103" y="200" width="243" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="2iL-T0-xHW"/>
@@ -199,7 +200,7 @@
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kQ-WG-IuJ">
                                     <rect key="frame" x="0.0" y="240" width="346" height="10"/>
-                                    <color key="backgroundColor" red="0.027717040849999999" green="0.03371883556" blue="0.1098119095" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.098215483129024506" green="0.10493458062410355" blue="0.16079136729240417" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="Hbg-Mk-Hsp"/>
                                     </constraints>
@@ -214,7 +215,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAn-1a-68f">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入交易密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAn-1a-68f">
                                     <rect key="frame" x="107" y="250" width="150" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="150" id="PmN-ql-Uff"/>

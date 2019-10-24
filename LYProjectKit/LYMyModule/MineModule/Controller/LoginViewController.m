@@ -41,7 +41,6 @@
     
     UITapGestureRecognizer *codeGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(codeClick)];
     [self.codeBtn addGestureRecognizer:codeGestureRecognizer];
-
     self.codeBtn .userInteractionEnabled = YES;
     
      UITapGestureRecognizer *pwBtnGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pwBtnClick)];
@@ -52,7 +51,14 @@
     self.codeBtn.layer.cornerRadius = 3;
     self.pwBtn.layer.masksToBounds = YES;
     self.codeBtn.layer.masksToBounds = YES;
+    self.pwdTF.secureTextEntry = YES;
+    
 
+    
+    //密码显示
+    UITapGestureRecognizer *imageGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick)];
+    [self.eyeImage addGestureRecognizer:imageGestureRecognizer];
+    self.eyeImage.userInteractionEnabled = YES;
     
 }
 -(void)pwBtnClick
@@ -66,6 +72,9 @@
     self.pwdTF.attributedPlaceholder = [self.pwdTF.placeholder ly_attributePlaceholder];
     self.pwBtn.backgroundColor = RGB(87, 187, 175, 1.0);
     self.codeBtn.backgroundColor = [UIColor clearColor];
+    self.pwdTF.secureTextEntry = YES;
+    self.pwdTF.text = @"";
+
 
 
 }
@@ -80,8 +89,16 @@
     self.pwdTF.attributedPlaceholder = [self.pwdTF.placeholder ly_attributePlaceholder];
     self.codeBtn.backgroundColor = RGB(87, 187, 175, 1.0);
     self.pwBtn.backgroundColor = [UIColor clearColor];
-    
+    self.pwdTF.secureTextEntry = NO;
+    self.pwdTF.text = @"";
 
+
+}
+-(void)imageClick
+{
+    NSString *imageStr = self.pwdTF.secureTextEntry?@"e2":@"e1";
+    self.eyeImage.image = [UIImage imageNamed:imageStr];
+    self.pwdTF.secureTextEntry = !self.pwdTF.secureTextEntry;
 }
 - (void) tapAction:(UITapGestureRecognizer *)tap{
     self.pwdTF.text = @"123456";

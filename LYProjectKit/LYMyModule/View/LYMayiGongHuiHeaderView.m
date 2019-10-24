@@ -90,6 +90,11 @@
         [self.delegate sendCaardWithType:CardType_MayiCard];
     }
 }
+- (IBAction)contackKefu:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(headerContackKefu)]) {
+        [self.delegate headerContackKefu];
+    }
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];

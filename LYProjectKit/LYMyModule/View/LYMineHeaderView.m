@@ -24,7 +24,7 @@
 }
 
 - (void)configDataWithUserInfo:(LYUserInfo *)userInfo{
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:userInfo.actor]];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:userInfo.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
     self.nicknameLabel.text = userInfo.userName;
     self.agcCountLabel.text = [NSString stringWithFormat:@"%.2f",userInfo.agcAmount];
     self.idLabel.text = [NSString stringWithFormat:@"ID:%@",userInfo.userId];

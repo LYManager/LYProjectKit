@@ -9,7 +9,14 @@
 @class LYAntGonghuiDataModel;
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol LYMayiGongHuiFooterViewDelegate <NSObject>
+
+- (void)contactKefu;
+
+@end
+
 @interface LYMayiGongHuiFooterView : UIView
+@property(nonatomic,weak)id<LYMayiGongHuiFooterViewDelegate>delegate;
 - (void) configDataWithModel:(LYAntGonghuiDataModel *)model;
 @end
 

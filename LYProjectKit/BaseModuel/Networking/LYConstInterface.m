@@ -11,7 +11,7 @@
 #if DEBUG
 NSString * const BaseURL          = @"http://ant-api.cciasia.org";
 #else
-NSString * const BaseURL          = @"";
+NSString * const BaseURL          = @"http://ant-api.cciasia.org";
 #endif
 // 注册
 NSString * const registerURL      = @"/ant-api/user/register";
