@@ -148,6 +148,9 @@
 		82FBA390235B2B9D00A6D038 /* AcceptanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA38E235B2B9D00A6D038 /* AcceptanceTableViewCell.xib */; };
 		82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA392235B39B200A6D038 /* AcceptanceDetailViewController.m */; };
 		82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */; };
+		82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8DF22362A60200A47845 /* InviteViewController.m */; };
+		82FE8DF62362BFF100A47845 /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF42362BFF100A47845 /* 背景2.jpg */; };
+		82FE8DF72362BFF100A47845 /* 背景1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF52362BFF100A47845 /* 背景1.jpg */; };
 		9352361FEA18E5C5AAFD783E /* libPods-LYProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */; };
 /* End PBXBuildFile section */
 
@@ -419,6 +422,10 @@
 		82FBA391235B39B200A6D038 /* AcceptanceDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcceptanceDetailViewController.h; sourceTree = "<group>"; };
 		82FBA392235B39B200A6D038 /* AcceptanceDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceDetailViewController.m; sourceTree = "<group>"; };
 		82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcceptanceDetailViewController.xib; sourceTree = "<group>"; };
+		82FE8DF12362A60200A47845 /* InviteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
+		82FE8DF22362A60200A47845 /* InviteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
+		82FE8DF42362BFF100A47845 /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
+		82FE8DF52362BFF100A47845 /* 背景1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1.jpg"; sourceTree = "<group>"; };
 		8FF97726890D2E6AFF9C6849 /* Pods-LYProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYProjectKit.debug.xcconfig"; path = "Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1111,6 +1118,8 @@
 				82ECDE71236047E6002D6532 /* AboutUsViewController.h */,
 				82ECDE72236047E6002D6532 /* AboutUsViewController.m */,
 				82ECDE73236047E6002D6532 /* AboutUsViewController.xib */,
+				82FE8DF12362A60200A47845 /* InviteViewController.h */,
+				82FE8DF22362A60200A47845 /* InviteViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1171,6 +1180,8 @@
 				82FBA374235AF2D100A6D038 /* code.jpg */,
 				82FBA376235AF5CE00A6D038 /* timg.jpg */,
 				829C2D3A235C08A1004F9641 /* 1.jpg */,
+				82FE8DF52362BFF100A47845 /* 背景1.jpg */,
+				82FE8DF42362BFF100A47845 /* 背景2.jpg */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -1296,6 +1307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FE8DF62362BFF100A47845 /* 背景2.jpg in Resources */,
 				6397A634235C54C400F8A2D2 /* LYPayPopViewController.xib in Resources */,
 				6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */,
 				82EAAD81235DF35B00991124 /* Assets.xcassets in Resources */,
@@ -1343,6 +1355,7 @@
 				82FBA369235AF08500A6D038 /* RegisteredViewController.xib in Resources */,
 				82FBA381235AFBCC00A6D038 /* AGCDetailHeadView.xib in Resources */,
 				63848CBE235D76D1000B505A /* LYHomeViewController.xib in Resources */,
+				82FE8DF72362BFF100A47845 /* 背景1.jpg in Resources */,
 				63933B6E2359E98D00D5E138 /* LYMineHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1423,6 +1436,7 @@
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
 				6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */,
 				82ECDE6D235F00DB002D6532 /* CoinDetailModel.m in Sources */,
+				82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */,
 				63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */,
 				63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */,
 				82FBA37B235AF9A000A6D038 /* AGCDetailViewController.m in Sources */,
@@ -1738,10 +1752,10 @@
 			baseConfigurationReference = 8FF97726890D2E6AFF9C6849 /* Pods-LYProjectKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = G8G6BXAV68;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1764,7 +1778,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = kingPro;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1774,10 +1788,10 @@
 			baseConfigurationReference = 3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = G8G6BXAV68;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1800,7 +1814,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = kingPro;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

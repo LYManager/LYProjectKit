@@ -33,6 +33,12 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
 
 @implementation AGCDetailViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self addRefresh];
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.coinArr = [NSMutableArray  array];
@@ -44,7 +50,6 @@ static NSString * const kAGCCellIdentifier = @"AGCDetailTableViewCell";
     [rigButton setTintColor:[UIColor whiteColor]];
     
 //    self.navigationItem.rightBarButtonItem = rigButton;//暂时隐藏
-        [self addRefresh];
         
         
         // Do any additional setup after loading the view from its nib.

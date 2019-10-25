@@ -50,6 +50,9 @@
              @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",@"withdrawDTO":@{@"address":self.assModel.userAddress,@"coinType":self.assModel.coinType,@"amount":self.numberText.text,@"transPassword":self.pwText.text},
          } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         NSLog(@"成功");
+        [self.view makeToast:@"提币成功" duration:2 position:CSToastPositionCenter];
+
+        [self.navigationController popViewControllerAnimated:YES];
     }];
     
 }
