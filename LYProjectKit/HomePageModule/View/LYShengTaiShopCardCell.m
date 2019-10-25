@@ -44,7 +44,7 @@
         case LYShengTaiShopCardType_ShopCard:
             {
                 self.leftTopLabel.text = [NSString stringWithFormat:@"周期:%ld天",data.cycleDays];
-                self.leftBottomLabel.text = [NSString stringWithFormat:@"总奖励:%.1ld",data.totalEarning];
+                self.leftBottomLabel.text = [NSString stringWithFormat:@"总奖励:%.1ldAGC",data.totalEarning];
                 self.reduceLabel.text = [NSString stringWithFormat:@"%ldAGC",data.amount];
             }
             break;

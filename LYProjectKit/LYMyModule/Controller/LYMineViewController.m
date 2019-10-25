@@ -89,7 +89,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// 我的等级
 - (void)clickMyLevel {
-     [self pushViewControllerWithClassName:@"" params:nil];
+     [self pushViewControllerWithClassName:@"LYMayiGongHuiViewController" params:nil];
 }
 
 /// t我的团队

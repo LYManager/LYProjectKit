@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYPopSendToolsViewController : LYBaseViewController
+/**< backBlock*/
+@property(nonatomic,copy)void(^backBlock) (void);
 /**< model*/
 @property(nonatomic,strong)LYAntCardModel * cardModel;
 @end

@@ -11,12 +11,13 @@
 #import "LYHomeCycleItemView.h"
 //数据
 #import "LYHomeData.h"
-
+#import "LYHomeCycleBgView.h"
 @interface LYHomeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *agcLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *earthImageView;
+@property (weak, nonatomic) IBOutlet LYHomeCycleBgView *homeCycleBgView;
 
 
 /**< itemViewArray*/
@@ -50,7 +51,7 @@ static NSInteger local = 0;
    
     
     CABasicAnimation *layer1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    layer1.toValue = @(2*M_PI);
+    layer1.toValue = @(-2*M_PI);
     layer1.duration = 80;
     layer1.removedOnCompletion = false;
     layer1.repeatCount = MAXFLOAT;
@@ -62,13 +63,14 @@ static NSInteger local = 0;
         redView.backgroundColor = [UIColor redColor];
        redView.frame = CGRectMake(0, 0, 40, 40);
         [self.itemArr addObject:redView];
-        CABasicAnimation *layer1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-        layer1.toValue = @(-2*M_PI);
-       layer1.duration = 40;
-       layer1.removedOnCompletion = false;
-       layer1.repeatCount = MAXFLOAT;
-       [redView.layer addAnimation:layer1 forKey:nil];
+        CABasicAnimation *layer2 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        layer2.toValue = @(-2*M_PI);
+       layer2.duration = 40;
+       layer2.removedOnCompletion = false;
+       layer2.repeatCount = MAXFLOAT;
+       [redView.layer addAnimation:layer2 forKey:nil];
        [self.bgImageView addSubview:redView];
+        [self.homeCycleBgView sendSubviewToBack:redView];
     }
     
    

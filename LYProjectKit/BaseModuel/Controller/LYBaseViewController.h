@@ -40,9 +40,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 使用道具弹框
 - (void) popToolsController:(LYAntCardModel *)antTaskModel callBack:(nullable void(^)(NSString *))callBack;
+- (void) popToolsController:(LYAntCardModel *)antTaskModel isRealCheck:(BOOL)isRealCheck callBack:(nullable void(^)(NSString *))callBack;
 
 /// 赠送道具
-- (void) popSendToolsController:(LYAntCardModel *)antTaskModel;
+- (void) popSendToolsController:(LYAntCardModel *)antTaskModel backBlock:(void(^)(void))backBlock;
+
 
 /// 错误弹框
 - (void)popErrorControllerIsSend:(BOOL)isSend isRealNameCard:(BOOL)isRealNameCard;

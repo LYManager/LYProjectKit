@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LYShengTaiDataModel: NSObject
 /**< 收益*/
-@property(nonatomic,assign)long agcDayEarning;
+@property(nonatomic,copy)NSString *agcDayEarning;
 /**< 活跃度*/
 @property(nonatomic,assign)NSInteger liveness;
 /**< 任务信息*/

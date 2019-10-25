@@ -57,6 +57,9 @@
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         [self.view makeToast:@"赠送成功" duration:1 position:CSToastPositionCenter];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (!error) {
+                !self.backBlock ? : self.backBlock();
+            }
             [self dismissViewControllerAnimated:YES completion:nil];
         });
     }];

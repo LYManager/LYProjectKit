@@ -16,7 +16,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONT-wS-nzC">
                     <rect key="frame" x="0.0" y="5" width="136.5" height="51"/>
                     <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="任务卡商城">
                         <color key="titleColor" red="0.27338030930000001" green="0.40165901180000002" blue="0.53055459260000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -30,7 +30,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-Zs-IGK">
                     <rect key="frame" x="138.5" y="5" width="137" height="51"/>
                     <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="我的任务卡">
                         <color key="titleColor" red="0.26944246890000001" green="0.39773246649999999" blue="0.52662479880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -44,7 +44,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-u6-HRr">
                     <rect key="frame" x="277.5" y="5" width="136.5" height="51"/>
                     <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="过期任务卡">
                         <color key="titleColor" red="0.24653968209999999" green="0.35852697490000002" blue="0.48321014639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
