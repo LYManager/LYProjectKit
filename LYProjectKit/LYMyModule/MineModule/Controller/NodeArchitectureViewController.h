@@ -9,5 +9,5 @@
 #import "LYBaseViewController.h"
 
 @interface NodeArchitectureViewController : LYBaseViewController
-
+@property (nonatomic,strong)NSString *tameStr;
 @end

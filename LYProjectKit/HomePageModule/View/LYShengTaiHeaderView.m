@@ -19,7 +19,7 @@
 - (void)configDataWithEarn:(NSString *)earn huoyue:(NSInteger)huoyue{
 //    NSString *imageUrl = [LYUserInfoManager shareInstance].userInfo.actor;
 //    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
-    self.earnLabel.text = [NSString stringWithFormat:@"%@",earn];
+    self.earnLabel.text = [NSString stringWithFormat:@"%@%@",earn,@" AGC"];
     self.huoyueLabel.text = [@(huoyue) stringValue];
 }
 /*

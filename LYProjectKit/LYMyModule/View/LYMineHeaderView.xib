@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -185,7 +185,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="187.5" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="19" maxY="-28"/>
-                            <inset key="imageEdgeInsets" minX="61" minY="-24" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="80" minY="-24" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="我的团队" image="qunzuduoren"/>
                             <connections>
                                 <action selector="myTeamAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aaA-Qs-4GQ"/>
@@ -195,8 +195,8 @@
                             <rect key="frame" x="187.5" y="0.0" width="187.5" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="18" maxY="-30"/>
-                            <inset key="imageEdgeInsets" minX="61" minY="-25" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="我的账单" image="bangding"/>
+                            <inset key="imageEdgeInsets" minX="80" minY="-25" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="我的账单" image="sd"/>
                             <connections>
                                 <action selector="myBillAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="TtY-Wq-Dn7"/>
                             </connections>
@@ -261,16 +261,18 @@
                 <outlet property="levelLabel" destination="ay3-Vs-iFg" id="qkd-Yh-R3v"/>
                 <outlet property="mayiGonghuiBtn" destination="dRw-X9-h7s" id="Umq-Rs-OOI"/>
                 <outlet property="nicknameLabel" destination="dCn-Ih-XBU" id="baG-uF-Oxe"/>
+                <outlet property="teamActionBtn" destination="dEB-UA-PsF" id="kF8-MT-fGS"/>
+                <outlet property="teamBtn" destination="nRH-vN-41e" id="Iuc-cJ-rD0"/>
             </connections>
             <point key="canvasLocation" x="113.768115942029" y="217.63392857142856"/>
         </view>
     </objects>
     <resources>
         <image name="A" width="17" height="17"/>
-        <image name="bangding" width="23" height="23"/>
         <image name="head_icon" width="180" height="180"/>
         <image name="mayi_icon" width="18" height="14"/>
         <image name="my_level_icon" width="17" height="17"/>
         <image name="qunzuduoren" width="23" height="23"/>
+        <image name="sd" width="23" height="23"/>
     </resources>
 </document>

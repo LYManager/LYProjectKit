@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)NSInteger cardNums;
 /**< agc数量*/
 @property(nonatomic,assign)CGFloat agcAmount;
+@property(nonatomic,copy)NSString *  groupAmount;
+
 @end
 
 NS_ASSUME_NONNULL_END

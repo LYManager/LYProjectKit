@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *idLabel;
 @property (weak, nonatomic) IBOutlet UILabel *agcCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *levelLabel;
+@property (weak, nonatomic) IBOutlet UIButton *teamBtn;
+@property (weak, nonatomic) IBOutlet UIButton *teamActionBtn;
 
 @end
 
@@ -29,6 +31,8 @@
     self.agcCountLabel.text = [NSString stringWithFormat:@"%.2f",userInfo.agcAmount];
     self.idLabel.text = [NSString stringWithFormat:@"ID:%@",userInfo.userId];
     self.levelLabel.text = userInfo.antLevel;
+    [self.teamBtn setTitle:[NSString stringWithFormat:@"%@%@%@",@"我的团队",userInfo.groupAmount,@"人"] forState:UIControlStateNormal];
+     [self.teamActionBtn setTitle:[NSString stringWithFormat:@"%@%@",@"团队活跃度:",userInfo.groupAmount] forState:UIControlStateNormal];
 }
 
 /*
