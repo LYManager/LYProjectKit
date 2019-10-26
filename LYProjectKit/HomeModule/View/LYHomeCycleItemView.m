@@ -32,14 +32,14 @@
     return self;
 }
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    UIView *view = [super hitTest:point withEvent:event];
-     CGPoint buttonPoint = [self.imageView convertPoint:point fromView:self];
-    if ([self.imageView pointInside:buttonPoint withEvent:event]) {
-      return self.imageView;
-    }
-    return view;
-}
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+//    UIView *view = [super hitTest:point withEvent:event];
+//     CGPoint buttonPoint = [self.imageView convertPoint:point fromView:self];
+//    if ([self.imageView pointInside:buttonPoint withEvent:event]) {
+//      return self.imageView;
+//    }
+//    return view;
+//}
 
 - (void)configDataWithModel:(LYRubbishModel *)rubbishModel{
     self.model = rubbishModel;
@@ -51,21 +51,20 @@
     self.titleLabel.text = rubbishModel.rubbishName;
 }
 
-- (void)tapAction:(UITapGestureRecognizer *)tap{
-    CGPoint touchPoint = [tap locationInView:self];
-//    if ([self.imageView.layer.presentationLayer hitTest:touchPoint]) {
-        NSLog(@"%@",self.model.rubbishName);
-    
-//    }
-}
+//- (void)tapAction:(UITapGestureRecognizer *)tap{
+//    CGPoint touchPoint = [tap locationInView:self];
+////    if ([self.imageView.layer.presentationLayer hitTest:touchPoint]) {
+//        NSLog(@"%@",self.model.rubbishName);
+//    
+////    }
+//}
 
 - (void) configUI {
     UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home_item_bg_icon"]];
     self.imageView = imageView;
     imageView.userInteractionEnabled = YES;
     [self addSubview:imageView];
-    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
-    [self.imageView addGestureRecognizer:tap];
+    
 //    
     
     UIImageView * itemImageView = [[UIImageView alloc]initWithFrame:CGRectZero];

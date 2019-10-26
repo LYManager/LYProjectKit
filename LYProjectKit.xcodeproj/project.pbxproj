@@ -92,6 +92,7 @@
 		6397A63A235CBCD900F8A2D2 /* LYPayPwdViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A639235CBCD900F8A2D2 /* LYPayPwdViewManager.m */; };
 		6397A63E235CC02B00F8A2D2 /* LYPopToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */; };
 		6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */; };
+		63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A815FD236438C100B9CC9E /* LYRubbishButton.m */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
@@ -327,6 +328,8 @@
 		6397A63B235CC02B00F8A2D2 /* LYPopToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopToolsViewController.h; sourceTree = "<group>"; };
 		6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopToolsViewController.m; sourceTree = "<group>"; };
 		6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopToolsViewController.xib; sourceTree = "<group>"; };
+		63A815FC236438C100B9CC9E /* LYRubbishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishButton.h; sourceTree = "<group>"; };
+		63A815FD236438C100B9CC9E /* LYRubbishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishButton.m; sourceTree = "<group>"; };
 		63C2243C22FBE10100821544 /* LYTestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTestWebViewController.h; sourceTree = "<group>"; };
 		63C2243D22FBE10100821544 /* LYTestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTestWebViewController.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
@@ -827,6 +830,8 @@
 				63684BD7236042610066D0C9 /* LYHomeCycleItemView.m */,
 				63684BD923605BF90066D0C9 /* LYHomeCycleBgView.h */,
 				63684BDA23605BF90066D0C9 /* LYHomeCycleBgView.m */,
+				63A815FC236438C100B9CC9E /* LYRubbishButton.h */,
+				63A815FD236438C100B9CC9E /* LYRubbishButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1490,6 +1495,7 @@
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */,
 				635C31A8235E0AEB0015889B /* LYUserInfoManager.m in Sources */,
+				63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */,
 				63264DDB235C161700293467 /* NSData+AES.m in Sources */,
 				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
 				63264DC7235C112100293467 /* LYConstInterface.m in Sources */,

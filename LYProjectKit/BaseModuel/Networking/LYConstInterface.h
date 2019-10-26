@@ -39,6 +39,8 @@ UIKIT_EXTERN NSString * const loginURL;
 
 UIKIT_EXTERN NSString * const homeURL;
 
+UIKIT_EXTERN NSString * const rubbishURL;
+
 UIKIT_EXTERN NSString * const mineURL;
 
 UIKIT_EXTERN NSString * const antGonghuiURL;

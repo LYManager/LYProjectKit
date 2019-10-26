@@ -14,42 +14,9 @@
 //    [self addGestureRecognizer:tap];
 }
 
-- (void)tapAction:(UITapGestureRecognizer *)tap{
-        CGPoint touchPoint = [tap locationInView:self];
-        for (UIView *marqueeView in self.subviews) {
-            if ([marqueeView isKindOfClass:LYHomeCycleItemView.class]) {
-                CALayer *layer = [marqueeView.layer.presentationLayer hitTest:touchPoint];
-                if (layer) {
-                    
-                    // [marqueeView.delegate activityMarqueeViewClick:marqueeView];
-                    break;
-                }
-            }
-        }
-}
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    UITouch *touch = [event.allTouches anyObject];
-    if (@available(iOS 9.1, *)) {
-        CGPoint locationPointWindow = [touch preciseLocationInView:self];
-        for (UIView *view in self.subviews) {
-            if ([view isKindOfClass:[UIImageView class]]) {
-                for (UIView * child in view.subviews) {
-                    LYHomeCycleItemView * click = (LYHomeCycleItemView *)child;
-//                     NSLog(@"===== %@",NSStringFromCGRect(click.imageView.layer.presentationLayer.frame));
-                    CALayer * layer = [click.layer.presentationLayer hitTest:locationPointWindow];
-                    if (layer) {
-                        LYHomeCycleItemView * click = (LYHomeCycleItemView *)child;
-                        NSLog(@"===== %@",click.model.rubbishName);
-                    }
-                }
-            }
-        }
-//        NSLog(@"TouchLocationWindow:(%.1f,%.1f)",locationPointWindow.x,locationPointWindow.y);
-    } else {
-        
-    }
-}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
