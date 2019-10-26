@@ -73,8 +73,14 @@ static NSString * const kSettingCellIdentifier = @"LYSafeSettingTableViewCell";
     }
     else
     {
-        [self pushViewControllerWithClassName:self.controllerNames[indexPath.section] params:nil];
-
+        NSInteger nums = [self.params[@"cardNums"]integerValue];
+        if (nums > 0) {
+            LYAntCardModel * cardModel = [[LYAntCardModel alloc]init];
+            cardModel.cardId = 1;
+            [self pushViewControllerWithClassName:self.controllerNames[indexPath.section] params:@{@"realNameCardModel":cardModel}];
+        }else{
+            [self popErrorControllerIsSend:NO isRealNameCard:YES];
+        }
     }
     
 }

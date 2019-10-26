@@ -10,7 +10,7 @@
 @implementation LYRubbishModel
 + (nullable NSDictionary<NSString *, id> *)modelCustomPropertyMapper {
     return @{
-        @"userId" : @"id",
+        @"rubbishId" : @"id",
     };
 }
 @end

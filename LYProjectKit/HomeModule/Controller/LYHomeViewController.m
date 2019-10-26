@@ -162,6 +162,14 @@ static NSInteger local = 0;
 - (IBAction)mineAction:(UIButton *)sender {
     [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
 }
+- (IBAction)zhaomuAction:(UIButton *)sender {
+    [self pushViewControllerWithClassName:@"InvitFriendViewController" params:nil];
+}
+
+- (IBAction)gonglueAction:(UIButton *)sender {
+    [self pushViewControllerWithClassName:@"" params:nil];
+}
+
 
 /// 展示网络数据
 /// @param model 数据模型
@@ -209,17 +217,6 @@ static NSInteger local = 0;
             }
         }
     }
-     self.currentItemView = nil;
-    
-    BOOL complete = YES;
-    for (LYHomeCycleItemView * itemView in self.itemArr) {
-        if (!itemView.hidden) {
-            complete = NO;
-        }
-    }
-    if (complete) {
-        [self loadRequest];
-    }
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -235,7 +232,7 @@ static NSInteger local = 0;
         if (layer) {
            NSInteger index = [self.rubbishBtnArray indexOfObject:button] + 1;
            if (index == self.drugItemView.model.rubbishType) {
-               [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"btn_%ld",index]] forState:UIControlStateNormal];
+               [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"btn_highlight_%ld",index]] forState:UIControlStateNormal];
            }else{
                [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"btn_error_%ld",index]] forState:UIControlStateNormal];
            }
@@ -252,12 +249,25 @@ static NSInteger local = 0;
 
 - (void) showLightByButton:(UIButton *)button{
     self.currentItemView.hidden = YES;
+    NSInteger index = [self.rubbishBtnArray indexOfObject:button] + 1;
+    [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"btn_%ld",index]] forState:UIControlStateNormal];
     [self.view makeToast:@"回收成功" duration:1 position:CSToastPositionCenter];
     self.lightImageView.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y - 40, button.frame.size.width, 50);
     self.lightImageView.hidden = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.lightImageView.hidden = YES;
     });
+    self.currentItemView = nil;
+    
+    BOOL complete = YES;
+    for (LYHomeCycleItemView * itemView in self.itemArr) {
+        if (!itemView.hidden) {
+            complete = NO;
+        }
+    }
+    if (complete) {
+        [self loadRequest];
+    }
 }
 
 - (void)viewDidLayoutSubviews{

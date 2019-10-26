@@ -59,7 +59,6 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 - (void)configUIWithUserInfo:(LYUserInfo *)userInfo{
     [self.headerView configDataWithUserInfo:userInfo];
-    
 }
 #pragma mark🐒------LYMineHeaderViewDelegate------🐒
 
@@ -160,6 +159,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
        }
     if (indexPath.section == 1) {
         LYSafeSettingViewController *safeVC = [[LYSafeSettingViewController alloc]init];
+        safeVC.params = @{@"cardNums":@(self.userInfo.cardNums)};
         [self.navigationController pushViewController:safeVC animated:YES];
     }
     if (indexPath.section == 2) {

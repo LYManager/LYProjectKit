@@ -23,7 +23,7 @@ NSString * const loginURL         = @"/ant-api/user/login";
 
 NSString * const homeURL          = @"/ant-api/ant/info";
 
-NSString * const rubbishURL = @"/ant-api/ant/classify";
+NSString * const rubbishURL =   @"/ant-api/ant/classify";
 
 NSString * const mineURL          = @"/ant-api/user/myInfo";
 
