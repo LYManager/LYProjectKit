@@ -132,6 +132,8 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
     else
     {
         cell.titShowLab.textColor = RGB(239, 22, 17, 1.0);
+        cell.titShowLab.text = [NSString stringWithFormat:@"%@%@",@"+",model.coinAmount];
+
     }
     
     
@@ -199,7 +201,7 @@ static NSString * const kAGCCellIdentifier = @"MyBillableViewCell";
 
 {
 
-    NSTimeInterval time = [str doubleValue];
+    NSTimeInterval time = [str doubleValue]/1000;;
 
     /** [[NSDate date] timeIntervalSince1970]*1000;*/
 

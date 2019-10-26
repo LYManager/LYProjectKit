@@ -7,6 +7,7 @@
 //
 
 #import "InvitFriendViewController.h"
+#import <SpriteKit/SpriteKit.h>
 #define RGB(R, G, B, A)\
 [UIColor colorWithRed:(R) / 255.0 green:(G) / 255.0 blue:(B) / 255.0 alpha:A]
 #define kCellbackColor [UIColor colorWithRed:6/255.0 green:19/255.0 blue:51/255.0 alpha:0.48] // cell背景色
@@ -22,6 +23,8 @@
 
 @property (nonatomic,strong)UIButton *onBtn;
 @property (nonatomic,strong)UIButton *nextBtn;
+@property (nonatomic,strong)NSArray *imageArr;
+@property (nonatomic,assign)NSInteger currentIndex;
 @end
 
 @implementation InvitFriendViewController
@@ -34,12 +37,18 @@
     [self.backImage addSubview:self.headImage];
     [self.backImage addSubview:self.nameLab];
     [self.backImage addSubview:self.invitLab];
+    [self.view addSubview:self.onBtn];
+    [self.view addSubview:self.nextBtn];
+
 
 
     self.title = @"邀请推广";
     [self loadRequest];
     self.nameLab.text = self.nameStr;
+    self.headImage.layer.cornerRadius = 20;
+    self.headImage.layer.masksToBounds = YES;
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:self.iconStr]];
+    
     
     
     UIBarButtonItem *rigButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(exitBtnAction)];
@@ -47,6 +56,27 @@
     [rigButton setImage:[UIImage imageNamed:@"fenxiang"]];
     
     self.navigationItem.rightBarButtonItem = rigButton;
+    
+        
+    _imageArr=@[@"背景1.jpg",@"背景2.jpg"];
+    
+    [self.onBtn addTarget:self action:@selector(onBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.nextBtn addTarget:self action:@selector(nextBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.nextBtn setImage:[UIImage imageNamed:@"rightArrow"] forState:UIControlStateNormal];
+    [self.nextBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, - self.nextBtn.imageView.image.size.width, 0, self.nextBtn.imageView.image.size.width)];
+    [self.nextBtn setImageEdgeInsets:UIEdgeInsetsMake(0, self.nextBtn.titleLabel.bounds.size.width, 0, -self.nextBtn.titleLabel.bounds.size.width-20)];
+
+    
+    [self.onBtn setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
+//    [self.onBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, - self.onBtn.imageView.image.size.width, 0, self.nextBtn.imageView.image.size.width)];
+    [self.onBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
+    
+    self.currentIndex= 1;
+
+    
+    
 }
 - (void)loadRequest{
     
@@ -63,7 +93,88 @@
     }];
     
 }
+-(void)onBtnAction
+{
+    if (self.currentIndex==1) {
+        self.currentIndex=2;
+    }else{
+        self.currentIndex=1;
+    };
+    NSString *imageName=[NSString stringWithFormat:@"背景%ld.jpg",(long)self.currentIndex];
+     
+    UIImage *image=[UIImage imageNamed:imageName];
+    self.backImage.image = image;
+    
+    if (self.currentIndex == 1) {
+        self.codeImage.frame = CGRectMake(CGRectGetMaxX(self.backImage.frame)-145, CGRectGetMaxY(self.backImage.frame)-300, 100, 100);
+        self.headImage.frame = CGRectMake(CGRectGetMaxX(self.codeImage.frame)-40, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
+        self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)-130, CGRectGetMaxY(self.headImage.frame)+10, 130, 13);
+        self.invitLab.frame = CGRectMake(CGRectGetMaxX(self.nameLab.frame)-130, CGRectGetMaxY(self.nameLab.frame)+10,130, 13);
+        self.nameLab.textAlignment= NSTextAlignmentRight;
+        self.invitLab.textAlignment= NSTextAlignmentRight;
+        self.invitLab.textColor = [UIColor whiteColor];
+        self.nameLab.textColor = [UIColor whiteColor];
 
+        
+    }
+    if (self.currentIndex == 2) {
+        self.codeImage.frame = CGRectMake(38, CGRectGetMaxY(self.backImage.frame)-273, 100, 100);
+        self.headImage.frame = CGRectMake(CGRectGetMinX(self.codeImage.frame)-10, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
+        self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)+5, CGRectGetMaxY(self.codeImage.frame)+15, 130, 13);
+        self.nameLab.textColor = RGB(51, 51, 51, 1);
+        self.nameLab.textAlignment = NSTextAlignmentLeft;
+        
+        self.invitLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)+5, CGRectGetMaxY(self.nameLab.frame)+5,130, 13);
+        self.invitLab.textColor = RGB(51, 51, 51, 1);
+        self.invitLab.textAlignment = NSTextAlignmentLeft;
+        
+    }
+    
+    
+     
+}
+-(void)nextBtnAction
+{
+    //截取标签上面的数字
+       NSInteger allCount=[_imageArr count];
+       if (self.currentIndex==allCount) {
+           self.currentIndex=1;
+       }
+    else
+    {
+        self.currentIndex = 2;
+    }
+       NSString *imageName=[NSString stringWithFormat:@"背景%ld.jpg",(long)self.currentIndex];
+        
+       UIImage *image=[UIImage imageNamed:imageName];
+       self.backImage.image = image;
+    
+    
+    
+    if (self.currentIndex == 1) {
+         self.codeImage.frame = CGRectMake(CGRectGetMaxX(self.backImage.frame)-145, CGRectGetMaxY(self.backImage.frame)-300, 100, 100);
+         self.headImage.frame = CGRectMake(CGRectGetMaxX(self.codeImage.frame)-40, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
+         self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)-130, CGRectGetMaxY(self.headImage.frame)+10, 130, 13);
+         self.invitLab.frame = CGRectMake(CGRectGetMaxX(self.nameLab.frame)-130, CGRectGetMaxY(self.nameLab.frame)+10,130, 13);
+         self.nameLab.textAlignment= NSTextAlignmentRight;
+         self.invitLab.textAlignment= NSTextAlignmentRight;
+        self.invitLab.textColor = [UIColor whiteColor];
+        self.nameLab.textColor = [UIColor whiteColor];
+         
+     }
+     if (self.currentIndex == 2) {
+         self.codeImage.frame = CGRectMake(38, CGRectGetMaxY(self.backImage.frame)-273, 100, 100);
+         self.headImage.frame = CGRectMake(CGRectGetMinX(self.codeImage.frame)-10, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
+         self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)+5, CGRectGetMaxY(self.codeImage.frame)+15, 130, 13);
+         self.nameLab.textColor = RGB(51, 51, 51, 1);
+         self.nameLab.textAlignment = NSTextAlignmentLeft;
+         
+         self.invitLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)+5, CGRectGetMaxY(self.nameLab.frame)+5,130, 13);
+         self.invitLab.textColor = RGB(51, 51, 51, 1);
+         self.invitLab.textAlignment = NSTextAlignmentLeft;
+         
+     }
+}
 -(void)exitBtnAction
 {
     
@@ -149,15 +260,17 @@
 -(UIImageView *)backImage
 {
     if (_backImage == nil) {
-        _backImage = [[UIImageView alloc] initWithFrame:CGRectMake(40, 20, kScreenW-80, kScreenH-170)];
-        _backImage.image = [UIImage imageNamed:@"1.jpg"];
+        _backImage = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenW - 335)/2, 20, 335, 527)];
+        //_backImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 335/375*kScreenW, 527/667*kScreenH)];
+        _backImage.image = [UIImage imageNamed:@"背景1.jpg"];
+        _backImage.contentMode = UIViewContentModeScaleToFill;
     }
     return _backImage;
 }
 -(UIImageView *)codeImage
 {
     if (_codeImage == nil) {
-        _codeImage = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-100-100, kScreenH-80-340, 80, 80)];
+        _codeImage = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.backImage.frame)-145, CGRectGetMaxY(self.backImage.frame)-300, 100, 100)];
         _codeImage.image = [UIImage imageNamed:@"code.jpg"];
         
     }
@@ -166,7 +279,7 @@
 -(UIImageView *)headImage
 {
     if (_headImage == nil) {
-        _headImage = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-50-100, kScreenH-320, 30, 30)];
+        _headImage = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.codeImage.frame)-40, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40)];
         _headImage.image = [UIImage imageNamed:@"code.jpg"];
         _headImage.layer.cornerRadius = 15;
     }
@@ -176,7 +289,7 @@
 {
     if (_nameLab == nil) {
         //描述
-        _nameLab = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-150-100, kScreenH-280, 130, 13)];
+        _nameLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.headImage.frame)-130, CGRectGetMaxY(self.headImage.frame)+10, 130, 13)];
         _nameLab.font = [UIFont systemFontOfSize:12.0f];
         _nameLab.textColor = RGB(255, 255, 255,1.0);
         _nameLab.textAlignment = NSTextAlignmentRight;
@@ -189,13 +302,33 @@
 {
     if (_invitLab == nil) {
         //描述
-        _invitLab = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-150-100, kScreenH-280+23, 130, 13)];
+        _invitLab = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.nameLab.frame)-130, CGRectGetMaxY(self.nameLab.frame)+10,130, 13)];
         _invitLab.font = [UIFont systemFontOfSize:12.0f];
         _invitLab.textColor = RGB(255, 255, 255,1.0);
         _invitLab.textAlignment = NSTextAlignmentRight;
 //        _invitLab.backgroundColor = [UIColor redColor];
     }
     return _invitLab;
+}
+-(UIButton *)onBtn
+{
+    if (_onBtn == nil) {
+        self.onBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.onBtn.frame = CGRectMake(40, CGRectGetMaxY(self.backImage.frame)+18, 60, 25);
+        [self.onBtn setTitle:@"上一张" forState:UIControlStateNormal];
+        [self.onBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }
+    return _onBtn;
+}
+-(UIButton *)nextBtn
+{
+    if (_nextBtn == nil) {
+        self.nextBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.nextBtn.frame = CGRectMake(kScreenW-100, CGRectGetMaxY(self.backImage.frame)+18, 60, 25);
+        [self.nextBtn setTitle:@"下一张" forState:UIControlStateNormal];
+        [self.nextBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }
+    return _nextBtn;
 }
 /*
 #pragma mark - Navigation

@@ -1,7 +1,7 @@
 // LYHomeViewController.m 
 // LYProjectKit 
 // 
-// Created by Sunshie on 2019/10/21. 
+
 // Copyright © 2019 Sunshie. All rights reserved. 
 // 
 
@@ -47,7 +47,6 @@ static NSInteger local = 0;
     
     [self loadRequest];
     self.itemArr = [NSMutableArray array];
-    
     
     CABasicAnimation *layer = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     layer.toValue = @(2*M_PI);
@@ -149,7 +148,7 @@ static NSInteger local = 0;
 /// 资讯
 /// @param sender sender
 - (IBAction)zixunAction:(UIButton *)sender {
-    [self pushViewControllerWithClassName:@"" params:nil];
+    [self pushViewControllerWithClassName:@"LYMayiGongHuiViewController" params:nil];
 }
 
 /// 交易
@@ -168,6 +167,8 @@ static NSInteger local = 0;
 /// @param model 数据模型
 - (void) configUIWithData:(LYHomeDataModel *)model{
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
+    [LYUserInfoManager shareInstance].userInfo.actor = model.actor;
+
     self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.agcAmount];
     @try {
         for (int i = 0; i < 6; i ++) {

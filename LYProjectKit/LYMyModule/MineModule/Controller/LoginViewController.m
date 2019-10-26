@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneLab;
 @property (weak, nonatomic) IBOutlet UILabel *pwLab;
 @property (weak, nonatomic) IBOutlet UIButton *sendBtn;
+@property (weak, nonatomic) IBOutlet UIButton *registBtn;
 @property (nonatomic,strong)NSString *myTag;
 @end
 
@@ -29,10 +30,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    NSString *registStr = @"没有账号？立即注册";
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@",registStr]];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0,7)];
+
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:13/255.0 green:194/255.0 blue:167/255.0 alpha:1.0] range:NSMakeRange(7,2)];
+    [self.registBtn setAttributedTitle:str forState:UIControlStateNormal];
+        
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"backImage"]]];
+
+
+    
+    
     self.myTag = @"1";
     
-    self.accountNumberTF.attributedPlaceholder = [self.accountNumberTF.placeholder ly_attributePlaceholder];
-    self.pwdTF.attributedPlaceholder = [self.pwdTF.placeholder ly_attributePlaceholder];
+    self.accountNumberTF.attributedPlaceholder = [self attributePlaceholder:self.accountNumberTF.placeholder];
+    self.pwdTF.attributedPlaceholder = [self attributePlaceholder:self.pwdTF.placeholder];
 #if DEBUG
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
     tap.numberOfTapsRequired = 2;
@@ -69,13 +82,15 @@
     self.eyeImage.hidden = NO;
     self.sendBtn.hidden = YES;
     self.pwdTF.placeholder = @"请输入密码";
-    self.pwdTF.attributedPlaceholder = [self.pwdTF.placeholder ly_attributePlaceholder];
-    self.pwBtn.backgroundColor = RGB(87, 187, 175, 1.0);
-    self.codeBtn.backgroundColor = [UIColor clearColor];
+    self.pwdTF.attributedPlaceholder = [self attributePlaceholder:self.pwdTF.placeholder];
+//    self.pwBtn.backgroundColor = RGB(87, 187, 175, 1.0);
+//    self.codeBtn.backgroundColor = [UIColor clearColor];
     self.pwdTF.secureTextEntry = YES;
     self.pwdTF.text = @"";
 
-
+    self.pwBtn.text = @"• 密码登录";
+    self.codeBtn.text = @"验证码登录";
+    
 
 }
 -(void)codeClick
@@ -86,12 +101,13 @@
     self.eyeImage.hidden = YES;
     self.sendBtn.hidden = NO;
     self.pwdTF.placeholder = @"请输入验证码";
-    self.pwdTF.attributedPlaceholder = [self.pwdTF.placeholder ly_attributePlaceholder];
-    self.codeBtn.backgroundColor = RGB(87, 187, 175, 1.0);
-    self.pwBtn.backgroundColor = [UIColor clearColor];
+    self.pwdTF.attributedPlaceholder = [self attributePlaceholder:self.pwdTF.placeholder];
+//    self.codeBtn.backgroundColor = RGB(87, 187, 175, 1.0);
+//    self.pwBtn.backgroundColor = [UIColor clearColor];
     self.pwdTF.secureTextEntry = NO;
     self.pwdTF.text = @"";
-
+    self.pwBtn.text = @"密码登录";
+    self.codeBtn.text = @"• 验证码登录";
 
 }
 -(void)imageClick
@@ -184,6 +200,12 @@
     
 }
 
+
+- (NSMutableAttributedString *)attributePlaceholder:(NSString *)str{
+    NSMutableAttributedString * attr = [[NSMutableAttributedString alloc]initWithString:str];
+    [attr addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:119/255.0 green:121/255.0 blue:156/255.0 alpha:1.0]} range:NSMakeRange(0, str.length)];
+    return attr;
+}
 /*
 #pragma mark - Navigation
 

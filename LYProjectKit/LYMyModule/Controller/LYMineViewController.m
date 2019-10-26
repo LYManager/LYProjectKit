@@ -30,6 +30,7 @@
 
 /**< userInfo*/
 @property(nonatomic,strong)LYUserInfo * userInfo;
+@property(nonatomic,strong)NSString *teamString;
 @end
 static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 @implementation LYMineViewController
@@ -52,6 +53,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
     [LYNetwork POSTWithApiPath:mineURL requestParams:@{} handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         self.userInfo = [LYUserInfo modelWithDictionary:response[@"data"]];
         [self configUIWithUserInfo:self.userInfo];
+        self.teamString = self.userInfo.groupAmount;
     }];
 }
 
@@ -82,9 +84,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// 我的账单
 - (void)clickMyBill {
-    MyBillViewController *billVC = [[MyBillViewController alloc]init];
-    [self.navigationController pushViewController:billVC animated:YES];
-    
+  
 }
 
 /// 我的等级
@@ -94,7 +94,9 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// t我的团队
 - (void)clickMyTeam {
-     [self pushViewControllerWithClassName:@"NodeArchitectureViewController" params:nil];
+    NodeArchitectureViewController *notVC = [[NodeArchitectureViewController alloc]init];
+    notVC.tameStr = self.teamString;
+    [self.navigationController pushViewController:notVC animated:YES];
 }
 // 蚂蚁工会
 - (void)clickMayiGonghui{
@@ -122,7 +124,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -152,22 +154,27 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 {
     NSLog(@"%ld",indexPath.row);
     if (indexPath.section == 0) {
+             MyBillViewController *billVC = [[MyBillViewController alloc]init];
+             [self.navigationController pushViewController:billVC animated:YES];
+             
+       }
+    if (indexPath.section == 1) {
         LYSafeSettingViewController *safeVC = [[LYSafeSettingViewController alloc]init];
         [self.navigationController pushViewController:safeVC animated:YES];
     }
-    if (indexPath.section == 1) {
+    if (indexPath.section == 2) {
         SystemSettingViewController *systemVC = [[SystemSettingViewController alloc]init];
         systemVC.nameStr = self.userInfo.userName;
         systemVC.iconStr = self.userInfo.actor;
 
         [self.navigationController pushViewController:systemVC animated:YES];
     }
-    if (indexPath.section == 2) {
+    if (indexPath.section == 3) {
         AboutUsViewController *custmVC = [[AboutUsViewController alloc]init];
               
         [self.navigationController pushViewController:custmVC animated:YES];
     }
-    if (indexPath.section == 3) {
+    if (indexPath.section == 4) {
         ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
         [self.navigationController pushViewController:custmVC animated:YES];
     }
@@ -184,7 +191,7 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 #pragma mark🐒------lazy------🐒
 - (NSArray<NSString *> *)iconsArr{
     if (_iconsArr == nil) {
-        _iconsArr = @[@"suoding"
+        _iconsArr = @[@"bangding",@"suoding"
                       ,@"system_setting_icon",
                       @"wenhao",
                       @"banbengengxin"];
@@ -194,7 +201,9 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 - (NSArray<NSString *> *)titlesArr{
     if (_titlesArr == nil) {
-        _titlesArr = @[@"安全设置",
+        _titlesArr = @[
+                       @"我的账单",
+                       @"安全设置",
                        @"系统设置",
                        @"关于我们",
                        @"联系客服"];

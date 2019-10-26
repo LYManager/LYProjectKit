@@ -79,7 +79,7 @@
 //组数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 //组中行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -95,7 +95,11 @@
     }else if (section == 1)
     {
         return 0;
-    }else if (section == 2)
+    }
+    else if (section == 2)
+    {
+        return 0;
+    }else if (section == 3)
     {
         return self.model.notActiveChilds.count +1;
     }else
@@ -133,6 +137,19 @@
         return cell;
     }
     else if (indexPath.section == 2)
+    {
+        TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        if (cell == nil) {
+            cell = [[TextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        }
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.codeLab.text = @"编号";
+        cell.phoneLab.text = @"手机号";
+        cell.idLab.text = @"ID";
+        return cell;
+    }
+    else if (indexPath.section == 3)
     {
            TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
            if (cell == nil) {
@@ -244,6 +261,36 @@
     else if (section == 2)
     {
         UIControl *titileView = [[UIControl alloc] initWithFrame:CGRectZero];
+         titileView.backgroundColor = kCellbackColor;
+         titileView.tag = section;
+         //设置  头视图的标题什么的
+         UILabel *titleLable = [[UILabel alloc] initWithFrame:CGRectMake(14, 14, kScreenW/2, 40)];
+         titleLable.backgroundColor = [UIColor clearColor];
+         titleLable.textColor = [UIColor whiteColor];
+         titleLable.font = [UIFont systemFontOfSize:14];
+         titleLable.text = @"团队活跃度";
+         [titleLable sizeToFit];
+         [titileView addSubview:titleLable];
+         
+         UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-154, 0,134, 40)];
+         titleshowLable.backgroundColor = [UIColor clearColor];
+         titleshowLable.textColor = [UIColor whiteColor];
+         titleshowLable.font = [UIFont systemFontOfSize:14];
+        titleshowLable.text = self.tameStr;
+         titleshowLable.textAlignment = NSTextAlignmentRight;
+
+        // [titleshowLable sizeToFit];
+         
+         [titileView addSubview:titleshowLable];
+         
+         
+         [titileView addTarget:self action:@selector(section2Action:) forControlEvents:UIControlEventTouchUpInside];
+         
+         return titileView;
+    }
+    else if (section == 3)
+    {
+        UIControl *titileView = [[UIControl alloc] initWithFrame:CGRectZero];
                titileView.backgroundColor = kCellbackColor;
                titileView.tag = section;
                //设置  头视图的标题什么的
@@ -270,7 +317,7 @@
                lastImageView.backgroundColor = [UIColor clearColor];
                lastImageView.image = [UIImage imageNamed:@"x"];
                [titileView addSubview:lastImageView];
-               [titileView addTarget:self action:@selector(section3Action:) forControlEvents:UIControlEventTouchUpInside];
+               [titileView addTarget:self action:@selector(section4Action:) forControlEvents:UIControlEventTouchUpInside];
                
                return titileView;
     }
@@ -303,7 +350,7 @@
         lastImageView.backgroundColor = [UIColor clearColor];
         lastImageView.image = [UIImage imageNamed:@"x"];
         [titileView addSubview:lastImageView];
-        [titileView addTarget:self action:@selector(section4Action:) forControlEvents:UIControlEventTouchUpInside];
+        [titileView addTarget:self action:@selector(section5Action:) forControlEvents:UIControlEventTouchUpInside];
         
         return titileView;
     }
@@ -333,21 +380,21 @@
     [self.baseTbleView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade]; //刷新制定单元格
     
 }
-- (void)section3Action:(UIControl *)control{
-    
-    NSInteger section = 2;
-    
-    status[2] = !status[2];
-    
-    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:section];
-    [self.baseTbleView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade]; //刷新制定单元格
-    
-}
 - (void)section4Action:(UIControl *)control{
     
     NSInteger section = 3;
     
     status[3] = !status[3];
+    
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:section];
+    [self.baseTbleView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade]; //刷新制定单元格
+    
+}
+- (void)section5Action:(UIControl *)control{
+    
+    NSInteger section = 4;
+    
+    status[4] = !status[4];
     
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:section];
     [self.baseTbleView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade]; //刷新制定单元格
