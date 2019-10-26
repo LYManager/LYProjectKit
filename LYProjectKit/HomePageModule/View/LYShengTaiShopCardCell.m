@@ -44,7 +44,7 @@
         case LYShengTaiShopCardType_ShopCard:
             {
                 self.leftTopLabel.text = [NSString stringWithFormat:@"周期:%ld天",data.cycleDays];
-                self.leftBottomLabel.text = [NSString stringWithFormat:@"总奖励:%.1ldAGC",data.totalEarning];
+                self.leftBottomLabel.text = [NSString stringWithFormat:@"总奖励:%.2fAGC",data.totalEarning];
                 self.reduceLabel.text = [NSString stringWithFormat:@"%ldAGC",data.amount];
             }
             break;
@@ -52,14 +52,14 @@
            {
                self.leftTopLabel.text = [NSString stringWithFormat:@"购买时间:%@",[self dateWithString:data.createTime Format:@"yyyy-MM-dd"]];
                self.leftBottomLabel.text = [NSString stringWithFormat:@"剩余天数:%ld天",data.remainDays];
-               self.reduceLabel.text = [NSString stringWithFormat:@"%ldAGC",data.nowEarning];
+               self.reduceLabel.text = [NSString stringWithFormat:@"%.2fAGC",data.nowEarning];
            }
            break;
         case LYShengTaiShopCardType_PastCard:
            {
                 self.leftTopLabel.text = [NSString stringWithFormat:@"购买时间:%@",[self dateWithString:data.createTime Format:@"yyyy-MM-dd"]];
                 self.leftBottomLabel.text = [NSString stringWithFormat:@"过期时间:%@",[self dateWithString:data.endTime Format:@"yyyy-MM-dd"]];
-                self.reduceLabel.text = [NSString stringWithFormat:@"%ldAGC",data.nowEarning];
+                self.reduceLabel.text = [NSString stringWithFormat:@"%.2fAGC",data.nowEarning];
            }
            break;
         

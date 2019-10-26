@@ -195,7 +195,8 @@
     [self.navigationController pushViewController:logVC animated:YES];}
 
 - (IBAction)registAction:(id)sender {
-    RegisteredViewController *regVC = [[RegisteredViewController alloc]init];
+    RegisteredViewController *regVC = [[RegisteredViewController alloc]initWithNibName:@"RegisteredViewController" bundle:nil];
+//    RegisteredViewController *regVC = [[RegisteredViewController alloc]init];
     [self.navigationController pushViewController:regVC animated:YES];
     
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,14 +25,14 @@
                                         <constraint firstAttribute="width" secondItem="sjX-Li-X1e" secondAttribute="height" multiplier="1:1" id="iEL-5x-7lw"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飞翔的越南人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCn-Ih-XBU">
-                                    <rect key="frame" x="80" y="25" width="86" height="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCn-Ih-XBU">
+                                    <rect key="frame" x="80" y="25" width="8" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:88888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byq-uL-3Tj">
-                                    <rect key="frame" x="80" y="45" width="54" height="25"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byq-uL-3Tj">
+                                    <rect key="frame" x="80" y="45" width="10.5" height="25"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <nil key="highlightedColor"/>
@@ -186,7 +186,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="19" maxY="-28"/>
                             <inset key="imageEdgeInsets" minX="80" minY="-24" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="我的团队" image="qunzuduoren"/>
+                            <state key="normal" title="               " image="qunzuduoren"/>
                             <connections>
                                 <action selector="myTeamAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aaA-Qs-4GQ"/>
                             </connections>
@@ -196,7 +196,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="18" maxY="-30"/>
                             <inset key="imageEdgeInsets" minX="80" minY="-25" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="我的账单" image="sd"/>
+                            <state key="normal" title="                " image="sd"/>
                             <connections>
                                 <action selector="myBillAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="TtY-Wq-Dn7"/>
                             </connections>

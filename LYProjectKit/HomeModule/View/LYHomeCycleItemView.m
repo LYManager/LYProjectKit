@@ -85,7 +85,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self).offset(-15);
+        make.left.mas_equalTo(self).offset(-25);
         make.bottom.mas_equalTo(self).offset(20);
         make.height.mas_equalTo(self.imageView.mas_width).multipliedBy(0.91);
         make.width.mas_equalTo(90);

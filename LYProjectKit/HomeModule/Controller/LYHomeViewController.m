@@ -192,12 +192,16 @@ static NSInteger local = 0;
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
      CGPoint point = [[touches anyObject] locationInView:self.view];
+//    BOOL isHiddenDrugView = YES;
     for (LYHomeCycleItemView * itemView in self.itemArr) {
          if ([itemView.layer.presentationLayer hitTest:point]) {
              self.currentItemView = itemView;
+             itemView.hidden = YES;
+//             isHiddenDrugView = NO;
              break;
         }
     }
+//    self.drugItemView.hidden = isHiddenDrugView;
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -214,13 +218,14 @@ static NSInteger local = 0;
 //                [self showLightByButton:button];
                 [self recoveryRubbish:self.currentItemView.model.rubbishId rubbishType:index button:button];
             }else{
+                self.currentItemView.hidden = NO;
                 NSInteger index = [self.rubbishBtnArray indexOfObject:button] + 1;
                 [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"btn_%ld",index]] forState:UIControlStateNormal];
             }
         }
     }
     if (!isBtnTop) {
-        self.currentItemView = nil;
+        self.currentItemView.hidden = NO;
     }
 //
 }
@@ -229,7 +234,7 @@ static NSInteger local = 0;
      CGPoint point = [[touches anyObject] locationInView:self.view];
      self.drugItemView.center = point;
     [self.drugItemView configDataWithModel:self.currentItemView.model];
-    self.drugItemView.hidden = self.currentItemView == nil;
+    self.drugItemView.hidden = !self.currentItemView.hidden;
     if (self.drugItemView.hidden) {
         return;
     }

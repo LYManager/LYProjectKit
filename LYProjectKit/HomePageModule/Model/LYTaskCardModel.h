@@ -23,9 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**< 任务 需要完成垃圾分类的次数*/
 @property(nonatomic,assign)NSInteger taskRequires;
 /**< 总奖励*/
-@property(nonatomic,assign)long totalEarning;
+@property(nonatomic,assign)CGFloat totalEarning;
 /**< 累计收益*/
-@property(nonatomic,assign)long nowEarning;
+@property(nonatomic,assign)CGFloat nowEarning;
 /**< 收益时长*/
 @property(nonatomic,assign)NSInteger cycleDays;
 /**< 购买时间*/

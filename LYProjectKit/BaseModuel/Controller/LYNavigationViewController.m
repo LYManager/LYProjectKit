@@ -7,6 +7,7 @@
 // <#Class des#>
 #import "LYNavigationViewController.h"
 #import "UIColor+Extention.h"
+#import <AFNetworking.h>
 @interface LYNavigationViewController ()
 
 @end
@@ -22,6 +23,10 @@
 #pragma mark - Life
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
+   AFNetworkReachabilityStatus status = [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus;
+    if (status == AFNetworkReachabilityStatusUnknown || status == AFNetworkReachabilityStatusNotReachable) {
+        return;
+    }
     if (self.childViewControllers.count > 0) {
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"back_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
         backItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);

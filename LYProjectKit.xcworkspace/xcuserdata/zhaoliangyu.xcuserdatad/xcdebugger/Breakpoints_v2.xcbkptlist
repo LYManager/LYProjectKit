@@ -82,32 +82,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F019A328-D9EF-408D-9147-8648701FFE26"
+            uuid = "8486F52B-9DC0-4F8F-8DFA-BA660ACD8623"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LYProjectKit/LYSafeSettingModule/Controller/LYRealNameAuthViewController.m"
+            filePath = "LYProjectKit/HomePageModule/Controller/LYShengTaiViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-loadRequestWithPwd:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0A3495F0-0024-4633-8EDA-EBAB1AD506DD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LYProjectKit/LYSafeSettingModule/Controller/LYRealNameAuthViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-loadRequestWithPwd:"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-loadRequest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
