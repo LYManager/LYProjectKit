@@ -44,7 +44,7 @@
 
     self.title = @"邀请推广";
     [self loadRequest];
-    self.nameLab.text = self.nameStr;
+    self.nameLab.text = [NSString stringWithFormat:@"%@%@",@"昵称:",self.nameStr];
     self.headImage.layer.cornerRadius = 20;
     self.headImage.layer.masksToBounds = YES;
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:self.iconStr]];
