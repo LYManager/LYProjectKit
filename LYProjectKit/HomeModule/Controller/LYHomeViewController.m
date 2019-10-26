@@ -12,6 +12,7 @@
 //数据
 #import "LYHomeData.h"
 #import "LYHomeCycleBgView.h"
+#import "InvitFriendViewController.h"
 @interface LYHomeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *agcLabel;
@@ -36,11 +37,7 @@
 static NSInteger local = 0;
 @implementation LYHomeViewController
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[LYUserInfoManager shareInstance].userInfo.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
-    
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,32 +45,39 @@ static NSInteger local = 0;
     [self loadRequest];
     self.itemArr = [NSMutableArray array];
     
-    CABasicAnimation *layer = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    layer.toValue = @(2*M_PI);
-    layer.duration = 40;
-    layer.removedOnCompletion = false;
-    layer.repeatCount = MAXFLOAT;
-    [self.bgImageView.layer addAnimation:layer forKey:nil];
+   
 
    
     
-    CABasicAnimation *layer1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    layer1.toValue = @(-2*M_PI);
-    layer1.duration = 80;
-    layer1.removedOnCompletion = false;
-    layer1.repeatCount = MAXFLOAT;
+//    CABasicAnimation *layer1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+//    layer1.toValue = @(-2*M_PI);
+//    layer1.duration = 80;
+//    layer1.removedOnCompletion = false;
+//    layer1.repeatCount = MAXFLOAT;
 //    [self.earthImageView.layer addAnimation:layer1 forKey:nil];
    
     
     for (int i = 0; i < 6;  i ++ ) {
         LYHomeCycleItemView * redView = [[LYHomeCycleItemView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
         [self.itemArr addObject:redView];
-        
-    
         [self.view addSubview:redView];
         [self.homeCycleBgView sendSubviewToBack:redView];
-        
-          CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    }
+    
+   
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void) addAnimation{
+    CABasicAnimation *layer = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+   layer.toValue = @(2*M_PI);
+   layer.duration = 40;
+   layer.removedOnCompletion = false;
+   layer.repeatCount = MAXFLOAT;
+   [self.bgImageView.layer addAnimation:layer forKey:@"bg_animation"];
+    
+    for (NSInteger i = 0; i < 6; i++) {
+         CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
            animation.keyPath = @"position";
            animation.duration = 40;
            animation.removedOnCompletion = NO;
@@ -85,16 +89,29 @@ static NSInteger local = 0;
             CGPoint center = self.homeCycleBgView.center;
                UIBezierPath *circlePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(center.x, center.y) radius:120 startAngle:M_PI / 3 * i + M_PI / 6 endAngle:M_PI * 2 + M_PI / 3 * i + M_PI / 6 clockwise:true];
                animation.path = circlePath.CGPath;
-            [redView.layer addAnimation:animation forKey:nil];
+            [self.itemArr[i].layer addAnimation:animation forKey:[NSString stringWithFormat:@"item_animation_%ld",i]];
         });
-        
     }
     
-   
-    // Do any additional setup after loading the view from its nib.
+}
+
+- (void) removeAnimation{
+    for (NSInteger i = 0; i < 6; i++) {
+        [self.itemArr[i].layer removeAnimationForKey:[NSString stringWithFormat:@"item_animation_%ld",i]];
+    }
+    [self.bgImageView.layer removeAnimationForKey:@"bg_animation"];
 }
 
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[LYUserInfoManager shareInstance].userInfo.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
+    [self addAnimation];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [self removeAnimation];
+}
 
 
 - (void)loadRequest{    
@@ -163,7 +180,10 @@ static NSInteger local = 0;
     [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
 }
 - (IBAction)zhaomuAction:(UIButton *)sender {
-    [self pushViewControllerWithClassName:@"InvitFriendViewController" params:nil];
+    InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
+    invitVC.nameStr = self.data.data.userName;
+    [self.navigationController pushViewController:invitVC animated:YES];
+//    [self pushViewControllerWithClassName:@"InvitFriendViewController" params:nil];
 }
 
 - (IBAction)gonglueAction:(UIButton *)sender {
@@ -192,19 +212,27 @@ static NSInteger local = 0;
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
      CGPoint point = [[touches anyObject] locationInView:self.view];
-//    BOOL isHiddenDrugView = YES;
+    BOOL isHiddenDrugView = YES;
     for (LYHomeCycleItemView * itemView in self.itemArr) {
          if ([itemView.layer.presentationLayer hitTest:point]) {
              self.currentItemView = itemView;
              itemView.hidden = YES;
-//             isHiddenDrugView = NO;
+             isHiddenDrugView = NO;
              break;
         }
     }
-//    self.drugItemView.hidden = isHiddenDrugView;
+    dispatch_async(dispatch_get_main_queue(), ^{
+         self.drugItemView.center = point;
+         [self.drugItemView configDataWithModel:self.currentItemView.model];
+        self.drugItemView.hidden = isHiddenDrugView;
+    });
+    
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if (self.drugItemView.hidden) {
+        return;
+    }
     CGPoint point = [[touches anyObject] locationInView:self.view];
     self.drugItemView.hidden = YES;
     BOOL isBtnTop = NO;
@@ -233,7 +261,7 @@ static NSInteger local = 0;
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
      CGPoint point = [[touches anyObject] locationInView:self.view];
      self.drugItemView.center = point;
-    [self.drugItemView configDataWithModel:self.currentItemView.model];
+   
     self.drugItemView.hidden = !self.currentItemView.hidden;
     if (self.drugItemView.hidden) {
         return;

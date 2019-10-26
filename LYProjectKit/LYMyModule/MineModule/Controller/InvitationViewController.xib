@@ -66,7 +66,7 @@
                                 <action selector="topAction:" destination="-1" eventType="touchUpInside" id="Lqi-FL-ogF"/>
                             </connections>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="73D-wc-LvF">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="73D-wc-LvF">
                             <rect key="frame" x="258" y="280" width="76" height="70"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -128,7 +128,6 @@
         </view>
     </objects>
     <resources>
-        <image name="code.jpg" width="256" height="256"/>
         <image name="invitback.jpg" width="1080" height="1920"/>
         <image name="timg.jpg" width="600" height="674"/>
     </resources>

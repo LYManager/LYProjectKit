@@ -24,7 +24,9 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
    AFNetworkReachabilityStatus status = [AFNetworkReachabilityManager sharedManager].networkReachabilityStatus;
-    if (status == AFNetworkReachabilityStatusUnknown || status == AFNetworkReachabilityStatusNotReachable) {
+    if (status == AFNetworkReachabilityStatusNotReachable) {
+        [self.view makeToast:@"请检查网络连接" duration:2 position:CSToastPositionCenter];
+
         return;
     }
     if (self.childViewControllers.count > 0) {
