@@ -203,9 +203,11 @@ static NSInteger local = 0;
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     CGPoint point = [[touches anyObject] locationInView:self.view];
     self.drugItemView.hidden = YES;
+    BOOL isBtnTop = NO;
     for (UIButton * button in self.rubbishBtnArray) {
          CALayer *layer = [button.layer hitTest:point];
         if (layer) {
+            isBtnTop = YES;
             button.backgroundColor = [UIColor clearColor];
             NSInteger index = [self.rubbishBtnArray indexOfObject:button] + 1;
             if (index == self.drugItemView.model.rubbishType) {
@@ -217,6 +219,10 @@ static NSInteger local = 0;
             }
         }
     }
+    if (!isBtnTop) {
+        self.currentItemView = nil;
+    }
+//
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
