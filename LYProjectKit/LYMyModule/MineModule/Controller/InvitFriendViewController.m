@@ -106,7 +106,7 @@
     self.backImage.image = image;
     
     if (self.currentIndex == 1) {
-        self.codeImage.frame = CGRectMake(CGRectGetMaxX(self.backImage.frame)-145, CGRectGetMaxY(self.backImage.frame)-300, 100, 100);
+        self.codeImage.frame = CGRectMake(CGRectGetMaxX(self.backImage.frame)-165, CGRectGetMaxY(self.backImage.frame)-300, 100, 100);
         self.headImage.frame = CGRectMake(CGRectGetMaxX(self.codeImage.frame)-40, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
         self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)-130, CGRectGetMaxY(self.headImage.frame)+10, 130, 13);
         self.invitLab.frame = CGRectMake(CGRectGetMaxX(self.nameLab.frame)-130, CGRectGetMaxY(self.nameLab.frame)+10,130, 13);
@@ -118,7 +118,7 @@
         
     }
     if (self.currentIndex == 2) {
-        self.codeImage.frame = CGRectMake(38, CGRectGetMaxY(self.backImage.frame)-273, 100, 100);
+        self.codeImage.frame = CGRectMake(27, CGRectGetMaxY(self.backImage.frame)-274, 100, 100);
         self.headImage.frame = CGRectMake(CGRectGetMinX(self.codeImage.frame)-10, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
         self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)+5, CGRectGetMaxY(self.codeImage.frame)+15, 130, 13);
         self.nameLab.textColor = RGB(51, 51, 51, 1);
@@ -152,7 +152,7 @@
     
     
     if (self.currentIndex == 1) {
-         self.codeImage.frame = CGRectMake(CGRectGetMaxX(self.backImage.frame)-145, CGRectGetMaxY(self.backImage.frame)-300, 100, 100);
+         self.codeImage.frame = CGRectMake(CGRectGetMaxX(self.backImage.frame)-165, CGRectGetMaxY(self.backImage.frame)-300, 100, 100);
          self.headImage.frame = CGRectMake(CGRectGetMaxX(self.codeImage.frame)-40, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
          self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)-130, CGRectGetMaxY(self.headImage.frame)+10, 130, 13);
          self.invitLab.frame = CGRectMake(CGRectGetMaxX(self.nameLab.frame)-130, CGRectGetMaxY(self.nameLab.frame)+10,130, 13);
@@ -163,7 +163,7 @@
          
      }
      if (self.currentIndex == 2) {
-         self.codeImage.frame = CGRectMake(38, CGRectGetMaxY(self.backImage.frame)-273, 100, 100);
+         self.codeImage.frame = CGRectMake(27, CGRectGetMaxY(self.backImage.frame)-274, 100, 100);
          self.headImage.frame = CGRectMake(CGRectGetMinX(self.codeImage.frame)-10, CGRectGetMaxY(self.codeImage.frame)+10, 40, 40);
          self.nameLab.frame = CGRectMake(CGRectGetMaxX(self.headImage.frame)+5, CGRectGetMaxY(self.codeImage.frame)+15, 130, 13);
          self.nameLab.textColor = RGB(51, 51, 51, 1);
@@ -260,7 +260,7 @@
 -(UIImageView *)backImage
 {
     if (_backImage == nil) {
-        _backImage = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenW - 335)/2, 20, 335, 527)];
+        _backImage = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenW - 527/16*9)/2, 20, 527/16*9, 527)];
         //_backImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 335/375*kScreenW, 527/667*kScreenH)];
         _backImage.image = [UIImage imageNamed:@"背景1.jpg"];
         _backImage.contentMode = UIViewContentModeScaleToFill;
@@ -270,7 +270,7 @@
 -(UIImageView *)codeImage
 {
     if (_codeImage == nil) {
-        _codeImage = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.backImage.frame)-145, CGRectGetMaxY(self.backImage.frame)-300, 100, 100)];
+        _codeImage = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.backImage.frame)-165, CGRectGetMaxY(self.backImage.frame)-300, 100, 100)];
         _codeImage.image = [UIImage imageNamed:@"code.jpg"];
         
     }
