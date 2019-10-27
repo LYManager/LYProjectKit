@@ -14,6 +14,7 @@
                 <outlet property="earthImageView" destination="NnT-dI-ZBf" id="Y2h-L2-ZSg"/>
                 <outlet property="headImageView" destination="g9o-Ub-IeF" id="cRP-Hz-dzk"/>
                 <outlet property="homeCycleBgView" destination="Kgd-Dt-G1v" id="F2T-H1-oPe"/>
+                <outlet property="taskLabel" destination="hT5-zZ-E9N" id="U5f-9E-Qaj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="rubbishBtnArray" destination="m7J-4B-dKc" id="Jfg-X5-ahO"/>
                 <outletCollection property="rubbishBtnArray" destination="SgG-D2-rGP" id="1hg-SM-NJ9"/>
@@ -228,6 +229,33 @@
                         <constraint firstItem="q0K-9O-Em4" firstAttribute="leading" secondItem="GPE-uC-C0Z" secondAttribute="leading" id="xhJ-Ys-qsR"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-i5-KGT">
+                    <rect key="frame" x="20" y="109" width="100" height="18"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="today_task_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PHU-X6-lPk">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-zZ-E9N">
+                            <rect key="frame" x="50" y="0.0" width="50" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="hT5-zZ-E9N" secondAttribute="trailing" id="3dg-2W-3Bs"/>
+                        <constraint firstItem="hT5-zZ-E9N" firstAttribute="leading" secondItem="gtw-i5-KGT" secondAttribute="centerX" id="Due-fp-HSz"/>
+                        <constraint firstItem="PHU-X6-lPk" firstAttribute="leading" secondItem="gtw-i5-KGT" secondAttribute="leading" id="EGi-1y-Q09"/>
+                        <constraint firstAttribute="height" constant="18" id="MuW-kQ-n7Q"/>
+                        <constraint firstItem="PHU-X6-lPk" firstAttribute="top" secondItem="gtw-i5-KGT" secondAttribute="top" id="Nfv-19-8Ga"/>
+                        <constraint firstAttribute="bottom" secondItem="hT5-zZ-E9N" secondAttribute="bottom" id="TQH-GM-IwC"/>
+                        <constraint firstAttribute="width" constant="100" id="VXT-sA-2uy"/>
+                        <constraint firstItem="hT5-zZ-E9N" firstAttribute="top" secondItem="gtw-i5-KGT" secondAttribute="top" id="jR4-Is-dcr"/>
+                        <constraint firstAttribute="bottom" secondItem="PHU-X6-lPk" secondAttribute="bottom" id="uRH-B2-6Hb"/>
+                        <constraint firstAttribute="trailing" secondItem="PHU-X6-lPk" secondAttribute="trailing" id="wQH-K1-HhM"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -241,6 +269,7 @@
                 <constraint firstItem="SgG-D2-rGP" firstAttribute="bottom" secondItem="m7J-4B-dKc" secondAttribute="bottom" id="E2k-8E-sco"/>
                 <constraint firstAttribute="trailing" secondItem="nzL-3g-6CL" secondAttribute="trailing" id="FfT-eP-Qev"/>
                 <constraint firstAttribute="bottom" secondItem="rwI-O6-FRp" secondAttribute="bottom" constant="40" id="Iu0-vq-nef"/>
+                <constraint firstItem="gtw-i5-KGT" firstAttribute="leading" secondItem="aTb-8z-SIC" secondAttribute="leading" id="J72-oa-7yZ"/>
                 <constraint firstItem="SgG-D2-rGP" firstAttribute="width" secondItem="m7J-4B-dKc" secondAttribute="width" id="OF2-il-Srn"/>
                 <constraint firstItem="nzL-3g-6CL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Oih-aL-Mdo"/>
                 <constraint firstAttribute="trailing" secondItem="Kgd-Dt-G1v" secondAttribute="trailing" constant="30" id="P0H-4z-zHh"/>
@@ -267,6 +296,7 @@
                 <constraint firstItem="Gwf-QX-nKh" firstAttribute="height" secondItem="m7J-4B-dKc" secondAttribute="height" id="pCe-an-Chm"/>
                 <constraint firstAttribute="trailing" secondItem="rwI-O6-FRp" secondAttribute="trailing" constant="35" id="tJK-kQ-uIk"/>
                 <constraint firstItem="Kgd-Dt-G1v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uCP-Fh-ggU"/>
+                <constraint firstItem="gtw-i5-KGT" firstAttribute="top" secondItem="aTb-8z-SIC" secondAttribute="bottom" constant="5" id="vdB-7S-2J7"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
         </view>
@@ -286,6 +316,7 @@
         <image name="rx" width="35.5" height="157.5"/>
         <image name="six_icon" width="208" height="237.5"/>
         <image name="st" width="92" height="84"/>
+        <image name="today_task_icon" width="100" height="19.5"/>
         <image name="top_img_right" width="8.5" height="59.5"/>
         <image name="wd" width="92" height="84.5"/>
         <image name="zhaomu" width="109" height="55"/>

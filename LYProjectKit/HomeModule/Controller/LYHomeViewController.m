@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *earthImageView;
 @property (weak, nonatomic) IBOutlet LYHomeCycleBgView *homeCycleBgView;
+@property (weak, nonatomic) IBOutlet UILabel *taskLabel;
+
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *rubbishBtnArray;
 
@@ -197,7 +199,7 @@ static NSInteger local = 0;
 - (void) configUIWithData:(LYHomeDataModel *)model{
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
     [LYUserInfoManager shareInstance].userInfo.actor = model.actor;
-
+    self.taskLabel.text = model.todayTask;
     self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.agcAmount];
     @try {
         for (int i = 0; i < 6; i ++) {

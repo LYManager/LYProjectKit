@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface LYHomeDataModel : NSObject
+/**< 今日任务*/
+@property(nonatomic,copy)NSString *  todayTask;
 /**< 头像*/
 @property(nonatomic,copy)NSString *  actor;
 /**< agc数量*/
