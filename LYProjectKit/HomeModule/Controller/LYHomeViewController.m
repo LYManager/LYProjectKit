@@ -184,6 +184,7 @@ static NSInteger local = 0;
 - (IBAction)zhaomuAction:(UIButton *)sender {
     InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
     invitVC.nameStr = self.data.data.userName;
+    invitVC.iconStr = self.data.data.actor;
     [self.navigationController pushViewController:invitVC animated:YES];
 //    [self pushViewControllerWithClassName:@"InvitFriendViewController" params:nil];
 }
