@@ -51,9 +51,19 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
     [self.manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"text/plain",@"application/json",@"text/json",@"text/javascript",@"text/html", nil ,nil]];
 }
 
+- (void)POSTWithApiPath:(NSString *)apiPath requestParams:(NSDictionary *)requestParams shouldHandlerError:(NetworkCompletionHandler)handler{
+     [self POSTWithApiPath:apiPath requestParams:requestParams autoHandlerError:NO handler:handler];
+}
+
+- (void)POSTWithApiPath:(NSString *)apiPath requestParams:(NSDictionary *)requestParams handler:(NetworkCompletionHandler)handler{
+    [self POSTWithApiPath:apiPath requestParams:requestParams autoHandlerError:YES handler:handler];
+}
+
 - (void)POSTWithApiPath:(NSString*)apiPath
                  requestParams:(NSDictionary*)requestParams
+              autoHandlerError:(BOOL)autoHandlerError
                        handler:(NetworkCompletionHandler)handler
+       
 {
      [LYProgressHUD ly_showHUD];
     NSMutableDictionary * paramsNew = [NSMutableDictionary dictionaryWithDictionary:requestParams];
@@ -114,12 +124,19 @@ static NSString * const kErrorUserInfoMsgKey =  @"errorMsg"; // 错误key
              if (code == 0) {
                  !handler ?: handler(responseObject,nil);
              }else{
-                 [[UIApplication sharedApplication].keyWindow makeToast:[NSString stringWithFormat:@"%@",responseObject[@"message"]] duration:2 position:CSToastPositionCenter];
+                 if (autoHandlerError) {
+                      [[UIApplication sharedApplication].keyWindow makeToast:[NSString stringWithFormat:@"%@",responseObject[@"message"]] duration:2 position:CSToastPositionCenter];
+                 }else{
+                    !handler ?: handler(responseObject,nil);
+                 }
              }
              
          }
          [LYProgressHUD ly_dismissHUD];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (!autoHandlerError) {
+             !handler ?: handler(@{},error);
+        }
          [LYProgressHUD ly_dismissHUD];
     }];
 }
