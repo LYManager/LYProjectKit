@@ -276,7 +276,7 @@
          titleshowLable.backgroundColor = [UIColor clearColor];
          titleshowLable.textColor = [UIColor whiteColor];
          titleshowLable.font = [UIFont systemFontOfSize:14];
-        titleshowLable.text = self.tameStr;
+        titleshowLable.text = self.model.groupAmount;
          titleshowLable.textAlignment = NSTextAlignmentRight;
 
         // [titleshowLable sizeToFit];

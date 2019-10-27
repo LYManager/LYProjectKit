@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSArray *notActiveChilds;
 /**< 直推已加入会员*/
 @property(nonatomic,strong)NSArray *childsList;
+@property(nonatomic,copy)NSString *  groupAmount;
 
 
 @end
