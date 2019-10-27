@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**< agc数量*/
 @property(nonatomic,assign)CGFloat agcAmount;
 @property(nonatomic,copy)NSString *  groupAmount;
+@property(nonatomic,copy)NSString *  teamNums;
 
 @end
 
