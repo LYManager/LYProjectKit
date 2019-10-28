@@ -152,6 +152,8 @@
 		82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8DF22362A60200A47845 /* InviteViewController.m */; };
 		82FE8DF62362BFF100A47845 /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF42362BFF100A47845 /* 背景2.jpg */; };
 		82FE8DF72362BFF100A47845 /* 背景1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF52362BFF100A47845 /* 背景1.jpg */; };
+		82FE8E422365BFA500A47845 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8E402365BFA500A47845 /* ImageViewController.m */; };
+		82FE8E432365BFA500A47845 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8E412365BFA500A47845 /* ImageViewController.xib */; };
 		9352361FEA18E5C5AAFD783E /* libPods-LYProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */; };
 /* End PBXBuildFile section */
 
@@ -442,6 +444,9 @@
 		82FE8DF22362A60200A47845 /* InviteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
 		82FE8DF42362BFF100A47845 /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
 		82FE8DF52362BFF100A47845 /* 背景1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1.jpg"; sourceTree = "<group>"; };
+		82FE8E3F2365BFA500A47845 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		82FE8E402365BFA500A47845 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		82FE8E412365BFA500A47845 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		8FF97726890D2E6AFF9C6849 /* Pods-LYProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYProjectKit.debug.xcconfig"; path = "Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1136,6 +1141,9 @@
 				82ECDE71236047E6002D6532 /* AboutUsViewController.h */,
 				82ECDE72236047E6002D6532 /* AboutUsViewController.m */,
 				82ECDE73236047E6002D6532 /* AboutUsViewController.xib */,
+				82FE8E3F2365BFA500A47845 /* ImageViewController.h */,
+				82FE8E402365BFA500A47845 /* ImageViewController.m */,
+				82FE8E412365BFA500A47845 /* ImageViewController.xib */,
 				82FE8DF12362A60200A47845 /* InviteViewController.h */,
 				82FE8DF22362A60200A47845 /* InviteViewController.m */,
 			);
@@ -1354,6 +1362,7 @@
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
 				63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */,
+				82FE8E432365BFA500A47845 /* ImageViewController.xib in Resources */,
 				82ECDE75236047E6002D6532 /* AboutUsViewController.xib in Resources */,
 				63933BAC235B3B3500D5E138 /* LYShengTaiSessionHeaderView.xib in Resources */,
 				63531BF9235CC7040072A093 /* LYPopSendToolsViewController.xib in Resources */,
@@ -1462,6 +1471,7 @@
 				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
 				82FBA366235AF08500A6D038 /* LoginViewController.m in Sources */,
 				6397A637235CB3C800F8A2D2 /* LYPopContentView.m in Sources */,
+				82FE8E422365BFA500A47845 /* ImageViewController.m in Sources */,
 				82FBA36C235AF08500A6D038 /* ModifyViewController.m in Sources */,
 				82FBA37F235AFBAC00A6D038 /* AGCDetailHeadView.m in Sources */,
 				63264DCB235C132E00293467 /* KGDataCenter.m in Sources */,

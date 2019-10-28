@@ -31,7 +31,7 @@
     self.agcCountLabel.text = [NSString stringWithFormat:@"%.2f",userInfo.agcAmount];
     self.idLabel.text = [NSString stringWithFormat:@"ID:%@",userInfo.userId];
     self.levelLabel.text = userInfo.antLevel;
-    [self.teamBtn setTitle:[NSString stringWithFormat:@"%@%@%@",@"我的团队",userInfo.teamNums,@"人"] forState:UIControlStateNormal];
+    [self.teamBtn setTitle:[NSString stringWithFormat:@"%@%@%@",@"我的团队:",userInfo.teamNums,@"人"] forState:UIControlStateNormal];
      [self.teamActionBtn setTitle:[NSString stringWithFormat:@"%@%@",@"团队活跃度:",userInfo.groupAmount] forState:UIControlStateNormal];
 }
 

@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LYSafeSettingViewController : LYBaseViewController
 
+
 @end
 
 NS_ASSUME_NONNULL_END

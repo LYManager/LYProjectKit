@@ -306,7 +306,7 @@
                                 <constraint firstAttribute="width" constant="97" id="Zpi-5d-sT5"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册即代表您同意《AGC用户协议》" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-La-J69">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册即代表您同意《蚂蚁分类用户协议》" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-La-J69">
                             <rect key="frame" x="35" y="479" width="344" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="2Pt-ku-Ju0"/>

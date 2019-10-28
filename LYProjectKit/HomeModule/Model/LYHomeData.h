@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *  userId;
 /**< userName*/
 @property(nonatomic,copy)NSString *  userName;
+
+
+@property(nonatomic,strong)NSArray *strategies;
 @end
 
 NS_ASSUME_NONNULL_END
