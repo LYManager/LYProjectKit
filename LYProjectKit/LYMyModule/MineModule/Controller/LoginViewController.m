@@ -118,7 +118,7 @@
 }
 - (void) tapAction:(UITapGestureRecognizer *)tap{
     self.pwdTF.text = @"123456";
-    self.accountNumberTF.text = @"333333";
+    self.accountNumberTF.text = @"13554034010";
 }
 - (IBAction)sendAction:(UIButton *)sender {
 

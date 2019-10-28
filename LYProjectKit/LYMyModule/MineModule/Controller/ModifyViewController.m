@@ -39,10 +39,11 @@
        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
 
         [self.view makeToast:@"昵称修改成功" duration:1 position:CSToastPositionCenter];
+        [LYUserInfoManager shareInstance].userInfo.userName = self.nameText.text;
         
 
        }];
-       
+       //
 }
 - (NSString *)URLEncodedString:(NSString *)string
 {

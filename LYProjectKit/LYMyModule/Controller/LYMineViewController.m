@@ -64,9 +64,9 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 
 /// AGC余额
 - (void)clickAGCBalance {
-    AGCDetailViewController *AGCVC = [[AGCDetailViewController alloc]init];
-    [self.navigationController pushViewController:AGCVC animated:YES];
-        
+//    AGCDetailViewController *AGCVC = [[AGCDetailViewController alloc]init];
+//    [self.navigationController pushViewController:AGCVC animated:YES];
+//        
 }
 
 /// 邀请好友
@@ -159,7 +159,11 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
        }
     if (indexPath.section == 1) {
         LYSafeSettingViewController *safeVC = [[LYSafeSettingViewController alloc]init];
-        safeVC.params = @{@"cardNums":@(self.userInfo.cardNums)};
+        safeVC.params = @{
+            @"cardNums":@(self.userInfo.cardNums),
+            @"isChecked":@(![self.userInfo.antLevel isEqual:@"未实名"])
+        };
+        
         [self.navigationController pushViewController:safeVC animated:YES];
     }
     if (indexPath.section == 2) {
@@ -175,8 +179,10 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
         [self.navigationController pushViewController:custmVC animated:YES];
     }
     if (indexPath.section == 4) {
-        ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
-        [self.navigationController pushViewController:custmVC animated:YES];
+//        ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
+//        [self.navigationController pushViewController:custmVC animated:YES];
+        [self pushViewControllerWithClassName:@"" params:nil];
+
     }
 }
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

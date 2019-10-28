@@ -13,6 +13,8 @@
 #import "LYHomeData.h"
 #import "LYHomeCycleBgView.h"
 #import "InvitFriendViewController.h"
+#import "ImageViewController.h"
+
 @interface LYHomeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *agcLabel;
@@ -183,14 +185,16 @@ static NSInteger local = 0;
 }
 - (IBAction)zhaomuAction:(UIButton *)sender {
     InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
-    invitVC.nameStr = self.data.data.userName;
-    invitVC.iconStr = self.data.data.actor;
+    invitVC.nameStr = [LYUserInfoManager shareInstance].userInfo.userName;
+    invitVC.iconStr = [LYUserInfoManager shareInstance].userInfo.actor;
     [self.navigationController pushViewController:invitVC animated:YES];
 //    [self pushViewControllerWithClassName:@"InvitFriendViewController" params:nil];
 }
 
 - (IBAction)gonglueAction:(UIButton *)sender {
-    [self pushViewControllerWithClassName:@"" params:nil];
+    ImageViewController *imageVC = [[ImageViewController alloc]init];
+    imageVC.urlString = [self.data.data.strategies[0]objectForKey:@"url"];
+    [self.navigationController pushViewController:imageVC animated:YES];
 }
 
 
@@ -199,6 +203,7 @@ static NSInteger local = 0;
 - (void) configUIWithData:(LYHomeDataModel *)model{
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:model.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
     [LYUserInfoManager shareInstance].userInfo.actor = model.actor;
+    [LYUserInfoManager shareInstance].userInfo.userName = model.userName;
     self.taskLabel.text = model.todayTask;
     self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.agcAmount];
     @try {

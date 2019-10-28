@@ -45,34 +45,58 @@
 - (IBAction)submitBtnAction:(id)sender {
     
     
-//    if (_addressText.text.length == 0) {
-//        [self.view makeToast:@"请输入提币地址" duration:2 position:CSToastPositionCenter];
-//
-//        return;
-//    }
-//    if (_numberText.text.length == 0) {
-//           [self.view makeToast:@"请输入提币数量" duration:2 position:CSToastPositionCenter];
-//
-//           return;
-//       }
-//    if (_pwText.text.length == 0) {
-//           [self.view makeToast:@"请输入交易密码" duration:2 position:CSToastPositionCenter];
-//
-//           return;
-//       }
-    self.submitBtn.enabled = NO;
-    
-    [LYNetwork POSTWithApiPath:coinWithdraw requestParams:@{
-             @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",@"withdrawDTO":@{@"address":self.assModel.userAddress,@"coinType":self.assModel.coinType,@"amount":self.numberText.text,@"transPassword":self.pwText.text},
-         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-        
-        NSLog(@"成功");
-        [self.view makeToast:@"提币成功" duration:2 position:CSToastPositionCenter];
-         self.submitBtn.enabled = NO;
+    if (_addressText.text.length == 0) {
+        [self.view makeToast:@"请输入提币地址" duration:2 position:CSToastPositionCenter];
 
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
+        return;
+    }
+    if (_numberText.text.length == 0) {
+           [self.view makeToast:@"请输入提币数量" duration:2 position:CSToastPositionCenter];
+
+           return;
+       }
+    if (_pwText.text.length == 0) {
+           [self.view makeToast:@"请输入交易密码" duration:2 position:CSToastPositionCenter];
+
+           return;
+       }
     
+//    [LYNetwork POSTWithApiPath:coinWithdraw requestParams:@{
+//             @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",@"withdrawDTO":@{@"address":self.assModel.userAddress,@"coinType":self.assModel.coinType,@"amount":self.numberText.text,@"transPassword":self.pwText.text},
+//         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+//
+//        NSLog(@"成功");
+//        [self.view makeToast:@"提币成功" duration:2 position:CSToastPositionCenter];
+//         self.submitBtn.enabled = NO;
+//
+//        [self.navigationController popViewControllerAnimated:YES];
+//    }];
+    
+    
+    
+    self.submitBtn.enabled = NO;
+    [LYNetwork POSTWithApiPath:coinWithdraw requestParams:@{
+        @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",@"withdrawDTO":@{@"address":self.addressText.text,@"coinType":self.assModel.coinType,@"amount":self.numberText.text,@"transPassword":self.pwText.text},
+    } shouldHandlerError:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        self.submitBtn.enabled = YES;
+        if (error) {
+            [self.view makeToast:@"提币失败" duration:2 position:CSToastPositionCenter];
+
+        }
+        else
+        {
+            
+            if ([[response objectForKey:@"code"] integerValue]!= 0) {
+                [self.view makeToast:[response objectForKey:@"message"] duration:2 position:CSToastPositionCenter];
+            }
+            else
+            {
+                NSLog(@"成功");
+                [self.view makeToast:@"提币成功" duration:2 position:CSToastPositionCenter];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }
+    }];
 }
 
 /*

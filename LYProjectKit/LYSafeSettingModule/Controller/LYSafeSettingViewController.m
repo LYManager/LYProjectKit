@@ -73,6 +73,10 @@ static NSString * const kSettingCellIdentifier = @"LYSafeSettingTableViewCell";
     }
     else
     {
+        if ([self.params[@"isChecked"]boolValue]) {
+            [self.view makeToast:@"已认证" duration:1 position:CSToastPositionCenter];
+            return;
+        }
         NSInteger nums = [self.params[@"cardNums"]integerValue];
         if (nums > 0) {
             LYAntCardModel * cardModel = [[LYAntCardModel alloc]init];
