@@ -107,7 +107,7 @@
              [self popErrorControllerIsSend:NO isRealNameCard:YES];
         }
     }else{
-        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        LYAntCardModel * model = self.data.data.propsCardList.lastObject;
         if (model.cardCount > 0) {
             [self popToolsController:self.data.data.propsCardList.lastObject callBack:nil];
         }else{
@@ -130,7 +130,7 @@
              [self popErrorControllerIsSend:YES isRealNameCard:YES];
         }
     }else{
-        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        LYAntCardModel * model = self.data.data.propsCardList.lastObject;
         if (model.cardCount > 0) {
             [self popSendToolsController:self.data.data.propsCardList.lastObject backBlock:^{
                 [self loadRequest];

@@ -106,7 +106,7 @@
     [str appendFormat:@"%@", s];
     }
      
-    [str stringByReplacingOccurrencesOfString:@"\\\\" withString:@"\\"];
+//    [str stringByReplacingOccurrencesOfString:@"\\\\" withString:@"\\"];
 //    return  [NSMutableString stringWithString:[str stringByReplacingOccurrencesOfString:@"\\\\" withString:@"\\"]];
     return str;
 
