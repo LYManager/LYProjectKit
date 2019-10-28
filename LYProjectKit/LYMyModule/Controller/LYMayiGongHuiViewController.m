@@ -97,6 +97,9 @@
 - (void)useCardWithType:(CardType)cardType{
     if (cardType == CardType_RealCard) {
         LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        if (model.cardId != 1) {
+            model = self.data.data.propsCardList.lastObject;
+        }
         if (model.cardCount > 0) {
 //            去实名认证
             [self pushViewControllerWithClassName:@"LYRealNameAuthViewController" params:@{
@@ -107,9 +110,12 @@
              [self popErrorControllerIsSend:NO isRealNameCard:YES];
         }
     }else{
-        LYAntCardModel * model = self.data.data.propsCardList.lastObject;
+        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        if (model.cardId != 2) {
+            model = self.data.data.propsCardList.lastObject;
+        }
         if (model.cardCount > 0) {
-            [self popToolsController:self.data.data.propsCardList.lastObject callBack:nil];
+            [self popToolsController:model callBack:nil];
         }else{
         //  联系客服弹框
               [self popErrorControllerIsSend:NO isRealNameCard:NO];
@@ -121,8 +127,11 @@
 - (void)sendCaardWithType:(CardType)cardType{
     if (cardType == CardType_RealCard) {
         LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        if (model.cardId != 1) {
+            model = self.data.data.propsCardList.lastObject;
+        }
         if (model.cardCount > 0) {
-            [self popSendToolsController:self.data.data.propsCardList.firstObject backBlock:^{
+            [self popSendToolsController:model backBlock:^{
                 [self loadRequest];
             }];
         }else{
@@ -130,9 +139,12 @@
              [self popErrorControllerIsSend:YES isRealNameCard:YES];
         }
     }else{
-        LYAntCardModel * model = self.data.data.propsCardList.lastObject;
+        LYAntCardModel * model = self.data.data.propsCardList.firstObject;
+        if (model.cardId != 2) {
+            model = self.data.data.propsCardList.lastObject;
+        }
         if (model.cardCount > 0) {
-            [self popSendToolsController:self.data.data.propsCardList.lastObject backBlock:^{
+            [self popSendToolsController:model backBlock:^{
                 [self loadRequest];
             }];
         }else{
@@ -141,6 +153,15 @@
         }
     }
 }
+
+//- (LYAntCardModel *)_getCardModelWithCardId:(NSInteger)cardId{
+//    for (LYAntCardModel * model in self.data.data.propsCardList) {
+//        if (model.cardId == cardId) {
+//            return model;
+//        }
+//    }
+//    return nil;
+//}
 
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
