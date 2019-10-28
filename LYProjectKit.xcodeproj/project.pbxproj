@@ -93,6 +93,7 @@
 		6397A63E235CC02B00F8A2D2 /* LYPopToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */; };
 		6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */; };
 		63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A815FD236438C100B9CC9E /* LYRubbishButton.m */; };
+		63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
@@ -348,6 +349,8 @@
 		6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopToolsViewController.xib; sourceTree = "<group>"; };
 		63A815FC236438C100B9CC9E /* LYRubbishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishButton.h; sourceTree = "<group>"; };
 		63A815FD236438C100B9CC9E /* LYRubbishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishButton.m; sourceTree = "<group>"; };
+		63B3775E236735F5001C8CCC /* LYAVOSCloudManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAVOSCloudManager.h; sourceTree = "<group>"; };
+		63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYAVOSCloudManager.m; sourceTree = "<group>"; };
 		63C2243C22FBE10100821544 /* LYTestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTestWebViewController.h; sourceTree = "<group>"; };
 		63C2243D22FBE10100821544 /* LYTestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTestWebViewController.m; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
@@ -495,6 +498,8 @@
 				63264DC5235C112100293467 /* LYConstInterface.h */,
 				63264DC6235C112100293467 /* LYConstInterface.m */,
 				635C31A9235E0CC60015889B /* LYResponseCode.h */,
+				63B3775E236735F5001C8CCC /* LYAVOSCloudManager.h */,
+				63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1517,6 +1522,7 @@
 				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
 				634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */,
 				82FBA372235AF08500A6D038 /* SystemSettingViewController.m in Sources */,
+				63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */,
 				829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */,
 				63264DC4235C106000293467 /* LYNetworkManager.m in Sources */,
 				82FBA371235AF08500A6D038 /* InvitationViewController.m in Sources */,
@@ -1782,10 +1788,10 @@
 			baseConfigurationReference = 8FF97726890D2E6AFF9C6849 /* Pods-LYProjectKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = EJ7948K8NR;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1808,7 +1814,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = kingPro;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1818,10 +1824,10 @@
 			baseConfigurationReference = 3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = EJ7948K8NR;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1844,7 +1850,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = kingPro;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

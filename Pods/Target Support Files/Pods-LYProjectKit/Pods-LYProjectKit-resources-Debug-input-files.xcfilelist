@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit-resources.sh
+${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc
 ${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle
 ${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
 ${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle

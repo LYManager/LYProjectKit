@@ -27,4 +27,5 @@ target 'LYProjectKit' do
   #-----------------------------------------数据简单提示
   pod 'Toast', '~> 4.0.0'
   pod 'IQKeyboardManager', '~> 6.5.0'
+  pod 'AVOSCloud'
 end

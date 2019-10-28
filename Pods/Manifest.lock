@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - AVOSCloud (12.0.2)
   - CTMediator (25)
   - IQKeyboardManager (6.5.0)
   - Masonry (1.1.0)
@@ -34,6 +35,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - Aspects (~> 1.4.1)
+  - AVOSCloud
   - CTMediator (~> 25)
   - IQKeyboardManager (~> 6.5.0)
   - Masonry (~> 1.1.0)
@@ -61,11 +63,13 @@ SPEC REPOS:
     - WebViewJavascriptBridge
     - YYKit
   trunk:
+    - AVOSCloud
     - IQKeyboardManager
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  AVOSCloud: 10a9ec9a8aa754968a043c1769858a6869b68811
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -78,6 +82,6 @@ SPEC CHECKSUMS:
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 341972df0f4377c2d8d3858f26599008ccbac55f
+PODFILE CHECKSUM: a0cfb4890e6bdab63324111147eb78b4eb3f30b3
 
 COCOAPODS: 1.8.4
