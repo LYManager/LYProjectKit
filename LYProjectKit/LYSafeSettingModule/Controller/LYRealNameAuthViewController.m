@@ -60,14 +60,14 @@
 }
 //提交数据
 - (void) loadRequestWithPwd:(NSString *)pwd{
+    NSString * userName = [self utf8ToUnicode:self.realNameTF.text];
     [LYNetwork POSTWithApiPath:idCardValiURL requestParams:@{
         @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?: @"",
         @"keyWords":pwd,
         @"userCardDto":@{
                 @"mobile":self.phoneNumberTF.text ?:@"",
                 @"userCardNum":self.cardTF.text ?:@"",
-                @"userName": self.realNameTF.text ? :@""
-                    // [self utf8ToUnicode:self.realNameTF.text] ?:@""
+                @"userName": userName ?:@""
         }
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         [self.view makeToast:@"认证成功" duration:1 position:CSToastPositionCenter];
@@ -105,8 +105,9 @@
     }
     [str appendFormat:@"%@", s];
     }
-//    [str stringByReplacingOccurrencesOfString:@"\\\\" withString:@"\\"];
-
+     
+    [str stringByReplacingOccurrencesOfString:@"\\\\" withString:@"\\"];
+//    return  [NSMutableString stringWithString:[str stringByReplacingOccurrencesOfString:@"\\\\" withString:@"\\"]];
     return str;
 
 }

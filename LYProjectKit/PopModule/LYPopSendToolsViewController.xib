@@ -12,6 +12,7 @@
                 <outlet property="cardNameLabel" destination="Z6d-qj-8rA" id="Bnb-D2-YCd"/>
                 <outlet property="commitBtn" destination="ab3-cR-gve" id="Uvk-77-Ahl"/>
                 <outlet property="contentView" destination="8nA-Sv-H5R" id="9x6-0B-ljH"/>
+                <outlet property="countTF" destination="V57-Qu-zn0" id="Dd9-LG-kNG"/>
                 <outlet property="pwdView" destination="Nxh-P6-ZlM" id="Stc-xR-2IX"/>
                 <outlet property="userIdTF" destination="RC0-6h-oNw" id="OWv-Zx-Iyx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -99,6 +100,24 @@
                                 <constraint firstAttribute="height" constant="1" id="5yl-tk-l7p"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmV-mY-kCH">
+                            <rect key="frame" x="15" y="114" width="304" height="30"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入赠送数量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V57-Qu-zn0">
+                                    <rect key="frame" x="5" y="0.0" width="299" height="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" red="0.16292276980000001" green="0.19201594590000001" blue="0.35382550950000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="V57-Qu-zn0" secondAttribute="trailing" id="UFI-be-SV4"/>
+                                <constraint firstAttribute="bottom" secondItem="V57-Qu-zn0" secondAttribute="bottom" id="Xca-1R-Ziv"/>
+                                <constraint firstItem="V57-Qu-zn0" firstAttribute="top" secondItem="nmV-mY-kCH" secondAttribute="top" id="Yul-9H-JMA"/>
+                                <constraint firstItem="V57-Qu-zn0" firstAttribute="leading" secondItem="nmV-mY-kCH" secondAttribute="leading" constant="5" id="zPn-rG-ilr"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.092780984940000005" green="0.11468636240000001" blue="0.23087477679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -107,6 +126,7 @@
                         <constraint firstItem="l7x-s2-YyH" firstAttribute="leading" secondItem="8nA-Sv-H5R" secondAttribute="leading" constant="15" id="G0z-Gm-Ego"/>
                         <constraint firstAttribute="trailing" secondItem="ab3-cR-gve" secondAttribute="trailing" constant="20" id="HhI-IF-9DI"/>
                         <constraint firstAttribute="trailing" secondItem="Ipu-hP-Zzo" secondAttribute="trailing" constant="10" id="J8f-aI-rm7"/>
+                        <constraint firstItem="nmV-mY-kCH" firstAttribute="height" secondItem="l7x-s2-YyH" secondAttribute="height" id="MTl-cG-kWV"/>
                         <constraint firstAttribute="trailing" secondItem="FFT-Ld-y3G" secondAttribute="trailing" id="MfD-OQ-yth"/>
                         <constraint firstAttribute="bottom" secondItem="ab3-cR-gve" secondAttribute="bottom" constant="20" id="PgE-Zw-Ihb"/>
                         <constraint firstItem="Nxh-P6-ZlM" firstAttribute="top" secondItem="Ipu-hP-Zzo" secondAttribute="bottom" constant="5" id="QTd-67-EvD"/>
@@ -117,12 +137,15 @@
                         <constraint firstAttribute="trailing" secondItem="Nxh-P6-ZlM" secondAttribute="trailing" constant="10" id="bH9-Gi-Hac"/>
                         <constraint firstItem="e3k-eT-wJO" firstAttribute="top" secondItem="8nA-Sv-H5R" secondAttribute="top" constant="15" id="bZ0-s3-K0C"/>
                         <constraint firstItem="Ipu-hP-Zzo" firstAttribute="leading" secondItem="8nA-Sv-H5R" secondAttribute="leading" constant="10" id="bZ9-wB-7R3"/>
+                        <constraint firstItem="nmV-mY-kCH" firstAttribute="width" secondItem="l7x-s2-YyH" secondAttribute="width" id="boT-Qm-ASp"/>
                         <constraint firstItem="Z6d-qj-8rA" firstAttribute="leading" secondItem="8nA-Sv-H5R" secondAttribute="leading" constant="15" id="by1-rb-BnP"/>
                         <constraint firstItem="8YE-rR-wJC" firstAttribute="top" secondItem="Nxh-P6-ZlM" secondAttribute="bottom" constant="5" id="eyG-op-zOo"/>
                         <constraint firstAttribute="trailing" secondItem="l7x-s2-YyH" secondAttribute="trailing" constant="15" id="fq4-qL-NFV"/>
                         <constraint firstAttribute="width" secondItem="8nA-Sv-H5R" secondAttribute="height" multiplier="1:1" id="ir8-JI-hcN"/>
+                        <constraint firstItem="nmV-mY-kCH" firstAttribute="top" secondItem="l7x-s2-YyH" secondAttribute="bottom" constant="1" id="jUA-dK-Nr8"/>
                         <constraint firstAttribute="trailing" secondItem="8YE-rR-wJC" secondAttribute="trailing" id="p8Q-Gr-tlD"/>
                         <constraint firstItem="e3k-eT-wJO" firstAttribute="leading" secondItem="8nA-Sv-H5R" secondAttribute="leading" constant="15" id="sPx-VR-DR4"/>
+                        <constraint firstItem="nmV-mY-kCH" firstAttribute="leading" secondItem="l7x-s2-YyH" secondAttribute="leading" id="tQP-ep-3ju"/>
                         <constraint firstItem="l7x-s2-YyH" firstAttribute="top" secondItem="Z6d-qj-8rA" secondAttribute="bottom" constant="5" id="yUh-Uz-cvJ"/>
                     </constraints>
                 </view>

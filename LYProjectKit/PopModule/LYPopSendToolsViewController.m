@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet LYPopContentView *contentView;
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 @property (weak, nonatomic) IBOutlet UITextField *userIdTF;
+@property (weak, nonatomic) IBOutlet UITextField *countTF;
+
 @property (weak, nonatomic) IBOutlet UILabel *cardNameLabel;
 /**< <#des#>*/
 @property(nonatomic,strong)NSString * pwd;
@@ -24,6 +26,7 @@
     [super viewDidLoad];
     [self configPwdView];
     self.userIdTF.attributedPlaceholder = [self.userIdTF.placeholder ly_attributePlaceholder];
+     self.countTF.attributedPlaceholder = [self.countTF.placeholder ly_attributePlaceholder];
     [self configData];
     // Do any additional setup after loading the view from its nib.
 }
@@ -46,6 +49,11 @@
         return;
     }
     
+    if (self.countTF.text.length == 0) {
+       [self.view makeToast:@"请输入赠送数量" duration:1 position:CSToastPositionCenter];
+       return;
+    }
+    
     if (self.pwd.length != 6) {
         [self.view makeToast:@"请输入六位数支付密码" duration:1 position:CSToastPositionCenter];
         return;
@@ -53,7 +61,8 @@
     [LYNetwork POSTWithApiPath:sendCardURL requestParams:@{
         @"keyWords":self.pwd,
         @"cardId":@(self.cardModel.cardId),
-        @"toUserId":self.userIdTF.text
+        @"toUserId":self.userIdTF.text,
+        @"count":@([self.countTF.text integerValue])
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         [self.view makeToast:@"赠送成功" duration:1 position:CSToastPositionCenter];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

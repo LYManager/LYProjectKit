@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.navigationItem.title = @"攻略";
     self.showImg = [[UIImageView alloc]init];
     __weak  typeof(self)weakSelf= self;
