@@ -40,7 +40,7 @@
         @"keyWords":self.pwd,
         @"taskId":@(self.model.taskId)
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-        [self.view makeToast:@"购买成功" duration:2 position:CSToastPositionCenter];
+        [self.view makeToast:@"兑换成功" duration:2 position:CSToastPositionCenter];
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
 }

@@ -46,7 +46,7 @@ static NSInteger local = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadRequest];
+//    [self loadRequest];
     self.itemArr = [NSMutableArray array];
     
    
@@ -109,6 +109,7 @@ static NSInteger local = 0;
 
 -(void)viewWillAppear:(BOOL)animated
 {
+     [self loadRequest];
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[LYUserInfoManager shareInstance].userInfo.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
     [self addAnimation];
 }
