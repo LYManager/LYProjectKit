@@ -96,6 +96,7 @@
     
     [LYNetwork POSTWithApiPath:registURL requestParams:@{@"loginDTO":@{@"mobile":self.phoneLab.text,@"password":self.pwText.text,@"mobileCode":self.codeText.text,@"inviteCode":self.invitText.text,@"transPassword":self.moneyPwText.text,},
        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+
         [[LYPageContext shareInstance]setupLoginViewController];
 
     }];

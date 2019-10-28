@@ -71,20 +71,24 @@ static NSString * const kSettingCellIdentifier = @"LYSafeSettingTableViewCell";
         logVC.myTag =  @"交易密码";
         [self.navigationController pushViewController:logVC animated:YES];
     }
-    else
+    else if (indexPath.section == 2)
     {
         if ([self.params[@"isChecked"]boolValue]) {
-            [self.view makeToast:@"已认证" duration:1 position:CSToastPositionCenter];
-            return;
-        }
-        NSInteger nums = [self.params[@"cardNums"]integerValue];
-        if (nums > 0) {
-            LYAntCardModel * cardModel = [[LYAntCardModel alloc]init];
-            cardModel.cardId = 1;
-            [self pushViewControllerWithClassName:self.controllerNames[indexPath.section] params:@{@"realNameCardModel":cardModel}];
-        }else{
-            [self popErrorControllerIsSend:NO isRealNameCard:YES];
-        }
+                   [self.view makeToast:@"已认证" duration:1 position:CSToastPositionCenter];
+                   return;
+               }
+               NSInteger nums = [self.params[@"cardNums"]integerValue];
+               if (nums > 0) {
+                   LYAntCardModel * cardModel = [[LYAntCardModel alloc]init];
+                   cardModel.cardId = 1;
+                   [self pushViewControllerWithClassName:self.controllerNames[indexPath.section] params:@{@"realNameCardModel":cardModel}];
+               }else{
+                   [self popErrorControllerIsSend:NO isRealNameCard:YES];
+               }
+    }
+    else
+    {
+       [self.view makeToast:@"功能开发中。。。" duration:2 position:CSToastPositionCenter];
     }
     
 }

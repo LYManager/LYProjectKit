@@ -153,6 +153,9 @@
                 }
             } handler:^(NSDictionary * _Nonnull response, NSError * _Nullable error) {
                 if (!error) {
+                    
+                    [self.view makeToast:@"登录成功" duration:2 position:CSToastPositionCenter];
+
                     [LYUserDefault shareInstance].userInfoDict = response;
         //            登录成功
                     LYUserInfo *info =  [LYUserInfo modelWithJSON:response[@"data"]];
