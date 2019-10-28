@@ -172,6 +172,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		63EC9AE22365ABC7002ED458 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		124D5E7C782EB02CD381F3A4 /* libPods-LYProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1BF2C4758873BAB5F4A3C0 /* Pods-LYProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYProjectKit.release.xcconfig"; path = "Target Support Files/Pods-LYProjectKit/Pods-LYProjectKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -1239,6 +1252,7 @@
 				634220E62233925C00A2CD27 /* Frameworks */,
 				634220E72233925C00A2CD27 /* Resources */,
 				30F3A926ED193ACEC78AE391 /* [CP] Copy Pods Resources */,
+				63EC9AE22365ABC7002ED458 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
