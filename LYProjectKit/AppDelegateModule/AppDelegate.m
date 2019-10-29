@@ -7,7 +7,10 @@
 
 #import "AppDelegate.h"
 #import "LYPageContext.h"
-
+#import <AVOSCloud/AVOSCloud.h>
+#import "LYAVOSCloudManager.h"
+static NSString * const kAppId = @"lSKy6cV4UGpBNoSAeoVJmwGF-gzGzoHsz";
+static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
 @interface AppDelegate ()
 /**< <#des#>*/
 
@@ -23,10 +26,8 @@
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
            switch (status) {
                case AFNetworkReachabilityStatusReachableViaWWAN:
-                   
                    break;
                case AFNetworkReachabilityStatusReachableViaWiFi:
-                   
                    break;
                case AFNetworkReachabilityStatusNotReachable:
                    [self.window makeToast:@"请检查网络连接" duration:2 position:CSToastPositionCenter];
@@ -38,6 +39,8 @@
                    break;
            }
        }];
+    
+    [[LYAVOSCloudManager shareInstance]registerCloud];
     return YES;
 }
 

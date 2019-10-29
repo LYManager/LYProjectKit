@@ -220,6 +220,9 @@ static NSInteger local = 0;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if (event.allTouches.count > 1) {
+        return;
+    }
      CGPoint point = [[touches anyObject] locationInView:self.view];
     BOOL isHiddenDrugView = YES;
     for (LYHomeCycleItemView * itemView in self.itemArr) {
