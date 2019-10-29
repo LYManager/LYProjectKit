@@ -72,5 +72,5 @@ NSString * const registURL = @"/ant-api/user/register";
 
 NSString * const codelogURL = @"/ant-api/user/mobileLogin";
 
-NSString * constforcedURL = @"/ant-api/common/appClient";
+NSString * const forcedURL = @"/ant-api/common/appClient";
 
