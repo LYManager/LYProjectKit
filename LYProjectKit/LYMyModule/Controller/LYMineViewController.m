@@ -75,10 +75,15 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
 //    invitVC.iconStr = self.userInfo.actor;
 //    invitVC.nameStr = self.userInfo.userName;
 //    [self.navigationController pushViewController:invitVC animated:YES];
-    InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
-    invitVC.iconStr = self.userInfo.actor;
-    invitVC.nameStr = self.userInfo.userName;
-    [self.navigationController pushViewController:invitVC animated:YES];
+    if (self.userInfo && ![self.userInfo.antLevel isEqual:@"未实名"]) {
+        InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
+        invitVC.iconStr = self.userInfo.actor;
+        invitVC.nameStr = self.userInfo.userName;
+        [self.navigationController pushViewController:invitVC animated:YES];
+    }else{
+        [self.view makeToast:@"实名认证后即可邀请好友" duration:1 position:CSToastPositionCenter];
+    }
+    
 }
 
 /// 我的账单
