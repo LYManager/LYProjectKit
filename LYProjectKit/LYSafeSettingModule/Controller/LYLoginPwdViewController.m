@@ -65,6 +65,10 @@
                @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
                @"loginDTO":@{@"mobile":self.phoneText.text,@"newPassword":self.pwdTF.text,@"mobileCode":self.oldPwdTF.text},
            } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+            
+            [self.view makeToast:@"修改成功" duration:2 position:CSToastPositionCenter];
+            [self.navigationController popViewControllerAnimated:YES];
+
 
         }];
     }
@@ -92,6 +96,10 @@
                       @"userId":[LYUserInfoManager shareInstance].userInfo.userId ?:@"",
                       @"loginDTO":@{@"mobile":self.phoneText.text,@"newPassword":self.pwdTF.text,@"mobileCode":self.oldPwdTF.text},
                   } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+                   
+                   [self.view makeToast:@"修改成功" duration:2 position:CSToastPositionCenter];
+                   [self.navigationController popViewControllerAnimated:YES];
+
 
                }];
     }

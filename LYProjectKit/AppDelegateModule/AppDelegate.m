@@ -60,9 +60,11 @@ static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
         
         NSString *url = [[response objectForKey:@"data"] objectForKey:@"url"];
         NSString *force_update = [[response objectForKey:@"data"] objectForKey:@"force_update"];
+        NSString *title = [[response objectForKey:@"data"] objectForKey:@"tip"];
+
         if ([force_update isEqualToString:@"Y"]) {//强制更新
             
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"需要更新到最新版本才能使用蚂蚁分类！" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 NSURL *urlStr = [NSURL URLWithString:url];
@@ -85,7 +87,7 @@ static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
         if ([force_update isEqualToString:@"N"]) {//非强制更新
              
             
-           UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"发现新版本是否更新" message:nil preferredStyle:UIAlertControllerStyleAlert];
+           UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
            
             UIAlertAction *cancalBtn  = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
