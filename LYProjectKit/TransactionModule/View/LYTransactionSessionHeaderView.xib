@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LYTransactionSessionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If3-DL-2NE">
+                    <rect key="frame" x="0.0" y="5" width="136.5" height="42"/>
+                    <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="出售">
+                        <color key="titleColor" red="0.25800532100000001" green="0.37818163630000001" blue="0.50290173289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.4470003843" green="0.80898457769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="saleBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="zzK-z5-QLn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wal-0I-glE">
+                    <rect key="frame" x="138.5" y="5" width="137" height="42"/>
+                    <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="购买">
+                        <color key="titleColor" red="0.2504760325" green="0.36245393749999999" blue="0.48714017869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.43180373309999998" green="0.77685958150000001" blue="0.99757534270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="buyBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="mGZ-DE-r7I"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-AH-sd7">
+                    <rect key="frame" x="277.5" y="5" width="136.5" height="42"/>
+                    <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="交易记录">
+                        <color key="titleColor" red="0.26944246890000001" green="0.39773246649999999" blue="0.52662479880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.43925690649999999" green="0.79710352419999997" blue="0.99308425190000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="transactionBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="y8I-Fw-sm6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.062369965020000001" green="0.069832727309999995" blue="0.1071563587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Lpd-AH-sd7" firstAttribute="bottom" secondItem="If3-DL-2NE" secondAttribute="bottom" id="1x3-ue-UJY"/>
+                <constraint firstItem="If3-DL-2NE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="4R2-lO-BpR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lpd-AH-sd7" secondAttribute="trailing" id="JIA-IG-SOu"/>
+                <constraint firstItem="Wal-0I-glE" firstAttribute="leading" secondItem="If3-DL-2NE" secondAttribute="trailing" constant="2" id="LmC-x8-Vi4"/>
+                <constraint firstItem="Lpd-AH-sd7" firstAttribute="leading" secondItem="Wal-0I-glE" secondAttribute="trailing" constant="2" id="hcW-N2-1zE"/>
+                <constraint firstItem="Lpd-AH-sd7" firstAttribute="width" secondItem="If3-DL-2NE" secondAttribute="width" id="l4o-Jh-N9m"/>
+                <constraint firstItem="Lpd-AH-sd7" firstAttribute="height" secondItem="If3-DL-2NE" secondAttribute="height" id="me8-22-FQ6"/>
+                <constraint firstItem="If3-DL-2NE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="neh-HM-dBb"/>
+                <constraint firstItem="Wal-0I-glE" firstAttribute="bottom" secondItem="If3-DL-2NE" secondAttribute="bottom" id="pep-db-nL7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="If3-DL-2NE" secondAttribute="bottom" id="qt4-Jr-rbE"/>
+                <constraint firstItem="Wal-0I-glE" firstAttribute="width" secondItem="If3-DL-2NE" secondAttribute="width" id="yYf-DQ-fuL"/>
+                <constraint firstItem="Wal-0I-glE" firstAttribute="height" secondItem="If3-DL-2NE" secondAttribute="height" id="zcC-rJ-e1Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="buyBtn" destination="Wal-0I-glE" id="6Cq-kA-5CW"/>
+                <outlet property="saleBtn" destination="If3-DL-2NE" id="T15-c4-viI"/>
+                <outlet property="transactionBtn" destination="Lpd-AH-sd7" id="1f2-6G-bhj"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="299.66517857142856"/>
+        </view>
+    </objects>
+</document>
