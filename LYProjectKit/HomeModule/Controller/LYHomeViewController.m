@@ -14,6 +14,7 @@
 #import "LYHomeCycleBgView.h"
 #import "InvitFriendViewController.h"
 #import "ImageViewController.h"
+#import "APPDelegate.h"
 
 @interface LYHomeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
@@ -112,6 +113,8 @@ static NSInteger local = 0;
      [self loadRequest];
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[LYUserInfoManager shareInstance].userInfo.actor]placeholderImage:[UIImage imageNamed:@"head_icon"]];
     [self addAnimation];
+    
+    //[self forcedToUpdate];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -128,6 +131,11 @@ static NSInteger local = 0;
         self.data = [LYHomeData modelWithDictionary:response];
         [self configUIWithData:self.data.data];
         [self.itemArr setValue:@(NO) forKey:@"hidden"];
+        
+        //任务完成，全部隐藏
+        if ([self.data.data.todayTask isEqualToString:@"已完成"]) {
+            [self.itemArr setValue:@(YES) forKey:@"hidden"];
+        }
     }];
 }
 
@@ -185,10 +193,18 @@ static NSInteger local = 0;
     [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
 }
 - (IBAction)zhaomuAction:(UIButton *)sender {
-    InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
-    invitVC.nameStr = [LYUserInfoManager shareInstance].userInfo.userName;
-    invitVC.iconStr = [LYUserInfoManager shareInstance].userInfo.actor;
-    [self.navigationController pushViewController:invitVC animated:YES];
+    if (self.data.data.isActive) {
+        InvitFriendViewController *invitVC = [[InvitFriendViewController alloc]init];
+        invitVC.nameStr = [LYUserInfoManager shareInstance].userInfo.userName;
+        invitVC.iconStr = [LYUserInfoManager shareInstance].userInfo.actor;
+        [self.navigationController pushViewController:invitVC animated:YES];
+    }
+    else
+    {
+        [self.view makeToast:@"实名认证后即可邀请好友" duration:1 position:CSToastPositionCenter];
+
+    }
+    
 //    [self pushViewControllerWithClassName:@"InvitFriendViewController" params:nil];
 }
 
@@ -302,7 +318,15 @@ static NSInteger local = 0;
     self.currentItemView.hidden = YES;
     NSInteger index = [self.rubbishBtnArray indexOfObject:button] + 1;
     [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"btn_%ld",index]] forState:UIControlStateNormal];
-    [self.view makeToast:@"回收成功" duration:1 position:CSToastPositionCenter];
+    //判断未购卡状态
+    if ([self.data.data.todayTask isEqualToString:@"未购卡"]) {
+        [self.view makeToast:@"未购卡" duration:1 position:CSToastPositionCenter];
+
+    }
+    else
+    {
+        [self.view makeToast:@"回收成功" duration:1 position:CSToastPositionCenter];
+    }
     self.lightImageView.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y - 40, button.frame.size.width, 50);
     self.lightImageView.hidden = NO;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -310,15 +334,17 @@ static NSInteger local = 0;
     });
     self.currentItemView = nil;
     
-    BOOL complete = YES;
-    for (LYHomeCycleItemView * itemView in self.itemArr) {
-        if (!itemView.hidden) {
-            complete = NO;
-        }
-    }
-    if (complete) {
-        [self loadRequest];
-    }
+//    BOOL complete = YES;
+//    for (LYHomeCycleItemView * itemView in self.itemArr) {
+//        if (!itemView.hidden) {
+//            complete = NO;
+//        }
+//    }
+//    if (complete) {
+//        [self loadRequest];
+//    }
+    //每次刷新
+    [self loadRequest];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -370,6 +396,74 @@ static NSInteger local = 0;
     }
     return _lightImageView;
 }
+//-(void)forcedToUpdate
+//{
+//    [LYNetwork POSTWithApiPath:forcedURL requestParams:@{
+//        @"appType":@"1",
+//        @"version":@"1.0.0",
+//    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+//
+//
+//        NSString *url = [[response objectForKey:@"data"] objectForKey:@"url"];
+//        NSString *force_update = [[response objectForKey:@"data"] objectForKey:@"force_update"];
+//
+//
+//
+//        if ([force_update isEqualToString:@"Y"]) {//强制更新
+//
+//            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"需要更新到最新版本才能使用途信通！" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//
+//            UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                NSURL *urlStr = [NSURL URLWithString:url];
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                    if ([[UIApplication sharedApplication] canOpenURL:urlStr]) {
+//                        [[UIApplication sharedApplication] openURL:urlStr];
+//                        [self exitApplication ];
+//                    }
+//                });
+//            }];
+//            // 添加取消按钮才能点击空白隐藏
+//            [alertController addAction:OKAction];
+//            [self presentViewController:alertController animated:YES completion:nil];
+//        }
+//        if ([force_update isEqualToString:@"N"]) {//非强制更新
+//
+//            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"需要更新到最新版本才能使用途信通！" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//
+//            UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                NSURL *urlStr = [NSURL URLWithString:url];
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                    if ([[UIApplication sharedApplication] canOpenURL:urlStr]) {
+//                        [[UIApplication sharedApplication] openURL:urlStr];
+//                        [self exitApplication ];
+//                    }
+//                });
+//            }];
+//            // 添加取消按钮才能点击空白隐藏
+//            [alertController addAction:OKAction];
+//            [self presentViewController:alertController animated:YES completion:nil];
+//        }
+//
+//
+//    }];
+//}
+//- (void)exitApplication {
+//
+//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    UIWindow *window = app.window;
+//    // 动画 1
+//    [UIView animateWithDuration:1.0f animations:^{
+//        window.alpha = 0;
+//        window.frame = CGRectMake(0, window.bounds.size.width, 0, 0);
+//    } completion:^(BOOL finished) {
+//        exit(0);
+//    }];
+//    //exit(0);
+//
+//}
+//
+//
+//
 
 /*
 #pragma mark - Navigation

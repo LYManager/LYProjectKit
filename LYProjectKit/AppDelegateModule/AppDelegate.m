@@ -41,10 +41,96 @@ static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
        }];
     
     [[LYAVOSCloudManager shareInstance]registerCloud];
+    //添加强制更新
+    [self forcedToUpdate];
+    
+    
     return YES;
 }
+-(void)forcedToUpdate
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+
+    [LYNetwork POSTWithApiPath:forcedURL requestParams:@{
+        @"appType":@"1",
+        @"version":app_Version,
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        
+        
+        NSString *url = [[response objectForKey:@"data"] objectForKey:@"url"];
+        NSString *force_update = [[response objectForKey:@"data"] objectForKey:@"force_update"];
+        NSString *title = [[response objectForKey:@"data"] objectForKey:@"tip"];
+
+        if ([force_update isEqualToString:@"Y"]) {//强制更新
+            
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                NSURL *urlStr = [NSURL URLWithString:url];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    if ([[UIApplication sharedApplication] canOpenURL:urlStr]) {
+                        [[UIApplication sharedApplication] openURL:urlStr];
+                        [self exitApplication ];
+                    }
+                });
+            }];
+            // 添加取消按钮才能点击空白隐藏
+            [alertController addAction:OKAction];
+            UIWindow   *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+            alertWindow.rootViewController = [[UIViewController alloc] init];
+            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+            [alertWindow makeKeyAndVisible];
+            [alertWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+
+        }
+        if ([force_update isEqualToString:@"N"]) {//非强制更新
+             
+            
+           UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
+           
+            UIAlertAction *cancalBtn  = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+           UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+               NSURL *urlStr = [NSURL URLWithString:url];
+               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                   if ([[UIApplication sharedApplication] canOpenURL:urlStr]) {
+                       [[UIApplication sharedApplication] openURL:urlStr];
+                       [self exitApplication ];
+                   }
+               });
+           }];
+            
+           // 添加取消按钮才能点击空白隐藏
+            [alertController addAction:cancalBtn];
+           [alertController addAction:OKAction];
+
+           UIWindow   *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+           alertWindow.rootViewController = [[UIViewController alloc] init];
+           alertWindow.windowLevel = UIWindowLevelAlert + 1;
+           [alertWindow makeKeyAndVisible];
+           [alertWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+
+       }
 
 
+    }];
+}
+- (void)exitApplication {
+    
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIWindow *window = app.window;
+    // 动画 1
+    [UIView animateWithDuration:1.0f animations:^{
+        window.alpha = 0;
+        window.frame = CGRectMake(0, window.bounds.size.width, 0, 0);
+    } completion:^(BOOL finished) {
+        exit(0);
+    }];
+    //exit(0);
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
