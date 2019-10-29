@@ -11,8 +11,9 @@
 #if DEBUG
 NSString * const BaseURL          = @"http://ant-api.cciasia.org";
 #else
-NSString * const BaseURL          = @"http://api.agc.tw";
+NSString * const BaseURL          = @"http://ant-api.cciasia.org";
 #endif
+//NSString * const BaseURL          = @"http://api.agc.tw";
 // 注册
 NSString * const registerURL      = @"/ant-api/user/register";
 
@@ -70,3 +71,6 @@ NSString * const resetZhiURL = @"/ant-api/user/changePayPassword";
 NSString * const registURL = @"/ant-api/user/register";
 
 NSString * const codelogURL = @"/ant-api/user/mobileLogin";
+
+NSString * const forcedURL = @"/ant-api/common/appClient";
+

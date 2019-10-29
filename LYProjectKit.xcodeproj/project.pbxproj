@@ -98,6 +98,7 @@
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
 		63E9989F22377D5200A1168B /* LYFindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989E22377D5200A1168B /* LYFindModel.m */; };
+		827952822368171900514471 /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 827952812368171900514471 /* 背景2.jpg */; };
 		829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D36235B405C004F9641 /* MyBillViewController.m */; };
 		829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D37235B405C004F9641 /* MyBillViewController.xib */; };
 		829C2D3B235C08A2004F9641 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D3A235C08A1004F9641 /* 1.jpg */; };
@@ -151,7 +152,6 @@
 		82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA392235B39B200A6D038 /* AcceptanceDetailViewController.m */; };
 		82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */; };
 		82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8DF22362A60200A47845 /* InviteViewController.m */; };
-		82FE8DF62362BFF100A47845 /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF42362BFF100A47845 /* 背景2.jpg */; };
 		82FE8DF72362BFF100A47845 /* 背景1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF52362BFF100A47845 /* 背景1.jpg */; };
 		82FE8E422365BFA500A47845 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8E402365BFA500A47845 /* ImageViewController.m */; };
 		82FE8E432365BFA500A47845 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8E412365BFA500A47845 /* ImageViewController.xib */; };
@@ -362,6 +362,7 @@
 		63E99895223777D000A1168B /* LYCellModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYCellModelProtocol.h; sourceTree = "<group>"; };
 		63E9989D22377D5200A1168B /* LYFindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindModel.h; sourceTree = "<group>"; };
 		63E9989E22377D5200A1168B /* LYFindModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindModel.m; sourceTree = "<group>"; };
+		827952812368171900514471 /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
 		829C2D35235B405C004F9641 /* MyBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBillViewController.h; sourceTree = "<group>"; };
 		829C2D36235B405C004F9641 /* MyBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBillViewController.m; sourceTree = "<group>"; };
 		829C2D37235B405C004F9641 /* MyBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBillViewController.xib; sourceTree = "<group>"; };
@@ -445,7 +446,6 @@
 		82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcceptanceDetailViewController.xib; sourceTree = "<group>"; };
 		82FE8DF12362A60200A47845 /* InviteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
 		82FE8DF22362A60200A47845 /* InviteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
-		82FE8DF42362BFF100A47845 /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
 		82FE8DF52362BFF100A47845 /* 背景1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1.jpg"; sourceTree = "<group>"; };
 		82FE8E3F2365BFA500A47845 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		82FE8E402365BFA500A47845 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
@@ -1212,7 +1212,7 @@
 				82FBA376235AF5CE00A6D038 /* timg.jpg */,
 				829C2D3A235C08A1004F9641 /* 1.jpg */,
 				82FE8DF52362BFF100A47845 /* 背景1.jpg */,
-				82FE8DF42362BFF100A47845 /* 背景2.jpg */,
+				827952812368171900514471 /* 背景2.jpg */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -1339,7 +1339,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82FE8DF62362BFF100A47845 /* 背景2.jpg in Resources */,
 				6397A634235C54C400F8A2D2 /* LYPayPopViewController.xib in Resources */,
 				6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */,
 				82EAAD81235DF35B00991124 /* Assets.xcassets in Resources */,
@@ -1364,6 +1363,7 @@
 				82FBA37C235AF9A000A6D038 /* AGCDetailViewController.xib in Resources */,
 				82EAAD8C235E08E300991124 /* 123123.png in Resources */,
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
+				827952822368171900514471 /* 背景2.jpg in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
 				63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */,
@@ -1791,7 +1791,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = EJ7948K8NR;
+				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1812,6 +1812,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1827,7 +1828,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = EJ7948K8NR;
+				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1848,6 +1849,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

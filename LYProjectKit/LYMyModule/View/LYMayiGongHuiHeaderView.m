@@ -39,7 +39,7 @@
 }
 
 - (void) configBtn:(UIButton *)button isUsed:(BOOL)isUsed{
-    [button setTitle:isUsed ? @"已使用" : @"立即使用" forState:UIControlStateNormal];
+    [button setTitle:isUsed ? @"已激活" : @"立即激活" forState:UIControlStateNormal];
     if (isUsed) {
          [button setBackgroundColor:[UIColor ly_colorWithHexString:@"#313656"]];
         button.layer.cornerRadius = button.frame.size.height / 2;
