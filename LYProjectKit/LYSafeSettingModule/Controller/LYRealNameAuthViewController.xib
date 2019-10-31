@@ -115,8 +115,8 @@
                         <action selector="commitAction:" destination="-1" eventType="touchUpInside" id="7Zp-pB-ibL"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注意：认证失败同样将扣除一张认证卡，身份证号必须与手机号运营商处所保留的信息一致，请再次确认填写的信息是否有误" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ6-CB-8I7">
-                    <rect key="frame" x="30" y="200.5" width="354" height="29"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注意：一张认证卡仅有一次认证机会、请认真核实姓名、身份证信息、手机号均是本人信息。三种信息不一致认证会消耗认证卡，请再次确认填写信息。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ6-CB-8I7">
+                    <rect key="frame" x="30" y="200.5" width="354" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.35403680799999998" green="0.52700197699999995" blue="0.67266088719999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>

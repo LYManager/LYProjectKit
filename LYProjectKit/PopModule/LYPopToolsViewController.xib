@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYPopToolsViewController">
             <connections>
-                <outlet property="bottomLabel" destination="t7V-Fx-43e" id="I8i-Uv-P0x"/>
                 <outlet property="cardNameLabel" destination="aIj-dg-Wwf" id="34q-ES-fqT"/>
                 <outlet property="commitBtn" destination="2rt-qo-FhS" id="RSU-Pn-Ydw"/>
                 <outlet property="contentView" destination="W6z-N6-OTD" id="oYR-YF-tpw"/>
@@ -39,14 +38,8 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每位用户仅可使用一次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-TV-E4P">
-                            <rect key="frame" x="15" y="83" width="123" height="14.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.4470003843" green="0.80898457769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用后即可加入蚂蚁工会" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7V-Fx-43e">
-                            <rect key="frame" x="15" y="102.5" width="135" height="14.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一张认证卡仅有一次认证机会、请认真核实姓名、身份证信息、手机号均是本人信息。三种信息不一致认证会消耗认证卡，请再次确认填写信息。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-TV-E4P">
+                            <rect key="frame" x="15" y="83" width="304" height="43"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.4470003843" green="0.80898457769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -97,9 +90,8 @@
                     </subviews>
                     <color key="backgroundColor" red="0.089022584259999996" green="0.1069274321" blue="0.218965888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="t7V-Fx-43e" firstAttribute="leading" secondItem="W6z-N6-OTD" secondAttribute="leading" constant="15" id="2ki-GL-PRb"/>
                         <constraint firstAttribute="width" secondItem="W6z-N6-OTD" secondAttribute="height" multiplier="1:1" id="8pF-r2-Q4H"/>
-                        <constraint firstItem="t7V-Fx-43e" firstAttribute="top" secondItem="WeC-TV-E4P" secondAttribute="bottom" constant="5" id="Bfm-Kc-tRV"/>
+                        <constraint firstAttribute="trailing" secondItem="WeC-TV-E4P" secondAttribute="trailing" constant="15" id="AR2-Gt-8sX"/>
                         <constraint firstAttribute="trailing" secondItem="v6m-Ub-DKx" secondAttribute="trailing" constant="10" id="GDC-Yf-mq0"/>
                         <constraint firstAttribute="trailing" secondItem="Ghc-Nw-gbt" secondAttribute="trailing" constant="10" id="Kl4-pL-MMP"/>
                         <constraint firstItem="y0W-eR-82y" firstAttribute="leading" secondItem="W6z-N6-OTD" secondAttribute="leading" constant="15" id="OVW-ki-MTj"/>

@@ -10,6 +10,7 @@
 #import "LYMayiGongHuiFooterView.h"
 
 #import "LYAntGonghuiData.h"
+
 @interface LYMayiGongHuiViewController ()<LYMayiGongHuiHeaderViewDelegate,UITableViewDelegate,UITableViewDataSource,LYMayiGongHuiFooterViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< headerView*/
@@ -26,6 +27,14 @@
     [super viewDidLoad];
     self.navigationItem.title = @"蚂蚁工会";
     [self configTableView];
+    
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 50, 40);
+    [button setTitle:@"记录" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(recordAction) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:13];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
     [self loadRequest];
     // Do any additional setup after loading the view from its nib.
 }
@@ -35,6 +44,10 @@
         self.data = [LYAntGonghuiData modelWithDictionary:response];
         [self configDataWithModel:self.data.data];
     }];
+}
+
+- (void) recordAction{
+    [self pushViewControllerWithClassName:@"LYGonghuiRecordViewController" params:nil];
 }
 
 

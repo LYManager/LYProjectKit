@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**< message*/
 @property(nonatomic,copy)NSString *  message;
 /**< time*/
-@property(nonatomic,assign)long systemTime;
+@property(nonatomic,copy)NSString * systemTime;
 @end
 
 NS_ASSUME_NONNULL_END

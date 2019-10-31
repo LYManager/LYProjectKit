@@ -94,6 +94,11 @@
 		6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */; };
 		639E46FD236A7DEB001A4131 /* LYSureSendCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E46FC236A7DEB001A4131 /* LYSureSendCardView.m */; };
 		639E46FF236A7DF4001A4131 /* LYSureSendCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639E46FE236A7DF4001A4131 /* LYSureSendCardView.xib */; };
+		639E4703236AE5DB001A4131 /* LYGonghuiRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E4701236AE5DB001A4131 /* LYGonghuiRecordViewController.m */; };
+		639E4704236AE5DB001A4131 /* LYGonghuiRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639E4702236AE5DB001A4131 /* LYGonghuiRecordViewController.xib */; };
+		639E4708236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E4706236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m */; };
+		639E4709236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639E4707236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib */; };
+		639E470C236AED33001A4131 /* LYGonghuiRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E470B236AED33001A4131 /* LYGonghuiRecordModel.m */; };
 		63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A815FD236438C100B9CC9E /* LYRubbishButton.m */; };
 		63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
@@ -362,6 +367,14 @@
 		639E46FB236A7DEB001A4131 /* LYSureSendCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSureSendCardView.h; sourceTree = "<group>"; };
 		639E46FC236A7DEB001A4131 /* LYSureSendCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSureSendCardView.m; sourceTree = "<group>"; };
 		639E46FE236A7DF4001A4131 /* LYSureSendCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYSureSendCardView.xib; sourceTree = "<group>"; };
+		639E4700236AE5DB001A4131 /* LYGonghuiRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYGonghuiRecordViewController.h; sourceTree = "<group>"; };
+		639E4701236AE5DB001A4131 /* LYGonghuiRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYGonghuiRecordViewController.m; sourceTree = "<group>"; };
+		639E4702236AE5DB001A4131 /* LYGonghuiRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYGonghuiRecordViewController.xib; sourceTree = "<group>"; };
+		639E4705236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYGonghuiRecordTableViewCell.h; sourceTree = "<group>"; };
+		639E4706236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYGonghuiRecordTableViewCell.m; sourceTree = "<group>"; };
+		639E4707236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYGonghuiRecordTableViewCell.xib; sourceTree = "<group>"; };
+		639E470A236AED33001A4131 /* LYGonghuiRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYGonghuiRecordModel.h; sourceTree = "<group>"; };
+		639E470B236AED33001A4131 /* LYGonghuiRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYGonghuiRecordModel.m; sourceTree = "<group>"; };
 		63A815FC236438C100B9CC9E /* LYRubbishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishButton.h; sourceTree = "<group>"; };
 		63A815FD236438C100B9CC9E /* LYRubbishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishButton.m; sourceTree = "<group>"; };
 		63B3775E236735F5001C8CCC /* LYAVOSCloudManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAVOSCloudManager.h; sourceTree = "<group>"; };
@@ -926,6 +939,9 @@
 				63933B8F235AFF1E00D5E138 /* LYMayiGongHuiViewController.h */,
 				63933B90235AFF1E00D5E138 /* LYMayiGongHuiViewController.m */,
 				63933B91235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib */,
+				639E4700236AE5DB001A4131 /* LYGonghuiRecordViewController.h */,
+				639E4701236AE5DB001A4131 /* LYGonghuiRecordViewController.m */,
+				639E4702236AE5DB001A4131 /* LYGonghuiRecordViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -937,6 +953,8 @@
 				637754FA235EA78000FEA141 /* LYAntGonghuiData.m */,
 				637754FC235EA8DC00FEA141 /* LYAntCardModel.h */,
 				637754FD235EA8DC00FEA141 /* LYAntCardModel.m */,
+				639E470A236AED33001A4131 /* LYGonghuiRecordModel.h */,
+				639E470B236AED33001A4131 /* LYGonghuiRecordModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -956,6 +974,9 @@
 				63933B99235B27E100D5E138 /* LYMayiGongHuiFooterView.h */,
 				63933B9A235B27E100D5E138 /* LYMayiGongHuiFooterView.m */,
 				63933B9C235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib */,
+				639E4705236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.h */,
+				639E4706236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m */,
+				639E4707236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1465,9 +1486,11 @@
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
 				635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */,
+				639E4704236AE5DB001A4131 /* LYGonghuiRecordViewController.xib in Resources */,
 				82FBA36E235AF08500A6D038 /* LoginViewController.xib in Resources */,
 				82FBA37C235AF9A000A6D038 /* AGCDetailViewController.xib in Resources */,
 				63E8C0F223687F1000C95354 /* LYTransactionHeaderView.xib in Resources */,
+				639E4709236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib in Resources */,
 				82EAAD8C235E08E300991124 /* 123123.png in Resources */,
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				827952822368171900514471 /* 背景2.jpg in Resources */,
@@ -1574,6 +1597,7 @@
 				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
 				82EAAD8A235E08E300991124 /* ImageTableViewCell.m in Sources */,
+				639E4703236AE5DB001A4131 /* LYGonghuiRecordViewController.m in Sources */,
 				63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */,
 				82FBA370235AF08500A6D038 /* RegisteredViewController.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
@@ -1582,6 +1606,7 @@
 				82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */,
 				63E8C0F52368867A00C95354 /* LYTransactionSessionHeaderView.m in Sources */,
 				63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */,
+				639E470C236AED33001A4131 /* LYGonghuiRecordModel.m in Sources */,
 				63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */,
 				82FBA37B235AF9A000A6D038 /* AGCDetailViewController.m in Sources */,
 				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
@@ -1663,6 +1688,7 @@
 				63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */,
 				82ECDE74236047E6002D6532 /* AboutUsViewController.m in Sources */,
 				637754FE235EA8DC00FEA141 /* LYAntCardModel.m in Sources */,
+				639E4708236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
 				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
 				829C2D3F235C0C93004F9641 /* MyBillableViewCell.m in Sources */,

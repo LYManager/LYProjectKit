@@ -32,6 +32,8 @@ NSString * const confirmSendURL = @"/ant-api/ant/confir";
 
 NSString * const antGonghuiURL    = @"/ant-api/ant/consortia";
 
+NSString * const gonghuiRecordURL = @"/ant-api/ant/cardRecord";
+
 NSString * const shengTaiURL = @"/ant-api/ant/store";
 //团队
 NSString * const teamURL = @"/ant-api/user/myTeamInfo";

@@ -47,6 +47,8 @@ UIKIT_EXTERN NSString * const confirmSendURL;
 
 UIKIT_EXTERN NSString * const antGonghuiURL;
 
+UIKIT_EXTERN NSString * const gonghuiRecordURL;
+
 UIKIT_EXTERN NSString * const shengTaiURL;
 
 UIKIT_EXTERN NSString * const teamURL;
