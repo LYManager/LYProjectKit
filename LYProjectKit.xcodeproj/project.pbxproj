@@ -117,6 +117,8 @@
 		829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */; };
 		829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */; };
 		829C2D49235C4369004F9641 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D48235C4369004F9641 /* TeamViewController.m */; };
+		82E0A6E1236AC4BC00C6090D /* MembersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E0A6DF236AC4BC00C6090D /* MembersTableViewCell.m */; };
+		82E0A6E2236AC4BC00C6090D /* MembersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E0A6E0236AC4BC00C6090D /* MembersTableViewCell.xib */; };
 		82EAAD81235DF35B00991124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EAAD80235DF35B00991124 /* Assets.xcassets */; };
 		82EAAD8A235E08E300991124 /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EAAD85235E08E200991124 /* ImageTableViewCell.m */; };
 		82EAAD8B235E08E300991124 /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82EAAD86235E08E200991124 /* TextTableViewCell.m */; };
@@ -401,6 +403,9 @@
 		829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWOACItemBoxView.m; sourceTree = "<group>"; };
 		829C2D47235C4369004F9641 /* TeamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
 		829C2D48235C4369004F9641 /* TeamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		82E0A6DE236AC4BC00C6090D /* MembersTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembersTableViewCell.h; sourceTree = "<group>"; };
+		82E0A6DF236AC4BC00C6090D /* MembersTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembersTableViewCell.m; sourceTree = "<group>"; };
+		82E0A6E0236AC4BC00C6090D /* MembersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MembersTableViewCell.xib; sourceTree = "<group>"; };
 		82EAAD80235DF35B00991124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82EAAD85235E08E200991124 /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 		82EAAD86235E08E200991124 /* TextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTableViewCell.m; sourceTree = "<group>"; };
@@ -1035,11 +1040,11 @@
 		63E8C0E323687D7400C95354 /* TransactionModule */ = {
 			isa = PBXGroup;
 			children = (
+				63E8C0E623687D7400C95354 /* Controller */,
+				63E8C0E823687D7400C95354 /* View */,
 				63E8C0E423687D7400C95354 /* ViewModel */,
 				63E8C0E523687D7400C95354 /* Pop */,
-				63E8C0E623687D7400C95354 /* Controller */,
 				63E8C0E723687D7400C95354 /* Model */,
-				63E8C0E823687D7400C95354 /* View */,
 			);
 			path = TransactionModule;
 			sourceTree = "<group>";
@@ -1296,6 +1301,9 @@
 				82EAAD85235E08E200991124 /* ImageTableViewCell.m */,
 				82EAAD88235E08E200991124 /* TextTableViewCell.h */,
 				82EAAD86235E08E200991124 /* TextTableViewCell.m */,
+				82E0A6DE236AC4BC00C6090D /* MembersTableViewCell.h */,
+				82E0A6DF236AC4BC00C6090D /* MembersTableViewCell.m */,
+				82E0A6E0236AC4BC00C6090D /* MembersTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1476,6 +1484,7 @@
 				82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
 				82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */,
+				82E0A6E2236AC4BC00C6090D /* MembersTableViewCell.xib in Resources */,
 				63933B81235ABA3C00D5E138 /* LYSafeSettingTableViewCell.xib in Resources */,
 				63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */,
 				63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */,
@@ -1584,6 +1593,7 @@
 				63264DCB235C132E00293467 /* KGDataCenter.m in Sources */,
 				6397A63A235CBCD900F8A2D2 /* LYPayPwdViewManager.m in Sources */,
 				82FBA38A235B296400A6D038 /* AcceptanceViewController.m in Sources */,
+				82E0A6E1236AC4BC00C6090D /* MembersTableViewCell.m in Sources */,
 				63E9988F2237545B00A1168B /* LYWebView.m in Sources */,
 				63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */,
 				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
