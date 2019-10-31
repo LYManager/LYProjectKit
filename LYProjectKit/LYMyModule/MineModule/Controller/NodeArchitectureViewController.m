@@ -10,7 +10,7 @@
 
 #import "ImageTableViewCell.h"
 #import "TextTableViewCell.h"
-
+#import "MembersTableViewCell.h"
 #import "TeamModel.h"
 
 #define kScreenW [[UIScreen mainScreen] bounds].size.width
@@ -34,6 +34,7 @@
 @property (nonatomic,strong)TeamModel *model;
 
 @end
+static NSString * const kAGCCellIdentifier = @"MembersTableViewCell";
 
 @implementation NodeArchitectureViewController
 
@@ -69,6 +70,7 @@
         self.baseTbleView.delegate = self;
         [self.baseTbleView registerClass:[TextTableViewCell class] forCellReuseIdentifier:@"finCell"];
         [self.baseTbleView registerClass:[ImageTableViewCell class] forCellReuseIdentifier:@"imageCell"];
+        [self.baseTbleView registerNib:[UINib nibWithNibName:kAGCCellIdentifier bundle:NSBundle.mainBundle] forCellReuseIdentifier:kAGCCellIdentifier];
 
         //self.baseTbleView.separatorStyle = NO;
         self.baseTbleView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -79,7 +81,7 @@
 //组数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 4;
 }
 //组中行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -99,12 +101,9 @@
     else if (section == 2)
     {
         return 0;
-    }else if (section == 3)
-    {
-        return self.model.notActiveChilds.count +1;
     }else
     {
-         return self.model.childsList.count +1;
+         return self.model.teamInfo.count;
     }
     
     
@@ -149,47 +148,20 @@
         cell.idLab.text = @"ID";
         return cell;
     }
-    else if (indexPath.section == 3)
-    {
-           TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
-           if (cell == nil) {
-               cell = [[TextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
-           }
-           tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-           cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        if (indexPath.row == 0) {
-            cell.codeLab.text = @"编号";
-            cell.phoneLab.text = @"手机号";
-            cell.idLab.text = @"ID";
-        }
-        else
-        {
-          
-            cell.codeLab.text = [NSString stringWithFormat:@"%ld",indexPath.row];
-            cell.phoneLab.text = [self.model.notActiveChilds[indexPath.row-1]objectForKey:@"mobile"];
-            cell.idLab.text = [NSString stringWithFormat:@"%@",[self.model.notActiveChilds[indexPath.row-1]objectForKey:@"userId"]];
-        }
-        return cell;
-    }
     else
     {
-        TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
-        if (cell == nil) {
-            cell = [[TextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
-        }
+        MembersTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kAGCCellIdentifier forIndexPath:indexPath];
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-       if (indexPath.row == 0) {
-            cell.codeLab.text = @"编号";
-            cell.phoneLab.text = @"手机号";
-            cell.idLab.text = @"ID";
-        }
-        else
-        {
-            cell.codeLab.text = [NSString stringWithFormat:@"%ld",indexPath.row];
-            cell.phoneLab.text = [self.model.childsList[indexPath.row-1]objectForKey:@"mobile"];
-            cell.idLab.text = [NSString stringWithFormat:@"%@",[self.model.childsList[indexPath.row-1]objectForKey:@"userId"]];
-        }
+      
+        cell.nickNameLab.text = [self.model.teamInfo[indexPath.row]objectForKey:@"nickName"];
+        cell.levelLab.text = [NSString stringWithFormat:@"%@%@",@"等级:",[self.model.teamInfo[indexPath.row]objectForKey:@"levelName"]];
+        cell.iDLab.text = [NSString stringWithFormat:@"%@%@  %@",@"ID:",[self.model.teamInfo[indexPath.row]objectForKey:@"userId"],[self.model.teamInfo[indexPath.row]objectForKey:@"mobile"]];
+        cell.huoyueLab.text = [NSString stringWithFormat:@"%@%@",@"活跃度:",[self.model.teamInfo[indexPath.row]objectForKey:@"liveness"]];
+        cell.teamLab.text = [NSString stringWithFormat:@"%@%@%@",@"他的团队:",[self.model.teamInfo[indexPath.row]objectForKey:@"groupNum"],@"人"];
+        cell.teamAllLab.text = [NSString stringWithFormat:@"%@%@",@"他的团队活跃度:",[self.model.teamInfo[indexPath.row]objectForKey:@"groupTotal"]];
+
+
         return cell;
     }
 }
@@ -288,39 +260,6 @@
          
          return titileView;
     }
-    else if (section == 3)
-    {
-        UIControl *titileView = [[UIControl alloc] initWithFrame:CGRectZero];
-               titileView.backgroundColor = kCellbackColor;
-               titileView.tag = section;
-               //设置  头视图的标题什么的
-               UILabel *titleLable = [[UILabel alloc] initWithFrame:CGRectMake(14, 14, kScreenW/2, 40)];
-               titleLable.backgroundColor = [UIColor clearColor];
-               titleLable.textColor = [UIColor whiteColor];
-               titleLable.font = [UIFont systemFontOfSize:14];
-               titleLable.text = @"直推未加入会员";
-               [titleLable sizeToFit];
-               [titileView addSubview:titleLable];
-               
-               UILabel *titleshowLable = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW-174, 0,134, 40)];
-               titleshowLable.backgroundColor = [UIColor clearColor];
-               titleshowLable.textColor = [UIColor whiteColor];
-               titleshowLable.font = [UIFont systemFontOfSize:14];
-        titleshowLable.text = [NSString stringWithFormat:@"%ld",(long)self.model.notActiveNums];
-               titleshowLable.textAlignment = NSTextAlignmentRight;
-
-              // [titleshowLable sizeToFit];
-               
-               [titileView addSubview:titleshowLable];
-               
-               UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenW-30, 17.5, 10, 5)];
-               lastImageView.backgroundColor = [UIColor clearColor];
-               lastImageView.image = [UIImage imageNamed:@"x"];
-               [titileView addSubview:lastImageView];
-               [titileView addTarget:self action:@selector(section4Action:) forControlEvents:UIControlEventTouchUpInside];
-               
-               return titileView;
-    }
     else {
 
         UIControl *titileView = [[UIControl alloc] initWithFrame:CGRectZero];
@@ -331,7 +270,7 @@
         titleLable.backgroundColor = [UIColor clearColor];
         titleLable.textColor = [UIColor whiteColor];
         titleLable.font = [UIFont systemFontOfSize:14];
-        titleLable.text = @"直推已加入会员";
+        titleLable.text = @"直推人数";
         [titleLable sizeToFit];
         [titileView addSubview:titleLable];
         
@@ -339,7 +278,7 @@
         titleshowLable.backgroundColor = [UIColor clearColor];
         titleshowLable.textColor = [UIColor whiteColor];
         titleshowLable.font = [UIFont systemFontOfSize:14];
-        titleshowLable.text = [NSString stringWithFormat:@"%ld",(long)self.model.activedNums];
+        titleshowLable.text = [NSString stringWithFormat:@"%ld",(long)self.model.teamInfo.count];
         titleshowLable.textAlignment = NSTextAlignmentRight;
 
        // [titleshowLable sizeToFit];
@@ -350,7 +289,7 @@
         lastImageView.backgroundColor = [UIColor clearColor];
         lastImageView.image = [UIImage imageNamed:@"x"];
         [titileView addSubview:lastImageView];
-        [titileView addTarget:self action:@selector(section5Action:) forControlEvents:UIControlEventTouchUpInside];
+        [titileView addTarget:self action:@selector(section4Action:) forControlEvents:UIControlEventTouchUpInside];
         
         return titileView;
     }
@@ -404,6 +343,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     return 40;
+    
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -413,6 +353,9 @@
 {
     if (indexPath.section ==0) {
         return 340;
+    }
+    if (indexPath.section ==3) {
+        return 107;
     }
     else
     {

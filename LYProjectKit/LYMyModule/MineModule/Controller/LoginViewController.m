@@ -117,8 +117,8 @@
     self.pwdTF.secureTextEntry = !self.pwdTF.secureTextEntry;
 }
 - (void) tapAction:(UITapGestureRecognizer *)tap{
-    self.pwdTF.text = @"123456";
-    self.accountNumberTF.text = @"13554034010";
+    self.pwdTF.text = @"111111";
+    self.accountNumberTF.text = @"15083184842";
 }
 - (IBAction)sendAction:(UIButton *)sender {
 
