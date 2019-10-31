@@ -45,8 +45,6 @@
     [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
     [button ly_gradint];
     [self.view addSubview:button];
-
-
 }
 
 - (void)buttonAction

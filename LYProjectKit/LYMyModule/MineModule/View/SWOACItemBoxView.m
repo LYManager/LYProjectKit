@@ -42,6 +42,7 @@
     self.textLabel = textLabel;
     textLabel.backgroundColor = [UIColor clearColor];
     textLabel.textAlignment = NSTextAlignmentCenter;
+    
     [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(textLabel.superview);
     }];

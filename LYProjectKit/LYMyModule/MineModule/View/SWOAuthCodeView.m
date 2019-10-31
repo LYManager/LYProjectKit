@@ -178,7 +178,9 @@
     for (int i= 0; i < boxViewArr.count; i++) {
         SWOACItemBoxView *boxView = self.boxViewArr[i];
         if (i < contentText.length) {
-            boxView.textLabel.text = @"●";
+            boxView.textLabel.text = @"*";
+            NSAttributedString * att1 = [[NSAttributedString alloc] initWithString:boxView.textLabel.text attributes:@{NSFontAttributeName: boxView.textLabel.font,NSBaselineOffsetAttributeName:@(-2)}];
+            boxView.textLabel.attributedText = att1;
 //            [contentText substringWithRange:NSMakeRange(i, 1)];
         }else{
             boxView.textLabel.text = @"";

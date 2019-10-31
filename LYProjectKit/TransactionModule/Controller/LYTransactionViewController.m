@@ -8,7 +8,7 @@
 #import "LYTransactionViewController.h"
 #import "LYTransactionHeaderView.h"
 #import "LYTransactionSessionHeaderView.h"
-//#import "LYShengTaiShopCardCell.h"
+#import "LYTransactionSaleTableViewCell.h"
 @interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< SessionHeaderView*/
@@ -33,7 +33,8 @@
         self.tableView.tableHeaderView = headerView;
     });
     
-   
+    [self.tableView registerNib:[UINib nibWithNibName:@"LYTransactionSaleTableViewCell" bundle:NSBundle.mainBundle] forCellReuseIdentifier:@"LYTransactionSaleTableViewCell"];
+    self.tableView.rowHeight = 150;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -41,15 +42,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    LYTransactionSaleTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionSaleTableViewCell" forIndexPath:indexPath];
+    return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
+    return 45;
 }
 
 

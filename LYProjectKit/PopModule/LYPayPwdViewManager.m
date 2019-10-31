@@ -18,7 +18,7 @@
     oacView.boxBorderWidth = 2; //方框的边框宽度
     oacView.boxCornerRadius = 6; //方框的圆角半径
     oacView.boxBGColor = [UIColor ly_colorWithHexString:@"#1F2348"];  //方框的背景色
-    oacView.boxTextColor = [UIColor blackColor]; //方框内文字的颜色
+    oacView.boxTextColor = [UIColor whiteColor]; //方框内文字的颜色
     /* -----设置可选的属性 end----- */
     //显示键盘，可以输入验证码了
     if (isBeginEdit) {

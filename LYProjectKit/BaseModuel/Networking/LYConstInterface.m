@@ -28,6 +28,8 @@ NSString * const rubbishURL =   @"/ant-api/ant/classify";
 
 NSString * const mineURL          = @"/ant-api/user/myInfo";
 
+NSString * const confirmSendURL = @"/ant-api/ant/confir";
+
 NSString * const antGonghuiURL    = @"/ant-api/ant/consortia";
 
 NSString * const shengTaiURL = @"/ant-api/ant/store";

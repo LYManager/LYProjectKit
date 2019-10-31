@@ -92,6 +92,8 @@
 		6397A63A235CBCD900F8A2D2 /* LYPayPwdViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A639235CBCD900F8A2D2 /* LYPayPwdViewManager.m */; };
 		6397A63E235CC02B00F8A2D2 /* LYPopToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */; };
 		6397A63F235CC02B00F8A2D2 /* LYPopToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */; };
+		639E46FD236A7DEB001A4131 /* LYSureSendCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E46FC236A7DEB001A4131 /* LYSureSendCardView.m */; };
+		639E46FF236A7DF4001A4131 /* LYSureSendCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639E46FE236A7DF4001A4131 /* LYSureSendCardView.xib */; };
 		63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A815FD236438C100B9CC9E /* LYRubbishButton.m */; };
 		63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
@@ -101,6 +103,8 @@
 		63E8C0F223687F1000C95354 /* LYTransactionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E8C0F123687F1000C95354 /* LYTransactionHeaderView.xib */; };
 		63E8C0F52368867A00C95354 /* LYTransactionSessionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8C0F42368867A00C95354 /* LYTransactionSessionHeaderView.m */; };
 		63E8C0F72368868600C95354 /* LYTransactionSessionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E8C0F62368868600C95354 /* LYTransactionSessionHeaderView.xib */; };
+		63E8C0FB23688DAE00C95354 /* LYTransactionSaleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E8C0F923688DAE00C95354 /* LYTransactionSaleTableViewCell.m */; };
+		63E8C0FC23688DAE00C95354 /* LYTransactionSaleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E8C0FA23688DAE00C95354 /* LYTransactionSaleTableViewCell.xib */; };
 		63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988B2237504A00A1168B /* LYWebViewController.m */; };
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
 		63E9989F22377D5200A1168B /* LYFindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989E22377D5200A1168B /* LYFindModel.m */; };
@@ -353,6 +357,9 @@
 		6397A63B235CC02B00F8A2D2 /* LYPopToolsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopToolsViewController.h; sourceTree = "<group>"; };
 		6397A63C235CC02B00F8A2D2 /* LYPopToolsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopToolsViewController.m; sourceTree = "<group>"; };
 		6397A63D235CC02B00F8A2D2 /* LYPopToolsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopToolsViewController.xib; sourceTree = "<group>"; };
+		639E46FB236A7DEB001A4131 /* LYSureSendCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSureSendCardView.h; sourceTree = "<group>"; };
+		639E46FC236A7DEB001A4131 /* LYSureSendCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSureSendCardView.m; sourceTree = "<group>"; };
+		639E46FE236A7DF4001A4131 /* LYSureSendCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYSureSendCardView.xib; sourceTree = "<group>"; };
 		63A815FC236438C100B9CC9E /* LYRubbishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishButton.h; sourceTree = "<group>"; };
 		63A815FD236438C100B9CC9E /* LYRubbishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishButton.m; sourceTree = "<group>"; };
 		63B3775E236735F5001C8CCC /* LYAVOSCloudManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAVOSCloudManager.h; sourceTree = "<group>"; };
@@ -368,6 +375,9 @@
 		63E8C0F32368867A00C95354 /* LYTransactionSessionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTransactionSessionHeaderView.h; sourceTree = "<group>"; };
 		63E8C0F42368867A00C95354 /* LYTransactionSessionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTransactionSessionHeaderView.m; sourceTree = "<group>"; };
 		63E8C0F62368868600C95354 /* LYTransactionSessionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYTransactionSessionHeaderView.xib; sourceTree = "<group>"; };
+		63E8C0F823688DAE00C95354 /* LYTransactionSaleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTransactionSaleTableViewCell.h; sourceTree = "<group>"; };
+		63E8C0F923688DAE00C95354 /* LYTransactionSaleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTransactionSaleTableViewCell.m; sourceTree = "<group>"; };
+		63E8C0FA23688DAE00C95354 /* LYTransactionSaleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYTransactionSaleTableViewCell.xib; sourceTree = "<group>"; };
 		63E9988A2237504A00A1168B /* LYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebViewController.h; sourceTree = "<group>"; };
 		63E9988B2237504A00A1168B /* LYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWebViewController.m; sourceTree = "<group>"; };
 		63E9988D2237545B00A1168B /* LYWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWebView.h; sourceTree = "<group>"; };
@@ -991,6 +1001,7 @@
 		6397A62F235C542E00F8A2D2 /* PopModule */ = {
 			isa = PBXGroup;
 			children = (
+				639E46FA236A7DD4001A4131 /* View */,
 				6397A635235CB3C800F8A2D2 /* LYPopContentView.h */,
 				6397A636235CB3C800F8A2D2 /* LYPopContentView.m */,
 				6397A638235CBCD900F8A2D2 /* LYPayPwdViewManager.h */,
@@ -1009,6 +1020,16 @@
 				63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */,
 			);
 			path = PopModule;
+			sourceTree = "<group>";
+		};
+		639E46FA236A7DD4001A4131 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				639E46FB236A7DEB001A4131 /* LYSureSendCardView.h */,
+				639E46FC236A7DEB001A4131 /* LYSureSendCardView.m */,
+				639E46FE236A7DF4001A4131 /* LYSureSendCardView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		63E8C0E323687D7400C95354 /* TransactionModule */ = {
@@ -1063,6 +1084,9 @@
 				63E8C0F32368867A00C95354 /* LYTransactionSessionHeaderView.h */,
 				63E8C0F42368867A00C95354 /* LYTransactionSessionHeaderView.m */,
 				63E8C0F62368868600C95354 /* LYTransactionSessionHeaderView.xib */,
+				63E8C0F823688DAE00C95354 /* LYTransactionSaleTableViewCell.h */,
+				63E8C0F923688DAE00C95354 /* LYTransactionSaleTableViewCell.m */,
+				63E8C0FA23688DAE00C95354 /* LYTransactionSaleTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1429,6 +1453,7 @@
 				82FBA390235B2B9D00A6D038 /* AcceptanceTableViewCell.xib in Resources */,
 				63933B86235ABEBE00D5E138 /* LYLoginPwdViewController.xib in Resources */,
 				63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */,
+				639E46FF236A7DF4001A4131 /* LYSureSendCardView.xib in Resources */,
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
 				635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */,
@@ -1455,6 +1480,7 @@
 				63933B8E235AC72D00D5E138 /* LYRealNameAuthViewController.xib in Resources */,
 				63933B98235AFF7C00D5E138 /* LYMayiGongHuiHeaderView.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
+				63E8C0FC23688DAE00C95354 /* LYTransactionSaleTableViewCell.xib in Resources */,
 				63933B9D235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib in Resources */,
 				63933B93235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib in Resources */,
 				634221392233B8A300A2CD27 /* Localizable.strings in Resources */,
@@ -1599,6 +1625,7 @@
 				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
 				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
 				634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */,
+				639E46FD236A7DEB001A4131 /* LYSureSendCardView.m in Sources */,
 				82FBA372235AF08500A6D038 /* SystemSettingViewController.m in Sources */,
 				63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */,
 				829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */,
@@ -1612,6 +1639,7 @@
 				82EAAD8B235E08E300991124 /* TextTableViewCell.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
 				635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */,
+				63E8C0FB23688DAE00C95354 /* LYTransactionSaleTableViewCell.m in Sources */,
 				63264DCE235C136300293467 /* PersistenceHelper.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
@@ -1870,7 +1898,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = EJ7948K8NR;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1891,7 +1919,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1908,7 +1936,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = EJ7948K8NR;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1929,7 +1957,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
