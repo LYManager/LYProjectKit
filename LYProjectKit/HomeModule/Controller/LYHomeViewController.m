@@ -184,7 +184,7 @@ static NSInteger local = 0;
 /// 交易
 /// @param sender sender
 - (IBAction)jiaoyiAction:(UIButton *)sender {
-    [self pushViewControllerWithClassName:@"LYTransactionViewController" params:nil];
+    [self pushViewControllerWithClassName:@"" params:nil];
 }
 
 /// 我的
@@ -209,6 +209,13 @@ static NSInteger local = 0;
 }
 
 - (IBAction)gonglueAction:(UIButton *)sender {
+    
+    if ([[self.data.data.strategies[0]objectForKey:@"url"] isEqualToString:@""] ||[self.data.data.strategies[0]objectForKey:@"url"] == nil) {
+    
+        [self.view makeToast:@"服务器异常，请稍后再试" duration:1 position:CSToastPositionCenter];
+        return;
+        
+    }
     ImageViewController *imageVC = [[ImageViewController alloc]init];
     imageVC.urlString = [self.data.data.strategies[0]objectForKey:@"url"];
     [self.navigationController pushViewController:imageVC animated:YES];

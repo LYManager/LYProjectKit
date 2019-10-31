@@ -154,6 +154,7 @@ static NSString * const kAGCCellIdentifier = @"MembersTableViewCell";
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
       
+        [cell.headImage sd_setImageWithURL:[NSURL URLWithString:[self.model.teamInfo[indexPath.row]objectForKey:@"url"]]];
         cell.nickNameLab.text = [self.model.teamInfo[indexPath.row]objectForKey:@"nickName"];
         cell.levelLab.text = [NSString stringWithFormat:@"%@%@",@"等级:",[self.model.teamInfo[indexPath.row]objectForKey:@"levelName"]];
         cell.iDLab.text = [NSString stringWithFormat:@"%@%@  %@",@"ID:",[self.model.teamInfo[indexPath.row]objectForKey:@"userId"],[self.model.teamInfo[indexPath.row]objectForKey:@"mobile"]];
