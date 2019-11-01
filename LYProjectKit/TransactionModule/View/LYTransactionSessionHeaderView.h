@@ -9,8 +9,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LYTransactionSessionHeaderView : UIView
+typedef NS_ENUM(NSUInteger,LYTransactionSessionHeaderViewClickType) {
+    LYTransactionSessionHeaderViewClickType_Sale,
+    LYTransactionSessionHeaderViewClickType_Buy,
+    LYTransactionSessionHeaderViewClickType_Record
+};
 
+@protocol LYTransactionSessionHeaderViewDelegate <NSObject>
+
+- (void) clickActionWithType:(LYTransactionSessionHeaderViewClickType)clickType;
+
+@end
+
+@interface LYTransactionSessionHeaderView : UIView
+/**< des*/
+@property(nonatomic,weak)id<LYTransactionSessionHeaderViewDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -49,6 +49,8 @@
 		637754FE235EA8DC00FEA141 /* LYAntCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637754FD235EA8DC00FEA141 /* LYAntCardModel.m */; };
 		63775501235EC43D00FEA141 /* LYShengTaiData.m in Sources */ = {isa = PBXBuildFile; fileRef = 63775500235EC43D00FEA141 /* LYShengTaiData.m */; };
 		63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63775503235EC70C00FEA141 /* LYTaskCardModel.m */; };
+		637BBDFA236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637BBDF8236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.m */; };
+		637BBDFB236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637BBDF9236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.xib */; };
 		63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CB2235D5F00000B505A /* LYPopErrorViewController.m */; };
 		63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */; };
 		63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CBB235D76D1000B505A /* LYHomeViewController.m */; };
@@ -295,6 +297,9 @@
 		63775500235EC43D00FEA141 /* LYShengTaiData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYShengTaiData.m; sourceTree = "<group>"; };
 		63775502235EC70C00FEA141 /* LYTaskCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTaskCardModel.h; sourceTree = "<group>"; };
 		63775503235EC70C00FEA141 /* LYTaskCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTaskCardModel.m; sourceTree = "<group>"; };
+		637BBDF7236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTransactionRecordTableViewCell.h; sourceTree = "<group>"; };
+		637BBDF8236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTransactionRecordTableViewCell.m; sourceTree = "<group>"; };
+		637BBDF9236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTransactionRecordTableViewCell.xib; sourceTree = "<group>"; };
 		63848CB1235D5F00000B505A /* LYPopErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopErrorViewController.h; sourceTree = "<group>"; };
 		63848CB2235D5F00000B505A /* LYPopErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopErrorViewController.m; sourceTree = "<group>"; };
 		63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopErrorViewController.xib; sourceTree = "<group>"; };
@@ -1104,6 +1109,9 @@
 		63E8C0E823687D7400C95354 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				637BBDF7236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.h */,
+				637BBDF8236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.m */,
+				637BBDF9236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.xib */,
 				63E8C0EE23687EF100C95354 /* LYTransactionHeaderView.h */,
 				63E8C0EF23687EF100C95354 /* LYTransactionHeaderView.m */,
 				63E8C0F123687F1000C95354 /* LYTransactionHeaderView.xib */,
@@ -1494,6 +1502,7 @@
 				82EAAD8C235E08E300991124 /* 123123.png in Resources */,
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				827952822368171900514471 /* 背景2.jpg in Resources */,
+				637BBDFB236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.xib in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
 				63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */,
@@ -1592,6 +1601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63933B96235AFF7000D5E138 /* LYMayiGongHuiHeaderView.m in Sources */,
+				637BBDFA236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.m in Sources */,
 				63933BA5235B366F00D5E138 /* LYShengTaiHeaderView.m in Sources */,
 				82ECDE70235F5010002D6532 /* InvitFriendViewController.m in Sources */,
 				63933B552359DB7600D5E138 /* UIColor+Extention.m in Sources */,
