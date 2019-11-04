@@ -9,10 +9,13 @@
 #import "LYTransactionHeaderView.h"
 #import "LYTransactionSessionHeaderView.h"
 #import "LYTransactionSaleTableViewCell.h"
-@interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "LYTransactionRecordTableViewCell.h"
+@interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,LYTransactionSessionHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< SessionHeaderView*/
 @property(nonatomic,strong)LYTransactionSessionHeaderView * sessionHeaderView;
+/**< type*/
+@property(nonatomic,assign)LYTransactionSessionHeaderViewClickType clickType;
 @end
 
 @implementation LYTransactionViewController
@@ -34,7 +37,13 @@
     });
     
     [self.tableView registerNib:[UINib nibWithNibName:@"LYTransactionSaleTableViewCell" bundle:NSBundle.mainBundle] forCellReuseIdentifier:@"LYTransactionSaleTableViewCell"];
-    self.tableView.rowHeight = 150;
+     [self.tableView registerNib:[UINib nibWithNibName:@"LYTransactionRecordTableViewCell" bundle:NSBundle.mainBundle] forCellReuseIdentifier:@"LYTransactionRecordTableViewCell"];
+    self.tableView.rowHeight = 170;
+}
+
+- (void)clickActionWithType:(LYTransactionSessionHeaderViewClickType)clickType{
+    self.clickType = clickType;
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -46,8 +55,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    LYTransactionSaleTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionSaleTableViewCell" forIndexPath:indexPath];
-    return cell;
+   
+    if (self.clickType == LYTransactionSessionHeaderViewClickType_Record) {
+         LYTransactionRecordTableViewCell * recordCell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionRecordTableViewCell" forIndexPath:indexPath];
+        return recordCell;
+    }else{
+         LYTransactionSaleTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionSaleTableViewCell" forIndexPath:indexPath];
+         return cell;
+    }
+    return nil;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -62,7 +78,7 @@
 - (LYTransactionSessionHeaderView *)sessionHeaderView{
     if (!_sessionHeaderView) {
         _sessionHeaderView = [[NSBundle mainBundle]loadNibNamed:@"LYTransactionSessionHeaderView" owner:self options:nil][0];
-//        _sessionHeaderView.delegate = self;
+        _sessionHeaderView.delegate = self;
     }
     return _sessionHeaderView;
 }

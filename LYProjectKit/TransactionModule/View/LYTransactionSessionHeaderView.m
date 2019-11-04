@@ -25,7 +25,9 @@
         return;
     }
     [self configSelectedWithBtn:sender];
-
+    if ([self.delegate respondsToSelector:@selector(clickActionWithType:)]) {
+        [self.delegate clickActionWithType:LYTransactionSessionHeaderViewClickType_Sale];
+    }
 }
 
 - (IBAction)buyBtnAction:(UIButton *)sender {
@@ -33,7 +35,9 @@
         return;
     }
     [self configSelectedWithBtn:sender];
-
+    if ([self.delegate respondsToSelector:@selector(clickActionWithType:)]) {
+           [self.delegate clickActionWithType:LYTransactionSessionHeaderViewClickType_Buy];
+       }
 }
 
 - (IBAction)transactionBtnAction:(UIButton *)sender {
@@ -41,7 +45,9 @@
         return;
     }
     [self configSelectedWithBtn:sender];
-
+    if ([self.delegate respondsToSelector:@selector(clickActionWithType:)]) {
+           [self.delegate clickActionWithType:LYTransactionSessionHeaderViewClickType_Record];
+    }
 }
 
 
