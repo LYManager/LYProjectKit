@@ -168,6 +168,8 @@
 		82FBA390235B2B9D00A6D038 /* AcceptanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA38E235B2B9D00A6D038 /* AcceptanceTableViewCell.xib */; };
 		82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA392235B39B200A6D038 /* AcceptanceDetailViewController.m */; };
 		82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */; };
+		82FDCC54236BFAB20036E6DD /* PayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FDCC52236BFAB20036E6DD /* PayDetailViewController.m */; };
+		82FDCC55236BFAB20036E6DD /* PayDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FDCC53236BFAB20036E6DD /* PayDetailViewController.xib */; };
 		82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8DF22362A60200A47845 /* InviteViewController.m */; };
 		82FE8DF72362BFF100A47845 /* 背景1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF52362BFF100A47845 /* 背景1.jpg */; };
 		82FE8E422365BFA500A47845 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8E402365BFA500A47845 /* ImageViewController.m */; };
@@ -487,6 +489,9 @@
 		82FBA391235B39B200A6D038 /* AcceptanceDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcceptanceDetailViewController.h; sourceTree = "<group>"; };
 		82FBA392235B39B200A6D038 /* AcceptanceDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceDetailViewController.m; sourceTree = "<group>"; };
 		82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcceptanceDetailViewController.xib; sourceTree = "<group>"; };
+		82FDCC51236BFAB20036E6DD /* PayDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayDetailViewController.h; sourceTree = "<group>"; };
+		82FDCC52236BFAB20036E6DD /* PayDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayDetailViewController.m; sourceTree = "<group>"; };
+		82FDCC53236BFAB20036E6DD /* PayDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayDetailViewController.xib; sourceTree = "<group>"; };
 		82FE8DF12362A60200A47845 /* InviteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
 		82FE8DF22362A60200A47845 /* InviteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
 		82FE8DF52362BFF100A47845 /* 背景1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1.jpg"; sourceTree = "<group>"; };
@@ -1090,6 +1095,9 @@
 				63E8C0E923687D9000C95354 /* LYTransactionViewController.h */,
 				63E8C0EA23687D9000C95354 /* LYTransactionViewController.m */,
 				63E8C0EB23687D9000C95354 /* LYTransactionViewController.xib */,
+				82FDCC51236BFAB20036E6DD /* PayDetailViewController.h */,
+				82FDCC52236BFAB20036E6DD /* PayDetailViewController.m */,
+				82FDCC53236BFAB20036E6DD /* PayDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1484,6 +1492,7 @@
 				63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */,
 				639E46FF236A7DF4001A4131 /* LYSureSendCardView.xib in Resources */,
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
+				82FDCC55236BFAB20036E6DD /* PayDetailViewController.xib in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
 				635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */,
 				639E4704236AE5DB001A4131 /* LYGonghuiRecordViewController.xib in Resources */,
@@ -1651,6 +1660,7 @@
 				82ECDE6A235EF831002D6532 /* AssetModel.m in Sources */,
 				82ECDE64235EDBAE002D6532 /* TeamModel.m in Sources */,
 				63933B80235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m in Sources */,
+				82FDCC54236BFAB20036E6DD /* PayDetailViewController.m in Sources */,
 				63E8C0F023687EF100C95354 /* LYTransactionHeaderView.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
 				63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */,

@@ -40,8 +40,11 @@
         @"keyWords":self.pwd,
         @"taskId":@(self.model.taskId)
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-        [self.view makeToast:@"兑换成功" duration:2 position:CSToastPositionCenter];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.view makeToast:@"兑换成功" duration:1 position:CSToastPositionCenter];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self dismissViewControllerAnimated:YES completion:nil];
+
+        });
     }];
 }
 - (void)oauthCodeView:(SWOAuthCodeView *)mqView didInputFinish:(NSString *)finalText{
