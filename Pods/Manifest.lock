@@ -21,6 +21,7 @@ PODS:
   - Masonry (1.1.0)
   - MGJRouter (0.10.0)
   - MJRefresh (3.1.15.7)
+  - OYCountDownManager (2.0.3)
   - ReactiveObjC (3.1.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MGJRouter (~> 0.10.0)
   - MJRefresh (~> 3.1.15.7)
+  - OYCountDownManager
   - ReactiveObjC (~> 3.1.0)
   - SDWebImage (~> 4.0.0)
   - SVProgressHUD (~> 2.2.5)
@@ -65,6 +67,7 @@ SPEC REPOS:
   trunk:
     - AVOSCloud
     - IQKeyboardManager
+    - OYCountDownManager
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -75,6 +78,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MGJRouter: 15d94541eb2cc81eff7d577337288feb7ae9575f
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  OYCountDownManager: 6206192efd604eb54f3a4244292a5928a762f7d5
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
@@ -82,6 +86,6 @@ SPEC CHECKSUMS:
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: a0cfb4890e6bdab63324111147eb78b4eb3f30b3
+PODFILE CHECKSUM: d0482cc1971dd384de953288d3d992d3581f0083
 
 COCOAPODS: 1.8.4
