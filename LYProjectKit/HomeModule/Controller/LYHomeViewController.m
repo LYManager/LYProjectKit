@@ -184,7 +184,8 @@ static NSInteger local = 0;
 /// 交易
 /// @param sender sender
 - (IBAction)jiaoyiAction:(UIButton *)sender {
-    [self pushViewControllerWithClassName:@"LYTransactionViewController" params:nil];
+    [self pushViewControllerWithClassName:@"" params:nil];
+    //LYTransactionViewController
 }
 
 /// 我的

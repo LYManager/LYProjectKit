@@ -124,6 +124,12 @@
 		829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D41235C2CBB004F9641 /* SWOAuthCodeView.m */; };
 		829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */; };
 		829C2D49235C4369004F9641 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D48235C4369004F9641 /* TeamViewController.m */; };
+		82AC1AD52371146300FC41BF /* ReleaseBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AC1AD32371146300FC41BF /* ReleaseBuyViewController.m */; };
+		82AC1AD62371146300FC41BF /* ReleaseBuyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AC1AD42371146300FC41BF /* ReleaseBuyViewController.xib */; };
+		82AC1ADA23711E2D00FC41BF /* PayStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AC1AD823711E2D00FC41BF /* PayStateViewController.m */; };
+		82AC1ADB23711E2D00FC41BF /* PayStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AC1AD923711E2D00FC41BF /* PayStateViewController.xib */; };
+		82AC1ADF237121F800FC41BF /* ReleaseSellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AC1ADD237121F800FC41BF /* ReleaseSellViewController.m */; };
+		82AC1AE0237121F800FC41BF /* ReleaseSellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AC1ADE237121F800FC41BF /* ReleaseSellViewController.xib */; };
 		82E0A6E1236AC4BC00C6090D /* MembersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E0A6DF236AC4BC00C6090D /* MembersTableViewCell.m */; };
 		82E0A6E2236AC4BC00C6090D /* MembersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E0A6E0236AC4BC00C6090D /* MembersTableViewCell.xib */; };
 		82EAAD81235DF35B00991124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EAAD80235DF35B00991124 /* Assets.xcassets */; };
@@ -170,6 +176,8 @@
 		82FBA390235B2B9D00A6D038 /* AcceptanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA38E235B2B9D00A6D038 /* AcceptanceTableViewCell.xib */; };
 		82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FBA392235B39B200A6D038 /* AcceptanceDetailViewController.m */; };
 		82FBA395235B39B200A6D038 /* AcceptanceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */; };
+		82FDCC54236BFAB20036E6DD /* PayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FDCC52236BFAB20036E6DD /* PayDetailViewController.m */; };
+		82FDCC55236BFAB20036E6DD /* PayDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FDCC53236BFAB20036E6DD /* PayDetailViewController.xib */; };
 		82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8DF22362A60200A47845 /* InviteViewController.m */; };
 		82FE8DF72362BFF100A47845 /* 背景1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8DF52362BFF100A47845 /* 背景1.jpg */; };
 		82FE8E422365BFA500A47845 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FE8E402365BFA500A47845 /* ImageViewController.m */; };
@@ -421,6 +429,15 @@
 		829C2D45235C2D54004F9641 /* SWOACItemBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWOACItemBoxView.m; sourceTree = "<group>"; };
 		829C2D47235C4369004F9641 /* TeamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
 		829C2D48235C4369004F9641 /* TeamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		82AC1AD22371146300FC41BF /* ReleaseBuyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseBuyViewController.h; sourceTree = "<group>"; };
+		82AC1AD32371146300FC41BF /* ReleaseBuyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseBuyViewController.m; sourceTree = "<group>"; };
+		82AC1AD42371146300FC41BF /* ReleaseBuyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseBuyViewController.xib; sourceTree = "<group>"; };
+		82AC1AD723711E2D00FC41BF /* PayStateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayStateViewController.h; sourceTree = "<group>"; };
+		82AC1AD823711E2D00FC41BF /* PayStateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayStateViewController.m; sourceTree = "<group>"; };
+		82AC1AD923711E2D00FC41BF /* PayStateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayStateViewController.xib; sourceTree = "<group>"; };
+		82AC1ADC237121F800FC41BF /* ReleaseSellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseSellViewController.h; sourceTree = "<group>"; };
+		82AC1ADD237121F800FC41BF /* ReleaseSellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseSellViewController.m; sourceTree = "<group>"; };
+		82AC1ADE237121F800FC41BF /* ReleaseSellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseSellViewController.xib; sourceTree = "<group>"; };
 		82E0A6DE236AC4BC00C6090D /* MembersTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembersTableViewCell.h; sourceTree = "<group>"; };
 		82E0A6DF236AC4BC00C6090D /* MembersTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembersTableViewCell.m; sourceTree = "<group>"; };
 		82E0A6E0236AC4BC00C6090D /* MembersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MembersTableViewCell.xib; sourceTree = "<group>"; };
@@ -492,6 +509,9 @@
 		82FBA391235B39B200A6D038 /* AcceptanceDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcceptanceDetailViewController.h; sourceTree = "<group>"; };
 		82FBA392235B39B200A6D038 /* AcceptanceDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceDetailViewController.m; sourceTree = "<group>"; };
 		82FBA393235B39B200A6D038 /* AcceptanceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcceptanceDetailViewController.xib; sourceTree = "<group>"; };
+		82FDCC51236BFAB20036E6DD /* PayDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayDetailViewController.h; sourceTree = "<group>"; };
+		82FDCC52236BFAB20036E6DD /* PayDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayDetailViewController.m; sourceTree = "<group>"; };
+		82FDCC53236BFAB20036E6DD /* PayDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayDetailViewController.xib; sourceTree = "<group>"; };
 		82FE8DF12362A60200A47845 /* InviteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
 		82FE8DF22362A60200A47845 /* InviteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
 		82FE8DF52362BFF100A47845 /* 背景1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1.jpg"; sourceTree = "<group>"; };
@@ -1095,6 +1115,18 @@
 				63E8C0E923687D9000C95354 /* LYTransactionViewController.h */,
 				63E8C0EA23687D9000C95354 /* LYTransactionViewController.m */,
 				63E8C0EB23687D9000C95354 /* LYTransactionViewController.xib */,
+				82FDCC51236BFAB20036E6DD /* PayDetailViewController.h */,
+				82FDCC52236BFAB20036E6DD /* PayDetailViewController.m */,
+				82FDCC53236BFAB20036E6DD /* PayDetailViewController.xib */,
+				82AC1AD22371146300FC41BF /* ReleaseBuyViewController.h */,
+				82AC1AD32371146300FC41BF /* ReleaseBuyViewController.m */,
+				82AC1AD42371146300FC41BF /* ReleaseBuyViewController.xib */,
+				82AC1ADC237121F800FC41BF /* ReleaseSellViewController.h */,
+				82AC1ADD237121F800FC41BF /* ReleaseSellViewController.m */,
+				82AC1ADE237121F800FC41BF /* ReleaseSellViewController.xib */,
+				82AC1AD723711E2D00FC41BF /* PayStateViewController.h */,
+				82AC1AD823711E2D00FC41BF /* PayStateViewController.m */,
+				82AC1AD923711E2D00FC41BF /* PayStateViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1492,14 +1524,17 @@
 				63933BA7235B368600D5E138 /* LYShengTaiHeaderView.xib in Resources */,
 				639E46FF236A7DF4001A4131 /* LYSureSendCardView.xib in Resources */,
 				82FBA38B235B296400A6D038 /* AcceptanceViewController.xib in Resources */,
+				82FDCC55236BFAB20036E6DD /* PayDetailViewController.xib in Resources */,
 				82FBA36D235AF08500A6D038 /* SystemSettingViewController.xib in Resources */,
 				635C31A2235DFAFB0015889B /* LaunchScreen.storyboard in Resources */,
 				639E4704236AE5DB001A4131 /* LYGonghuiRecordViewController.xib in Resources */,
 				82FBA36E235AF08500A6D038 /* LoginViewController.xib in Resources */,
 				82FBA37C235AF9A000A6D038 /* AGCDetailViewController.xib in Resources */,
 				63E8C0F223687F1000C95354 /* LYTransactionHeaderView.xib in Resources */,
+				82AC1ADB23711E2D00FC41BF /* PayStateViewController.xib in Resources */,
 				639E4709236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib in Resources */,
 				82EAAD8C235E08E300991124 /* 123123.png in Resources */,
+				82AC1AE0237121F800FC41BF /* ReleaseSellViewController.xib in Resources */,
 				82FBA363235AF08500A6D038 /* WithdrawalViewController.xib in Resources */,
 				827952822368171900514471 /* 背景2.jpg in Resources */,
 				637BBDFB236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.xib in Resources */,
@@ -1514,6 +1549,7 @@
 				829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */,
 				82FBA377235AF5CF00A6D038 /* timg.jpg in Resources */,
 				82FBA364235AF08500A6D038 /* ContactCustomerViewController.xib in Resources */,
+				82AC1AD62371146300FC41BF /* ReleaseBuyViewController.xib in Resources */,
 				633442E82238E92300035BBA /* README.md in Resources */,
 				82FBA365235AF08500A6D038 /* InvitationViewController.xib in Resources */,
 				82E0A6E2236AC4BC00C6090D /* MembersTableViewCell.xib in Resources */,
@@ -1614,6 +1650,7 @@
 				6342210F2233942000A2CD27 /* LYBaseViewController.m in Sources */,
 				82ECDE6D235F00DB002D6532 /* CoinDetailModel.m in Sources */,
 				82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */,
+				82AC1ADF237121F800FC41BF /* ReleaseSellViewController.m in Sources */,
 				63E8C0F52368867A00C95354 /* LYTransactionSessionHeaderView.m in Sources */,
 				63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */,
 				639E470C236AED33001A4131 /* LYGonghuiRecordModel.m in Sources */,
@@ -1659,8 +1696,10 @@
 				82FBA36F235AF08500A6D038 /* TopUpViewController.m in Sources */,
 				6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */,
 				82ECDE6A235EF831002D6532 /* AssetModel.m in Sources */,
+				82AC1ADA23711E2D00FC41BF /* PayStateViewController.m in Sources */,
 				82ECDE64235EDBAE002D6532 /* TeamModel.m in Sources */,
 				63933B80235ABA3C00D5E138 /* LYSafeSettingTableViewCell.m in Sources */,
+				82FDCC54236BFAB20036E6DD /* PayDetailViewController.m in Sources */,
 				63E8C0F023687EF100C95354 /* LYTransactionHeaderView.m in Sources */,
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
 				63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */,
@@ -1687,6 +1726,7 @@
 				63E8C0FB23688DAE00C95354 /* LYTransactionSaleTableViewCell.m in Sources */,
 				63264DCE235C136300293467 /* PersistenceHelper.m in Sources */,
 				63933BAA235B3B2700D5E138 /* LYShengTaiSessionHeaderView.m in Sources */,
+				82AC1AD52371146300FC41BF /* ReleaseBuyViewController.m in Sources */,
 				6342212822339C2600A2CD27 /* LYPageContext.m in Sources */,
 				82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */,
 				635C31A8235E0AEB0015889B /* LYUserInfoManager.m in Sources */,
@@ -1942,9 +1982,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = G8G6BXAV68;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1965,7 +2005,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1980,9 +2020,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = TBQ6LRJ9N9;
+				DEVELOPMENT_TEAM = G8G6BXAV68;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LYProjectKit/LYProjectKit.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2003,7 +2043,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayikind.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
