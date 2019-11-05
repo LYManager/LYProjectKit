@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -38,10 +38,10 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一张认证卡仅有一次认证机会、请认真核实姓名、身份证信息、手机号均是本人信息。三种信息不一致认证会消耗认证卡，请再次确认填写信息。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-TV-E4P">
-                            <rect key="frame" x="15" y="83" width="304" height="43"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★重要提醒★★★" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-TV-E4P">
+                            <rect key="frame" x="15" y="83" width="304" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.4470003843" green="0.80898457769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.93663889169692993" green="0.46941328048706055" blue="0.57254350185394287" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rt-qo-FhS">
@@ -87,12 +87,24 @@
                                 <action selector="cancelBtnAction:" destination="-1" eventType="touchUpInside" id="d5u-yx-Eih"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p09-YS-Yb0">
+                            <rect key="frame" x="15" y="102.5" width="304" height="57.5"/>
+                            <string key="text">一张认证卡仅有一次认证机会
+请填写您使用身份证号办理手机号时的信息
+三种信息不一致认证失败也会消耗认证卡
+请再次确认填写信息                        </string>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.93663889170000003" green="0.46941328049999997" blue="0.57254350190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.089022584259999996" green="0.1069274321" blue="0.218965888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="W6z-N6-OTD" secondAttribute="height" multiplier="1:1" id="8pF-r2-Q4H"/>
                         <constraint firstAttribute="trailing" secondItem="WeC-TV-E4P" secondAttribute="trailing" constant="15" id="AR2-Gt-8sX"/>
+                        <constraint firstItem="p09-YS-Yb0" firstAttribute="top" secondItem="WeC-TV-E4P" secondAttribute="bottom" constant="5" id="EFM-Jj-vhB"/>
                         <constraint firstAttribute="trailing" secondItem="v6m-Ub-DKx" secondAttribute="trailing" constant="10" id="GDC-Yf-mq0"/>
+                        <constraint firstItem="p09-YS-Yb0" firstAttribute="leading" secondItem="W6z-N6-OTD" secondAttribute="leading" constant="15" id="KBR-01-XMa"/>
                         <constraint firstAttribute="trailing" secondItem="Ghc-Nw-gbt" secondAttribute="trailing" constant="10" id="Kl4-pL-MMP"/>
                         <constraint firstItem="y0W-eR-82y" firstAttribute="leading" secondItem="W6z-N6-OTD" secondAttribute="leading" constant="15" id="OVW-ki-MTj"/>
                         <constraint firstItem="aIj-dg-Wwf" firstAttribute="leading" secondItem="W6z-N6-OTD" secondAttribute="leading" constant="15" id="OtQ-0S-QXT"/>
@@ -106,6 +118,7 @@
                         <constraint firstItem="aIj-dg-Wwf" firstAttribute="top" secondItem="y0W-eR-82y" secondAttribute="bottom" constant="30" id="hQ0-ba-n3A"/>
                         <constraint firstItem="Ghc-Nw-gbt" firstAttribute="leading" secondItem="W6z-N6-OTD" secondAttribute="leading" constant="10" id="hiO-4H-b18"/>
                         <constraint firstAttribute="bottom" secondItem="2rt-qo-FhS" secondAttribute="bottom" constant="20" id="i6d-CZ-xtC"/>
+                        <constraint firstAttribute="trailing" secondItem="p09-YS-Yb0" secondAttribute="trailing" constant="15" id="jB2-4D-RuL"/>
                         <constraint firstAttribute="trailing" secondItem="2rt-qo-FhS" secondAttribute="trailing" constant="20" id="jbV-fm-X9b"/>
                         <constraint firstItem="WeC-TV-E4P" firstAttribute="leading" secondItem="W6z-N6-OTD" secondAttribute="leading" constant="15" id="mCf-Wg-ZPN"/>
                         <constraint firstItem="10D-lP-59T" firstAttribute="top" secondItem="W6z-N6-OTD" secondAttribute="top" id="oTH-VK-JNc"/>

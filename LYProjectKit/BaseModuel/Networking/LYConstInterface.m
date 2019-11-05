@@ -9,7 +9,7 @@
 
 
 #if DEBUG
-NSString * const BaseURL          = @"http://ant-api.cciasia.org";
+NSString * const BaseURL          = @"http://api.agc.tw";
 #else
 NSString * const BaseURL          = @"http://api.agc.tw";
 #endif

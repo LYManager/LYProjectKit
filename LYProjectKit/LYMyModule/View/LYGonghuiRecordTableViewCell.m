@@ -47,7 +47,7 @@
     }else if (type == 2){
         return @"获赠";
     }else{
-        return @"拔卡";
+        return @"拨卡";
     }
 }
 -(NSString *)_getTypeDesString:(NSInteger)type withUserID:(NSString *)userId{
@@ -58,7 +58,7 @@
     }else if (type == 2){
         return [NSString stringWithFormat:@"转入ID %@",userId];
     }else{
-        return @"系统拔卡";
+        return @"系统拨卡";
     }
 }
 //将时间戳转换为时间字符串
