@@ -28,4 +28,6 @@ target 'LYProjectKit' do
   pod 'Toast', '~> 4.0.0'
   pod 'IQKeyboardManager', '~> 6.5.0'
   pod 'AVOSCloud'
+  pod 'OYCountDownManager'
+  
 end

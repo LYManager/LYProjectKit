@@ -10,6 +10,8 @@
 #import "LYTransactionSessionHeaderView.h"
 #import "LYTransactionSaleTableViewCell.h"
 #import "LYTransactionRecordTableViewCell.h"
+
+#import <OYCountDownManager.h>
 @interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,LYTransactionSessionHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< SessionHeaderView*/
@@ -25,6 +27,8 @@
     self.navigationItem.title = @"交易";
     
     [self configHeaderView];
+    
+    [kCountDownManager start];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -51,16 +55,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    
     if (self.clickType == LYTransactionSessionHeaderViewClickType_Record) {
          LYTransactionRecordTableViewCell * recordCell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionRecordTableViewCell" forIndexPath:indexPath];
+        [recordCell configUIWithStatus:indexPath.row % 5];
         return recordCell;
     }else{
          LYTransactionSaleTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionSaleTableViewCell" forIndexPath:indexPath];
+        
          return cell;
     }
     return nil;
@@ -81,6 +87,10 @@
         _sessionHeaderView.delegate = self;
     }
     return _sessionHeaderView;
+}
+
+- (void)dealloc{
+    NSLog(@"delloc");
 }
 /*
 #pragma mark - Navigation
