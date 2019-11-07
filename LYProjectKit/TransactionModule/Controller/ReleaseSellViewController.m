@@ -26,16 +26,54 @@
 @property (weak, nonatomic) IBOutlet UIImageView *aliImage;
 @property (weak, nonatomic) IBOutlet UIButton *submitBtn;
 
+@property (nonatomic,strong)NSString *payType;
 @end
 
 @implementation ReleaseSellViewController
 
 - (void)viewDidLoad {
 
+    self.payType = @"1";
+    
     [super viewDidLoad];
+    [self.submitBtn ly_gradint];
 
     self.title = @"出售";
+    self.userLab.text = [NSString stringWithFormat:@"%@  %@",self.model.nickName,self.model.mobile];
+    self.unitPriceLab.text = [NSString stringWithFormat:@"%@%.2fCNY",@"单价",self.model.unitPrice];
+    self.allNimberLab.text = [NSString stringWithFormat:@"%@%.0fAGC",@"卖单总数:",self.model.quantity];
+    self.moneyLab.text = [NSString stringWithFormat:@"%.2fCNY",self.model.totalAmount];
+    self.sellLab.text = [NSString stringWithFormat:@"%.2f",self.model.payAmount];
+    self.otherLab.text = [NSString stringWithFormat:@"%@%.2f",@"其中包含手续费:",self.model.charge];
 
+    self.shouruLab.text = [NSString stringWithFormat:@"%.2f",self.model.totalAmount];
+    self.tishiLab.text = [NSString stringWithFormat:@"%@%ld",@"其中包含手续费:",(long)self.model.charge];
+    self.tishiLab.text = [NSString stringWithFormat:@"%@%.2f%@",@"市场参考价1AGC≈",self.tradmodel.data.agcToRmb,@"CNY"];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImage)];
+    [_weichatImage addGestureRecognizer:tapGesture];
+    _weichatImage.userInteractionEnabled = YES;
+
+    UITapGestureRecognizer *tap1Gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click1Image)];
+    [_aliImage addGestureRecognizer:tap1Gesture];
+    _aliImage.userInteractionEnabled = YES;
+    
+    
+    
+
+}
+-(void)clickImage
+{
+    self.payType = @"1";
+    self.weichatImage.image = [UIImage imageNamed:@"椭圆1拷贝2"];
+    self.aliImage.image = [UIImage imageNamed:@"椭圆1"];
+
+}
+-(void)click1Image
+{
+    self.payType = @"2";
+    self.weichatImage.image = [UIImage imageNamed:@"椭圆1"];
+    self.aliImage.image = [UIImage imageNamed:@"椭圆1拷贝2"];
 }
 - (IBAction)sellAction:(id)sender {
 //    
@@ -45,10 +83,10 @@
 //       }
     
     [LYNetwork POSTWithApiPath:buyURL requestParams:@{
-            @"tradeId":@"",
-            @"mobile":@"",
+        @"tradeId":[NSString stringWithFormat:@"%ld",(long)self.model.tradeId],
+            @"mobile":[NSString stringWithFormat:@"%ld",(long)self.model.mobile],
             @"keyWords":@"",
-            @"payType":@""
+            @"payType":self.payType
         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
        
             [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];

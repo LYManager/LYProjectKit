@@ -9,6 +9,7 @@
 #import "PayDetailViewController.h"
 
 @interface PayDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *stateLab;
 @property (weak, nonatomic) IBOutlet UILabel *timeLab;
 @property (weak, nonatomic) IBOutlet UILabel *priceLab;
 @property (weak, nonatomic) IBOutlet UILabel *accountLab;
@@ -17,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *mineyLab;
 @property (weak, nonatomic) IBOutlet UIImageView *codeImage;
 @property (weak, nonatomic) IBOutlet UILabel *orderId;
+@property (weak, nonatomic) IBOutlet UIButton *shensuBtn;
+@property (weak, nonatomic) IBOutlet UIButton *fangbiBtn;
+@property (weak, nonatomic) IBOutlet UIButton *shensuABtn;
 
 @end
 
@@ -24,15 +28,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.title = @"买单详情";
+    if (self.model.status == 1) {
+        self.stateLab.text = @"待支付";
+        self.shensuABtn.hidden = YES;
+        self.timeLab.text = [NSString stringWithFormat:@"%@%@%@",@"买家还有",@"",@"完成支付"];
+
+    }
+    else if (self.model.status == 2) {
+        self.stateLab.text = @"已支付";
+        self.shensuBtn.hidden = YES;
+        self.fangbiBtn.hidden = YES;
+        self.shensuABtn.hidden = NO;
+        self.timeLab.text = @"待卖家确认放币";
+
+    }
+    else
+    {
+        self.stateLab.text = @"交易成功";
+        self.shensuBtn.hidden = YES;
+        self.fangbiBtn.hidden = YES;
+        self.shensuABtn.hidden = NO;
+        self.timeLab.text = @"卖家已放币";
+
+
+    }
+    self.priceLab.text = [NSString stringWithFormat:@"%.2f%@",self.model.totalAmount,@"CNY"];
+    self.accountLab.text = self.model.alipayAccount;
+    self.nameLab.text = self.model.alipayName;
+    self.numberLab.text = [NSString stringWithFormat:@"%.2f%@",self.model.quantity,@"AGC"];
+    self.mineyLab.text = [NSString stringWithFormat:@"%.2f%@",self.model.unitPrice,@"CNY"];
+    [self.codeImage sd_setImageWithURL:[NSURL URLWithString:self.model.alipayUrl]];
+    self.orderId.text = self.model.orderNum;
+
+
 }
 - (IBAction)connectAction:(id)sender {
+    [self pushViewControllerWithClassName:@"" params:nil];
+
 }
-- (IBAction)cancelAction:(id)sender {
+- (IBAction)cancelAction:(id)sender {//取消交易
+    
+    
 }
-- (IBAction)payAction:(id)sender {
+- (IBAction)payAction:(id)sender {//标记为已支付
+    
+
 }
 - (IBAction)complaintAction:(id)sender {
+    [self pushViewControllerWithClassName:@"" params:nil];
+
 }
 
 /*

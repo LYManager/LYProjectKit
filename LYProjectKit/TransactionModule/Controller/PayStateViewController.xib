@@ -10,13 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayStateViewController">
             <connections>
-                <outlet property="accountLab" destination="mqo-iI-xkr" id="5tC-63-oDh"/>
+                <outlet property="accLab" destination="c5n-u1-e9D" id="nB2-fi-6fj"/>
+                <outlet property="accountLab" destination="c5n-u1-e9D" id="XRm-D2-NK0"/>
+                <outlet property="fangbiBtn" destination="D95-Ob-nVx" id="ERs-0z-oAh"/>
                 <outlet property="moneyLab" destination="htH-cl-I6O" id="9Hl-xq-JaS"/>
                 <outlet property="nameLab" destination="83o-O6-upt" id="xM8-Nv-W0P"/>
                 <outlet property="numberLab" destination="0mJ-ul-PSC" id="9ca-Dw-jZA"/>
+                <outlet property="ordLab" destination="6Ow-kD-Nqu" id="D0M-hx-BhM"/>
                 <outlet property="orderLab" destination="mqo-iI-xkr" id="J77-lb-ED1"/>
                 <outlet property="payStateLab" destination="k64-Ws-i13" id="kYC-TG-WQs"/>
                 <outlet property="priceLab" destination="ZFI-O6-Ptv" id="pwX-1M-D3b"/>
+                <outlet property="shensuAbtn" destination="TA7-zd-T2i" id="KDl-fd-ubO"/>
+                <outlet property="shensuBtn" destination="X5F-VA-C7J" id="QvI-qQ-lFo"/>
                 <outlet property="timeLab" destination="0IV-cu-h5w" id="Yg4-QC-IeR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
