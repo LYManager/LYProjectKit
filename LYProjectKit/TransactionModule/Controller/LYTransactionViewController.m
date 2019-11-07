@@ -157,6 +157,9 @@
 }
 #pragma mark🐒------发布买单------🐒
 - (IBAction)fabuBtnAction:(UIButton *)sender {
+    [self popConfirmControllerType:ConfirmType_Purchased backBlock:^{
+        
+    }];
 }
 
 

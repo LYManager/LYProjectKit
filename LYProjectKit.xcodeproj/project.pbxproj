@@ -105,6 +105,8 @@
 		639E4708236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E4706236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m */; };
 		639E4709236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639E4707236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib */; };
 		639E470C236AED33001A4131 /* LYGonghuiRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E470B236AED33001A4131 /* LYGonghuiRecordModel.m */; };
+		639EC8B2237465C900EE5177 /* LYPopConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC8B0237465C900EE5177 /* LYPopConfirmViewController.m */; };
+		639EC8B3237465C900EE5177 /* LYPopConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639EC8B1237465C900EE5177 /* LYPopConfirmViewController.xib */; };
 		63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A815FD236438C100B9CC9E /* LYRubbishButton.m */; };
 		63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
@@ -402,6 +404,9 @@
 		639E4707236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYGonghuiRecordTableViewCell.xib; sourceTree = "<group>"; };
 		639E470A236AED33001A4131 /* LYGonghuiRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYGonghuiRecordModel.h; sourceTree = "<group>"; };
 		639E470B236AED33001A4131 /* LYGonghuiRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYGonghuiRecordModel.m; sourceTree = "<group>"; };
+		639EC8AF237465C900EE5177 /* LYPopConfirmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopConfirmViewController.h; sourceTree = "<group>"; };
+		639EC8B0237465C900EE5177 /* LYPopConfirmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopConfirmViewController.m; sourceTree = "<group>"; };
+		639EC8B1237465C900EE5177 /* LYPopConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopConfirmViewController.xib; sourceTree = "<group>"; };
 		63A815FC236438C100B9CC9E /* LYRubbishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishButton.h; sourceTree = "<group>"; };
 		63A815FD236438C100B9CC9E /* LYRubbishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishButton.m; sourceTree = "<group>"; };
 		63B3775E236735F5001C8CCC /* LYAVOSCloudManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAVOSCloudManager.h; sourceTree = "<group>"; };
@@ -1086,6 +1091,9 @@
 				63848CB1235D5F00000B505A /* LYPopErrorViewController.h */,
 				63848CB2235D5F00000B505A /* LYPopErrorViewController.m */,
 				63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */,
+				639EC8AF237465C900EE5177 /* LYPopConfirmViewController.h */,
+				639EC8B0237465C900EE5177 /* LYPopConfirmViewController.m */,
+				639EC8B1237465C900EE5177 /* LYPopConfirmViewController.xib */,
 			);
 			path = PopModule;
 			sourceTree = "<group>";
@@ -1590,6 +1598,7 @@
 				63933B9D235B27EC00D5E138 /* LYMayiGongHuiFooterView.xib in Resources */,
 				63933B93235AFF1E00D5E138 /* LYMayiGongHuiViewController.xib in Resources */,
 				634221392233B8A300A2CD27 /* Localizable.strings in Resources */,
+				639EC8B3237465C900EE5177 /* LYPopConfirmViewController.xib in Resources */,
 				82FBA386235B003800A6D038 /* AGCDetailTableViewCell.xib in Resources */,
 				82FBA369235AF08500A6D038 /* RegisteredViewController.xib in Resources */,
 				82FBA381235AFBCC00A6D038 /* AGCDetailHeadView.xib in Resources */,
@@ -1728,6 +1737,7 @@
 				82FBA385235B003800A6D038 /* AGCDetailTableViewCell.m in Sources */,
 				82FBA36F235AF08500A6D038 /* TopUpViewController.m in Sources */,
 				6342212522339C0000A2CD27 /* LYHomePageViewController.m in Sources */,
+				639EC8B2237465C900EE5177 /* LYPopConfirmViewController.m in Sources */,
 				82ECDE6A235EF831002D6532 /* AssetModel.m in Sources */,
 				82AC1ADA23711E2D00FC41BF /* PayStateViewController.m in Sources */,
 				82ECDE64235EDBAE002D6532 /* TeamModel.m in Sources */,
