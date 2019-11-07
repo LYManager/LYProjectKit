@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *danjiaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalNumLabel;
-
+/**< <#des#>*/
+@property(nonatomic,strong)LYTradePageModel * model;
 @end
 
 @implementation LYTransactionSaleTableViewCell
@@ -27,6 +28,7 @@
 }
 
 - (void)configDataWithModel:(LYTradePageModel *)model{
+    self.model = model;
     [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:model.actor] placeholderImage:nil];
     self.nicknameLabel.text = model.nickName;
     self.phoneLabel.text = model.mobile;
@@ -35,7 +37,15 @@
     self.totalNumLabel.text = [NSString stringWithFormat:@"买单总数：%.2f",model.quantity];
 }
 
+- (void)configBtnEnable:(BOOL)enable{
+    self.saleBtn.enabled = enable;
+    [self.saleBtn setTitle:enable ? @"下架" : @"出售" forState:UIControlStateNormal];
+}
+
 - (IBAction)saleBtnAction:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(unSaleAction:)]) {
+        [self.delegate unSaleAction:self.model];
+    }
 }
 
 

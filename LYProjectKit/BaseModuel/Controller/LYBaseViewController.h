@@ -12,7 +12,21 @@
 #import "UIViewController+AdjustScrollViewLayout.h"
 #import "LYTaskCardModel.h"
 #import "LYAntCardModel.h"
+@class LYPopConfirmViewController;
 NS_ASSUME_NONNULL_BEGIN
+typedef void(^BackBlock)(void);
+typedef NS_ENUM(NSUInteger,ConfirmType) {
+    ConfirmType_FB,  // 放币
+    ConfirmType_CancelTrade,  // 取消交易
+    ConfirmType_Purchased, // 标记为已支付
+    ConfirmType_SoldOut   // 下架
+};
+
+typedef void(^TradeCallBack)(NSString * pwd);
+typedef NS_ENUM(NSUInteger,TradePopType) {
+    TradePopType_Buy,  // 发布买单
+    TradePopType_Sale // 卖单
+};
 
 @interface LYBaseViewController : UIViewController
 /** 状态栏字体风格*/
@@ -48,6 +62,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 错误弹框
 - (void)popErrorControllerIsSend:(BOOL)isSend isRealNameCard:(BOOL)isRealNameCard;
+
+// 确认弹框
+- (void) popConfirmControllerType:(ConfirmType)type backBlock:(BackBlock)backBlock;
+
+//交易密码弹框
+- (void) popTradePwdControllerType:(TradePopType)type AGC:(NSString *)agc CNY:(NSString *)cny backBlock:(TradeCallBack)backBlock;
 
 @end
 

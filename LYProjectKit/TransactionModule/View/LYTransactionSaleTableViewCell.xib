@@ -100,17 +100,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5S-mi-XVy">
                         <rect key="frame" x="0.0" y="115.5" width="405" height="37.5"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_icon" translatesAutoresizingMaskIntoConstraints="NO" id="RXw-oI-W1s">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wx" translatesAutoresizingMaskIntoConstraints="NO" id="RXw-oI-W1s">
                                 <rect key="frame" x="15" y="10.5" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RXw-oI-W1s" secondAttribute="height" multiplier="1:1" id="H9g-e5-adO"/>
                                     <constraint firstAttribute="height" constant="16" id="RC3-2k-B9e"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_icon" translatesAutoresizingMaskIntoConstraints="NO" id="C0P-R4-nDf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zfb" translatesAutoresizingMaskIntoConstraints="NO" id="C0P-R4-nDf">
                                 <rect key="frame" x="36" y="10.5" width="16" height="16"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kdG-pu-f6x">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="形状2" translatesAutoresizingMaskIntoConstraints="NO" id="kdG-pu-f6x">
                                 <rect key="frame" x="57" y="10.5" width="16" height="16"/>
                             </imageView>
                         </subviews>
@@ -156,5 +156,8 @@
     </objects>
     <resources>
         <image name="head_icon" width="180" height="180"/>
+        <image name="wx" width="16.5" height="16.5"/>
+        <image name="zfb" width="16.5" height="16.5"/>
+        <image name="形状2" width="49" height="49"/>
     </resources>
 </document>

@@ -21,7 +21,9 @@
 #import "PayStateViewController.h"
 
 
-@interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,LYTransactionSessionHeaderViewDelegate>
+@interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,
+LYTransactionSessionHeaderViewDelegate,
+LYTransactionSaleTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< headerView*/
 @property(nonatomic,strong)LYTransactionHeaderView * headerView;
@@ -90,6 +92,20 @@
         }
         [self.recordArray addObjectsFromArray:model.data.pageList];
              [self.tableView reloadData];
+    }];
+}
+
+#pragma mark🐒------下架------🐒
+- (void)unSaleAction:(LYTradePageModel *)model{
+    @weakify(self)
+    [LYNetwork POSTWithApiPath:soldOutURL requestParams:@{
+        @"tradeId":@(model.tradeId)
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+         @strongify(self)
+        [self popConfirmControllerType:ConfirmType_SoldOut backBlock:^{
+            [self.dataArray removeObject:model];
+            [self.tableView reloadData];
+        }];
     }];
 }
 
@@ -164,11 +180,9 @@
 }
 #pragma mark🐒------发布买单------🐒
 - (IBAction)fabuBtnAction:(UIButton *)sender {
-    
     ReleaseBuyViewController *releaseVC = [[ReleaseBuyViewController alloc]init];
     releaseVC.model = self.model;
     [self.navigationController pushViewController:releaseVC animated:YES];
-    
 }
 
 
@@ -193,6 +207,8 @@
     }else{
          LYTransactionSaleTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionSaleTableViewCell" forIndexPath:indexPath];
         [cell configDataWithModel:self.dataArray[indexPath.row]];
+        [cell configBtnEnable:self.clickType == LYTransactionSessionHeaderViewClickType_Buy];
+        cell.delegate = self;
          return cell;
     }
     return nil;

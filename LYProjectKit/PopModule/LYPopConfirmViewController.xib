@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYPopConfirmViewController">
+            <connections>
+                <outlet property="comfirmBtn" destination="zhU-cQ-cIU" id="yxl-LZ-8II"/>
+                <outlet property="desLabel" destination="J6J-96-V0N" id="Tot-e4-24l"/>
+                <outlet property="titleLabel" destination="80J-GA-049" id="HyN-Ar-jUe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXH-tR-8HU">
+                    <rect key="frame" x="30" y="334" width="354" height="228"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-Lx-h3f">
+                            <rect key="frame" x="314" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="A5F-Td-xex"/>
+                                <constraint firstAttribute="height" constant="40" id="Nvy-IZ-xmn"/>
+                            </constraints>
+                            <state key="normal" image="cancel_icon"/>
+                            <connections>
+                                <action selector="cancelBtnAction:" destination="-1" eventType="touchUpInside" id="ccw-GP-yyd"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80J-GA-049">
+                            <rect key="frame" x="15" y="15" width="12.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-cQ-cIU">
+                            <rect key="frame" x="15" y="171" width="324" height="42"/>
+                            <color key="backgroundColor" red="0.051094092430000002" green="0.76780819889999996" blue="0.66273170709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="zhU-cQ-cIU" secondAttribute="height" multiplier="233:30" id="qyl-BH-Zy8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmBtnAction:" destination="-1" eventType="touchUpInside" id="QvC-6g-HaX"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6J-96-V0N">
+                            <rect key="frame" x="15" y="60" width="324" height="91"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.097016550600000001" green="0.11551145459999999" blue="0.2067537606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="J6J-96-V0N" secondAttribute="trailing" constant="15" id="38G-if-DNh"/>
+                        <constraint firstItem="dtp-Lx-h3f" firstAttribute="top" secondItem="cXH-tR-8HU" secondAttribute="top" id="GJe-ql-qJA"/>
+                        <constraint firstItem="80J-GA-049" firstAttribute="leading" secondItem="cXH-tR-8HU" secondAttribute="leading" constant="15" id="IaT-3V-uCY"/>
+                        <constraint firstItem="80J-GA-049" firstAttribute="top" secondItem="cXH-tR-8HU" secondAttribute="top" constant="15" id="Rsc-0v-j0j"/>
+                        <constraint firstItem="J6J-96-V0N" firstAttribute="top" secondItem="dtp-Lx-h3f" secondAttribute="bottom" constant="20" id="Wfn-f8-Q5I"/>
+                        <constraint firstAttribute="trailing" secondItem="dtp-Lx-h3f" secondAttribute="trailing" id="YaD-l0-NC6"/>
+                        <constraint firstItem="J6J-96-V0N" firstAttribute="leading" secondItem="cXH-tR-8HU" secondAttribute="leading" constant="15" id="h7r-0f-atO"/>
+                        <constraint firstItem="zhU-cQ-cIU" firstAttribute="leading" secondItem="cXH-tR-8HU" secondAttribute="leading" constant="15" id="l0n-18-aAM"/>
+                        <constraint firstAttribute="trailing" secondItem="zhU-cQ-cIU" secondAttribute="trailing" constant="15" id="sCh-qh-TUx"/>
+                        <constraint firstAttribute="width" secondItem="cXH-tR-8HU" secondAttribute="height" multiplier="280:180" id="wUz-lZ-qbR"/>
+                        <constraint firstAttribute="bottom" secondItem="zhU-cQ-cIU" secondAttribute="bottom" constant="15" id="xRW-gZ-qiB"/>
+                        <constraint firstItem="zhU-cQ-cIU" firstAttribute="top" secondItem="J6J-96-V0N" secondAttribute="bottom" constant="20" id="yKu-3l-mQS"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cXH-tR-8HU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="7Ea-pW-r6u"/>
+                <constraint firstAttribute="trailing" secondItem="cXH-tR-8HU" secondAttribute="trailing" constant="30" id="Xe5-4P-BvX"/>
+                <constraint firstItem="cXH-tR-8HU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jA8-QS-6kn"/>
+                <constraint firstItem="cXH-tR-8HU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u7A-ZU-iCH"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="112"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel_icon" width="12" height="12"/>
+    </resources>
+</document>

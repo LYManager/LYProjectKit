@@ -11,8 +11,8 @@
 #import "LYPopToolsViewController.h" // 使用道具
 #import "LYPopSendToolsViewController.h"
 #import "LYPopErrorViewController.h"
-
-
+#import "LYPopConfirmViewController.h"
+#import "LYPopTradePwdViewController.h"
 @interface LYBaseViewController ()<UINavigationControllerDelegate>
 
 @end
@@ -87,11 +87,24 @@
     [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
 
+
 - (void)popErrorControllerIsSend:(BOOL)isSend isRealNameCard:(BOOL)isRealNameCard{
     LYPopErrorViewController *vc = (LYPopErrorViewController *)[self _getPopVC:@"LYPopErrorViewController"];
     vc.isSend = isSend;
     vc.isRealNameCard = isRealNameCard;
     [self.navigationController presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)popConfirmControllerType:(ConfirmType)type backBlock:(BackBlock)backBlock{
+    LYPopConfirmViewController * vc = (LYPopConfirmViewController *)[self _getPopVC:@"LYPopConfirmViewController"];
+    [vc configDataWithType:type callBack:backBlock];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void) popTradePwdControllerType:(TradePopType)type AGC:(NSString *)agc CNY:(NSString *)cny backBlock:(TradeCallBack)backBlock{
+    LYPopTradePwdViewController * vc = (LYPopTradePwdViewController *)[self _getPopVC:@"LYPopTradePwdViewController"];
+    [vc configDataWithType:type AGC:agc CNY:cny callBack:backBlock];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (LYBaseViewController *)_getPopVC:(NSString *)popName{

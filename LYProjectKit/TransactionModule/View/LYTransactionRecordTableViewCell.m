@@ -46,10 +46,10 @@
          self.time =  model.remainTime / 1000 - [[NSDate dateWithTimeIntervalSinceNow:0]timeIntervalSince1970];
         [self configStatusWithModel:model];
         self.rightLabel.text = model.tradeType == 1 ? @"出售" : @"购买";
-           self.timeLabel.text = [self dateWithString:[@(model.createDate) stringValue] Format:@"yyyy-MM-dd HH:mm"];
-           self.priceLabel.text = [NSString stringWithFormat:@"%.2f",model.unitPrice];
-           self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.quantity];
-           self.totalLabel.text = [NSString stringWithFormat:@"%.2f",model.totalAmount];
+       self.timeLabel.text = [self dateWithString:[@(model.createDate) stringValue] Format:@"yyyy-MM-dd HH:mm"];
+       self.priceLabel.text = [NSString stringWithFormat:@"%.2f",model.unitPrice];
+       self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.quantity];
+       self.totalLabel.text = [NSString stringWithFormat:@"%.2f",model.totalAmount];
 }
 
 - (void) configStatusWithModel:(LYTradeRecordPageModel *)model{
