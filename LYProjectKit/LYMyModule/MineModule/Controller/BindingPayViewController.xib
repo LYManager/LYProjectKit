@@ -102,7 +102,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25P-MS-o1D">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload" translatesAutoresizingMaskIntoConstraints="NO" id="25P-MS-o1D">
                             <rect key="frame" x="12" y="45" width="133" height="133"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="133" id="hg4-vC-FME"/>
@@ -167,4 +167,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="upload" width="134" height="134"/>
+    </resources>
 </document>
