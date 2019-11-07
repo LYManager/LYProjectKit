@@ -91,3 +91,4 @@ NSString * const buyURL = @"/ant-api/trade/publish";
 
 NSString * const sellURL = @"/ant-api/trade/sell";
 
+NSString * const soldOutURL = @"/ant-api/trade/soldOut";

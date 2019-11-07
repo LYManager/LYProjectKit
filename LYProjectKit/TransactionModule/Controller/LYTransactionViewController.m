@@ -21,7 +21,9 @@
 #import "PayStateViewController.h"
 
 
-@interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,LYTransactionSessionHeaderViewDelegate>
+@interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,
+LYTransactionSessionHeaderViewDelegate,
+LYTransactionSaleTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< headerView*/
 @property(nonatomic,strong)LYTransactionHeaderView * headerView;
@@ -90,6 +92,16 @@
         }
         [self.recordArray addObjectsFromArray:model.data.pageList];
              [self.tableView reloadData];
+    }];
+}
+
+#pragma mark🐒------下架------🐒
+- (void)unSaleAction:(LYTradePageModel *)model{
+    [LYNetwork POSTWithApiPath:soldOutURL requestParams:@{
+        @"tradeId":@(model.tradeId)
+    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        [self.dataArray removeObject:model];
+        [self.tableView reloadData];
     }];
 }
 
@@ -191,6 +203,8 @@
     }else{
          LYTransactionSaleTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionSaleTableViewCell" forIndexPath:indexPath];
         [cell configDataWithModel:self.dataArray[indexPath.row]];
+        [cell configBtnEnable:self.clickType == LYTransactionSessionHeaderViewClickType_Buy];
+        cell.delegate = self;
          return cell;
     }
     return nil;

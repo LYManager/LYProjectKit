@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bai-q4-DPN">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="S-1" translatesAutoresizingMaskIntoConstraints="NO" id="bai-q4-DPN">
                     <rect key="frame" x="15" y="15" width="10" height="10"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="bai-q4-DPN" secondAttribute="height" multiplier="1:1" id="Xvh-We-t0p"/>
@@ -88,6 +88,6 @@
         </view>
     </objects>
     <resources>
-        <image name="head_icon" width="180" height="180"/>
+        <image name="S-1" width="10.5" height="11.5"/>
     </resources>
 </document>
