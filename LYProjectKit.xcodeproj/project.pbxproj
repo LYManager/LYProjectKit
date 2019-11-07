@@ -107,6 +107,8 @@
 		639E470C236AED33001A4131 /* LYGonghuiRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 639E470B236AED33001A4131 /* LYGonghuiRecordModel.m */; };
 		639EC8B2237465C900EE5177 /* LYPopConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC8B0237465C900EE5177 /* LYPopConfirmViewController.m */; };
 		639EC8B3237465C900EE5177 /* LYPopConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639EC8B1237465C900EE5177 /* LYPopConfirmViewController.xib */; };
+		639EC8B7237475E400EE5177 /* LYPopTradePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC8B5237475E400EE5177 /* LYPopTradePwdViewController.m */; };
+		639EC8B8237475E400EE5177 /* LYPopTradePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639EC8B6237475E400EE5177 /* LYPopTradePwdViewController.xib */; };
 		63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A815FD236438C100B9CC9E /* LYRubbishButton.m */; };
 		63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
@@ -407,6 +409,9 @@
 		639EC8AF237465C900EE5177 /* LYPopConfirmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopConfirmViewController.h; sourceTree = "<group>"; };
 		639EC8B0237465C900EE5177 /* LYPopConfirmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopConfirmViewController.m; sourceTree = "<group>"; };
 		639EC8B1237465C900EE5177 /* LYPopConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopConfirmViewController.xib; sourceTree = "<group>"; };
+		639EC8B4237475E400EE5177 /* LYPopTradePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopTradePwdViewController.h; sourceTree = "<group>"; };
+		639EC8B5237475E400EE5177 /* LYPopTradePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopTradePwdViewController.m; sourceTree = "<group>"; };
+		639EC8B6237475E400EE5177 /* LYPopTradePwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopTradePwdViewController.xib; sourceTree = "<group>"; };
 		63A815FC236438C100B9CC9E /* LYRubbishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishButton.h; sourceTree = "<group>"; };
 		63A815FD236438C100B9CC9E /* LYRubbishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishButton.m; sourceTree = "<group>"; };
 		63B3775E236735F5001C8CCC /* LYAVOSCloudManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAVOSCloudManager.h; sourceTree = "<group>"; };
@@ -1094,6 +1099,9 @@
 				639EC8AF237465C900EE5177 /* LYPopConfirmViewController.h */,
 				639EC8B0237465C900EE5177 /* LYPopConfirmViewController.m */,
 				639EC8B1237465C900EE5177 /* LYPopConfirmViewController.xib */,
+				639EC8B4237475E400EE5177 /* LYPopTradePwdViewController.h */,
+				639EC8B5237475E400EE5177 /* LYPopTradePwdViewController.m */,
+				639EC8B6237475E400EE5177 /* LYPopTradePwdViewController.xib */,
 			);
 			path = PopModule;
 			sourceTree = "<group>";
@@ -1576,6 +1584,7 @@
 				827952822368171900514471 /* 背景2.jpg in Resources */,
 				637BBDFB236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.xib in Resources */,
 				82FBA36A235AF08500A6D038 /* ModifyViewController.xib in Resources */,
+				639EC8B8237475E400EE5177 /* LYPopTradePwdViewController.xib in Resources */,
 				634221452233BA9400A2CD27 /* InfoPlist.strings in Resources */,
 				63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */,
 				82FE8E432365BFA500A47845 /* ImageViewController.xib in Resources */,
@@ -1790,6 +1799,7 @@
 				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,
 				63264DDE235C29F600293467 /* NSDictionary+TypeSafe.m in Sources */,
 				82FBA38F235B2B9D00A6D038 /* AcceptanceTableViewCell.m in Sources */,
+				639EC8B7237475E400EE5177 /* LYPopTradePwdViewController.m in Sources */,
 				82FBA367235AF08500A6D038 /* ContactCustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

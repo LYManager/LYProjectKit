@@ -164,13 +164,12 @@
 }
 #pragma mark🐒------发布买单------🐒
 - (IBAction)fabuBtnAction:(UIButton *)sender {
-
-    
-    ReleaseBuyViewController *releaseVC = [[ReleaseBuyViewController alloc]init];
-    releaseVC.model = self.model;
-    [self.navigationController pushViewController:releaseVC animated:YES];
-    
-
+    [self popTradePwdControllerType:TradePopType_Sale AGC:@"2020" CNY:@"20" backBlock:^(NSString * _Nonnull pwd) {
+        
+    }];
+//    ReleaseBuyViewController *releaseVC = [[ReleaseBuyViewController alloc]init];
+//    releaseVC.model = self.model;
+//    [self.navigationController pushViewController:releaseVC animated:YES];
 }
 
 
