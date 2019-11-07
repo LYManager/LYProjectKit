@@ -17,7 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    self.title = @"发布买单";
     [self.submitBtn ly_gradint];
+  
+    self.numberText.attributedPlaceholder = [self.numberText.placeholder ly_attributePlaceholder];
+    self.priceLab.attributedPlaceholder = [self.priceLab.placeholder ly_attributePlaceholder];
+    self.balanceLab.text = [NSString stringWithFormat:@"%@%f",@"我的AGC余额",self.model.data.agcAomount];
+
     
     
     
@@ -36,7 +42,7 @@
      [LYNetwork POSTWithApiPath:buyURL requestParams:@{
          @"quantity":self.numberText.text,
          @"unitPrice":self.priceLab.text,
-         @"keyWords":@""
+         @"keyWords":@"123456"
      } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
     
          [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];

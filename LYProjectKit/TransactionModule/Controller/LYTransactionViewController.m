@@ -15,6 +15,12 @@
 #import "LYTradeRecordModel.h"
 #import "LYTradeRecordPageModel.h"
 #import <OYCountDownManager.h>
+#import "ReleaseBuyViewController.h"
+#import "ReleaseSellViewController.h"
+#import "PayDetailViewController.h"
+#import "PayStateViewController.h"
+
+
 @interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,LYTransactionSessionHeaderViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< headerView*/
@@ -61,6 +67,7 @@
         @"pageNum":@(page)
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         LYTradeModel * model = [LYTradeModel modelWithDictionary:response];
+        self.model = model;
         [self configHeaderViewWithModel:model];
         if (self.dataArray.count >= model.data.tradeList.total) {
             [self.tableView reloadData];
@@ -157,9 +164,13 @@
 }
 #pragma mark🐒------发布买单------🐒
 - (IBAction)fabuBtnAction:(UIButton *)sender {
-    [self popConfirmControllerType:ConfirmType_Purchased backBlock:^{
-        
-    }];
+
+    
+    ReleaseBuyViewController *releaseVC = [[ReleaseBuyViewController alloc]init];
+    releaseVC.model = self.model;
+    [self.navigationController pushViewController:releaseVC animated:YES];
+    
+
 }
 
 
@@ -201,9 +212,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.clickType == LYTransactionSessionHeaderViewClickType_Sale) { // 出售
         LYTradePageModel * model = self.dataArray[indexPath.row];
+        ReleaseSellViewController *releaseVC = [[ReleaseSellViewController alloc]init];
+        releaseVC.model = model;
+        [self.navigationController pushViewController:releaseVC animated:YES];
         // TODO 跳转
     }else if (self.clickType == LYTransactionSessionHeaderViewClickType_Buy){ // 购买
         LYTradePageModel * model = self.dataArray[indexPath.row];
+        
+        
         // TODO 跳转
     }else{    // 交易记录
         LYTradeRecordPageModel * model = self.recordArray[indexPath.row];
