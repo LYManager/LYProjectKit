@@ -97,11 +97,15 @@ LYTransactionSaleTableViewCellDelegate>
 
 #pragma mark🐒------下架------🐒
 - (void)unSaleAction:(LYTradePageModel *)model{
+    @weakify(self)
     [LYNetwork POSTWithApiPath:soldOutURL requestParams:@{
         @"tradeId":@(model.tradeId)
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-        [self.dataArray removeObject:model];
-        [self.tableView reloadData];
+         @strongify(self)
+        [self popConfirmControllerType:ConfirmType_SoldOut backBlock:^{
+            [self.dataArray removeObject:model];
+            [self.tableView reloadData];
+        }];
     }];
 }
 

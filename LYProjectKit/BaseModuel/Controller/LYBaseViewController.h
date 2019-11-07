@@ -18,7 +18,8 @@ typedef void(^BackBlock)(void);
 typedef NS_ENUM(NSUInteger,ConfirmType) {
     ConfirmType_FB,  // 放币
     ConfirmType_CancelTrade,  // 取消交易
-    ConfirmType_Purchased  // 标记为已支付
+    ConfirmType_Purchased, // 标记为已支付
+    ConfirmType_SoldOut   // 下架
 };
 
 typedef void(^TradeCallBack)(NSString * pwd);

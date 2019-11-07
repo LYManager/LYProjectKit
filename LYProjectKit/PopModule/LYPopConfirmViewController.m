@@ -58,6 +58,13 @@
                 btnTitle = @"确定";
            }
            break;
+        case ConfirmType_SoldOut:
+        {
+            title = @"下架";
+            desc = @"确定下架该单？";
+             btnTitle = @"确定";
+        }
+        break;
    }
    self.titleLabel.text = title;
    self.desLabel.text = desc;
