@@ -9,6 +9,14 @@
 #import "PayStateViewController.h"
 
 @interface PayStateViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *payStateLab;
+@property (weak, nonatomic) IBOutlet UILabel *timeLab;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLab;
+@property (weak, nonatomic) IBOutlet UIView *accountLab;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *numberLab;
+@property (weak, nonatomic) IBOutlet UILabel *priceLab;
+@property (weak, nonatomic) IBOutlet UIView *orderLab;
 
 @end
 
@@ -17,6 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)connectAction:(id)sender {
+}
+- (IBAction)complaintAction:(id)sender {
+}
+- (IBAction)putAction:(id)sender {
+}
+- (IBAction)connAction:(id)sender {
 }
 
 /*

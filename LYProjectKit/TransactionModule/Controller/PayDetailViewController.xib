@@ -10,6 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayDetailViewController">
             <connections>
+                <outlet property="accountLab" destination="Ile-2x-cYZ" id="tIe-0u-dAN"/>
+                <outlet property="codeImage" destination="3Ua-4T-X9t" id="G84-b6-5oz"/>
+                <outlet property="mineyLab" destination="PCD-LA-rwE" id="sZs-qA-F3Y"/>
+                <outlet property="nameLab" destination="bNo-fR-XID" id="Opl-Jq-IfY"/>
+                <outlet property="numberLab" destination="eJg-So-mak" id="zbW-zz-1x1"/>
+                <outlet property="orderId" destination="xwT-dR-HYy" id="etU-YK-N14"/>
+                <outlet property="priceLab" destination="4UC-ms-VzK" id="aTg-qi-k9h"/>
+                <outlet property="timeLab" destination="qfk-DY-v9v" id="0Dx-g4-t7D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -223,8 +231,11 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="联系客服"/>
+                            <connections>
+                                <action selector="connectAction:" destination="-1" eventType="touchUpInside" id="iNE-kG-zme"/>
+                            </connections>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bangding" translatesAutoresizingMaskIntoConstraints="NO" id="vSN-zF-Mg9">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="vSN-zF-Mg9">
                             <rect key="frame" x="301" y="19" width="12" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="FxE-w0-SaR"/>
@@ -251,15 +262,57 @@
                     <color key="textColor" red="0.52297914028167725" green="0.52065765857696533" blue="0.94122177362442017" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWg-n3-Hs8">
+                    <rect key="frame" x="14" y="786" width="386" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Pi2-6N-vBZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="申诉"/>
+                    <connections>
+                        <action selector="complaintAction:" destination="-1" eventType="touchUpInside" id="nyc-Mb-2Ki"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzn-l5-jT3">
+                    <rect key="frame" x="16" y="745" width="100" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="ezv-3i-now"/>
+                        <constraint firstAttribute="width" constant="100" id="l2L-N5-1hg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="取消交易"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="7P6-QI-mfr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJO-JS-eG5">
+                    <rect key="frame" x="126" y="745" width="274" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="wWq-Mt-SdC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="标记为已支付"/>
+                    <connections>
+                        <action selector="payAction:" destination="-1" eventType="touchUpInside" id="f6B-vd-sCp"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.031500332059999997" green="0.03851054609" blue="0.078436277809999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="8Df-pJ-f5s" firstAttribute="top" secondItem="l2S-a8-gMz" secondAttribute="bottom" constant="7" id="66x-Aw-ef1"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Wyy-FV-G20" secondAttribute="trailing" constant="15" id="8p1-Ml-e6S"/>
                 <constraint firstItem="8Df-pJ-f5s" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="ASj-2q-Jv4"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="BWg-n3-Hs8" secondAttribute="bottom" constant="40" id="Ha8-gg-GEX"/>
                 <constraint firstItem="l2S-a8-gMz" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="KZf-Xq-y6x"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kJO-JS-eG5" secondAttribute="trailing" constant="14" id="Lbr-Rg-QpO"/>
                 <constraint firstItem="hPg-qi-SxU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="Lhf-uw-gLA"/>
                 <constraint firstItem="l2S-a8-gMz" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Mab-rW-fBh"/>
+                <constraint firstItem="kJO-JS-eG5" firstAttribute="leading" secondItem="bzn-l5-jT3" secondAttribute="trailing" constant="10" id="cJn-E3-4Vu"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="BWg-n3-Hs8" secondAttribute="trailing" constant="14" id="eRg-ZY-1Ht"/>
+                <constraint firstItem="BWg-n3-Hs8" firstAttribute="top" secondItem="kJO-JS-eG5" secondAttribute="bottom" constant="5" id="ecC-wv-tzO"/>
+                <constraint firstItem="BWg-n3-Hs8" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="14" id="f4i-nE-OE7"/>
+                <constraint firstItem="bzn-l5-jT3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="fdy-re-09U"/>
+                <constraint firstItem="BWg-n3-Hs8" firstAttribute="top" secondItem="bzn-l5-jT3" secondAttribute="bottom" constant="5" id="gN3-Zc-4Iu"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="8Df-pJ-f5s" secondAttribute="trailing" constant="15" id="gc1-uJ-YtU"/>
                 <constraint firstItem="Wyy-FV-G20" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="hhk-Ky-Jq3"/>
                 <constraint firstItem="Wyy-FV-G20" firstAttribute="top" secondItem="hPg-qi-SxU" secondAttribute="bottom" constant="13" id="iCm-tg-faN"/>
@@ -272,7 +325,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bangding" width="23" height="23"/>
         <image name="code.jpg" width="256" height="256"/>
+        <image name="phone" width="12.5" height="12.5"/>
     </resources>
 </document>

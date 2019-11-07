@@ -9,6 +9,14 @@
 #import "PayDetailViewController.h"
 
 @interface PayDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *timeLab;
+@property (weak, nonatomic) IBOutlet UILabel *priceLab;
+@property (weak, nonatomic) IBOutlet UILabel *accountLab;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *numberLab;
+@property (weak, nonatomic) IBOutlet UILabel *mineyLab;
+@property (weak, nonatomic) IBOutlet UIImageView *codeImage;
+@property (weak, nonatomic) IBOutlet UILabel *orderId;
 
 @end
 
@@ -17,6 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)connectAction:(id)sender {
+}
+- (IBAction)cancelAction:(id)sender {
+}
+- (IBAction)payAction:(id)sender {
+}
+- (IBAction)complaintAction:(id)sender {
 }
 
 /*
