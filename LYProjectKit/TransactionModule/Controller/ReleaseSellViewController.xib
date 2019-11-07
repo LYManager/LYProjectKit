@@ -12,7 +12,15 @@
             <connections>
                 <outlet property="aliBtn" destination="odx-ja-iiT" id="kk1-Ag-MYs"/>
                 <outlet property="aliImage" destination="bIy-CF-Kvo" id="khw-7Z-Zst"/>
+                <outlet property="allNimberLab" destination="0he-Z6-DrB" id="zWR-uw-uhf"/>
+                <outlet property="moneyLab" destination="zaS-Ti-Fv4" id="a2w-Bw-sYE"/>
+                <outlet property="otherLab" destination="u5N-OE-Rpz" id="5YU-Qf-Pzg"/>
+                <outlet property="sellLab" destination="Msw-iE-AcX" id="2Ey-9K-6go"/>
+                <outlet property="shouruLab" destination="3px-nk-IxZ" id="5VZ-Vf-1ua"/>
                 <outlet property="submitBtn" destination="6Lq-bx-q9m" id="fYe-OR-8q5"/>
+                <outlet property="tishiLab" destination="BfJ-nz-wzA" id="TaW-dU-xTp"/>
+                <outlet property="unitPriceLab" destination="tuT-Cs-5Td" id="Ar7-AI-Qm0"/>
+                <outlet property="userLab" destination="jnW-bA-wPQ" id="cqd-ch-oQf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weichatBtn" destination="gO1-ER-kuN" id="qFS-5a-bTH"/>
                 <outlet property="weichatImage" destination="Uvv-ba-miR" id="ffc-GG-8oJ"/>
@@ -26,7 +34,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tgs-fs-Iau">
                     <rect key="frame" x="15" y="44" width="384" height="103"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="wNo-AW-bJs">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m拷贝" translatesAutoresizingMaskIntoConstraints="NO" id="wNo-AW-bJs">
                             <rect key="frame" x="10" y="13" width="16" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="16" id="L9n-FW-qf2"/>
@@ -197,26 +205,27 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odx-ja-iiT">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odx-ja-iiT">
                             <rect key="frame" x="304" y="17" width="60" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="16" id="jgB-us-MD2"/>
                                 <constraint firstAttribute="width" constant="60" id="m01-bl-GWG"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <state key="normal" title="支付宝">
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
+                            <state key="normal" title="支付宝" image="zfb">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bIy-CF-Kvo">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="椭圆1" translatesAutoresizingMaskIntoConstraints="NO" id="bIy-CF-Kvo">
                             <rect key="frame" x="285" y="19" width="12" height="12"/>
-                            <color key="backgroundColor" red="0.4470003843" green="0.80898457769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="7ak-FB-QYV"/>
                                 <constraint firstAttribute="width" constant="12" id="OO1-Tn-UhR"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-ER-kuN">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO1-ER-kuN">
                             <rect key="frame" x="196" y="17" width="60" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="95y-5e-een"/>
@@ -224,14 +233,15 @@
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="KAp-pe-Uqj"/>
                                 <constraint firstAttribute="width" constant="60" id="OyT-Rk-5Z6"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <state key="normal" title="微信">
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
+                            <state key="normal" title="微信" image="wx">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-ba-miR">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="椭圆1拷贝2" translatesAutoresizingMaskIntoConstraints="NO" id="Uvv-ba-miR">
                             <rect key="frame" x="177" y="19" width="12" height="12"/>
-                            <color key="backgroundColor" red="0.4470003843" green="0.80898457769999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="Xb9-eI-bK6"/>
                                 <constraint firstAttribute="width" constant="12" id="eDm-aT-v3f"/>
@@ -302,6 +312,10 @@
         </view>
     </objects>
     <resources>
-        <image name="A" width="17" height="17"/>
+        <image name="m拷贝" width="17" height="17"/>
+        <image name="wx" width="16.5" height="16.5"/>
+        <image name="zfb" width="16.5" height="16.5"/>
+        <image name="椭圆1" width="13" height="13"/>
+        <image name="椭圆1拷贝2" width="13" height="13"/>
     </resources>
 </document>

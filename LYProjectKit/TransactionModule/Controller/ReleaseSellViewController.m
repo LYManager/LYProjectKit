@@ -9,6 +9,17 @@
 #import "ReleaseSellViewController.h"
 
 @interface ReleaseSellViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *userLab;
+@property (weak, nonatomic) IBOutlet UILabel *unitPriceLab;
+@property (weak, nonatomic) IBOutlet UILabel *allNimberLab;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLab;
+@property (weak, nonatomic) IBOutlet UILabel *sellLab;
+@property (weak, nonatomic) IBOutlet UILabel *otherLab;
+@property (weak, nonatomic) IBOutlet UILabel *shouruLab;
+@property (weak, nonatomic) IBOutlet UILabel *tishiLab;
+
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *weichatImage;
 @property (weak, nonatomic) IBOutlet UIButton *weichatBtn;
 @property (weak, nonatomic) IBOutlet UIButton *aliBtn;
