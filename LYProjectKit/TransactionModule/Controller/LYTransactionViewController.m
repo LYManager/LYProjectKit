@@ -154,6 +154,10 @@
         [self loadRequest:self.pageNum];
     }
 }
+#pragma mark🐒------发布买单------🐒
+- (IBAction)fabuBtnAction:(UIButton *)sender {
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;

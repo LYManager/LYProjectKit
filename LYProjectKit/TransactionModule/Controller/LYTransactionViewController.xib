@@ -36,6 +36,9 @@
                             <color key="backgroundColor" red="0.051094092430000002" green="0.76780819889999996" blue="0.66273170709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="发布买单"/>
+                            <connections>
+                                <action selector="fabuBtnAction:" destination="-1" eventType="touchUpInside" id="SER-rA-1v7"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.062369965020000001" green="0.069832727309999995" blue="0.1071563587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
