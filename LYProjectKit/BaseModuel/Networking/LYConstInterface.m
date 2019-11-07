@@ -82,3 +82,6 @@ NSString * const bindAliURL = @"/ant-api/user/addAlipay";
 
 NSString * const bindWeiatURL = @"/ant-api/user/addWeChat";
 
+NSString * const buyURL = @"/ant-api/trade/publish";
+
+NSString * const sellURL = @"/ant-api/trade/sell";

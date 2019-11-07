@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ReleaseBuyViewController : LYBaseViewController
+@property (weak, nonatomic) IBOutlet UITextField *numberText;
+@property (weak, nonatomic) IBOutlet UITextField *priceLab;
 
+@property (weak, nonatomic) IBOutlet UILabel *balanceLab;
+@property (weak, nonatomic) IBOutlet UILabel *referenceLab;
+@property (weak, nonatomic) IBOutlet UIButton *submitBtn;
 @end
 
 NS_ASSUME_NONNULL_END

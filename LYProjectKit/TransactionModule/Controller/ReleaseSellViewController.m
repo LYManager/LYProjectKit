@@ -9,14 +9,44 @@
 #import "ReleaseSellViewController.h"
 
 @interface ReleaseSellViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *weichatImage;
+@property (weak, nonatomic) IBOutlet UIButton *weichatBtn;
+@property (weak, nonatomic) IBOutlet UIButton *aliBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *aliImage;
+@property (weak, nonatomic) IBOutlet UIButton *submitBtn;
 
 @end
 
 @implementation ReleaseSellViewController
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.title = @"出售";
+
+}
+- (IBAction)sellAction:(id)sender {
+//    
+//    if (self.numberText.text.length == 0) {
+//           [self.view makeToast:@"交易密码不能为空" duration:1 position:CSToastPositionCenter];
+//           return;
+//       }
+    
+    [LYNetwork POSTWithApiPath:buyURL requestParams:@{
+            @"tradeId":@"",
+            @"mobile":@"",
+            @"keyWords":@"",
+            @"payType":@""
+        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+       
+            [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.navigationController popViewControllerAnimated:YES];
+
+            });
+        }];
+       
 }
 
 /*

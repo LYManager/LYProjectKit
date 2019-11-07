@@ -261,7 +261,7 @@
         }
         //上传
          
-         [LYNetwork POSTWithApiPath:uploadImageUrl requestParams:@{
+         [LYNetwork POSTWithApiPath:bindAliURL requestParams:@{
              @"alipay":[self utf8ToUnicode:self.accountText.text],
              @"nickName":[self utf8ToUnicode:self.nikeText.text],
              @"imageData":self.imageData
@@ -291,7 +291,7 @@
             [self.view makeToast:@"请上传微信收款码" duration:1 position:CSToastPositionCenter];
             return;
         }
-        [LYNetwork POSTWithApiPath:uploadImageUrl requestParams:@{
+        [LYNetwork POSTWithApiPath:bindWeiatURL requestParams:@{
              @"weichat":[self utf8ToUnicode:self.accountText.text],
              @"nickName":[self utf8ToUnicode:self.nikeText.text],
              @"imageData":self.imageData
