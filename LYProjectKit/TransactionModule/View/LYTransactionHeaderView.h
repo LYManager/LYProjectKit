@@ -6,11 +6,11 @@
 // 
 
 #import <UIKit/UIKit.h>
-
+#import "LYTradeModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYTransactionHeaderView : UIView
-
+- (void) configDataWithModel:(LYTradeModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END

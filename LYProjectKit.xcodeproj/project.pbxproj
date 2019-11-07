@@ -51,6 +51,10 @@
 		63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63775503235EC70C00FEA141 /* LYTaskCardModel.m */; };
 		637BBDFA236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637BBDF8236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.m */; };
 		637BBDFB236BFDDD00B26A03 /* LYTransactionRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637BBDF9236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.xib */; };
+		637EDCEC23730C9100B9668D /* LYTradeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637EDCEB23730C9100B9668D /* LYTradeModel.m */; };
+		637EDCEF23730E5300B9668D /* LYTradePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637EDCEE23730E5300B9668D /* LYTradePageModel.m */; };
+		637EDCF2237324A800B9668D /* LYTradeRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637EDCF1237324A800B9668D /* LYTradeRecordModel.m */; };
+		637EDCF52373253B00B9668D /* LYTradeRecordPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637EDCF42373253B00B9668D /* LYTradeRecordPageModel.m */; };
 		63848CB4235D5F00000B505A /* LYPopErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CB2235D5F00000B505A /* LYPopErrorViewController.m */; };
 		63848CB5235D5F00000B505A /* LYPopErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */; };
 		63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63848CBB235D76D1000B505A /* LYHomeViewController.m */; };
@@ -308,6 +312,14 @@
 		637BBDF7236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTransactionRecordTableViewCell.h; sourceTree = "<group>"; };
 		637BBDF8236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTransactionRecordTableViewCell.m; sourceTree = "<group>"; };
 		637BBDF9236BFDDC00B26A03 /* LYTransactionRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTransactionRecordTableViewCell.xib; sourceTree = "<group>"; };
+		637EDCEA23730C9100B9668D /* LYTradeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTradeModel.h; sourceTree = "<group>"; };
+		637EDCEB23730C9100B9668D /* LYTradeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTradeModel.m; sourceTree = "<group>"; };
+		637EDCED23730E5300B9668D /* LYTradePageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTradePageModel.h; sourceTree = "<group>"; };
+		637EDCEE23730E5300B9668D /* LYTradePageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTradePageModel.m; sourceTree = "<group>"; };
+		637EDCF0237324A800B9668D /* LYTradeRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTradeRecordModel.h; sourceTree = "<group>"; };
+		637EDCF1237324A800B9668D /* LYTradeRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTradeRecordModel.m; sourceTree = "<group>"; };
+		637EDCF32373253A00B9668D /* LYTradeRecordPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYTradeRecordPageModel.h; sourceTree = "<group>"; };
+		637EDCF42373253B00B9668D /* LYTradeRecordPageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYTradeRecordPageModel.m; sourceTree = "<group>"; };
 		63848CB1235D5F00000B505A /* LYPopErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopErrorViewController.h; sourceTree = "<group>"; };
 		63848CB2235D5F00000B505A /* LYPopErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopErrorViewController.m; sourceTree = "<group>"; };
 		63848CB3235D5F00000B505A /* LYPopErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopErrorViewController.xib; sourceTree = "<group>"; };
@@ -1134,6 +1146,14 @@
 		63E8C0E723687D7400C95354 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				637EDCEA23730C9100B9668D /* LYTradeModel.h */,
+				637EDCEB23730C9100B9668D /* LYTradeModel.m */,
+				637EDCED23730E5300B9668D /* LYTradePageModel.h */,
+				637EDCEE23730E5300B9668D /* LYTradePageModel.m */,
+				637EDCF0237324A800B9668D /* LYTradeRecordModel.h */,
+				637EDCF1237324A800B9668D /* LYTradeRecordModel.m */,
+				637EDCF32373253A00B9668D /* LYTradeRecordPageModel.h */,
+				637EDCF42373253B00B9668D /* LYTradeRecordPageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1644,6 +1664,7 @@
 				6342210C223393EB00A2CD27 /* AppDelegate.m in Sources */,
 				82EAAD8A235E08E300991124 /* ImageTableViewCell.m in Sources */,
 				639E4703236AE5DB001A4131 /* LYGonghuiRecordViewController.m in Sources */,
+				637EDCF2237324A800B9668D /* LYTradeRecordModel.m in Sources */,
 				63848CBD235D76D1000B505A /* LYHomeViewController.m in Sources */,
 				82FBA370235AF08500A6D038 /* RegisteredViewController.m in Sources */,
 				634220FC2233925E00A2CD27 /* main.m in Sources */,
@@ -1651,6 +1672,7 @@
 				82ECDE6D235F00DB002D6532 /* CoinDetailModel.m in Sources */,
 				82FE8DF32362A60200A47845 /* InviteViewController.m in Sources */,
 				82AC1ADF237121F800FC41BF /* ReleaseSellViewController.m in Sources */,
+				637EDCEC23730C9100B9668D /* LYTradeModel.m in Sources */,
 				63E8C0F52368867A00C95354 /* LYTransactionSessionHeaderView.m in Sources */,
 				63775504235EC70C00FEA141 /* LYTaskCardModel.m in Sources */,
 				639E470C236AED33001A4131 /* LYGonghuiRecordModel.m in Sources */,
@@ -1671,6 +1693,7 @@
 				63E9988C2237504A00A1168B /* LYWebViewController.m in Sources */,
 				637754F5235E847600FEA141 /* LYBaseModel.m in Sources */,
 				63531BF8235CC7040072A093 /* LYPopSendToolsViewController.m in Sources */,
+				637EDCEF23730E5300B9668D /* LYTradePageModel.m in Sources */,
 				63933B5B2359DFDE00D5E138 /* UIButton+Gradient.m in Sources */,
 				63264DE1235C3E7C00293467 /* LYShengTaiBaseTableViewCell.m in Sources */,
 				63933B85235ABEBE00D5E138 /* LYLoginPwdViewController.m in Sources */,
@@ -1690,6 +1713,7 @@
 				6397A633235C54C400F8A2D2 /* LYPayPopViewController.m in Sources */,
 				63264DD5235C14A000293467 /* GHLLocalizable.m in Sources */,
 				63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */,
+				637EDCF52373253B00B9668D /* LYTradeRecordPageModel.m in Sources */,
 				63684BDB23605BF90066D0C9 /* LYHomeCycleBgView.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
 				82FBA385235B003800A6D038 /* AGCDetailTableViewCell.m in Sources */,

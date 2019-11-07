@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger,LYTransactionSessionHeaderViewClickType) {
-    LYTransactionSessionHeaderViewClickType_Sale,
+    LYTransactionSessionHeaderViewClickType_Sale = 1,
     LYTransactionSessionHeaderViewClickType_Buy,
     LYTransactionSessionHeaderViewClickType_Record
 };

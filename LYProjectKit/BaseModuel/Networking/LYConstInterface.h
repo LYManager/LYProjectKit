@@ -77,3 +77,7 @@ UIKIT_EXTERN NSString * const registURL;
 
 UIKIT_EXTERN NSString * const codelogURL;
 UIKIT_EXTERN NSString * const forcedURL;
+
+UIKIT_EXTERN NSString * const tradeURL;
+
+UIKIT_EXTERN NSString * const tradeRecordURL;

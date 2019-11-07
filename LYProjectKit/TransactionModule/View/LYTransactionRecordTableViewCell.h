@@ -6,7 +6,7 @@
 // 
 
 #import <UIKit/UIKit.h>
-
+#import "LYTradeRecordPageModel.h"
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger,CellType) {
     CellType_Waitpay,
@@ -18,6 +18,8 @@ typedef NS_ENUM(NSUInteger,CellType) {
 };
 @interface LYTransactionRecordTableViewCell : UITableViewCell
 - (void)configUIWithStatus:(CellType)type;
+
+- (void)configWithModel:(LYTradeRecordPageModel *)model;
 /**< test*/
 @property(nonatomic,assign)NSInteger time;
 @end

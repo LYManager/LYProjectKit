@@ -143,7 +143,13 @@
             <color key="backgroundColor" red="0.062369965020000001" green="0.069832727309999995" blue="0.1071563587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="danjiaLabel" destination="40K-Of-C7O" id="NHw-Ep-gwl"/>
+                <outlet property="headerImageView" destination="Paq-Il-xwE" id="g8f-IJ-ut8"/>
+                <outlet property="nicknameLabel" destination="biR-vm-3qC" id="Yvr-dH-0LA"/>
+                <outlet property="phoneLabel" destination="TcO-bn-Dzs" id="HEO-IB-pmi"/>
                 <outlet property="saleBtn" destination="6vc-Cs-QBV" id="Jed-aD-PeO"/>
+                <outlet property="totalLabel" destination="2k5-1c-kyW" id="h12-LD-msE"/>
+                <outlet property="totalNumLabel" destination="Cgn-Rj-Lku" id="ljs-G2-NGA"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="116.51785714285714"/>
         </tableViewCell>

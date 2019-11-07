@@ -6,11 +6,11 @@
 // 
 
 #import <UIKit/UIKit.h>
-
+#import "LYTradePageModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYTransactionSaleTableViewCell : UITableViewCell
-
+- (void) configDataWithModel:(LYTradePageModel *)model;
 @end
 
 NS_ASSUME_NONNULL_END

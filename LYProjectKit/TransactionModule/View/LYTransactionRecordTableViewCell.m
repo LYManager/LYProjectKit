@@ -41,6 +41,39 @@
     // Initialization code
 }
 
+- (void)configWithModel:(LYTradeRecordPageModel *)model{
+    
+         self.time =  model.createDate / 1000 - [[NSDate dateWithTimeIntervalSinceNow:0]timeIntervalSince1970];
+        [self configStatusWithModel:model];
+        self.rightLabel.text = model.tradeType == 1 ? @"出售" : @"购买";
+           self.timeLabel.text = [self dateWithString:[@(model.createDate) stringValue] Format:@"yyyy-MM-dd HH:mm"];
+           self.priceLabel.text = [NSString stringWithFormat:@"%.2f",model.unitPrice];
+           self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.quantity];
+           self.totalLabel.text = [NSString stringWithFormat:@"%.2f",model.totalAmount];
+}
+
+- (void) configStatusWithModel:(LYTradeRecordPageModel *)model{
+    CellType type;
+    if (model.tradeType == 1) {
+        if (model.status == 1) {
+            type = CellType_WaitMoney;
+        }else if (model.status == 2){
+            type = CellType_WaitSendAGC;
+        }else{
+            type = CellType_GetAGC;
+        }
+    }else{
+        if (model.status == 1) {
+            type = CellType_Waitpay;
+        }else if (model.status == 2){
+            type = CellType_Paied;
+        }else{
+            type = CellType_TradeSuccess;
+        }
+    }
+    [self configUIWithStatus:type];
+}
+
 - (void)countDownNotification {
     /// 计算倒计时
      self.time --;
@@ -150,5 +183,27 @@
     self.statusLabel.text = status;
     self.statusDesLabel.text = statusDesc;
 }
+
+//将时间戳转换为时间字符串
+- (NSString*)dateWithString:(NSString*)str Format:(NSString*)format
+
+{
+
+    NSTimeInterval time = [str doubleValue]/1000;;
+
+    /** [[NSDate date] timeIntervalSince1970]*1000;*/
+
+    NSDate *detaildate = [NSDate dateWithTimeIntervalSince1970:time];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
+
+    [dateFormatter setDateFormat:format];//设定时间格式,这里可以设置成自己需要的格式
+
+    NSString*currentDateStr = [dateFormatter stringFromDate:detaildate];
+
+    return currentDateStr;
+
+}
+
 
 @end

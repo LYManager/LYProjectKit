@@ -9,7 +9,7 @@
 
 
 #if DEBUG
-NSString * const BaseURL          = @"http://api.agc.tw";
+NSString * const BaseURL          = @"http://ant-api.cciasia.org";
 #else
 NSString * const BaseURL          = @"http://api.agc.tw";
 #endif
@@ -78,3 +78,6 @@ NSString * const codelogURL = @"/ant-api/user/mobileLogin";
 
 NSString * const forcedURL = @"/ant-api/common/appClient";
 
+NSString * const tradeURL = @"/ant-api/trade/tradedRecord";
+
+NSString * const tradeRecordURL = @"/ant-api/trade/trade";
