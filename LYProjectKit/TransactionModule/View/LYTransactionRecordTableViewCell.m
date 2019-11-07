@@ -43,7 +43,7 @@
 
 - (void)configWithModel:(LYTradeRecordPageModel *)model{
     
-         self.time =  model.createDate / 1000 - [[NSDate dateWithTimeIntervalSinceNow:0]timeIntervalSince1970];
+         self.time =  model.remainTime / 1000 - [[NSDate dateWithTimeIntervalSinceNow:0]timeIntervalSince1970];
         [self configStatusWithModel:model];
         self.rightLabel.text = model.tradeType == 1 ? @"出售" : @"购买";
            self.timeLabel.text = [self dateWithString:[@(model.createDate) stringValue] Format:@"yyyy-MM-dd HH:mm"];

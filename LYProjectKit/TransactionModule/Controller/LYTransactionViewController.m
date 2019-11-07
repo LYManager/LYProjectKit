@@ -78,6 +78,7 @@
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         LYTradeRecordModel * model = [LYTradeRecordModel modelWithDictionary:response];
         if (self.recordArray.count >= model.data.total) {
+            [self.tableView reloadData];
             return ;
         }
         [self.recordArray addObjectsFromArray:model.data.pageList];
@@ -192,6 +193,19 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return self.sessionHeaderView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.clickType == LYTransactionSessionHeaderViewClickType_Sale) { // 出售
+        LYTradePageModel * model = self.dataArray[indexPath.row];
+        // TODO 跳转
+    }else if (self.clickType == LYTransactionSessionHeaderViewClickType_Buy){ // 购买
+        LYTradePageModel * model = self.dataArray[indexPath.row];
+        // TODO 跳转
+    }else{    // 交易记录
+        LYTradeRecordPageModel * model = self.recordArray[indexPath.row];
+        // TODO 跳转
+    }
 }
 
 - (void) configBottomCons{
