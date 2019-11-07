@@ -15,7 +15,8 @@
 #import "InvitFriendViewController.h"
 #import "ImageViewController.h"
 #import "APPDelegate.h"
-
+#import "ReleaseBuyViewController.h"
+#import "ReleaseSellViewController.h"
 @interface LYHomeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UILabel *agcLabel;
@@ -184,7 +185,9 @@ static NSInteger local = 0;
 /// 交易
 /// @param sender sender
 - (IBAction)jiaoyiAction:(UIButton *)sender {
+
     [self pushViewControllerWithClassName:@"LYTransactionViewController" params:nil];
+
     //LYTransactionViewController
 }
 

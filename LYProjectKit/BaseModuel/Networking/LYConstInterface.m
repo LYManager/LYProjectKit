@@ -78,6 +78,16 @@ NSString * const codelogURL = @"/ant-api/user/mobileLogin";
 
 NSString * const forcedURL = @"/ant-api/common/appClient";
 
+
 NSString * const tradeURL = @"/ant-api/trade/tradedRecord";
 
 NSString * const tradeRecordURL = @"/ant-api/trade/trade";
+
+NSString * const bindAliURL = @"/ant-api/user/addAlipay";
+
+NSString * const bindWeiatURL = @"/ant-api/user/addWeChat";
+
+NSString * const buyURL = @"/ant-api/trade/publish";
+
+NSString * const sellURL = @"/ant-api/trade/sell";
+

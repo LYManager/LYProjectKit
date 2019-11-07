@@ -16,7 +16,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+   
+    [self.submitBtn ly_gradint];
+    
+    
+    
+    
+}
+- (IBAction)submitAction:(id)sender {
+    
+    if (self.numberText.text.length == 0) {
+        [self.view makeToast:@"请输入买入数量" duration:1 position:CSToastPositionCenter];
+        return;
+    }
+    if (self.priceLab.text.length == 0) {
+        [self.view makeToast:@"请输入买入单价" duration:1 position:CSToastPositionCenter];
+        return;
+    }
+     [LYNetwork POSTWithApiPath:buyURL requestParams:@{
+         @"quantity":self.numberText.text,
+         @"unitPrice":self.priceLab.text,
+         @"keyWords":@""
+     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+    
+         [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];
+         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+             [self.navigationController popViewControllerAnimated:YES];
+
+         });
+     }];
+    
 }
 
 /*

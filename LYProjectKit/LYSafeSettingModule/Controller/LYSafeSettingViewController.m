@@ -8,6 +8,7 @@
 #import "LYSafeSettingViewController.h"
 #import "LYSafeSettingTableViewCell.h"
 #import "LYLoginPwdViewController.h"
+#import "BindingPayViewController.h"
 typedef NSString * ControllerName;
 @interface LYSafeSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -86,9 +87,17 @@ static NSString * const kSettingCellIdentifier = @"LYSafeSettingTableViewCell";
                    [self popErrorControllerIsSend:NO isRealNameCard:YES];
                }
     }
+    else if (indexPath.section == 3)
+    {
+        BindingPayViewController *logVC = [[BindingPayViewController alloc]init];
+        logVC.myStr = @"1";
+        [self.navigationController pushViewController:logVC animated:YES];
+    }
     else
     {
-       [self.view makeToast:@"功能开发中。。。" duration:2 position:CSToastPositionCenter];
+       BindingPayViewController *logVC = [[BindingPayViewController alloc]init];
+       logVC.myStr = @"0";
+       [self.navigationController pushViewController:logVC animated:YES];
     }
     
 }

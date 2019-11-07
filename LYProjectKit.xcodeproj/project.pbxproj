@@ -120,6 +120,8 @@
 		63E9988F2237545B00A1168B /* LYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9988E2237545B00A1168B /* LYWebView.m */; };
 		63E9989F22377D5200A1168B /* LYFindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E9989E22377D5200A1168B /* LYFindModel.m */; };
 		827952822368171900514471 /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 827952812368171900514471 /* 背景2.jpg */; };
+		828AA1422373099000EF3B91 /* BindingPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828AA1402373099000EF3B91 /* BindingPayViewController.m */; };
+		828AA1432373099000EF3B91 /* BindingPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 828AA1412373099000EF3B91 /* BindingPayViewController.xib */; };
 		829C2D38235B405C004F9641 /* MyBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829C2D36235B405C004F9641 /* MyBillViewController.m */; };
 		829C2D39235B405C004F9641 /* MyBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D37235B405C004F9641 /* MyBillViewController.xib */; };
 		829C2D3B235C08A2004F9641 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 829C2D3A235C08A1004F9641 /* 1.jpg */; };
@@ -428,6 +430,9 @@
 		63E9989D22377D5200A1168B /* LYFindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFindModel.h; sourceTree = "<group>"; };
 		63E9989E22377D5200A1168B /* LYFindModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFindModel.m; sourceTree = "<group>"; };
 		827952812368171900514471 /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
+		828AA13F2373099000EF3B91 /* BindingPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindingPayViewController.h; sourceTree = "<group>"; };
+		828AA1402373099000EF3B91 /* BindingPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingPayViewController.m; sourceTree = "<group>"; };
+		828AA1412373099000EF3B91 /* BindingPayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindingPayViewController.xib; sourceTree = "<group>"; };
 		829C2D35235B405C004F9641 /* MyBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBillViewController.h; sourceTree = "<group>"; };
 		829C2D36235B405C004F9641 /* MyBillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBillViewController.m; sourceTree = "<group>"; };
 		829C2D37235B405C004F9641 /* MyBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBillViewController.xib; sourceTree = "<group>"; };
@@ -1333,6 +1338,9 @@
 				82FE8E412365BFA500A47845 /* ImageViewController.xib */,
 				82FE8DF12362A60200A47845 /* InviteViewController.h */,
 				82FE8DF22362A60200A47845 /* InviteViewController.m */,
+				828AA13F2373099000EF3B91 /* BindingPayViewController.h */,
+				828AA1402373099000EF3B91 /* BindingPayViewController.m */,
+				828AA1412373099000EF3B91 /* BindingPayViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1551,6 +1559,7 @@
 				82FBA36E235AF08500A6D038 /* LoginViewController.xib in Resources */,
 				82FBA37C235AF9A000A6D038 /* AGCDetailViewController.xib in Resources */,
 				63E8C0F223687F1000C95354 /* LYTransactionHeaderView.xib in Resources */,
+				828AA1432373099000EF3B91 /* BindingPayViewController.xib in Resources */,
 				82AC1ADB23711E2D00FC41BF /* PayStateViewController.xib in Resources */,
 				639E4709236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.xib in Resources */,
 				82EAAD8C235E08E300991124 /* 123123.png in Resources */,
@@ -1733,6 +1742,7 @@
 				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
 				6336751A2234E7A600B87968 /* LYProgressHUD.m in Sources */,
 				634221312233B49F00A2CD27 /* UITabBar+Repair_iOS_12_1_bug.m in Sources */,
+				828AA1422373099000EF3B91 /* BindingPayViewController.m in Sources */,
 				639E46FD236A7DEB001A4131 /* LYSureSendCardView.m in Sources */,
 				82FBA372235AF08500A6D038 /* SystemSettingViewController.m in Sources */,
 				63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */,

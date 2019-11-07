@@ -78,6 +78,13 @@ UIKIT_EXTERN NSString * const registURL;
 UIKIT_EXTERN NSString * const codelogURL;
 UIKIT_EXTERN NSString * const forcedURL;
 
+
 UIKIT_EXTERN NSString * const tradeURL;
 
 UIKIT_EXTERN NSString * const tradeRecordURL;
+
+UIKIT_EXTERN NSString * const bindAliURL;
+UIKIT_EXTERN NSString * const bindWeiatURL;
+UIKIT_EXTERN NSString * const buyURL;
+UIKIT_EXTERN NSString * const sellURL;
+
