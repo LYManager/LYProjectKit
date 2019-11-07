@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYTransactionViewController">
             <connections>
+                <outlet property="bottomCon" destination="UBK-nw-6zE" id="mWL-Xq-xhA"/>
+                <outlet property="fabuBtn" destination="cuQ-Xa-VxG" id="I1e-YY-2V6"/>
                 <outlet property="tableView" destination="DGg-3W-UvC" id="EE9-oZ-P2D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,15 +28,37 @@
                         <outlet property="delegate" destination="-1" id="JGx-ey-Rez"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLh-op-EdT">
+                    <rect key="frame" x="0.0" y="896" width="414" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuQ-Xa-VxG">
+                            <rect key="frame" x="20" y="10" width="374" height="40"/>
+                            <color key="backgroundColor" red="0.051094092430000002" green="0.76780819889999996" blue="0.66273170709999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="发布买单"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.062369965020000001" green="0.069832727309999995" blue="0.1071563587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cuQ-Xa-VxG" secondAttribute="trailing" constant="20" id="13I-B9-ryf"/>
+                        <constraint firstItem="cuQ-Xa-VxG" firstAttribute="leading" secondItem="GLh-op-EdT" secondAttribute="leading" constant="20" id="1xm-9n-fA1"/>
+                        <constraint firstAttribute="bottom" secondItem="cuQ-Xa-VxG" secondAttribute="bottom" constant="10" id="TXi-Zg-XmF"/>
+                        <constraint firstAttribute="height" constant="60" id="g7J-Gl-BTp"/>
+                        <constraint firstItem="cuQ-Xa-VxG" firstAttribute="top" secondItem="GLh-op-EdT" secondAttribute="top" constant="10" id="lh1-Pi-nda"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="DGg-3W-UvC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="7YB-oU-pmk"/>
-                <constraint firstItem="DGg-3W-UvC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BS7-FF-7XB"/>
-                <constraint firstAttribute="bottom" secondItem="DGg-3W-UvC" secondAttribute="bottom" id="EGJ-6Z-kR7"/>
-                <constraint firstAttribute="trailing" secondItem="DGg-3W-UvC" secondAttribute="trailing" constant="15" id="wJ6-ex-sWP"/>
+                <constraint firstItem="GLh-op-EdT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0Pz-Hw-kxQ"/>
+                <constraint firstAttribute="trailing" secondItem="GLh-op-EdT" secondAttribute="trailing" id="HAK-Oa-Nta"/>
+                <constraint firstItem="GLh-op-EdT" firstAttribute="top" secondItem="DGg-3W-UvC" secondAttribute="bottom" id="JY1-3p-iyL"/>
+                <constraint firstAttribute="bottom" secondItem="GLh-op-EdT" secondAttribute="bottom" constant="-60" id="UBK-nw-6zE"/>
+                <constraint firstItem="DGg-3W-UvC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="goX-w7-Oa7"/>
+                <constraint firstAttribute="trailing" secondItem="DGg-3W-UvC" secondAttribute="trailing" constant="15" id="xA2-Hj-2VD"/>
+                <constraint firstItem="DGg-3W-UvC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="z2m-zS-nds"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="96"/>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
         </view>
     </objects>
 </document>
