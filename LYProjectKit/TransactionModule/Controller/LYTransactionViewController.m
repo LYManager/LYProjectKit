@@ -31,6 +31,9 @@
 @property(nonatomic,strong)NSMutableArray<LYTradeRecordPageModel *> *recordArray;
 /**< */
 @property(nonatomic,assign)NSInteger pageNum;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomCon;
+@property (weak, nonatomic) IBOutlet UIButton *fabuBtn;
+
 @end
 
 @implementation LYTransactionViewController
@@ -38,12 +41,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"交易";
-    
+    [self.fabuBtn ly_gradint];
     [self configHeaderView];
     self.clickType = LYTransactionSessionHeaderViewClickType_Sale;
+//    [self configBottomCons];
     [kCountDownManager start];
     self.pageNum = 1;
-    [self loadRequest:1];
+    [self loadRequest:3];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -58,6 +62,10 @@
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         LYTradeModel * model = [LYTradeModel modelWithDictionary:response];
         [self configHeaderViewWithModel:model];
+        if (self.dataArray.count >= model.data.tradeList.total) {
+            [self.tableView reloadData];
+            return ;
+        }
         [self.dataArray addObjectsFromArray:model.data.tradeList.pageList];
         [self.tableView reloadData];
     }];
@@ -69,11 +77,12 @@
         @"pageSize":@(10)
     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         LYTradeRecordModel * model = [LYTradeRecordModel modelWithDictionary:response];
+        if (self.recordArray.count >= model.data.total) {
+            [self.tableView reloadData];
+            return ;
+        }
         [self.recordArray addObjectsFromArray:model.data.pageList];
-        
              [self.tableView reloadData];
-        
-       
     }];
 }
 
@@ -135,7 +144,9 @@
 }
 
 - (void)clickActionWithType:(LYTransactionSessionHeaderViewClickType)clickType{
+    
     self.clickType = clickType;
+    [self configBottomCons];
     [self.dataArray removeAllObjects];
     self.pageNum = 1;
     if (clickType == LYTransactionSessionHeaderViewClickType_Record) {
@@ -144,6 +155,10 @@
         [self loadRequest:self.pageNum];
     }
 }
+#pragma mark🐒------发布买单------🐒
+- (IBAction)fabuBtnAction:(UIButton *)sender {
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -178,6 +193,29 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return self.sessionHeaderView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.clickType == LYTransactionSessionHeaderViewClickType_Sale) { // 出售
+        LYTradePageModel * model = self.dataArray[indexPath.row];
+        // TODO 跳转
+    }else if (self.clickType == LYTransactionSessionHeaderViewClickType_Buy){ // 购买
+        LYTradePageModel * model = self.dataArray[indexPath.row];
+        // TODO 跳转
+    }else{    // 交易记录
+        LYTradeRecordPageModel * model = self.recordArray[indexPath.row];
+        // TODO 跳转
+    }
+}
+
+- (void) configBottomCons{
+    CGFloat bottomCons = self.clickType == LYTransactionSessionHeaderViewClickType_Buy ? 20 : -60;
+    [self.view setNeedsLayout];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.bottomCon.constant = bottomCons;
+        [self.view layoutIfNeeded];
+    }];
+    
 }
 
 - (LYTransactionSessionHeaderView *)sessionHeaderView{

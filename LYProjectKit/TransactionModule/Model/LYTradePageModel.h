@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *  mobile;
 /**< paytype 1支付宝 2微信*/
 @property(nonatomic,assign)NSInteger payType;
+/**< 过期时间戳*/
+@property(nonatomic,assign)NSInteger remainTime;
 @end
 
 NS_ASSUME_NONNULL_END
