@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *balanceLab;
 @property (weak, nonatomic) IBOutlet UILabel *referenceLab;
 @property (weak, nonatomic) IBOutlet UIButton *submitBtn;
+@property (weak, nonatomic) IBOutlet UILabel *zongjiaLab;
 @end
 
 NS_ASSUME_NONNULL_END

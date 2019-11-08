@@ -73,13 +73,25 @@
     [self pushViewControllerWithClassName:@"" params:nil];
 
 }
-- (IBAction)putAction:(id)sender {
+- (IBAction)putAction:(id)sender {//确认放币
+    [self popConfirmControllerType:ConfirmType_FB backBlock:^{
+        
+        [LYNetwork POSTWithApiPath:concormlOutURL requestParams:@{
+             @"tradeId":@(self.model.recordId)
+         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        
+             [self.view makeToast:@"确认放币" duration:1 position:CSToastPositionCenter];
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 [self.navigationController popViewControllerAnimated:YES];
+
+             });
+         }];
+    }];
 
     
 }
 - (IBAction)connAction:(id)sender {
     [self pushViewControllerWithClassName:@"" params:nil];
-
 }
 
 /*

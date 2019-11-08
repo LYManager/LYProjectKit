@@ -8,7 +8,8 @@
 
 #import "ReleaseBuyViewController.h"
 
-@interface ReleaseBuyViewController ()
+@interface ReleaseBuyViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *shuomingLab;
 
 @end
 
@@ -24,13 +25,28 @@
     self.priceLab.attributedPlaceholder = [self.priceLab.placeholder ly_attributePlaceholder];
     self.balanceLab.text = [NSString stringWithFormat:@"%@%.2f",@"我的AGC余额",self.model.data.agcAomount];
     self.referenceLab.text = [NSString stringWithFormat:@"%@%.2f%@",@"市场参考价1AGC≈",self.model.data.agcToRmb,@"CNY"];
+    self.numberText.delegate =self;
+    self.priceLab.delegate =self;
+    self.shuomingLab.text = self.model.data.tradeShow;
+
 
     
     
     
     
 }
+-(void)textFieldDidChangeSelection:(UITextField *)textField
+{
+    if (self.numberText.text.length !=0 && self.priceLab.text.length !=0) {
+        CGFloat zongjia = [self.numberText.text floatValue] *[self.priceLab.text floatValue];
+        self.zongjiaLab.text = [NSString stringWithFormat:@"%.2fCNY",zongjia];
+    }
+    
+}
+
 - (IBAction)submitAction:(id)sender {
+    
+    
     
     if (self.numberText.text.length == 0) {
         [self.view makeToast:@"请输入买入数量" duration:1 position:CSToastPositionCenter];
@@ -40,18 +56,27 @@
         [self.view makeToast:@"请输入买入单价" duration:1 position:CSToastPositionCenter];
         return;
     }
-     [LYNetwork POSTWithApiPath:buyURL requestParams:@{
-         @"quantity":self.numberText.text,
-         @"unitPrice":self.priceLab.text,
-         @"keyWords":@"123456"
-     } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
     
-         [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];
-         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-             [self.navigationController popViewControllerAnimated:YES];
+    [self popTradePwdControllerType:TradePopType_Buy AGC:self.numberText.text CNY:self.numberText.text backBlock:^(NSString * _Nonnull pwd) {
+        
+        
+        [LYNetwork POSTWithApiPath:buyURL requestParams:@{
+             @"quantity":self.numberText.text,
+             @"unitPrice":self.priceLab.text,
+             @"keyWords":pwd?:@""
+         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        
+             [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 [self.navigationController popViewControllerAnimated:YES];
 
-         });
-     }];
+             });
+         }];
+    }];
+    
+    
+    
+     
     
 }
 

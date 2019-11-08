@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *shouruLab;
 @property (weak, nonatomic) IBOutlet UILabel *tishiLab;
 
+@property (weak, nonatomic) IBOutlet UILabel *shuomingLab;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *weichatImage;
@@ -50,6 +51,8 @@
     self.tishiLab.text = [NSString stringWithFormat:@"%@%ld",@"其中包含手续费:",(long)self.model.charge];
     self.tishiLab.text = [NSString stringWithFormat:@"%@%.2f%@",@"市场参考价1AGC≈",self.tradmodel.data.agcToRmb,@"CNY"];
     
+    self.shuomingLab.text = self.tradmodel.data.tradeDescrip;
+    
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImage)];
     [_weichatImage addGestureRecognizer:tapGesture];
     _weichatImage.userInteractionEnabled = YES;
@@ -76,25 +79,28 @@
     self.aliImage.image = [UIImage imageNamed:@"椭圆1拷贝2"];
 }
 - (IBAction)sellAction:(id)sender {
-//    
-//    if (self.numberText.text.length == 0) {
-//           [self.view makeToast:@"交易密码不能为空" duration:1 position:CSToastPositionCenter];
-//           return;
-//       }
-    
-    [LYNetwork POSTWithApiPath:buyURL requestParams:@{
-        @"tradeId":[NSString stringWithFormat:@"%ld",(long)self.model.tradeId],
-            @"mobile":[NSString stringWithFormat:@"%ld",(long)self.model.mobile],
-            @"keyWords":@"",
-            @"payType":self.payType
-        } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-       
-            [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.navigationController popViewControllerAnimated:YES];
 
-            });
-        }];
+    
+    NSString *agcStr = [NSString stringWithFormat:@"%.2f",self.model.quantity];
+    NSString *cnyStr = [NSString stringWithFormat:@"%.2f",self.model.totalAmount];
+
+    [self popTradePwdControllerType:TradePopType_Sale AGC:agcStr CNY:cnyStr backBlock:^(NSString * _Nonnull pwd) {
+        [LYNetwork POSTWithApiPath:buyURL requestParams:@{
+         @"tradeId":[NSString stringWithFormat:@"%ld",(long)self.model.tradeId],
+             @"mobile":[NSString stringWithFormat:@"%ld",(long)self.model.mobile],
+         @"keyWords":pwd?:@"",
+             @"payType":self.payType
+         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        
+             [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 [self.navigationController popViewControllerAnimated:YES];
+
+             });
+         }];
+    }];
+    
+    
        
 }
 

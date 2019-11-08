@@ -69,11 +69,37 @@
 }
 - (IBAction)cancelAction:(id)sender {//取消交易
     
+    [self popConfirmControllerType:ConfirmType_CancelTrade backBlock:^{
+        
+        [LYNetwork POSTWithApiPath:cancelOutURL requestParams:@{
+             @"tradeId":@(self.model.recordId)
+         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        
+             [self.view makeToast:@"取消交易" duration:1 position:CSToastPositionCenter];
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 [self.navigationController popViewControllerAnimated:YES];
+
+             });
+         }];
+    }];
+    
     
 }
 - (IBAction)payAction:(id)sender {//标记为已支付
     
+    [self popConfirmControllerType:ConfirmType_Purchased backBlock:^{
+        
+        [LYNetwork POSTWithApiPath:concormlOutURL requestParams:@{
+             @"tradeId":@(self.model.recordId)
+         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+        
+             [self.view makeToast:@"标记为已支付" duration:1 position:CSToastPositionCenter];
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 [self.navigationController popViewControllerAnimated:YES];
 
+             });
+         }];
+    }];
 }
 - (IBAction)complaintAction:(id)sender {
     [self pushViewControllerWithClassName:@"" params:nil];
