@@ -55,10 +55,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在14:30前支付给卖家" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IV-cu-h5w">
-                            <rect key="frame" x="220" y="17" width="150" height="12"/>
+                            <rect key="frame" x="176" y="17" width="194" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="Fdb-6D-O6i"/>
-                                <constraint firstAttribute="width" constant="150" id="rfw-Fn-QGE"/>
+                                <constraint firstAttribute="width" constant="194" id="rfw-Fn-QGE"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="0.51927697660000005" green="0.77705651519999996" blue="0.98042327169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -260,7 +260,7 @@
                         <constraint firstAttribute="height" constant="36" id="P2v-wO-Y1V"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="申诉"/>
+                    <state key="normal" title="申述"/>
                     <connections>
                         <action selector="complaintAction:" destination="-1" eventType="touchUpInside" id="9Dn-xR-cKB"/>
                     </connections>
@@ -272,7 +272,7 @@
                         <constraint firstAttribute="width" constant="100" id="dUj-jP-piL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="申诉">
+                    <state key="normal" title="申述">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -316,7 +316,7 @@
                 <constraint firstItem="fTp-Hm-mxW" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="tPN-kr-STX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="139" y="128"/>
+            <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
         </view>
     </objects>
     <resources>

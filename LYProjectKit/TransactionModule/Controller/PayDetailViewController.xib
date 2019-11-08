@@ -57,9 +57,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在14:30前支付给卖家" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfk-DY-v9v">
-                            <rect key="frame" x="215" y="17" width="150" height="12"/>
+                            <rect key="frame" x="187" y="17" width="178" height="12"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="150" id="cE0-KN-Bmz"/>
+                                <constraint firstAttribute="width" constant="178" id="cE0-KN-Bmz"/>
                                 <constraint firstAttribute="height" constant="12" id="maC-PB-sIM"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -275,7 +275,7 @@
                         <constraint firstAttribute="height" constant="36" id="Pi2-6N-vBZ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="申诉"/>
+                    <state key="normal" title="申述"/>
                     <connections>
                         <action selector="complaintAction:" destination="-1" eventType="touchUpInside" id="nyc-Mb-2Ki"/>
                     </connections>
