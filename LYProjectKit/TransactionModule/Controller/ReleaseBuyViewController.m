@@ -10,7 +10,7 @@
 
 @interface ReleaseBuyViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *shuomingLab;
-
+@property (nonatomic,strong)NSString *zongjiaStr;
 @end
 
 @implementation ReleaseBuyViewController
@@ -40,6 +40,7 @@
     if (self.numberText.text.length !=0 && self.priceLab.text.length !=0) {
         CGFloat zongjia = [self.numberText.text floatValue] *[self.priceLab.text floatValue];
         self.zongjiaLab.text = [NSString stringWithFormat:@"%.2fCNY",zongjia];
+        self.zongjiaStr = [NSString stringWithFormat:@"%.2f",zongjia];
     }
     
 }
@@ -57,7 +58,7 @@
         return;
     }
     
-    [self popTradePwdControllerType:TradePopType_Buy AGC:self.numberText.text CNY:self.numberText.text backBlock:^(NSString * _Nonnull pwd) {
+    [self popTradePwdControllerType:TradePopType_Buy AGC:self.numberText.text CNY:self.zongjiaStr backBlock:^(NSString * _Nonnull pwd) {
         
         
         [LYNetwork POSTWithApiPath:buyURL requestParams:@{
