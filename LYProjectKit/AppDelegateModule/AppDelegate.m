@@ -61,7 +61,6 @@ static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
         NSString *url = [[response objectForKey:@"data"] objectForKey:@"url"];
         NSString *force_update = [[response objectForKey:@"data"] objectForKey:@"force_update"];
         NSString *title = [[response objectForKey:@"data"] objectForKey:@"tip"];
-
         if ([force_update isEqualToString:@"Y"]) {//强制更新
             
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -77,11 +76,11 @@ static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
             }];
             // 添加取消按钮才能点击空白隐藏
             [alertController addAction:OKAction];
-            UIWindow   *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-            alertWindow.rootViewController = [[UIViewController alloc] init];
-            alertWindow.windowLevel = UIWindowLevelAlert + 1;
-            [alertWindow makeKeyAndVisible];
-            [alertWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+//            UIWindow   *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//            alertWindow.rootViewController = [[UIViewController alloc] init];
+//            alertWindow.windowLevel = UIWindowLevelAlert + 1;
+//            [alertWindow makeKeyAndVisible];
+            [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
 
         }
         if ([force_update isEqualToString:@"N"]) {//非强制更新
@@ -106,11 +105,11 @@ static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
             [alertController addAction:cancalBtn];
            [alertController addAction:OKAction];
 
-           UIWindow   *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-           alertWindow.rootViewController = [[UIViewController alloc] init];
-           alertWindow.windowLevel = UIWindowLevelAlert + 1;
-           [alertWindow makeKeyAndVisible];
-           [alertWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+//           UIWindow   *alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//           alertWindow.rootViewController = [[UIViewController alloc] init];
+//           alertWindow.windowLevel = UIWindowLevelAlert + 1;
+//           [alertWindow makeKeyAndVisible];
+           [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
 
        }
 
