@@ -260,25 +260,31 @@
             return;
         }
         //上传
-         
-         [LYNetwork POSTWithApiPath:bindAliURL requestParams:@{
-             @"alipay":[self utf8ToUnicode:self.accountText.text],
-             @"nickName":[self utf8ToUnicode:self.nikeText.text],
-             @"imageData":self.imageData
-         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         
-             [self.view makeToast:@"绑定成功" duration:1 position:CSToastPositionCenter];
-             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                 [self.navigationController popViewControllerAnimated:YES];
+        [self popTradePwdControllerType:TradePopType_Bind AGC:@"" CNY:@"" backBlock:^(NSString * _Nonnull pwd) {
+            [LYNetwork POSTWithApiPath:bindAliURL requestParams:@{
+                 @"alipay":[self utf8ToUnicode:self.accountText.text],
+                 @"nickName":[self utf8ToUnicode:self.nikeText.text],
+                 @"imageData":self.imageData,
+                 @"keyWords":pwd?:@""
+             } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+            
+                 [self.view makeToast:@"绑定成功" duration:1 position:CSToastPositionCenter];
+                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                     [self.navigationController popViewControllerAnimated:YES];
 
-             });
-         }];
+                 });
+             }];
+        }];
+         
+         
         
         
         
     }
     else
     {
+        
         if (self.accountText.text.length == 0) {
             [self.view makeToast:@"请填写微信收款账户" duration:1 position:CSToastPositionCenter];
             return;
@@ -291,19 +297,23 @@
             [self.view makeToast:@"请上传微信收款码" duration:1 position:CSToastPositionCenter];
             return;
         }
-        [LYNetwork POSTWithApiPath:bindWeiatURL requestParams:@{
-             @"weichat":[self utf8ToUnicode:self.accountText.text],
-             @"nickName":[self utf8ToUnicode:self.nikeText.text],
-             @"imageData":self.imageData
-         } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-        
-            [self.view makeToast:@"绑定成功" duration:1 position:CSToastPositionCenter];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.navigationController popViewControllerAnimated:YES];
+        [self popTradePwdControllerType:TradePopType_Bind AGC:@"" CNY:@"" backBlock:^(NSString * _Nonnull pwd) {
+             [LYNetwork POSTWithApiPath:bindWeiatURL requestParams:@{
+                        @"weichat":[self utf8ToUnicode:self.accountText.text],
+                        @"nickName":[self utf8ToUnicode:self.nikeText.text],
+                        @"imageData":self.imageData,
+                        @"keyWords":pwd?:@""
+                    } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+                   
+                       [self.view makeToast:@"绑定成功" duration:1 position:CSToastPositionCenter];
+                       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                           [self.navigationController popViewControllerAnimated:YES];
 
-            });
-             
-         }];
+                       });
+                        
+                    }];
+        }];
+       
     }
     
     

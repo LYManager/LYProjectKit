@@ -17,6 +17,7 @@
                 <outlet property="otherLab" destination="u5N-OE-Rpz" id="5YU-Qf-Pzg"/>
                 <outlet property="sellLab" destination="Msw-iE-AcX" id="2Ey-9K-6go"/>
                 <outlet property="shouruLab" destination="3px-nk-IxZ" id="5VZ-Vf-1ua"/>
+                <outlet property="shuomingLab" destination="d4f-zE-wUi" id="0vJ-nn-sUZ"/>
                 <outlet property="submitBtn" destination="6Lq-bx-q9m" id="fYe-OR-8q5"/>
                 <outlet property="tishiLab" destination="BfJ-nz-wzA" id="TaW-dU-xTp"/>
                 <outlet property="unitPriceLab" destination="tuT-Cs-5Td" id="Ar7-AI-Qm0"/>
@@ -268,10 +269,10 @@
                         <constraint firstItem="bIy-CF-Kvo" firstAttribute="leading" secondItem="gO1-ER-kuN" secondAttribute="trailing" constant="29" id="uyf-zu-jsS"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*交易说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-zE-wUi">
-                    <rect key="frame" x="20" y="477" width="374" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*交易说明" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-zE-wUi">
+                    <rect key="frame" x="20" y="477" width="374" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="12" id="cCS-KR-POp"/>
+                        <constraint firstAttribute="height" constant="50" id="cCS-KR-POp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.33756303787231445" green="0.34728157520294189" blue="0.45491594076156616" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

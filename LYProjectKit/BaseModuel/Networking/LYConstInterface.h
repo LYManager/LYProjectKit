@@ -89,4 +89,6 @@ UIKIT_EXTERN NSString * const buyURL;
 UIKIT_EXTERN NSString * const sellURL;
 
 UIKIT_EXTERN NSString * const soldOutURL;
+UIKIT_EXTERN NSString * const concormlOutURL;
+UIKIT_EXTERN NSString * const cancelOutURL;
 

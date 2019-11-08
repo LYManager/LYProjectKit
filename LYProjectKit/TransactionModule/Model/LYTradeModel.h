@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LYTradeModelData : NSObject
 /**< 交易说明*/
 @property(nonatomic,copy)NSString *  tradeDescrip;
+@property(nonatomic,copy)NSString *  tradeShow;
+
 /**< 市场参考价*/
 @property(nonatomic,assign)CGFloat agcToRmb;
 /**< agc数量*/
