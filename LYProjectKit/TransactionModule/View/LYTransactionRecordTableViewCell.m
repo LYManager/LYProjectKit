@@ -47,9 +47,9 @@
         [self configStatusWithModel:model];
         self.rightLabel.text = model.tradeType == 1 ? @"出售" : @"购买";
        self.timeLabel.text = [self dateWithString:[@(model.createDate) stringValue] Format:@"yyyy-MM-dd HH:mm"];
-       self.priceLabel.text = [NSString stringWithFormat:@"%.2f",model.unitPrice];
+       self.priceLabel.text = [NSString stringWithFormat:@"%.2fCNY",model.unitPrice];
        self.agcLabel.text = [NSString stringWithFormat:@"%.2f",model.quantity];
-       self.totalLabel.text = [NSString stringWithFormat:@"%.2f",model.totalAmount];
+       self.totalLabel.text = [NSString stringWithFormat:@"%.2fCNY",model.totalAmount];
 }
 
 - (void) configStatusWithModel:(LYTradeRecordPageModel *)model{

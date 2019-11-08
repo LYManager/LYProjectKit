@@ -13,4 +13,10 @@
         @"tradeId" : @"id",
     };
 }
+- (NSString *)mobile{
+    return _mobile.length >= 7 ? [_mobile stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"] : _mobile;
+}
+- (NSString *)phoneNumber{
+    return _mobile;
+}
 @end

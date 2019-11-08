@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)CGFloat totalAmount;
 /**< mobile*/
 @property(nonatomic,copy)NSString *  mobile;
+/**< 联系手机号*/
+@property(nonatomic,copy)NSString *  phoneNumber;
 /**< paytype 1支付宝 2微信*/
 @property(nonatomic,assign)NSInteger payType;
 /**< 过期时间戳*/
