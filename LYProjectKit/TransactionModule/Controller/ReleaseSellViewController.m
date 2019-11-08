@@ -86,14 +86,14 @@
     NSString *cnyStr = [NSString stringWithFormat:@"%.2f",self.model.totalAmount];
 
     [self popTradePwdControllerType:TradePopType_Sale AGC:agcStr CNY:cnyStr backBlock:^(NSString * _Nonnull pwd) {
-        [LYNetwork POSTWithApiPath:buyURL requestParams:@{
+        [LYNetwork POSTWithApiPath:sellURL requestParams:@{
          @"tradeId":[NSString stringWithFormat:@"%ld",(long)self.model.tradeId],
              @"mobile":[NSString stringWithFormat:@"%ld",(long)self.model.mobile],
          @"keyWords":pwd?:@"",
              @"payType":self.payType
          } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
         
-             [self.view makeToast:@"发布成功" duration:1 position:CSToastPositionCenter];
+             [self.view makeToast:@"出售成功" duration:1 position:CSToastPositionCenter];
              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                  [self.navigationController popViewControllerAnimated:YES];
 

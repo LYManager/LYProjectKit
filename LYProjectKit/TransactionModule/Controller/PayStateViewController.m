@@ -79,11 +79,19 @@
 
 }
 - (IBAction)connectAction:(id)sender {
-    [self pushViewControllerWithClassName:@"" params:nil];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",self.model.mobile]];
+
+    UIWebView *webView = [[UIWebView alloc] init];
+
+    [webView loadRequest:[NSURLRequest requestWithURL:url]];
+
+    [self.view addSubview:webView];
 
 }
 - (IBAction)complaintAction:(id)sender {
-    [self pushViewControllerWithClassName:@"" params:nil];
+        ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
+    [self.navigationController pushViewController:custmVC animated:YES];
+
 
 }
 - (IBAction)putAction:(id)sender {//确认放币
@@ -104,7 +112,9 @@
     
 }
 - (IBAction)connAction:(id)sender {
-    [self pushViewControllerWithClassName:@"" params:nil];
+        ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
+    [self.navigationController pushViewController:custmVC animated:YES];
+
 }
 - (NSString *)ConvertStrToTime:(NSString *)timeStr{
 

@@ -184,9 +184,9 @@ static NSString * const kMineTableViewCellIdentifier = @"LYMineTableViewCell";
         [self.navigationController pushViewController:custmVC animated:YES];
     }
     if (indexPath.section == 4) {
-//        ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
-//        [self.navigationController pushViewController:custmVC animated:YES];
-        [self pushViewControllerWithClassName:@"" params:nil];
+        ContactCustomerViewController *custmVC = [[ContactCustomerViewController alloc]init];
+        [self.navigationController pushViewController:custmVC animated:YES];
+//        [self pushViewControllerWithClassName:@"" params:nil];
 
     }
 }

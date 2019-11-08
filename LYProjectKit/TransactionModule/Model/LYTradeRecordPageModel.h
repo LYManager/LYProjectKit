@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *  alipayName;
 /**< 微信名字*/
 @property(nonatomic,copy)NSString *  weiChatName;
+@property(nonatomic,copy)NSString *  mobile;
+
 /**< w支付宝账号*/
 @property(nonatomic,copy)NSString *  alipayAccount;
 /**< 微信账号*/
