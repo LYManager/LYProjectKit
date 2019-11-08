@@ -16,12 +16,27 @@ typedef NS_ENUM(NSUInteger,CellType) {
     CellType_WaitSendAGC,
     CellType_GetAGC
 };
+
+@protocol LYTransactionRecordTableViewCellDelegate <NSObject>
+
+- (void) confirmSendAGC:(LYTradeRecordPageModel *)model;
+
+- (void) cancelTrade:(LYTradeRecordPageModel *)model;
+
+- (void) shenshu:(LYTradeRecordPageModel *)model;
+
+- (void) payAtOnce:(LYTradeRecordPageModel *)model;
+
+@end
+
 @interface LYTransactionRecordTableViewCell : UITableViewCell
 - (void)configUIWithStatus:(CellType)type;
 
 - (void)configWithModel:(LYTradeRecordPageModel *)model;
 /**< test*/
 @property(nonatomic,assign)NSInteger time;
+/**< <#des#>*/
+@property(nonatomic,weak)id<LYTransactionRecordTableViewCellDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -32,7 +32,7 @@
     [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:model.actor] placeholderImage:nil];
     self.nicknameLabel.text = model.nickName;
     self.phoneLabel.text = model.mobile;
-    self.totalLabel.text = [NSString stringWithFormat:@"%.2f",model.totalAmount];
+    self.totalLabel.text = [NSString stringWithFormat:@"%.2fCNY",model.totalAmount];
     self.danjiaLabel.text = [NSString stringWithFormat:@"单价：%.2fCNY",model.unitPrice];
     self.totalNumLabel.text = [NSString stringWithFormat:@"买单总数：%.2fAGC",model.quantity];
 }

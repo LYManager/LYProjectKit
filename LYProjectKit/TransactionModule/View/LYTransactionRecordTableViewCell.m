@@ -24,6 +24,8 @@
 
 /**< type*/
 @property(nonatomic,assign)CellType type;
+/**< <#des#>*/
+@property(nonatomic,strong)LYTradeRecordPageModel * model;
 @end
 
 
@@ -42,7 +44,7 @@
 }
 
 - (void)configWithModel:(LYTradeRecordPageModel *)model{
-    
+    self.model = model;
          self.time =  model.remainTime / 1000 - [[NSDate dateWithTimeIntervalSinceNow:0]timeIntervalSince1970];
         [self configStatusWithModel:model];
         self.rightLabel.text = model.tradeType == 1 ? @"出售" : @"购买";
@@ -104,6 +106,26 @@
     }
 }
 
+- (IBAction)payBtnAction:(id)sender {
+    if (self.type == CellType_Waitpay && [self.delegate respondsToSelector:@selector(payAtOnce:)]) { // 立即支付
+        [self.delegate payAtOnce:self.model];
+    }else if (self.type == CellType_WaitMoney && [self.delegate respondsToSelector:@selector(cancelTrade:)]){ // 取消交易
+        [self.delegate cancelTrade:self.model];
+    }else{
+        if ([self.delegate respondsToSelector:@selector(shenshu:)]) {
+            [self.delegate shenshu:self.model];
+        }
+    }
+}
+
+- (IBAction)cancelBtnAction:(id)sender {
+    if (self.type == CellType_WaitSendAGC && [self.delegate respondsToSelector:@selector(confirmSendAGC:)]) {
+        [self.delegate confirmSendAGC:self.model];
+    }else if (self.type == CellType_Waitpay && [self.delegate respondsToSelector:@selector(cancelTrade:)]){
+        [self.delegate cancelTrade:self.model];
+    }
+}
+
 - (void)setFrame:(CGRect)frame{
     frame.size.height -= 5;
     [super setFrame:frame];
@@ -116,18 +138,20 @@
 }
 
 - (void)configUIWithStatus:(CellType)type{
+//    type = CellType_Waitpay;
     self.type = type;
     NSString * status;
     NSString * statusDesc;
     NSString * payBtnTitle;
+    NSString * cancelBtnTitle;
     UIColor * statusTextColor;
     BOOL hiddenCancelBtn;
-    
     switch (type) {
         case CellType_Waitpay:
         {
             status = @"待付款";
             payBtnTitle = @"立即支付";
+            cancelBtnTitle = @"取消交易";
             statusTextColor = [UIColor ly_colorWithHexString:@"#D8575A"];
             hiddenCancelBtn = NO;
         }
@@ -162,6 +186,7 @@
         {
            status = @"已收款";
            payBtnTitle = @"申述";
+            cancelBtnTitle = @"立即放币";
             statusDesc = @"待放币";
            statusTextColor = [UIColor ly_colorWithHexString:@"#CB9D2E"];
            hiddenCancelBtn = YES;
@@ -179,6 +204,11 @@
     }
     self.cancelBtn.hidden = hiddenCancelBtn;
     [self.payBtn setTitle:payBtnTitle forState:UIControlStateNormal];
+    self.payBtn.enabled = self.type != CellType_Waitpay;
+    if (cancelBtnTitle != nil) {
+        self.cancelBtn.hidden = NO;
+        [self.cancelBtn setTitle:cancelBtnTitle forState:UIControlStateNormal];
+    }
     self.statusLabel.textColor = statusTextColor;
     self.statusLabel.text = status;
     self.statusDesLabel.text = statusDesc;
