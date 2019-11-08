@@ -9,6 +9,7 @@
 #import "ReleaseSellViewController.h"
 
 @interface ReleaseSellViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *userLab;
 @property (weak, nonatomic) IBOutlet UILabel *unitPriceLab;
 @property (weak, nonatomic) IBOutlet UILabel *allNimberLab;
@@ -40,6 +41,7 @@
     [self.submitBtn ly_gradint];
 
     self.title = @"出售";
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:self.model.actor]];
     self.userLab.text = [NSString stringWithFormat:@"%@  %@",self.model.nickName,self.model.phoneNumber];
     self.unitPriceLab.text = [NSString stringWithFormat:@"%@%.2fCNY",@"单价",self.model.unitPrice];
     self.allNimberLab.text = [NSString stringWithFormat:@"%@%.0fAGC",@"卖单总数:",self.model.quantity];
@@ -95,6 +97,7 @@
         
              [self.view makeToast:@"出售成功" duration:1 position:CSToastPositionCenter];
              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 !self.successCallback ? : self.successCallback();
                  [self.navigationController popViewControllerAnimated:YES];
 
              });

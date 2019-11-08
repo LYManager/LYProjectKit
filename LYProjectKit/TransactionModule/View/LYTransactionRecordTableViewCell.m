@@ -159,7 +159,7 @@
         case CellType_Paied:
         {
            status = @"已支付";
-            payBtnTitle = @"申述";
+            payBtnTitle = @"申诉";
             statusDesc = @"待卖家放币";
            statusTextColor = [UIColor ly_colorWithHexString:@"#CB9D2E"];
            hiddenCancelBtn = YES;
@@ -168,7 +168,7 @@
         case CellType_TradeSuccess:
         {
             status = @"交易成功";
-            payBtnTitle = @"申述";
+            payBtnTitle = @"申诉";
             statusDesc = @"卖家已放币";
             statusTextColor = [UIColor ly_colorWithHexString:@"#2DB249"];
             hiddenCancelBtn = YES;
@@ -195,7 +195,7 @@
         case CellType_GetAGC:
         {
           status = @"交易成功";
-          payBtnTitle = @"申述";
+          payBtnTitle = @"申诉";
             statusDesc = @"买家已收币";
            statusTextColor = [UIColor ly_colorWithHexString:@"#2DB249"];
            hiddenCancelBtn = YES;

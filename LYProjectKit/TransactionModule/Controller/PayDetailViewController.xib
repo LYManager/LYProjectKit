@@ -275,7 +275,7 @@
                         <constraint firstAttribute="height" constant="36" id="Pi2-6N-vBZ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="申述"/>
+                    <state key="normal" title="申诉"/>
                     <connections>
                         <action selector="complaintAction:" destination="-1" eventType="touchUpInside" id="nyc-Mb-2Ki"/>
                     </connections>
