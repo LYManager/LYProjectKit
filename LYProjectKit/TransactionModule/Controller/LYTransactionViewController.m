@@ -23,7 +23,8 @@
 
 @interface LYTransactionViewController ()<UITableViewDelegate,UITableViewDataSource,
 LYTransactionSessionHeaderViewDelegate,
-LYTransactionSaleTableViewCellDelegate>
+LYTransactionSaleTableViewCellDelegate,
+LYTransactionRecordTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /**< headerView*/
 @property(nonatomic,strong)LYTransactionHeaderView * headerView;
@@ -56,6 +57,13 @@ LYTransactionSaleTableViewCellDelegate>
     [kCountDownManager start];
     self.pageNum = 1;
     [self loadRequest:3];
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 50, 40);
+    [button setTitle:@"交易规则" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(tradeRule) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:13];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -146,6 +154,40 @@ LYTransactionSaleTableViewCellDelegate>
            [self loadRequest:self.pageNum];
        }
 }
+#pragma mark🐒------确认放币------🐒
+- (void)confirmSendAGC:(LYTradeRecordPageModel *)model{
+    [self popConfirmControllerType:ConfirmType_FB backBlock:^{
+        [LYNetwork POSTWithApiPath:concormlOutURL requestParams:@{
+                    @"tradeId":@(model.recordId)
+            } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+            [self.view makeToast:@"已放币" duration:1 position:CSToastPositionCenter];
+            [self loadRecordData:1];
+         }];
+    }];
+}
+
+#pragma mark🐒------取消交易------🐒
+- (void) cancelTrade:(LYTradeRecordPageModel *)model{
+    [self popConfirmControllerType:ConfirmType_CancelTrade backBlock:^{
+        [LYNetwork POSTWithApiPath:cancelOutURL requestParams:@{
+                    @"tradeId":@(model.recordId)
+                } handler:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
+               
+            [self.view makeToast:@"已取消" duration:1 position:CSToastPositionCenter];
+            [self loadRecordData:1];
+        }];
+    }];
+}
+
+#pragma mark🐒------立即支付------🐒
+//- (void)payAtOnce:(LYTradeRecordPageModel *)model{
+//    NSLog(@"立即支付");
+//}
+
+#pragma mark🐒------申述------🐒
+- (void)shenshu:(LYTradeRecordPageModel *)model{
+    NSLog(@"申述");
+}
 
 - (void) configHeaderView{
     LYTransactionHeaderView * headerView = [[NSBundle mainBundle]loadNibNamed:@"LYTransactionHeaderView" owner:self options:nil][0];
@@ -203,6 +245,7 @@ LYTransactionSaleTableViewCellDelegate>
     if (self.clickType == LYTransactionSessionHeaderViewClickType_Record) {
          LYTransactionRecordTableViewCell * recordCell = [tableView dequeueReusableCellWithIdentifier:@"LYTransactionRecordTableViewCell" forIndexPath:indexPath];
         [recordCell configWithModel:self.recordArray[indexPath.row]];
+        recordCell.delegate = self;
 //        [recordCell configUIWithStatus:indexPath.row % 5];
         return recordCell;
     }else{
@@ -261,6 +304,10 @@ LYTransactionSaleTableViewCellDelegate>
         }
         // TODO 跳转
     }
+}
+
+- (void)tradeRule{
+    [self pushViewControllerWithClassName:@"LYTradeRuleViewController" params:nil];
 }
 
 - (void) configBottomCons{

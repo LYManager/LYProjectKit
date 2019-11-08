@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -271,16 +271,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*交易说明" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-zE-wUi">
-                    <rect key="frame" x="20" y="477" width="374" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="cCS-KR-POp"/>
-                    </constraints>
+                    <rect key="frame" x="20" y="477" width="374" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.33756303787231445" green="0.34728157520294189" blue="0.45491594076156616" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-bx-q9m">
-                    <rect key="frame" x="14" y="771" width="386" height="36"/>
+                    <rect key="frame" x="14" y="801" width="386" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="9a9-KF-JjE"/>
                     </constraints>
@@ -298,7 +295,7 @@
                 <constraint firstItem="PMN-5w-9Sj" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="OBm-c9-JvA"/>
                 <constraint firstItem="6Lq-bx-q9m" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="14" id="SQi-1o-HQv"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Tgs-fs-Iau" secondAttribute="trailing" constant="15" id="Vxh-pp-48u"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="6Lq-bx-q9m" secondAttribute="bottom" constant="55" id="X4l-n3-zbI"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="6Lq-bx-q9m" secondAttribute="bottom" constant="25" id="X4l-n3-zbI"/>
                 <constraint firstItem="d4f-zE-wUi" firstAttribute="top" secondItem="Yhh-nM-5qX" secondAttribute="bottom" constant="15" id="aUx-Ub-glD"/>
                 <constraint firstItem="PMN-5w-9Sj" firstAttribute="top" secondItem="Tgs-fs-Iau" secondAttribute="bottom" constant="5" id="crX-Ob-Wmr"/>
                 <constraint firstItem="Tgs-fs-Iau" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="ekP-kP-5gy"/>
