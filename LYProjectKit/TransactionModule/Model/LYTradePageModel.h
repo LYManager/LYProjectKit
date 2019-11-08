@@ -30,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)NSInteger payType;
 /**< 过期时间戳*/
 @property(nonatomic,assign)NSInteger remainTime;
+
+@property(nonatomic,assign)CGFloat payAmount;
+@property(nonatomic,assign)CGFloat charge;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

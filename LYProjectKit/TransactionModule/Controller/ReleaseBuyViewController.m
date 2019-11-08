@@ -22,7 +22,8 @@
   
     self.numberText.attributedPlaceholder = [self.numberText.placeholder ly_attributePlaceholder];
     self.priceLab.attributedPlaceholder = [self.priceLab.placeholder ly_attributePlaceholder];
-    self.balanceLab.text = [NSString stringWithFormat:@"%@%f",@"我的AGC余额",self.model.data.agcAomount];
+    self.balanceLab.text = [NSString stringWithFormat:@"%@%.2f",@"我的AGC余额",self.model.data.agcAomount];
+    self.referenceLab.text = [NSString stringWithFormat:@"%@%.2f%@",@"市场参考价1AGC≈",self.model.data.agcToRmb,@"CNY"];
 
     
     

@@ -7,10 +7,12 @@
 //
 
 #import "LYBaseViewController.h"
+#import "LYTradeRecordPageModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PayStateViewController : LYBaseViewController
+@property (nonatomic,strong)LYTradeRecordPageModel *model;
 
 @end
 

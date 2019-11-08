@@ -229,6 +229,7 @@ LYTransactionSaleTableViewCellDelegate>
         LYTradePageModel * model = self.dataArray[indexPath.row];
         ReleaseSellViewController *releaseVC = [[ReleaseSellViewController alloc]init];
         releaseVC.model = model;
+        releaseVC.tradmodel = self.model;
         [self.navigationController pushViewController:releaseVC animated:YES];
         // TODO 跳转
     }else if (self.clickType == LYTransactionSessionHeaderViewClickType_Buy){ // 购买
@@ -238,6 +239,19 @@ LYTransactionSaleTableViewCellDelegate>
         // TODO 跳转
     }else{    // 交易记录
         LYTradeRecordPageModel * model = self.recordArray[indexPath.row];
+        if (model.tradeType == 1) {//出售
+            PayStateViewController *payVC = [[PayStateViewController alloc]init];
+            payVC.model = model;
+            [self.navigationController pushViewController:payVC animated:YES];
+        }
+        else
+        {//购买
+            PayDetailViewController *payVC = [[PayDetailViewController alloc]init];
+            payVC.model = model;
+            [self.navigationController pushViewController:payVC animated:YES];
+            
+            
+        }
         // TODO 跳转
     }
 }

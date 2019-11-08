@@ -12,11 +12,15 @@
             <connections>
                 <outlet property="accountLab" destination="Ile-2x-cYZ" id="tIe-0u-dAN"/>
                 <outlet property="codeImage" destination="3Ua-4T-X9t" id="G84-b6-5oz"/>
+                <outlet property="fangbiBtn" destination="kJO-JS-eG5" id="q6Y-Ol-wST"/>
                 <outlet property="mineyLab" destination="PCD-LA-rwE" id="sZs-qA-F3Y"/>
                 <outlet property="nameLab" destination="bNo-fR-XID" id="Opl-Jq-IfY"/>
                 <outlet property="numberLab" destination="eJg-So-mak" id="zbW-zz-1x1"/>
                 <outlet property="orderId" destination="xwT-dR-HYy" id="etU-YK-N14"/>
                 <outlet property="priceLab" destination="4UC-ms-VzK" id="aTg-qi-k9h"/>
+                <outlet property="shensuABtn" destination="BWg-n3-Hs8" id="PfA-yN-Tws"/>
+                <outlet property="shensuBtn" destination="BWg-n3-Hs8" id="dVx-QR-WFU"/>
+                <outlet property="stateLab" destination="gXy-DE-Pp2" id="WXX-M2-hxO"/>
                 <outlet property="timeLab" destination="qfk-DY-v9v" id="0Dx-g4-t7D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
