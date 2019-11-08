@@ -95,6 +95,7 @@
         
              [self.view makeToast:@"出售成功" duration:1 position:CSToastPositionCenter];
              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 !self.successCallback ? : self.successCallback();
                  [self.navigationController popViewControllerAnimated:YES];
 
              });
