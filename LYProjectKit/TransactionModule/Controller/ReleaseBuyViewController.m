@@ -27,7 +27,9 @@
     self.referenceLab.text = [NSString stringWithFormat:@"%@%.2f%@",@"市场参考价1AGC≈",self.model.data.agcToRmb,@"CNY"];
     self.numberText.delegate =self;
     self.priceLab.delegate =self;
-    self.shuomingLab.text = self.model.data.tradeShow;
+    
+    NSString *str = [self.model.data.tradeShow stringByReplacingOccurrencesOfString:@"\\n\n" withString:@"\n"];
+    self.shuomingLab.text = str;
 
 
     
@@ -44,7 +46,17 @@
     }
     
 }
+- (NSString *)ConvertStrToTime:(NSString *)timeStr{
 
+    
+
+    long long time=[timeStr longLongValue];
+    long second = time/1000%60;
+ long m = time/1000/60;
+    NSString *timeString =[NSString stringWithFormat:@"%02ld:%02ld",m,second];
+    return timeString;
+
+}
 - (IBAction)submitAction:(id)sender {
     
     

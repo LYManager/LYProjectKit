@@ -21,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *shensuBtn;
 @property (weak, nonatomic) IBOutlet UIButton *fangbiBtn;
 @property (weak, nonatomic) IBOutlet UIButton *shensuABtn;
+@property (weak, nonatomic) IBOutlet UILabel *zhifuAccLab;
+@property (weak, nonatomic) IBOutlet UILabel *shoukuanLab;
+@property (weak, nonatomic) IBOutlet UILabel *codeLab;
 
 @end
 
@@ -29,10 +32,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"买单详情";
+    
+    [self.shensuBtn ly_gradint];
+    [self.fangbiBtn ly_gradint];
+    [self.shensuABtn ly_gradint];
     if (self.model.status == 1) {
         self.stateLab.text = @"待支付";
         self.shensuABtn.hidden = YES;
-        self.timeLab.text = [NSString stringWithFormat:@"%@%@%@",@"买家还有",@"",@"完成支付"];
+        NSString *timeStr = [NSString stringWithFormat:@"%ld",(long)self.model.remainTime];
+
+        self.timeLab.text = [NSString stringWithFormat:@"%@%@%@",@"买家还有",[self ConvertStrToTime:timeStr],@"完成支付"];
+        
+        
 
     }
     else if (self.model.status == 2) {
@@ -53,16 +64,48 @@
 
 
     }
+    if (self.model.payType == 1) {//微信
+        
+        self.zhifuAccLab.text = @"支付宝账号";
+        self.shoukuanLab.text = @"收款人昵称";
+        self.codeLab.text = @"支付宝收款码";
+        self.accountLab.text = self.model.alipayAccount;
+        self.nameLab.text = self.model.alipayName;
+        [self.codeImage sd_setImageWithURL:[NSURL URLWithString:self.model.alipayUrl]];
+
+    }
+    else
+    {
+        self.zhifuAccLab.text = @"微信账号";
+        self.shoukuanLab.text = @"收款人昵称";
+        self.codeLab.text = @"微信收款码";
+        self.accountLab.text = self.model.weichatAccount;
+        self.nameLab.text = self.model.weiChatName;
+        [self.codeImage sd_setImageWithURL:[NSURL URLWithString:self.model.weichatUrl]];
+    }
+    
+    
+    
     self.priceLab.text = [NSString stringWithFormat:@"%.2f%@",self.model.totalAmount,@"CNY"];
-    self.accountLab.text = self.model.alipayAccount;
-    self.nameLab.text = self.model.alipayName;
     self.numberLab.text = [NSString stringWithFormat:@"%.2f%@",self.model.quantity,@"AGC"];
     self.mineyLab.text = [NSString stringWithFormat:@"%.2f%@",self.model.unitPrice,@"CNY"];
-    [self.codeImage sd_setImageWithURL:[NSURL URLWithString:self.model.alipayUrl]];
     self.orderId.text = self.model.orderNum;
 
 
 }
+- (NSString *)ConvertStrToTime:(NSString *)timeStr{
+
+    
+
+    long long time=[timeStr longLongValue];
+    long second = time/1000%60;
+ long m = time/1000/60;
+    NSString *timeString =[NSString stringWithFormat:@"%02ld:%02ld",m,second];
+    return timeString;
+
+}
+
+
 - (IBAction)connectAction:(id)sender {
     [self pushViewControllerWithClassName:@"" params:nil];
 
