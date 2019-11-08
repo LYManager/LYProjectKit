@@ -34,7 +34,7 @@
     self.phoneLabel.text = model.mobile;
     self.totalLabel.text = [NSString stringWithFormat:@"%.2f",model.totalAmount];
     self.danjiaLabel.text = [NSString stringWithFormat:@"单价：%.2fCNY",model.unitPrice];
-    self.totalNumLabel.text = [NSString stringWithFormat:@"买单总数：%.2f",model.quantity];
+    self.totalNumLabel.text = [NSString stringWithFormat:@"买单总数：%.2fAGC",model.quantity];
 }
 
 - (void)configBtnEnable:(BOOL)enable{
