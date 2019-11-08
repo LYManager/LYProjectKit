@@ -260,7 +260,7 @@
                         <constraint firstAttribute="height" constant="36" id="P2v-wO-Y1V"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="申述"/>
+                    <state key="normal" title="申诉"/>
                     <connections>
                         <action selector="complaintAction:" destination="-1" eventType="touchUpInside" id="9Dn-xR-cKB"/>
                     </connections>
@@ -272,7 +272,7 @@
                         <constraint firstAttribute="width" constant="100" id="dUj-jP-piL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="申述">
+                    <state key="normal" title="申诉">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>

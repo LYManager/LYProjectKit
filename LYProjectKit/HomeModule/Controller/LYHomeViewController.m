@@ -186,7 +186,33 @@ static NSInteger local = 0;
 /// @param sender sender
 - (IBAction)jiaoyiAction:(UIButton *)sender {
 
-    [self pushViewControllerWithClassName:@"LYTransactionViewController" params:nil];
+    if (self.data.data.tradeSwitch) {
+        if (self.data.data.isActive) {
+            if (self.data.data.isBingPay) {
+                [self pushViewControllerWithClassName:@"LYTransactionViewController" params:nil];
+
+            }
+            else
+            {
+                [self.view makeToast:@"请绑定支付方式" duration:1 position:CSToastPositionCenter];
+                return;
+            }
+            
+        }
+        else
+        {
+            [self.view makeToast:@"您未实名认证" duration:1 position:CSToastPositionCenter];
+            return;
+
+        }
+    }
+    else
+    {
+        [self.view makeToast:@"非交易时间" duration:1 position:CSToastPositionCenter];
+        return;
+    }
+    
+    
 
     //LYTransactionViewController
 }
@@ -194,6 +220,9 @@ static NSInteger local = 0;
 /// 我的
 /// @param sender sender
 - (IBAction)mineAction:(UIButton *)sender {
+    
+    
+    
     [self pushViewControllerWithClassName:@"LYMineViewController" params:nil];
 }
 - (IBAction)zhaomuAction:(UIButton *)sender {

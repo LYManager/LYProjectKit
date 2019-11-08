@@ -9,11 +9,12 @@
 
 
 #if DEBUG
-NSString * const BaseURL          = @"http://ant-api.cciasia.org";
+NSString * const BaseURL          = @"http://api.agc.tw";
 #else
-NSString * const BaseURL          = @"http://ant-api.cciasia.org";
+NSString * const BaseURL          = @"http://api.agc.tw";
 #endif
 //NSString * const BaseURL          = @"http://api.agc.tw";
+//NSString * const BaseURL          = @"http://ant-api.cciasia.org";
 // 注册
 NSString * const registerURL      = @"/ant-api/user/register";
 

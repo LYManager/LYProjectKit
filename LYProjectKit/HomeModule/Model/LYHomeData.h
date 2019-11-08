@@ -33,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**< userName*/
 @property(nonatomic,copy)NSString *  userName;
 
+@property(nonatomic,assign)BOOL tradeSwitch;
+@property(nonatomic,assign)BOOL isBingPay;
 
 @property(nonatomic,strong)NSArray *strategies;
 @end

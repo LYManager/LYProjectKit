@@ -13,6 +13,7 @@
                 <outlet property="aliBtn" destination="odx-ja-iiT" id="kk1-Ag-MYs"/>
                 <outlet property="aliImage" destination="bIy-CF-Kvo" id="khw-7Z-Zst"/>
                 <outlet property="allNimberLab" destination="0he-Z6-DrB" id="zWR-uw-uhf"/>
+                <outlet property="headImage" destination="wNo-AW-bJs" id="51s-Nv-baB"/>
                 <outlet property="moneyLab" destination="zaS-Ti-Fv4" id="a2w-Bw-sYE"/>
                 <outlet property="otherLab" destination="u5N-OE-Rpz" id="5YU-Qf-Pzg"/>
                 <outlet property="sellLab" destination="Msw-iE-AcX" id="2Ey-9K-6go"/>
