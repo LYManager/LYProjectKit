@@ -30,12 +30,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"卖单详情";
+    
+    [self.shensuBtn ly_gradint];
+    [self.fangbiBtn ly_gradint];
+    [self.shensuAbtn ly_gradint];
+    
       if (self.model.status == 1) {
           self.payStateLab.text = @"买家待支付";
           self.shensuBtn.hidden = YES;
           self.fangbiBtn.hidden = YES;
           self.shensuAbtn.hidden = YES;
-          self.timeLab.text = [NSString stringWithFormat:@"%@%@%@",@"买家还有",@"",@"完成支付"];
+          NSString *timeStr = [NSString stringWithFormat:@"%ld",(long)self.model.remainTime];
+
+          self.timeLab.text = [NSString stringWithFormat:@"%@%@%@",@"买家还有",[self ConvertStrToTime:timeStr],@"完成支付"];
 
 
       }
@@ -55,6 +62,12 @@
 
 
       }
+    
+    
+    
+    
+    
+    
       self.priceLab.text = [NSString stringWithFormat:@"%.2f%@",self.model.totalAmount,@"CNY"];
       self.accLab.text = self.model.alipayAccount;
       self.nameLab.text = self.model.weichatAccount;
@@ -93,7 +106,17 @@
 - (IBAction)connAction:(id)sender {
     [self pushViewControllerWithClassName:@"" params:nil];
 }
+- (NSString *)ConvertStrToTime:(NSString *)timeStr{
 
+    
+
+    long long time=[timeStr longLongValue];
+    long second = time/1000%60;
+ long m = time/1000/60;
+    NSString *timeString =[NSString stringWithFormat:@"%02ld:%02ld",m,second];
+    return timeString;
+
+}
 /*
 #pragma mark - Navigation
 

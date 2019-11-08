@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="accountLab" destination="Ile-2x-cYZ" id="tIe-0u-dAN"/>
                 <outlet property="codeImage" destination="3Ua-4T-X9t" id="G84-b6-5oz"/>
+                <outlet property="codeLab" destination="9dN-fb-90g" id="c4M-MV-Df7"/>
                 <outlet property="fangbiBtn" destination="kJO-JS-eG5" id="q6Y-Ol-wST"/>
                 <outlet property="mineyLab" destination="PCD-LA-rwE" id="sZs-qA-F3Y"/>
                 <outlet property="nameLab" destination="bNo-fR-XID" id="Opl-Jq-IfY"/>
@@ -20,9 +21,11 @@
                 <outlet property="priceLab" destination="4UC-ms-VzK" id="aTg-qi-k9h"/>
                 <outlet property="shensuABtn" destination="BWg-n3-Hs8" id="PfA-yN-Tws"/>
                 <outlet property="shensuBtn" destination="BWg-n3-Hs8" id="dVx-QR-WFU"/>
+                <outlet property="shoukuanLab" destination="jWN-XY-Bsb" id="7t8-BB-vxo"/>
                 <outlet property="stateLab" destination="gXy-DE-Pp2" id="WXX-M2-hxO"/>
                 <outlet property="timeLab" destination="qfk-DY-v9v" id="0Dx-g4-t7D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zhifuAccLab" destination="gEB-xK-EjQ" id="AJ5-Pe-VVv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -234,7 +237,7 @@
                                 <constraint firstAttribute="width" constant="50" id="NJT-hW-v1z"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="联系客服"/>
+                            <state key="normal" title="联系对方"/>
                             <connections>
                                 <action selector="connectAction:" destination="-1" eventType="touchUpInside" id="iNE-kG-zme"/>
                             </connections>

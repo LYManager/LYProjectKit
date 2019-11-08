@@ -51,7 +51,8 @@
     self.tishiLab.text = [NSString stringWithFormat:@"%@%ld",@"其中包含手续费:",(long)self.model.charge];
     self.tishiLab.text = [NSString stringWithFormat:@"%@%.2f%@",@"市场参考价1AGC≈",self.tradmodel.data.agcToRmb,@"CNY"];
     
-    self.shuomingLab.text = self.tradmodel.data.tradeDescrip;
+    NSString *str = [self.tradmodel.data.tradeDescrip stringByReplacingOccurrencesOfString:@"\\n\n" withString:@"\n"];
+    self.shuomingLab.text = str;
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImage)];
     [_weichatImage addGestureRecognizer:tapGesture];

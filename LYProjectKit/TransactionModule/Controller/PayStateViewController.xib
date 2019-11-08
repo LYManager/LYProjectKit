@@ -91,7 +91,7 @@
                             <color key="textColor" red="0.33756303789999997" green="0.34728157520000003" blue="0.45491594079999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收款人名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-cP-Fv3">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信账户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-cP-Fv3">
                             <rect key="frame" x="10" y="49" width="80" height="12"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="12" id="0Lf-WE-3DS"/>
@@ -220,7 +220,7 @@
                                 <constraint firstAttribute="width" constant="50" id="9QR-ib-vXb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="联系客服"/>
+                            <state key="normal" title="联系对方"/>
                             <connections>
                                 <action selector="connectAction:" destination="-1" eventType="touchUpInside" id="KMJ-xe-XtS"/>
                             </connections>
