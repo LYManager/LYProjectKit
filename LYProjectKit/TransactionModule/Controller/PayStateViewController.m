@@ -40,6 +40,7 @@
           self.shensuBtn.hidden = YES;
           self.fangbiBtn.hidden = YES;
           self.shensuAbtn.hidden = YES;
+          
           NSString *timeStr = [NSString stringWithFormat:@"%ld",(long)self.model.remainTime];
 
           self.timeLab.text = [NSString stringWithFormat:@"%@%@%@",@"买家还有",[self ConvertStrToTime:timeStr],@"完成支付"];
@@ -122,7 +123,7 @@
 
     long long time=[timeStr longLongValue];
     long second = time/1000%60;
- long m = time/1000/60;
+    long m = time/1000/60;
     NSString *timeString =[NSString stringWithFormat:@"%02ld:%02ld",m,second];
     return timeString;
 

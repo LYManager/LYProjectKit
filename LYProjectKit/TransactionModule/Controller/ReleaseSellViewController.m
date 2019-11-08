@@ -40,7 +40,7 @@
     [self.submitBtn ly_gradint];
 
     self.title = @"出售";
-    self.userLab.text = [NSString stringWithFormat:@"%@  %@",self.model.nickName,self.model.mobile];
+    self.userLab.text = [NSString stringWithFormat:@"%@  %@",self.model.nickName,self.model.phoneNumber];
     self.unitPriceLab.text = [NSString stringWithFormat:@"%@%.2fCNY",@"单价",self.model.unitPrice];
     self.allNimberLab.text = [NSString stringWithFormat:@"%@%.0fAGC",@"卖单总数:",self.model.quantity];
     self.moneyLab.text = [NSString stringWithFormat:@"%.2fCNY",self.model.totalAmount];

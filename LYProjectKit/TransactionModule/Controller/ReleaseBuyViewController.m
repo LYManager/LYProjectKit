@@ -46,17 +46,7 @@
     }
     
 }
-- (NSString *)ConvertStrToTime:(NSString *)timeStr{
 
-    
-
-    long long time=[timeStr longLongValue];
-    long second = time/1000%60;
- long m = time/1000/60;
-    NSString *timeString =[NSString stringWithFormat:@"%02ld:%02ld",m,second];
-    return timeString;
-
-}
 - (IBAction)submitAction:(id)sender {
     
     
