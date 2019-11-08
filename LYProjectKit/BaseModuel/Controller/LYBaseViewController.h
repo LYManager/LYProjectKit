@@ -14,6 +14,9 @@
 #import "LYAntCardModel.h"
 @class LYPopConfirmViewController;
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^SuccessCallback)(void);
+
 typedef void(^BackBlock)(void);
 typedef NS_ENUM(NSUInteger,ConfirmType) {
     ConfirmType_FB,  // 放币
@@ -43,6 +46,8 @@ typedef NS_ENUM(NSUInteger,TradePopType) {
 @property(nonatomic,assign,getter=isForbidConfigBgColor)BOOL forbidConfigBgColor;
 /**< 传参*/
 @property(nonatomic,strong,nullable)NSDictionary * params;
+/**< 成功回调*/
+@property(nonatomic,copy)SuccessCallback  successCallback;
 // 跳转
 - (void) pushViewControllerWithClassName:(NSString *)controllerName
                                   params:(nullable NSDictionary *)params;
