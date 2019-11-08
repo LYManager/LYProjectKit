@@ -171,6 +171,7 @@ LYTransactionSaleTableViewCellDelegate>
     self.clickType = clickType;
     [self configBottomCons];
     [self.dataArray removeAllObjects];
+    [self.tableView reloadData];
     self.pageNum = 1;
     if (clickType == LYTransactionSessionHeaderViewClickType_Record) {
         [self loadRecordData:self.pageNum];

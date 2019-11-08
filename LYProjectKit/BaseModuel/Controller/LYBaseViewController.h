@@ -25,7 +25,8 @@ typedef NS_ENUM(NSUInteger,ConfirmType) {
 typedef void(^TradeCallBack)(NSString * pwd);
 typedef NS_ENUM(NSUInteger,TradePopType) {
     TradePopType_Buy,  // 发布买单
-    TradePopType_Sale // 卖单
+    TradePopType_Sale, // 卖单
+    TradePopType_Bind  // 绑定
 };
 
 @interface LYBaseViewController : UIViewController

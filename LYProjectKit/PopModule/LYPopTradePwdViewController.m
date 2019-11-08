@@ -25,6 +25,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *agcLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cnyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *desLabel;
 
 /**< <#des#>*/
 @property(nonatomic,copy)NSString *  agc;
@@ -57,12 +58,14 @@
     NSString * title;
     NSString * leftTopTitle;
     NSString * leftBottomTitle;
+    BOOL hiddenDesLabel;
     switch (self.type) {
         case TradePopType_Buy:
         {
             title = @"发布买单";
             leftTopTitle = @"买入";
             leftBottomTitle = @"总价";
+            hiddenDesLabel = YES;
         }
         break;
         case TradePopType_Sale:
@@ -70,9 +73,19 @@
             title = @"确认出售";
             leftTopTitle = @"卖出";
             leftBottomTitle = @"总价";
+            hiddenDesLabel = YES;
         }
         break;
+        case TradePopType_Bind:
+       {
+           title = @"确认绑定";
+//           leftTopTitle = @"卖出";
+//           leftBottomTitle = @"总价";
+           hiddenDesLabel = NO;
+       }
+       break;
     }
+    self.desLabel.hidden = hiddenDesLabel;
     self.leftTopLabel.text = leftTopTitle;
     self.leftBottomLabel.text = leftBottomTitle;
     self.fabuTitleLabel.text = title;
