@@ -7,7 +7,7 @@
 //
 
 #import "PayStateViewController.h"
-
+#import<libkern/OSAtomic.h>
 @interface PayStateViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *payStateLab;
 @property (weak, nonatomic) IBOutlet UILabel *timeLab;
@@ -40,9 +40,35 @@
           self.shensuBtn.hidden = YES;
           self.fangbiBtn.hidden = YES;
           self.shensuAbtn.hidden = YES;
-          NSString *timeStr = [NSString stringWithFormat:@"%ld",(long)self.model.remainTime];
-
-          self.timeLab.text = [NSString stringWithFormat:@"%@%@%@",@"买家还有",[self ConvertStrToTime:timeStr],@"完成支付"];
+           NSInteger time = self.model.remainTime / 1000 - [[NSDate dateWithTimeIntervalSinceNow:0]timeIntervalSince1970];
+                  if (time <= 0) {
+                      self.timeLab.text = @"已过期";
+                  }else{
+                      __block int32_t timeOutCount = (int32_t)time;
+                         dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+                         
+                         dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1ull * NSEC_PER_SEC, 0);
+                         dispatch_source_set_event_handler(timer, ^{
+                             OSAtomicDecrement32(&timeOutCount);
+                             if (timeOutCount == 0) {
+                                 self.timeLab.text = @"已过期";
+                                 dispatch_source_cancel(timer);
+                             }else{
+                                 NSInteger m = timeOutCount / 60;
+                                 NSInteger s = timeOutCount % 60;
+                                 if (m >= 1) {
+                                     self.timeLab.text = [NSString stringWithFormat:@"买家还有%ld分%ld秒完成支付",m,s];
+                                 }else{
+                                   self.timeLab.text = [NSString stringWithFormat:@"买家还有%ld秒完成支付",s];
+                                 }
+                             }
+                         });
+                         
+          //                   dispatch_source_set_cancel_handler(timer, ^{
+          //                       NSLog(@"timersource cancel handle block");
+          //                   });
+                             dispatch_resume(timer);
+                  }
 
 
       }
