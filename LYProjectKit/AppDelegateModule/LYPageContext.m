@@ -18,6 +18,8 @@
 #import "LYHomeViewController.h"
 #import "LYNavigationViewController.h"
 #import "LoginViewController.h"
+
+#import "LYWorkViewController.h"
 @implementation LYPageContext
 + (instancetype)shareInstance
 {
@@ -36,25 +38,18 @@
 
 - (void)setupMainViewController
 {
-    LYHomeViewController * loginVC = [[LYHomeViewController alloc]initWithNibName:@"LYHomeViewController" bundle:nil];
-    loginVC.hideNavigationBar = YES;
+    
+    
+    LYWorkViewController * loginVC = [[LYWorkViewController alloc]init];
+//    loginVC.hideNavigationBar = YES;
     LYNavigationViewController * navc = [[LYNavigationViewController alloc]initWithRootViewController:loginVC];
     [UIApplication sharedApplication].keyWindow.rootViewController = navc;
-//    NSArray * controllers = controllerArray();
-//    NSMutableArray * navcs = [NSMutableArray array];
-//    [controllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        LYBaseViewController * vc = [((Class)obj) new];
-//        LYNavigationViewController *navc = [self _getNavcWithCurrentVC:vc];
-//        [navcs addObject:navc];
-//    }];
-//
-//    LYTabBarViewController * tabBarVC = [[LYTabBarViewController alloc]init];
-//    tabBarVC.viewControllers = navcs;
-//    [self _configDataTabBarVC:tabBarVC];
-//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVC;
 }
 
 - (void)setupLoginViewController{
+     [self setupMainViewController];
+    return;
+    
 //    如果有值，登录过
     if ([LYUserDefault shareInstance].userInfoDict) {
         [LYUserInfoManager shareInstance].userInfo = [LYUserInfo modelWithDictionary:[LYUserDefault shareInstance].userInfoDict[@"data"]];

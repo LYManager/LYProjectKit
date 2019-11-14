@@ -42,7 +42,7 @@ static NSString * const kAppKey = @"hYVKTmQ7XheQdwUIawAHb1Ux";
     
     [[LYAVOSCloudManager shareInstance]registerCloud];
     //添加强制更新
-    [self forcedToUpdate];
+//    [self forcedToUpdate];
     
     
     return YES;

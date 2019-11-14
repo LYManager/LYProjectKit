@@ -111,6 +111,13 @@
 		639EC8B3237465C900EE5177 /* LYPopConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639EC8B1237465C900EE5177 /* LYPopConfirmViewController.xib */; };
 		639EC8B7237475E400EE5177 /* LYPopTradePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639EC8B5237475E400EE5177 /* LYPopTradePwdViewController.m */; };
 		639EC8B8237475E400EE5177 /* LYPopTradePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639EC8B6237475E400EE5177 /* LYPopTradePwdViewController.xib */; };
+		63A3A8F6237CEDFA00BE7B67 /* LYWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A3A8F5237CEDFA00BE7B67 /* LYWorkViewController.m */; };
+		63A3A8F9237CEE1C00BE7B67 /* LYWorkPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A3A8F8237CEE1C00BE7B67 /* LYWorkPresenter.m */; };
+		63A3A8FC237CF13F00BE7B67 /* LYWorkHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A3A8FB237CF13F00BE7B67 /* LYWorkHeaderView.m */; };
+		63A3A8FF237D0FE500BE7B67 /* LYMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A3A8FE237D0FE500BE7B67 /* LYMessageView.m */; };
+		63A3A902237D1D2500BE7B67 /* LYServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A3A901237D1D2500BE7B67 /* LYServiceTableViewCell.m */; };
+		63A3A905237D1D4E00BE7B67 /* LYWarningMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A3A904237D1D4E00BE7B67 /* LYWarningMessageCell.m */; };
+		63A3A908237D239A00BE7B67 /* LYServiceItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A3A907237D239A00BE7B67 /* LYServiceItemView.m */; };
 		63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A815FD236438C100B9CC9E /* LYRubbishButton.m */; };
 		63B37760236735F5001C8CCC /* LYAVOSCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3775F236735F5001C8CCC /* LYAVOSCloudManager.m */; };
 		63C2243E22FBE10100821544 /* LYTestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2243D22FBE10100821544 /* LYTestWebViewController.m */; };
@@ -417,6 +424,20 @@
 		639EC8B4237475E400EE5177 /* LYPopTradePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPopTradePwdViewController.h; sourceTree = "<group>"; };
 		639EC8B5237475E400EE5177 /* LYPopTradePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPopTradePwdViewController.m; sourceTree = "<group>"; };
 		639EC8B6237475E400EE5177 /* LYPopTradePwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPopTradePwdViewController.xib; sourceTree = "<group>"; };
+		63A3A8F4237CEDFA00BE7B67 /* LYWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWorkViewController.h; sourceTree = "<group>"; };
+		63A3A8F5237CEDFA00BE7B67 /* LYWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWorkViewController.m; sourceTree = "<group>"; };
+		63A3A8F7237CEE1C00BE7B67 /* LYWorkPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWorkPresenter.h; sourceTree = "<group>"; };
+		63A3A8F8237CEE1C00BE7B67 /* LYWorkPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWorkPresenter.m; sourceTree = "<group>"; };
+		63A3A8FA237CF13F00BE7B67 /* LYWorkHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWorkHeaderView.h; sourceTree = "<group>"; };
+		63A3A8FB237CF13F00BE7B67 /* LYWorkHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWorkHeaderView.m; sourceTree = "<group>"; };
+		63A3A8FD237D0FE500BE7B67 /* LYMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYMessageView.h; sourceTree = "<group>"; };
+		63A3A8FE237D0FE500BE7B67 /* LYMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYMessageView.m; sourceTree = "<group>"; };
+		63A3A900237D1D2500BE7B67 /* LYServiceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYServiceTableViewCell.h; sourceTree = "<group>"; };
+		63A3A901237D1D2500BE7B67 /* LYServiceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYServiceTableViewCell.m; sourceTree = "<group>"; };
+		63A3A903237D1D4E00BE7B67 /* LYWarningMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYWarningMessageCell.h; sourceTree = "<group>"; };
+		63A3A904237D1D4E00BE7B67 /* LYWarningMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWarningMessageCell.m; sourceTree = "<group>"; };
+		63A3A906237D239A00BE7B67 /* LYServiceItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYServiceItemView.h; sourceTree = "<group>"; };
+		63A3A907237D239A00BE7B67 /* LYServiceItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYServiceItemView.m; sourceTree = "<group>"; };
 		63A815FC236438C100B9CC9E /* LYRubbishButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYRubbishButton.h; sourceTree = "<group>"; };
 		63A815FD236438C100B9CC9E /* LYRubbishButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYRubbishButton.m; sourceTree = "<group>"; };
 		63B3775E236735F5001C8CCC /* LYAVOSCloudManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYAVOSCloudManager.h; sourceTree = "<group>"; };
@@ -719,6 +740,7 @@
 		634220EB2233925C00A2CD27 /* LYProjectKit */ = {
 			isa = PBXGroup;
 			children = (
+				63A3A8EF237CEDEA00BE7B67 /* LYWork */,
 				63422102223393EB00A2CD27 /* AppDelegateModule */,
 				63422105223393EB00A2CD27 /* BaseModuel */,
 				6397A62F235C542E00F8A2D2 /* PopModule */,
@@ -1117,6 +1139,59 @@
 				639E46FB236A7DEB001A4131 /* LYSureSendCardView.h */,
 				639E46FC236A7DEB001A4131 /* LYSureSendCardView.m */,
 				639E46FE236A7DF4001A4131 /* LYSureSendCardView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63A3A8EF237CEDEA00BE7B67 /* LYWork */ = {
+			isa = PBXGroup;
+			children = (
+				63A3A8F0237CEDEA00BE7B67 /* Presenter */,
+				63A3A8F1237CEDEA00BE7B67 /* Controller */,
+				63A3A8F2237CEDEA00BE7B67 /* Model */,
+				63A3A8F3237CEDEA00BE7B67 /* View */,
+			);
+			path = LYWork;
+			sourceTree = "<group>";
+		};
+		63A3A8F0237CEDEA00BE7B67 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				63A3A8F7237CEE1C00BE7B67 /* LYWorkPresenter.h */,
+				63A3A8F8237CEE1C00BE7B67 /* LYWorkPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		63A3A8F1237CEDEA00BE7B67 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63A3A8F4237CEDFA00BE7B67 /* LYWorkViewController.h */,
+				63A3A8F5237CEDFA00BE7B67 /* LYWorkViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63A3A8F2237CEDEA00BE7B67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63A3A8F3237CEDEA00BE7B67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63A3A8FA237CF13F00BE7B67 /* LYWorkHeaderView.h */,
+				63A3A8FB237CF13F00BE7B67 /* LYWorkHeaderView.m */,
+				63A3A8FD237D0FE500BE7B67 /* LYMessageView.h */,
+				63A3A8FE237D0FE500BE7B67 /* LYMessageView.m */,
+				63A3A906237D239A00BE7B67 /* LYServiceItemView.h */,
+				63A3A907237D239A00BE7B67 /* LYServiceItemView.m */,
+				63A3A900237D1D2500BE7B67 /* LYServiceTableViewCell.h */,
+				63A3A901237D1D2500BE7B67 /* LYServiceTableViewCell.m */,
+				63A3A903237D1D4E00BE7B67 /* LYWarningMessageCell.h */,
+				63A3A904237D1D4E00BE7B67 /* LYWarningMessageCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1715,6 +1790,7 @@
 				63848CC1235D8BD8000B505A /* LYHomeBottomView.m in Sources */,
 				82FBA37B235AF9A000A6D038 /* AGCDetailViewController.m in Sources */,
 				6336751F22350E5300B87968 /* UIViewController+AdjustScrollViewLayout.m in Sources */,
+				63A3A8F9237CEE1C00BE7B67 /* LYWorkPresenter.m in Sources */,
 				82FBA366235AF08500A6D038 /* LoginViewController.m in Sources */,
 				6397A637235CB3C800F8A2D2 /* LYPopContentView.m in Sources */,
 				82FE8E422365BFA500A47845 /* ImageViewController.m in Sources */,
@@ -1750,6 +1826,7 @@
 				63264DD5235C14A000293467 /* GHLLocalizable.m in Sources */,
 				63933B7B235AB97E00D5E138 /* LYSafeSettingViewController.m in Sources */,
 				637EDCF52373253B00B9668D /* LYTradeRecordPageModel.m in Sources */,
+				63A3A8FF237D0FE500BE7B67 /* LYMessageView.m in Sources */,
 				63684BDB23605BF90066D0C9 /* LYHomeCycleBgView.m in Sources */,
 				63E9989F22377D5200A1168B /* LYFindModel.m in Sources */,
 				82FBA385235B003800A6D038 /* AGCDetailTableViewCell.m in Sources */,
@@ -1766,6 +1843,7 @@
 				6336751C2234E7A600B87968 /* LYAlert.m in Sources */,
 				63264DD8235C150700293467 /* NSBundle+GHLLanguage.m in Sources */,
 				63775501235EC43D00FEA141 /* LYShengTaiData.m in Sources */,
+				63A3A908237D239A00BE7B67 /* LYServiceItemView.m in Sources */,
 				6397A63E235CC02B00F8A2D2 /* LYPopToolsViewController.m in Sources */,
 				6336751B2234E7A600B87968 /* LYUserDefault.m in Sources */,
 				63933B72235A0D3800D5E138 /* LYMineTableViewCell.m in Sources */,
@@ -1784,6 +1862,7 @@
 				82FBA36B235AF08500A6D038 /* WithdrawalViewController.m in Sources */,
 				63933B89235AC55700D5E138 /* NSString+Placeholder.m in Sources */,
 				82EAAD8B235E08E300991124 /* TextTableViewCell.m in Sources */,
+				63A3A8FC237CF13F00BE7B67 /* LYWorkHeaderView.m in Sources */,
 				829C2D43235C2CBB004F9641 /* SWOAuthCodeView.m in Sources */,
 				635C31A5235E05FF0015889B /* LYUserInfo.m in Sources */,
 				63E8C0FB23688DAE00C95354 /* LYTransactionSaleTableViewCell.m in Sources */,
@@ -1794,9 +1873,11 @@
 				82FBA394235B39B200A6D038 /* AcceptanceDetailViewController.m in Sources */,
 				635C31A8235E0AEB0015889B /* LYUserInfoManager.m in Sources */,
 				63A815FE236438C100B9CC9E /* LYRubbishButton.m in Sources */,
+				63A3A905237D1D4E00BE7B67 /* LYWarningMessageCell.m in Sources */,
 				63264DDB235C161700293467 /* NSData+AES.m in Sources */,
 				63933B8D235AC72D00D5E138 /* LYRealNameAuthViewController.m in Sources */,
 				63264DC7235C112100293467 /* LYConstInterface.m in Sources */,
+				63A3A902237D1D2500BE7B67 /* LYServiceTableViewCell.m in Sources */,
 				637754F8235E859B00FEA141 /* LYRubbishModel.m in Sources */,
 				63933BB0235B415600D5E138 /* LYShengTaiShopCardCell.m in Sources */,
 				82ECDE74236047E6002D6532 /* AboutUsViewController.m in Sources */,
@@ -1804,6 +1885,7 @@
 				639E4708236AE6B8001A4131 /* LYGonghuiRecordTableViewCell.m in Sources */,
 				63933B682359E8F300D5E138 /* LYMineViewController.m in Sources */,
 				63933B92235AFF1E00D5E138 /* LYMayiGongHuiViewController.m in Sources */,
+				63A3A8F6237CEDFA00BE7B67 /* LYWorkViewController.m in Sources */,
 				829C2D3F235C0C93004F9641 /* MyBillableViewCell.m in Sources */,
 				829C2D46235C2D54004F9641 /* SWOACItemBoxView.m in Sources */,
 				63933B6C2359E98300D5E138 /* LYMineHeaderView.m in Sources */,
